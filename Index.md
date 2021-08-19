@@ -1,5 +1,4 @@
 ---
-title: "Welcome to my blog"
+title: "Ewan Burnett - Development Blog"
 ---
 
-Time to write this site!
