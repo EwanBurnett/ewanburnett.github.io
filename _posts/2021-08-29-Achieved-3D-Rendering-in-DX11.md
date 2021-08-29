@@ -1,7 +1,6 @@
 ---
 Title: Achieved 3D Rendering in DirectX 11
 Date: 2021-08-29
-layout: posts
 ---
 
 <h1>3D Rendering in DirectX 11 </h1>

@@ -1,7 +1,6 @@
 ---
 Title: DirectX 11 First Triangle
 Date: 2021-08-19
-layout: posts
 ---
 <h1>First Triangle using DirectX 11</h1>
 Yesterday, I made my first triangle in DX11! 
