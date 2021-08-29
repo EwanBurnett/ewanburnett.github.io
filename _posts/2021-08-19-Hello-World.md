@@ -1,6 +1,7 @@
 ---
 Title: Hello World!
 Date: 2021-08-19
+layout: posts
 ---
 
 Hey there! I'm Ewan, a wannabe programmer in the games industry!

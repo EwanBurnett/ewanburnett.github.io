@@ -1,8 +1,9 @@
 ---
 Title: DirectX 11 First Triangle
 Date: 2021-08-19
+layout: posts
 ---
-
+<h1>First Triangle using DirectX 11</h1>
 Yesterday, I made my first triangle in DX11! 
 
 Here's a video of the Demo
@@ -82,4 +83,4 @@ I've learned a lot from this project so far - Hundreds of things are happening e
 
 Thanks for reading!
 (
-The source code for this demo can be found on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/50f9231dff9bfa18e06bbf79b19a8be96df43d8c). This isn't using a standard framework yet, so future demos' source may differ.)
+The Demo for this project can be found [here](https://github.com/EwanBurnett/ewanburnett.github.io/blob/c04900621cc99262d97a59ec8b18a17a61a32855/Resources/DX11-Triangle-Demo.zip), and the source code can be found on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/50f9231dff9bfa18e06bbf79b19a8be96df43d8c). This isn't using a standard framework yet, so future demos' source may differ.)
