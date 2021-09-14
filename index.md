@@ -31,7 +31,7 @@ layout: home
             <div class = 'project'>
                 <h2>Project</h2>
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat suscipit sagittis. Nunc quis consequat tortor. Donec nec tortor ut odio pretium eleifend eu facilisis erat.</h3>
-                <button class = 'projects' href = 'projects.html'>Take a look at my work</button>
+                <a href = '/projects/'>Take a look at my work</a>
             </div>
         </section>
        <section id = "details">
@@ -51,10 +51,8 @@ layout: home
                         <a href = 'mailto:ewanburnettsk@oulook.com'>EwanBurnettSK@oulook.com</a>
                         <h3>Socials</h3>
                         <ul>
-                            <li><a href = 'https://github.com/ewanburnett'>Github</a>
-                            </li>  data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide",      }'
-                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
-                            </li>
+                            <li><a href = 'https://github.com/ewanburnett'>Github</a></li>
+                            <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
                             <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
                         </ul>
                     </div>

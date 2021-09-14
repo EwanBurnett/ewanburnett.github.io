@@ -105,10 +105,6 @@
     color: white;
   }
 
-  .showreel.is-fullscreen .slide{
-      height:100%;
-  } 
-
   /* no circle */
   .flickity-button {
     background: transparent;
@@ -151,7 +147,7 @@
     right:50%;
   }
 
-  .project button{
+  .project a{
     padding: 10px 40px;
     margin-top:10px;
     background-color: transparent;
@@ -160,6 +156,7 @@
     transition: 0.3s ease;
     color:white;
   }
+
 
   .project button:hover{
     cursor:pointer;
@@ -193,9 +190,10 @@
 }
 
 .promoimage{
-    width: 1750px;
-    height:500px;
+    width: 600px;
+    height:900px;
     padding: 0px 30px;
+    background-image: url("https://dummyimage.com/600x900/9fa19c/fff.png&text=Promo+Image+(600x900)");
 }
 
 .intro{
