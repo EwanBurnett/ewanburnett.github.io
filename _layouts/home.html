@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class = 'home'>
+
+  <nav class = 'navigation'>
+    <h1>Ewan Burnett</h1>
+    <ul>                
+        <li><a href = '#'>Home</a></li>
+        <li><a href = '#'>Projects</a></li>
+        <li><a href = '/blog/'>Blog</a></li>
+        <li><a href = '#'>About Me</a></li>
+    </ul>
+  </nav>
+
+    {{ content }}
+
+    
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+</div>
