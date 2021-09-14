@@ -49,18 +49,19 @@ layout: home
                     <div class="contact">
                         <h3>Email Me</h3>
                         <a href = 'mailto:ewanburnettsk@oulook.com'>EwanBurnettSK@oulook.com</a>
+                        <br>
                         <h3>Socials</h3>
                         <ul>
                             <li><a href = 'https://github.com/ewanburnett'>Github</a></li>
                             <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
                             <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
                         </ul>
-                        <br></br>
+                        <br>
                     </div>
                 </div>
            </div>
        </section>
-       <section class="skills">
+       <section id="skills">
             <h1>Skills</h1>
             <div class = 'tech'>
                 <div class = 'skill'>

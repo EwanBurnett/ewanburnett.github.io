@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -6,298 +6,315 @@
 }
 
 
-
 /* home page */
-#home{
+
+#home {
     display: flex;
     flex-direction: column;
-    justify-content:left;
+    justify-content: left;
     align-items: left;
-    color:white;
+    color: white;
     background-color: royalblue;
-    height:800px;
+    height: 800px;
 }
 
-#home::before{
-    content:"";
+#home::before {
+    content: "";
     position: absolute;
-    top:0;
-    right:0;
-    height:900px;
+    top: 0;
+    right: 0;
+    height: 900px;
     width: 100%;
     z-index: -1;
 }
 
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top:25%;
-    right:15%;
+    top: 25%;
+    right: 15%;
 }
 
-.demo{
+.demo {
     padding: 10px 40px;
-    margin-top:10px;
+    margin-top: 10px;
     background-color: transparent;
-    border:1px solid white;
+    border: 1px solid white;
     outline: none;
     transition: 0.3s ease;
-    color:white;
+    color: white;
 }
 
-.demo:hover{
-    cursor:pointer;
+.demo:hover {
+    cursor: pointer;
     background-color: white;
-    color:black;
+    color: black;
 }
+
 
 /* Portfolio Reel */
 
-#portfolio{
+#portfolio {
     display: flex;
     flex-direction: column;
-    justify-content:left;
+    justify-content: left;
     align-items: left;
-    color:white;
+    color: white;
     background: rgb(62, 160, 114);
-    height:800px;
+    height: 800px;
 }
 
-#portfolio::before{
-    content:"";
+#portfolio::before {
+    content: "";
     position: absolute;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     width: 100%;
     z-index: -1;
 }
+
+
 /* external css: flickity.css */
 
-.portfolio h1{
-    font-size:60px;
+.portfolio h1 {
+    font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-.showreel{
-    background:rgb(17, 168, 105);
+.showreel {
+    background: rgb(17, 168, 105);
 }
-  
-  .slide {
+
+.showreel.is-fullscreen .slide {
+    top: 50%;
+}
+
+.slide {
     width: 1000px;
     height: 500px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: slide;
-    left:50%;
-    display:flex;
+    left: 50%;
+    display: flex;
     justify-content: center;
-  }
-  
-  /* cell number */
-  .slide:before {
+}
+
+
+/* cell number */
+
+.slide:before {
     display: block;
     text-align: center;
     line-height: 200px;
     font-size: 80px;
     color: white;
-  }
+}
 
-  /* no circle */
-  .flickity-button {
+
+/* no circle */
+
+.flickity-button {
     background: transparent;
-  }
-  /* big previous & next buttons */
-  .flickity-prev-next-button {
+}
+
+
+/* big previous & next buttons */
+
+.flickity-prev-next-button {
     width: 100px;
     height: 100px;
-  }
-  /* icon color */
-  .flickity-button-icon {
-    fill: white;
-  }
-
-  #project1{
-      background-color: aqua;
-      background-image: url("https://dummyimage.com/1000x500/a19ca1/fff.png&text=Project+1(1000x500)");
-  }
-
-  #project2{
-      background-color: coral;
-      background-image: url("https://dummyimage.com/1000x500/5ca9b5/fff.png&text=Project+2(1000x500)");
-  }
-
-  #project3{
-      background-color: cornsilk;
-      background-image: url("https://dummyimage.com/1000x500/b32b24/fff.png&text=Project+3(1000x500)");
-  }
-
-  #project4{
-      background-color: crimson;
-      background-image: url("https://dummyimage.com/1000x500/89ba4d/fff.png&text=Project+4(1000x500)");
-  }
-
-  .project{
-    padding-top:5%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    right:50%;
-  }
-
-  .project a{
-    padding: 10px 40px;
-    margin-top:10px;
-    background-color: transparent;
-    border:1px solid white;
-    outline: none;
-    transition: 0.3s ease;
-    color:white;
-  }
-
-
-  .project button:hover{
-    cursor:pointer;
-    background-color: white;
-    color:black;
 }
 
-/* About Section */
-#details{
+
+/* icon color */
+
+.flickity-button-icon {
+    fill: white;
+}
+
+#project1 {
+    background-color: aqua;
+    background-image: url("https://dummyimage.com/1000x500/a19ca1/fff.png&text=Project+1(1000x500)");
+}
+
+#project2 {
+    background-color: coral;
+    background-image: url("https://dummyimage.com/1000x500/5ca9b5/fff.png&text=Project+2(1000x500)");
+}
+
+#project3 {
+    background-color: cornsilk;
+    background-image: url("https://dummyimage.com/1000x500/b32b24/fff.png&text=Project+3(1000x500)");
+}
+
+#project4 {
+    background-color: crimson;
+    background-image: url("https://dummyimage.com/1000x500/89ba4d/fff.png&text=Project+4(1000x500)");
+}
+
+.project {
+    padding-top: 5%;
     display: flex;
     flex-direction: column;
-    justify-content:left;
-    align-items: left;
-    color:white;
-    background: rgb(209, 183, 69);
-    height:800px;
+    align-items: center;
+    right: 50%;
 }
 
-#details::before{
-    content:"";
+.project a {
+    padding: 10px 40px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.project button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+
+/* About Section */
+
+#details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    color: white;
+    background: rgb(209, 183, 69);
+    height: 800px;
+}
+
+#details::before {
+    content: "";
     position: absolute;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     width: 100%;
     z-index: -1;
 }
 
-.about{
-    display:flex;
+.about {
+    display: flex;
     padding: 50px;
 }
 
-.promoimage{
+.promoimage {
     width: 400px;
-    height:600px;
+    height: 600px;
     padding: 0px 200px;
-    margin-right:100px;
+    margin-right: 100px;
     background-image: url("https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)");
-    overflow:hidden;
-    display:block;
-    float:left;
+    overflow: hidden;
+    display: block;
+    float: left;
 }
 
-.intro{
-    display:block;
-    float:right;
+.intro {
+    display: block;
+    float: right;
     flex-direction: column;
-    text-align:right;
+    text-align: right;
     padding: 10px;
-    margin:5%;
+    margin: 5%;
     height: 100px;
     width: auto;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.about a{
+.about a {
     padding: 10px 40px;
-    margin-top:10px;
+    margin-top: 10px;
     background-color: transparent;
-    border:1px solid white;
+    border: 1px solid white;
     outline: none;
     transition: 0.3s ease;
-    color:white;
-  }
+    color: white;
+}
 
-  .about a:hover{
-    cursor:pointer;
+.about a:hover {
+    cursor: pointer;
     background-color: white;
-    color:black;
-  }
+    color: black;
+}
 
-.contact{
+.contact {
     padding: 20px 40px;
     margin-top: 100px;
     margin-bottom: 160px;
-    
     background-color: transparent;
     border: 1px solid white;
     outline: none;
     color: white;
-    bottom:60px;
+    bottom: 60px;
 }
 
-.contact li{
-    float:left;
-    margin-top:0px;
-    padding:10px;
-    display:block;
-    bottom:0px;
+.contact li {
+    float: left;
+    margin-top: 0px;
+    padding: 10px;
+    display: block;
+    bottom: 0px;
 }
 
 
 /* Skills Section */
 
-#skills{
+#skills {
     display: flex;
     flex-direction: column;
-    justify-content:left;
+    justify-content: left;
     align-items: left;
-    color:black;
+    color: black;
     background: white;
-    height:800px;
+    height: 800px;
 }
 
-#skills::before{
-    content:"";
+#skills::before {
+    content: "";
     position: absolute;
-    top:0;
-    right:0;
-    height:900px;
+    top: 0;
+    right: 0;
+    height: 50px;
     width: 100%;
     z-index: -1;
 }
 
-.tech{
-    display:flex;
-    justify-content:space-around;
+.tech {
+    display: flex;
+    justify-content: space-around;
     align-content: center;
     flex-wrap: wrap;
 }
 
-.cv{
-    display:flex;
+.cv {
+    display: flex;
     justify-content: space-around;
     display: flex;
 }
 
-.skill{
+.skill {
     display: flex;
     flex-direction: column;
-    width:400px;
-    height:450px;
-    border:1px solid black;
-    margin:10px;
+    width: 400px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
 }
 
-.techs{
+.techs {
     display: flex;
     flex-direction: column;
-    width:1280px;
-    height:450px;
-    border:1px solid black;
-    margin:10px;
+    width: 1280px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
 }
