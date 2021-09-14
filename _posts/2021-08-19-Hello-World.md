@@ -1,6 +1,7 @@
 ---
 Title: Hello World!
 Date: 2021-08-19
+layout: blog
 ---
 <h1>Hello World!</h1>
 Hey there! I'm Ewan, a wannabe programmer in the games industry!
