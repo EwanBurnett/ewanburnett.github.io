@@ -11,6 +11,7 @@ layout: home
         <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
         <link rel="stylesheet" href="/assets/flickity.css" media="screen">
     </head>
+    <script src="/assets/flickity.pkgd.min.js"></script>
     <body>
         <section id = 'home'>
             <div class="main">
@@ -83,7 +84,6 @@ layout: home
                </div>
             </div>
        </section>
-        <script src="/assets/flickity.pkgd.min.js"></script>
     </body>
 </html>
 
