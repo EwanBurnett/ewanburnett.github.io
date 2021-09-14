@@ -9,7 +9,7 @@ layout: home
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
         <title>Portfolio</title>
         <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
-        <link rel="stylesheet" href="flickity.css" media="screen">
+        <link rel="stylesheet" href="/assets/flickity.css" media="screen">
     </head>
     <body>
         <section id = 'home'>
@@ -83,7 +83,7 @@ layout: home
                </div>
             </div>
        </section>
-        <script src="flickity.pkgd.min.js"></script>
+        <script src="/assets/flickity.pkgd.min.js"></script>
     </body>
 </html>
 
