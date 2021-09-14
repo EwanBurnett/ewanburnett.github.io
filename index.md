@@ -9,9 +9,9 @@ layout: home
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
         <title>Portfolio</title>
         <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
-        <link rel="stylesheet" href="assets/flickity.css" media="screen">
+        <link rel="stylesheet" href="/assets/flickity.css" media="screen">
     </head>
-    <script src="assets/flickity.pkgd.min.js"></script>
+    <script src="/assets/flickity.pkgd.min.js"></script>
     <body>
         <section id = 'home'>
             <div class="main">
@@ -45,18 +45,18 @@ layout: home
                     <p>
                     Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
                     </p>
-                    <button href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</button>
+                    <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                     <div class="contact">
                         <h3>Email Me</h3>
-                        <button href = 'mailto:{{ site.author.email }}'>EwanBurnettSK@oulook.com</button>
+                        <a href = 'mailto:{{ site.author.email }}'>EwanBurnettSK@oulook.com</a>
                         <h3>Socials</h3>
                         <ul>
-                            <li><button href = 'https://github.com/{{ social.github | cgi_escape | escape }}'>Github</button>
+                            <li><a href = 'https://github.com/{{ social.github | cgi_escape | escape }}'>Github</a>
                             </li>
                             <li>
-                                <button href = 'https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}'>Linkedin</button>
+                                <a href = 'https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}'>Linkedin</a>
                             </li>
-                            <li><button href = 'https://twitter.com/{{ social.twitter | cgi_escape | escape }}'>Twitter</button></li>
+                            <li><a href = 'https://twitter.com/{{ social.twitter | cgi_escape | escape }}'>Twitter</a></li>
                         </ul>
                     </div>
                 </div>

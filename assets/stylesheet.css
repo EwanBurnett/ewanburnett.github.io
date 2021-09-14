@@ -168,7 +168,7 @@
     height:500px;
 }
 
-.about button{
+.about a{
     padding: 10px 40px;
     margin-top:10px;
     background-color: transparent;
@@ -178,7 +178,7 @@
     color:white;
   }
 
-  .about button:hover{
+  .about a:hover{
     cursor:pointer;
     background-color: white;
     color:black;
