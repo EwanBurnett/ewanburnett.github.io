@@ -55,6 +55,7 @@ layout: home
                             <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
                             <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
                         </ul>
+                        <br></br>
                     </div>
                 </div>
            </div>
