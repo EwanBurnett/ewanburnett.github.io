@@ -4,6 +4,17 @@
   {%- include head.html -%}
   <link rel='stylesheet' href='/assets/navbar.css'>
 
+  <style>
+      .blogpost{
+        display: block;
+        padding: 10px 40px;
+        margin-top:10px;
+        background-color: transparent;
+        border:1px solid black;
+        outline: none;
+      }
+  </style>
+
   <body>
 
     <nav class = 'navigation'>
@@ -37,7 +48,7 @@
     <ul class="post-list">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
-    <li>
+    <li class = 'blogpost'>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
