@@ -44,18 +44,18 @@ layout: home
                     <p>
                     Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
                     </p>
-                    <button href = 'Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</button>
+                    <button href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</button>
                     <div class="contact">
                         <h3>Email Me</h3>
-                        <button href = 'mailto: EwanBurnettSK@outlook.com'>EwanBurnettSK@oulook.com</button>
+                        <button href = 'mailto:{{ site.author.email }}'>EwanBurnettSK@oulook.com</button>
                         <h3>Socials</h3>
                         <ul>
-                            <li><button href = 'https://github.com/EwanBurnett'>Github</button>
+                            <li><button href = 'https://github.com/{{ social.github | cgi_escape | escape }}'>Github</button>
                             </li>
                             <li>
-                                <button href = 'https://linkedin.com/in/ewanburnettsk'>Linkedin</button>
+                                <button href = 'https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}'>Linkedin</button>
                             </li>
-                            <li><button href = 'https:// twitter.com/strikerdev_'>Twitter</button></li>
+                            <li><button href = 'https://twitter.com/{{ social.twitter | cgi_escape | escape }}'>Twitter</button></li>
                         </ul>
                     </div>
                 </div>
