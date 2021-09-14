@@ -37,7 +37,7 @@ layout: home
        <section id = "details">
         <h1>About Me</h1>
            <div class = 'about'>
-                <img class = 'promoimage' href = 'promo.png' alt = "">
+                <div class = 'promoimage'></div>
                 <div id = 'intro'>
                     <h2>Ewan Burnett</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis finibus luctus. Ut sodales scelerisque erat. Nunc metus eros, aliquam non tristique in, faucibus sit amet metus. Fusce pulvinar dui non semper euismod. Aliquam at consectetur ante, a aliquam justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis nulla semper, fermentum justo vel, laoreet libero. Proin semper sem ut eros sodales ultrices. Vestibulum tristique metus odio. Vestibulum mattis sapien leo, non consequat ligula lacinia volutpat. Phasellus ut neque et risus luctus vehicula. Quisque aliquam mattis iaculis. Suspendisse tincidunt mi sed ligula placerat blandit. In dolor eros, ornare ut augue quis, blandit finibus risus. In sit amet felis eu enim hendrerit congue vel vel diam. Curabitur vehicula est nec odio ultricies, sit amet accumsan orci pretium.
