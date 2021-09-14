@@ -75,6 +75,10 @@
     z-index: -1;
 }
 
+#portfolio::after {
+    height: 80px;
+}
+
 
 /* external css: flickity.css */
 
@@ -202,6 +206,11 @@
     z-index: -1;
 }
 
+#details::after {
+    position: absolute;
+    height: 80px;
+}
+
 .about {
     display: flex;
     padding: 50px;
@@ -286,6 +295,11 @@
     height: 50px;
     width: 100%;
     z-index: -1;
+}
+
+#skills::after {
+    position: absolute;
+    height: 200px;
 }
 
 .tech {
