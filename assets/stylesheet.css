@@ -86,11 +86,14 @@
 }
   
   .slide {
-    width: 100%;
+    width: 1000px;
     height: 500px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: slide;
+    left:50%;
+    display:flex;
+    justify-content: center;
   }
   
   /* cell number */
@@ -100,6 +103,24 @@
     line-height: 200px;
     font-size: 80px;
     color: white;
+  }
+
+  .showreel.is-fullscreen .slide{
+      height:100%;
+  } 
+
+  /* no circle */
+  .flickity-button {
+    background: transparent;
+  }
+  /* big previous & next buttons */
+  .flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill: white;
   }
 
   #project1{

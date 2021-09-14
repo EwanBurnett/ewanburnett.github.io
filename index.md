@@ -10,6 +10,7 @@ layout: home
         <title>Portfolio</title>
         <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
         <link rel="stylesheet" href="/assets/flickity.css" media="screen">
+        <link rel="stylesheet" href="/assets/fullscreen.css" media="screen">
     </head>
     <body>
         <section id = 'home'>
@@ -21,7 +22,7 @@ layout: home
         </section>
         <section id="portfolio">
             <h1>Portfolio</h1>
-            <div class="showreel js-flickity"  data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide"   }'>
+            <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
                 <div class="slide" id = 'project1'>proj1</div>
                 <div class="slide" id = 'project2'>proj2</div>
                 <div class="slide" id = 'project3'>proj3</div>
@@ -83,6 +84,7 @@ layout: home
             </div>
        </section>
        <script src="/assets/flickity.pkgd.min.js"></script>
+       <script src="/assets/fullscreen.js"></script>
     </body>
 </html>
 
