@@ -21,7 +21,7 @@ layout: home
         </section>
         <section id="portfolio">
             <h1>Portfolio</h1>
-            <div class="showreel js-flickity">
+            <div class="showreel js-flickity"  data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide"   }'>
                 <div class="slide" id = 'project1'>proj1</div>
                 <div class="slide" id = 'project2'>proj2</div>
                 <div class="slide" id = 'project3'>proj3</div>
@@ -51,8 +51,7 @@ layout: home
                         <h3>Socials</h3>
                         <ul>
                             <li><a href = 'https://github.com/ewanburnett'>Github</a>
-                            </li>
-                            <li>
+                            </li>  data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide",      }'
                                 <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
                             </li>
                             <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
