@@ -11,7 +11,6 @@ layout: home
         <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
         <link rel="stylesheet" href="/assets/flickity.css" media="screen">
     </head>
-    <script src="/assets/flickity.pkgd.min.js"></script>
     <body>
         <section id = 'home'>
             <div class="main">
@@ -23,10 +22,10 @@ layout: home
         <section id="portfolio">
             <h1>Portfolio</h1>
             <div class="showreel js-flickity">
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
+                <div class="slide" id = 'project1'>proj1</div>
+                <div class="slide" id = 'project2'>proj2</div>
+                <div class="slide" id = 'project3'>proj3</div>
+                <div class="slide" id = 'project4'>proj4</div>
               </div>
             <div class = 'project'>
                 <h2>Project</h2>
@@ -84,6 +83,7 @@ layout: home
                </div>
             </div>
        </section>
+       <script src="/assets/flickity.pkgd.min.js"></script>
     </body>
 </html>
 

@@ -70,7 +70,6 @@
     position: absolute;
     top:0;
     right:0;
-    height:900px;
     width: 100%;
     z-index: -1;
 }
@@ -101,6 +100,26 @@
     line-height: 200px;
     font-size: 80px;
     color: white;
+  }
+
+  #project1{
+      background-color: aqua;
+      background-image: none;
+  }
+
+  #project2{
+      background-color: coral;
+      background-image: none;
+  }
+
+  #project3{
+      background-color: cornsilk;
+      background-image: none;
+  }
+
+  #project4{
+      background-color: crimson;
+      background-image: none;
   }
 
   .project{
@@ -143,7 +162,6 @@
     position: absolute;
     top:0;
     right:0;
-    height:900px;
     width: 100%;
     z-index: -1;
 }
