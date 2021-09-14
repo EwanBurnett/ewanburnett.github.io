@@ -47,15 +47,15 @@ layout: home
                     <a   href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                     <div class="contact">
                         <h3>Email Me</h3>
-                        <a href = 'mailto:{{ site.author.email }}'>EwanBurnettSK@oulook.com</a>
+                        <a href = 'mailto:ewanburnettsk@oulook.com'>EwanBurnettSK@oulook.com</a>
                         <h3>Socials</h3>
                         <ul>
-                            <li><a href = 'https://github.com/{{ social.github | cgi_escape | escape }}'>Github</a>
+                            <li><a href = 'https://github.com/ewanburnett'>Github</a>
                             </li>
                             <li>
-                                <a href = 'https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}'>Linkedin</a>
+                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
                             </li>
-                            <li><a href = 'https://twitter.com/{{ social.twitter | cgi_escape | escape }}'>Twitter</a></li>
+                            <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
                         </ul>
                     </div>
                 </div>
