@@ -7,4 +7,5 @@ tags: UE4
 permalink: /Projects/:title/
 thumbnail: "/Resources/BoxDemoCap.png"
 ---
+<h1>GAMEJAM</h1>
 GAMEJAM DUMMY TEMPLATE
