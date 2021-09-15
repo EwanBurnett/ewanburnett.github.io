@@ -23,7 +23,7 @@
 
             <div>
                 <h2>Development Blogs</h2>
-                {% for post in site.category.blog %}
+                {% for post in site.categories.Blog %}
                 <li>
                     <h4>{{ post.date }}</h4>
                     <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}

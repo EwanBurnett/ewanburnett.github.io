@@ -9,7 +9,7 @@ UNDER CONSTRUCTION
 <div class = 'wrapper'>
     <div>
         <h2>Personal Projects</h2>
-        {% for post in site.category.Personal %}
+        {% for post in site.categories.Personal %}
         <li>
             <h4>{{ post.date }}</h4>
             <a href="{{ post.url }}">{{ post.title }}</a>
@@ -19,7 +19,7 @@ UNDER CONSTRUCTION
     </div>
     <div>
         <h2>GameJams</h2>
-        {% for post in site.category.GameJam %}
+        {% for post in site.categories.GameJam %}
         <li>
             <h4>{{ post.date }}</h4>
             <a href="{{ post.url }}">{{ post.title }}</a>
@@ -29,7 +29,7 @@ UNDER CONSTRUCTION
     </div>
     <div>
         <h2>University Coursework</h2>
-        {% for post in site.category.Coursework %}
+        {% for post in site.categories.Coursework %}
         <li>
             <h4>{{ post.date }}</h4>
             <a href="{{ post.url }}">{{ post.title }}</a>
