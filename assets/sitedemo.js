@@ -55,8 +55,7 @@ function main() {
     window.addEventListener('resize', ResizeCanvas, false);
 
     function ResizeCanvas(){
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        $(ctx.canvas).css("width: 100%");
 
         Draw(gl, programInfo, buffers);
     }
