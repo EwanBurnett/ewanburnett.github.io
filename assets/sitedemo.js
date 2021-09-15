@@ -51,8 +51,6 @@ function main() {
     const buffers = InitGeoBuffers(gl);
 
     //handle canvas resizing
-    const canvas = document.getElementById("sitedemo");
-    const context = canvas.getContext();
 
     window.addEventListener('resize', ResizeCanvas, false);
 
