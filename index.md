@@ -15,11 +15,15 @@ layout: home
     <body>
         <section id = 'home'>
             <div class="main">
-                <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
-                <button class = 'demo'>See what I can do</button>
-                <!--Embed WebGl mini-project here-->
-                <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
-                <script src="/assets/sitedemo.js"></script>
+                <div>
+                    <!--Embed WebGl mini-project here-->
+                    <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
+                    <script src="/assets/sitedemo.js"></script>
+                </div>
+                <div>
+                    <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
+                    <button class = 'demo'>See what I can do</button>
+                </div>
             </div>
         </section>
         <section id="portfolio">
