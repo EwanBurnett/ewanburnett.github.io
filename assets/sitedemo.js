@@ -199,12 +199,11 @@ function Draw(gl, programInfo, buffers) {
 
     const offset = 0;
     const vertCount = 24;
-    gl.drawArrays(gl.LINES, offset, vertCount);
+    gl.drawArrays(gl.LINE_LOOP, offset, vertCount);
 
 
 }
 
 function RunDemo() {
-    mat4.rotate(viewMatrix, viewMatrix, 5 / Math.PI * 180, [0, 1, 0]);
-    Draw(gl, programInfo, buffers);
+    console.log("Run Demo Button Clicked");
 }
