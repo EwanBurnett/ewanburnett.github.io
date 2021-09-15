@@ -2,6 +2,8 @@
 Title: Hello World!
 Date: 2021-08-18
 layout: blog
+categories: Blog
+permalink: /:categories/:title/
 ---
 <h1>Hello World!</h1>
 Hey there! I'm Ewan, a wannabe programmer in the games industry!
