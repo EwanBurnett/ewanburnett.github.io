@@ -13,51 +13,42 @@ body {
 }
 
 .pagewrapper{
-    height: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display:flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 1;
+    padding: 40px 0px;
 }
 
 /* home page */
 
 #home {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
     align-items: left;
     color: white;
     background-color: royalblue;
-    height: 800px;
+    height: auto;
 }
 
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 900px;
-    width: 100%;
-    z-index: -1;
-}
 
-.main {
-    display: flex;
+#home .pagewrapper{
     flex-direction: row;
-    align-items: normal;
-    position:inherit;
-    top: 10%;
-    right: 10%;
-    
 }
 
 .sitedemo {
-    flex: 1;
-    width: 1280px;
-    height: 720px;
+    flex: 0.6;
+    max-width: fit-content;
+    max-height: fit-content;
+    min-width: auto;
+    min-height: auto;
+    width: auto;
     margin: 5px;
 }
 
 .tagline {
+    position:relative;
     flex:0.4;
     width: 400px;
     height: 150px;
@@ -85,13 +76,13 @@ body {
 /* Portfolio Reel */
 
 #portfolio {
-    display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     color: white;
     background: rgb(62, 160, 114);
-    height: 900px;
+    height: auto;
 }
 
 #portfolio::before {
@@ -103,9 +94,7 @@ body {
     z-index: -1;
 }
 
-#portfolio::after {
-    height: 80px;
-}
+
 
 
 /* external css: flickity.css */
@@ -125,8 +114,8 @@ body {
 }
 
 .slide {
-    width: 1000px;
-    height: 500px;
+    min-width: 1000px;
+    min-height: 500px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: slide;
@@ -222,7 +211,7 @@ body {
     align-items: left;
     color: white;
     background: rgb(209, 183, 69);
-    height: 800px;
+    height: auto;
 }
 
 #details::before {
@@ -234,22 +223,18 @@ body {
     z-index: -1;
 }
 
-#details::after {
-    position: absolute;
-    height: 80px;
-}
-
 .about {
     flex:1;
     display: flex;
     padding: 50px;
+    height: auto;
 }
 
 .promoimage {
     flex:1;
     width: 400px;
     height: 600px;
-    padding: 0px 200px;
+    padding: 200px 200px;
     margin-right: 100px;
     background-image: url("https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)");
     overflow: hidden;
@@ -263,7 +248,7 @@ body {
     text-align: right;
     padding: 10px;
     margin: 5%;
-    height: 100px;
+    height: auto;
     width: auto;
     overflow: hidden;
 }
@@ -293,7 +278,7 @@ body {
     flex: 0.3;
     padding: 20px 40px;
     margin-top: 100px;
-    margin-bottom: 160px;
+    margin-bottom: 0px;
     background-color: transparent;
     border: 1px solid white;
     outline: none;
@@ -322,7 +307,7 @@ body {
     align-items: left;
     color: black;
     background: rgb(103, 235, 224);
-    height: 800px;
+    height: auto;
 }
 
 #skills::before {
@@ -335,11 +320,7 @@ body {
     z-index: -1;
 }
 
-#skills::after {
-    content: "";
-    height: 200px;
-    width: 100%;
-}
+
 
 .tech {
     display: flex;
@@ -362,16 +343,19 @@ body {
     height: 450px;
     border: 1px solid black;
     margin:10px;
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 20px;
 }
 
 .timeline {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex: 1;
+    width: 92.5%;
     height: auto;
     border: 1px solid black;
     margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
+    align-content: center;
 }

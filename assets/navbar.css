@@ -6,6 +6,7 @@
     background-color: rgba(1, 1, 1, 1);
     position: sticky;
     top: 0;
+    max-width: 100%;
     z-index: 1;
 }
 
@@ -19,7 +20,7 @@
 
 .navigation h1 {
     justify-self: left;
-    float: left;
+    flex: 1;
     color: white;
 }
 
@@ -29,7 +30,7 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 10px;
     text-decoration: none;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -62,7 +63,7 @@ footer {
     position: relative;
     height: 120px;
     margin-top: auto;
-    bottom: -80px;
+    bottom: 0px;
     width: 100%;
     background-color: white;
     z-index: 1;

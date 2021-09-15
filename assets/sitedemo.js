@@ -50,6 +50,19 @@ function main() {
     //Initialize Scene Objects
     const buffers = InitGeoBuffers(gl);
 
+    //handle canvas resizing
+    const canvas = document.getElementById("sitedemo");
+    const context = canvas.getContext();
+
+    window.addEventListener('resize', ResizeCanvas, false);
+
+    function ResizeCanvas(){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        Draw(gl, programInfo, buffers);
+    }
+    ResizeCanvas();
     //Draw the scene
     Draw(gl, programInfo, buffers);
 
@@ -187,4 +200,7 @@ function Draw(gl, programInfo, buffers) {
 
 }
 
+(function(){
+    
+})();
 window.onload = main;
