@@ -1,3 +1,5 @@
+const mat4 = glMatrix.mat4
+
 function main() {
     const canvas = document.querySelector("#demoCanvas");
 

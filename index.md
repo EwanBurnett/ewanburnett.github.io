@@ -46,24 +46,24 @@ layout: home
            <div class = 'about'>
                 <div class = 'promoimage'></div>
                 <div id = 'intro'>
-                    <h2>Ewan Burnett</h2>
-                    <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
-                    <p>
-                    Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
-                    </p>
-                    <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                    <div id = 'summary'>
+                        <h2>Ewan Burnett</h2>
+                        <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
+                        <p>
+                        Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
+                        </p>
+                        <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                    </div>
                     <div class="contact">
                         <div id = 'email'>
                             <h3>Email Me</h3>
                             <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
                         </div>
                         <div id = 'social'>
-                            <h3>Social Media</h3>
-                            <ul>
-                                <li><a href = 'https://github.com/ewanburnett'>Github</a></li>
-                                <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
-                                <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
-                            </ul>
+                            <h3>Social Media</h3>                            
+                                <a href = 'https://github.com/ewanburnett'>Github</a>
+                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,9 @@ layout: home
                         <li>GameJams</li>
                     </ul>
                 </div>
-               <div class = 'timeline'>
+            </div>
+            <div class = 'timeline'>
+            <h2>Where I've been</h2>
                     <div>
                         <h3>Confetti Institute of Creative Technologies (2018 - 2020) | Distinction</h3>
                         <p>Student of Games Technology - covering gameplay programming, teamwork, 3d modelling, industry skills and leadership.</p>
@@ -121,7 +123,6 @@ layout: home
                         <p>Master's Student in Computer Science for Games.</p>
                     </div>
                </div>
-            </div>
        </section>
        <script src="/assets/flickity.pkgd.min.js"></script>
        <script src="/assets/fullscreen.js"></script>

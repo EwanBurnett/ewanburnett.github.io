@@ -254,7 +254,6 @@ body {
 
 .intro {
     flex:1;
-    display: block;
     flex-direction: column;
     text-align: right;
     padding: 10px;
@@ -280,8 +279,13 @@ body {
     color: black;
 }
 
+#summary{
+    flex: 0.7;
+    height: 285px;
+}
+
 .contact {
-    flex: 1;
+    flex: 0.3;
     padding: 20px 40px;
     margin-top: 100px;
     margin-bottom: 160px;
@@ -294,17 +298,15 @@ body {
 
 #email{
     flex: 1;
+    margin-top: 10px;
+    
+}
+#social{
+    flex: 1;
+    flex-direction: row;
+    margin-top: 30px;
 }
 
-#social li{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    margin-top: 10px;
-    padding: 10px;
-    display: block;
-    bottom: 0px;
-}
 
 /* Skills Section */
 
@@ -336,10 +338,10 @@ body {
 
 .tech {
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
 }
 
 .cv {
@@ -349,18 +351,20 @@ body {
 }
 
 .skill {
-    display: flex;
+    flex: 0.25;
     flex-direction: column;
-    width: 400px;
+    width: 300px;
     height: 450px;
     border: 1px solid black;
-    margin: 10px;
+    margin:10px;
+    margin-right: 20px;
+    padding: 20px;
 }
 
 .timeline {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     height: auto;
     border: 1px solid black;
     margin: 10px;
