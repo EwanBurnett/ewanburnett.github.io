@@ -2,8 +2,12 @@
 Title: DirectX 11 First Triangle
 Date: 2021-08-19
 layout: blog
+categories: Blog
+tags: DX11
+permalink: /:categories/:title/
 ---
 <h1>First Triangle using DirectX 11</h1>
+<h6>{{ tag_name }}</h6>
 Yesterday, I made my first triangle in DX11! 
 
 Here's a video of the Demo
