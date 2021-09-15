@@ -2,7 +2,6 @@ const mat4 = glMatrix.mat4
 
 function main() {
     const canvas = document.querySelector("#demoCanvas");
-    const ctx = canvas.getContext('2d');
 
     //init WebGL context
     const gl = canvas.getContext("webgl");
