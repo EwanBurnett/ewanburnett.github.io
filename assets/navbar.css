@@ -60,10 +60,10 @@
 footer {
     clear: both;
     position: relative;
-    height: 200px;
-    margin-top: -200px;
+    height: 120px;
+    margin-top: auto;
+    bottom: -80px;
     width: 100%;
     background-color: white;
-    text-align: center;
     z-index: 1;
 }

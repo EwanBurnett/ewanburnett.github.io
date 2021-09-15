@@ -44,6 +44,20 @@ body {
     right: 15%;
 }
 
+.sitedemo {
+    float: left;
+    width: 1280px;
+    height: 720px;
+    margin: 5px;
+}
+
+.tagline {
+    float: right;
+    width: 400px;
+    height: 150px;
+    margin: 10px;
+}
+
 .demo {
     padding: 10px 40px;
     margin-top: 10px;
@@ -290,7 +304,7 @@ body {
     justify-content: left;
     align-items: left;
     color: black;
-    background: white;
+    background: rgb(103, 235, 224);
     height: 800px;
 }
 
@@ -340,4 +354,5 @@ body {
     height: auto;
     border: 1px solid black;
     margin: 10px;
+    justify-content: center;
 }
