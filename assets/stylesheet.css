@@ -224,7 +224,7 @@ body {
 
 .works {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .works div {

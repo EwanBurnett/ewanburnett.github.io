@@ -23,13 +23,13 @@ layout: home
                 </div>
                 <div class = 'tagline'>
                     <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
-                    <button class = 'demo'>See what I can do</button>
+                    <button class = 'demo' onclick = 'RunDemo()'>See what I can do</button>
                 </div>
             </div>
         </section>
         <section id="portfolio">
             <div class = 'pagewrapper'> 
-                <h1>Portfolio</h1>
+                <h1 class = 'title'>Portfolio</h1>
                 <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
                     <div class="slide" id = 'project1'><a href = '#'>Project 1</a></div>
                     <div class="slide" id = 'project2'><a href = '#'>Project 2</a></div>
@@ -56,7 +56,7 @@ layout: home
         </section>
        <section id = "details">
        <div class = 'pagewrapper'>
-            <h1>About Me</h1>
+            <h1 class = 'title'>About Me</h1>
             <div class = 'about'>
                     <div class = 'promoimage'></div>
                     <div id = 'intro'>
@@ -89,7 +89,7 @@ layout: home
        </section>
        <section id="skills">
        <div class = 'pagewrapper'>
-            <h1>Skills</h1>
+            <h1 class = 'title'>Skills</h1>
             <div class = 'tech'>
                 <div class = 'skill'>
                     <h2>Programming</h2>

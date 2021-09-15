@@ -1,4 +1,5 @@
 const mat4 = glMatrix.mat4
+window.onload = main;
 
 function main() {
     const canvas = document.querySelector("#demoCanvas");
@@ -198,12 +199,12 @@ function Draw(gl, programInfo, buffers) {
 
     const offset = 0;
     const vertCount = 24;
-    gl.drawArrays(gl.LINE_STRIP, offset, vertCount);
+    gl.drawArrays(gl.LINE_LIST, offset, vertCount);
 
 
 }
 
-(function() {
-
-})();
-window.onload = main;
+function RunDemo() {
+    mat4.rotate(viewMatrix, viewMatrix, 5 / Math.PI * 180, [0, 1, 0]);
+    Draw(gl, programInfo, buffers);
+}
