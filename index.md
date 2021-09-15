@@ -18,6 +18,7 @@ layout: home
                 <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
                 <button class = 'demo'>See what I can do</button>
                 <!--Embed WebGl mini-project here-->
+                <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
             </div>
         </section>
         <section id="portfolio">
@@ -117,6 +118,7 @@ layout: home
        </section>
        <script src="/assets/flickity.pkgd.min.js"></script>
        <script src="/assets/fullscreen.js"></script>
+       <script src="/assets/sitedemo.js"></script>
     </body>
 </html>
 
