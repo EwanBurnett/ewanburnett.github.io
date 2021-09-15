@@ -138,7 +138,7 @@ function InitGeoBuffers(gl) {
 
 function Draw(gl, programInfo, buffers) {
     //Clear
-    gl.clearColor(1.0, 0.0, 0.0, 1.0);
+    gl.clearColor(100, 0.0, 0.0, 0.0);
     gl.clearDepth(1.0);
     gl.enable(gl.DEPTH_TEST);
     gl.depthFunc(gl.LEQUAL);
@@ -158,7 +158,7 @@ function Draw(gl, programInfo, buffers) {
     //TODO: World Matrix implementation
     //Draw to scene 0, translate back so the whole model is in view
     const viewMatrix = mat4.create();
-    mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -5.0]);
+    mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -2.5]);
 
     { //Scope this
         //WebGL struct packing
