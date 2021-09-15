@@ -42,21 +42,21 @@ layout: home
                     <div class = 'works'>
                         <div>
                             <h2>GameJams</h2>
-                            <ul>GameJam 1</ul>
-                            <ul>GameJam 2</ul>
-                            <ul>GameJam 3</ul>
+                            <a href = '#'><ul>GameJam 1</ul></a>
+                            <a href = '#'><ul>GameJam 2</ul></a>
+                            <a href = '#'><ul>GameJam 3</ul></a>
                         </div>
                         <div>
                             <h2>Personal</h2>
-                            <ul>Personal 1</ul>
-                            <ul>Personal 2</ul>
-                            <ul>Personal 3</ul>
+                            <a href = '#'><ul>Personal 1</ul></a>
+                            <a href = '#'><ul>Personal 2</ul></a>
+                            <a href = '#'><ul>Personal 3</ul></a>
                         </div>
                         <div>
                             <h2>Coursework</h2>
-                            <ul>Coursework 1</ul>
-                            <ul>Coursework 2</ul>
-                            <ul>Coursework 3</ul>
+                            <a href = '#'><ul>Coursework 1</ul></a>
+                            <a href = '#'><ul>Coursework 2</ul></a>
+                            <a href = '#'><ul>Coursework 3</ul></a>
                         </div>
                     </div>
                     <a href = '/projects/'>Take a look at my other works</a>
