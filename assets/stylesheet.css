@@ -130,7 +130,10 @@ body {
     outline: none;
     transition: 0.3s ease;
     color: white;
-    bottom: 0px;
+    height: 40px;
+    width: 80%;
+    top: auto;
+    text-align: center;
 }
 
 .slide a:hover {
@@ -214,6 +217,23 @@ body {
     cursor: pointer;
     background-color: white;
     color: black;
+}
+
+
+/* works */
+
+.works {
+    display: flex;
+    flex-direction: column;
+}
+
+.works div {
+    flex: 1;
+    text-align: center;
+    border: white;
+    padding: 10px 40px;
+    width: 300px;
+    height: 100%;
 }
 
 

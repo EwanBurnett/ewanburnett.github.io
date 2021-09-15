@@ -37,9 +37,20 @@ layout: home
                     <div class="slide" id = 'project4'><a href = '#'>Project 4</a></div>
                 </div>    
                 <div class = 'project'>
-                    <h2>Project</h2>
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat suscipit sagittis. Nunc quis consequat tortor. Donec nec tortor ut odio pretium eleifend eu facilisis erat.</h3>
-                    <a href = '/projects/'>Take a look at my work</a>
+                    <h2>Projects</h2>
+                    <h3 style = 'text-align: center;'>Between Gamejams, University Coursework and Personal Projects, I have plenty of work to show off </h3>
+                    <div class = 'works'>
+                        <div>
+                            <h2>GameJams</h2>
+                        </div>
+                        <div>
+                            <h2>Personal</h2>
+                        </div>
+                        <div>
+                            <h2>Coursework</h2>
+                        </div>
+                    </div>
+                    <a href = '/projects/'>Take a look at my other works</a>
                 </div>            
             </div>
         </section>
