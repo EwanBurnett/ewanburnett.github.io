@@ -7,7 +7,4 @@ tags: Unity
 permalink: /Projects/:title/
 thumbnail: "/Resources/BoxDemoCap.png"
 ---
-
-<h4>{% tag_name %}</h4>
-
 COURSEWORK DUMMY TEMPLATE

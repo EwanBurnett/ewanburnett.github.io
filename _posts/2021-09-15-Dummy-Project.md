@@ -7,6 +7,4 @@ tags: DX11
 permalink: /Projects/:title/
 thumbnail: "/Resources/BoxDemoCap.png"
 ---
-<h4>{% tag_name %}</h4>
-
 PROJECT DUMMY TEMPLATE

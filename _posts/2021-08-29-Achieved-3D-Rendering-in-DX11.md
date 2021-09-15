@@ -8,7 +8,6 @@ permalink: /:categories/:title/
 ---
 
 <h1>3D Rendering in DirectX 11 </h1>
-<h6>{{ tag_name }}</h6>
 After hours of study, and even more hours of debbugging, I have a 3D rendered cube!
 
 This demo has a comparatively huge featureset compared to last week's [Triangle Demo](https://ewanburnett.github.io/2021/08/19/DX11-First-Triangle.html), featuring:
