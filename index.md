@@ -31,10 +31,10 @@ layout: home
             <div class = 'pagewrapper'> 
                 <h1>Portfolio</h1>
                 <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
-                    <div class="slide" id = 'project1'>proj1</div>
-                    <div class="slide" id = 'project2'>proj2</div>
-                    <div class="slide" id = 'project3'>proj3</div>
-                    <div class="slide" id = 'project4'>proj4</div>
+                    <div class="slide" id = 'project1'><a href = '#'>Project 1</a></div>
+                    <div class="slide" id = 'project2'><a href = '#'>Project 2</a></div>
+                    <div class="slide" id = 'project3'><a href = '#'>Project 3</a></div>
+                    <div class="slide" id = 'project4'><a href = '#'>Project 4</a></div>
                 </div>    
                 <div class = 'project'>
                     <h2>Project</h2>

@@ -172,6 +172,8 @@ function Draw(gl, programInfo, buffers) {
     //Draw to scene 0, translate back so the whole model is in view
     const viewMatrix = mat4.create();
     mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -2.5]);
+
+    //Rotation - W = TRS 
     mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 1, 0]);
 
     { //Scope this

@@ -12,14 +12,15 @@ body {
     width: 100%;
 }
 
-.pagewrapper{
-    display:flex;
+.pagewrapper {
+    display: flex;
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;
     flex: 1;
     padding: 40px 0px;
 }
+
 
 /* home page */
 
@@ -32,8 +33,7 @@ body {
     height: auto;
 }
 
-
-#home .pagewrapper{
+#home .pagewrapper {
     flex-direction: row;
 }
 
@@ -48,8 +48,8 @@ body {
 }
 
 .tagline {
-    position:relative;
-    flex:0.4;
+    position: relative;
+    flex: 0.4;
     width: 400px;
     height: 150px;
     margin: 10px;
@@ -95,8 +95,6 @@ body {
 }
 
 
-
-
 /* external css: flickity.css */
 
 .portfolio h1 {
@@ -122,6 +120,23 @@ body {
     left: 50%;
     display: flex;
     justify-content: center;
+}
+
+.slide a {
+    padding: 10px 40px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.3s ease;
+    color: white;
+    bottom: 0px;
+}
+
+.slide a:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
 
 
@@ -224,14 +239,14 @@ body {
 }
 
 .about {
-    flex:1;
+    flex: 1;
     display: flex;
     padding: 50px;
     height: auto;
 }
 
 .promoimage {
-    flex:1;
+    flex: 1;
     width: 400px;
     height: 600px;
     padding: 200px 200px;
@@ -243,7 +258,7 @@ body {
 }
 
 .intro {
-    flex:1;
+    flex: 1;
     flex-direction: column;
     text-align: right;
     padding: 10px;
@@ -269,7 +284,7 @@ body {
     color: black;
 }
 
-#summary{
+#summary {
     flex: 0.7;
     height: 285px;
 }
@@ -286,12 +301,12 @@ body {
     bottom: 60px;
 }
 
-#email{
+#email {
     flex: 1;
     margin-top: 10px;
-    
 }
-#social{
+
+#social {
     flex: 1;
     flex-direction: row;
     margin-top: 30px;
@@ -320,11 +335,9 @@ body {
     z-index: -1;
 }
 
-
-
 .tech {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     width: 100%;
@@ -342,7 +355,7 @@ body {
     width: 300px;
     height: 450px;
     border: 1px solid black;
-    margin:10px;
+    margin: 10px;
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
