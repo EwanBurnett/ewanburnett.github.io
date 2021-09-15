@@ -199,7 +199,7 @@ function Draw(gl, programInfo, buffers) {
 
     const offset = 0;
     const vertCount = 24;
-    gl.drawArrays(gl.LINE_LIST, offset, vertCount);
+    gl.drawArrays(gl.LINES, offset, vertCount);
 
 
 }
