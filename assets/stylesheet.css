@@ -21,6 +21,10 @@ body {
     padding: 40px 0px;
 }
 
+.title {
+    margin-left: 50px;
+}
+
 
 /* home page */
 
@@ -234,6 +238,13 @@ body {
     padding: 10px 40px;
     width: 300px;
     height: 100%;
+}
+
+.works ul {
+    padding: 5px;
+    width: 300px;
+    height: 225px;
+    background-image: url("https://dummyimage.com/1000x500/a19ca1/fff.png&text=Thumbnail(300x225)");
 }
 
 
