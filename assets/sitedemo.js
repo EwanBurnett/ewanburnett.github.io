@@ -27,7 +27,7 @@ function main() {
     //OpenGL refers to this as a fragment shader
     const ps = `
         void main(){
-            gl_FragColor = vec4(1.0, 1.0, 1 .0, 1.0);
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
         }
 
     `
