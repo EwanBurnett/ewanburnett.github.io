@@ -1,6 +1,6 @@
 ---
 title: "Ewan Burnett"
-layout: home
+layout: default
 ---
 
 <html>
@@ -8,9 +8,9 @@ layout: home
         <meta charset="UTF-8">
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
         <title>Portfolio</title>
-        <link rel = 'stylesheet' href = 'assets/stylesheet.css'>
-        <link rel="stylesheet" href="/assets/flickity.css" media="screen">
-        <link rel="stylesheet" href="/assets/fullscreen.css" media="screen">
+        <link rel = 'stylesheet' href = '/assets/css/stylesheet.css'>
+        <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
+        <link rel="stylesheet" href="/assets/css/fullscreen.css" media="screen">
     </head>
     <body>
         <section id = 'home'>
@@ -18,8 +18,8 @@ layout: home
                 <div class = 'sitedemo'>
                     <!--Embed WebGl mini-project here-->
                     <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
-                    <script src="/assets/gl-matrix.js"></script>
-                    <script src="/assets/sitedemo.js"></script>
+                    <script src="/assets/script/gl-matrix.js"></script>
+                    <script src="/assets/script/sitedemo.js"></script>
                 </div>
                 <div class = 'tagline'>
                     <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
@@ -78,7 +78,7 @@ layout: home
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
-                            <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                            <a href = '/resources/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                         </div>
                         <div class="contact">
                             <div id = 'email'>
@@ -112,7 +112,6 @@ layout: home
                         <li>DirectX 12</li>
                         <li>Vulkan</li>
                         <li>OpenGL</li>
-                        <li>LUA</li>
                     </ul>
                 </div>
                 <div class = 'skill'>
@@ -157,8 +156,8 @@ layout: home
             </div>
         </div>
        </section>
-       <script src="/assets/flickity.pkgd.min.js"></script>
-       <script src="/assets/fullscreen.js"></script>
+       <script src="/assets/script/flickity.pkgd.min.js"></script>
+       <script src="/assets/script/fullscreen.js"></script>
     </body>
 </html>
 

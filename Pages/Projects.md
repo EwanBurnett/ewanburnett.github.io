@@ -6,21 +6,36 @@ layout: default
 
 UNDER CONSTRUCTION
 
-<div>
-    {% for category in site.categories %}
-        {% unless category == "Blog" %}
-            <div class="project-collection">
-                {% capture category_name %}{{ category | first }}{% endcapture %}
-                <div id="#{{ category_name | slugize }}"></div>
-                <p></p>
-                <h3 class="category-head">{{ category_name }}</h3>
-                <a name="{{ category_name | slugize }}"></a>
-                {% for post in site.categories[category_name] %}
-                    <article class="project"><a href="{{ post.url }}" ><img src="{{ post.thumbnail }}" />
-                       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-                    </article>
-                {% endfor %}
-            </div>
-        {% endunless %}
-    {% endfor %}
+<div class = 'wrapper'>
+    <div>
+        <h2>Personal Projects</h2>
+        {% for post in site.category.personal %}
+        <li>
+            <h4>{{ post.date }}</h4>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}"><img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></a>
+        </li>
+        {% endfor %}
+    </div>
+    <div>
+        <h2>GameJams</h2>
+        {% for post in site.category.gamejam %}
+        <li>
+            <h4>{{ post.date }}</h4>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}"><img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></a>
+        </li>
+        {% endfor %}
+    </div>
+    <div>
+        <h2>University Coursework</h2>
+        {% for post in site.category.coursework %}
+        <li>
+            <h4>{{ post.date }}</h4>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}"><img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></a>
+        </li>
+        {% endfor %}
+    </div>
 </div>
+

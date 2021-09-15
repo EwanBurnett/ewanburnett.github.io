@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-  {%- include head.html -%}
-  <link rel='stylesheet' href='/assets/navbar.css'>
+{%- include head.html -%}
+<link rel='stylesheet' href='/assets/css/navbar.css'>
 
-  <body>
+<body>
 
-    <nav class = 'navigation'>
-      <h1>Ewan Burnett</h1>
-      <ul>                
-          <li><a href = '/'>Home</a></li>
-          <li><a href = '/projects/'>Projects</a></li>
-          <li><a href = '/blog/'>Blog</a></li>
-      </ul>
+    <nav class='navigation'>
+        <h1>Ewan Burnett</h1>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/projects/'>Projects</a></li>
+            <li><a href='/blog/'>Blog</a></li>
+        </ul>
     </nav>
 
-    {{ content }}
+    {{ content }} {%- include footer.html -%}
 
-
-    {%- include footer.html -%}
-
-  </body>
+</body>
 
 </html>
