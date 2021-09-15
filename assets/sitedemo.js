@@ -62,7 +62,8 @@ function InitShaderProgram(gl, vsSource, psSource) {
     const shaderProgram = gl.createProgram();
     gl.attachShader(shaderProgram, vertexShader);
     gl.attachShader(shaderProgram, pixelShader);
-    gl.linkProgam(shaderProgram);
+    gl.linkProgram(shaderProgram);
+
 
     //throw an alert if shader program creation failed
     if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
