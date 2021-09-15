@@ -51,9 +51,12 @@ layout: home
                     <div id = 'intro'>
                         <div id = 'summary'>
                             <h2>Ewan Burnett</h2>
-                            <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
+                            <p>I've been studying Game Development for 4 years now - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
                             <p>
-                            Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
+                            I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn frameworks like DirectX 11 - which enable me to engineer efficient graphical applications. Though I'm rooted in Game Development, my skills are applicable across the board.
+                            </p>
+                            <p>
+                            Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
                             <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                         </div>
@@ -100,7 +103,7 @@ layout: home
                         <li>Git</li>
                         <li>Unreal Engine 4</li>
                         <li>Unity Engine</li>
-                        <li>Photoshop</li>
+                        <li>Adobe Photoshop</li>
                         <li>Trello</li>
                         <li>Autodesk Maya</li>
                         <li>Autodesk 3DS Max</li>
@@ -113,7 +116,11 @@ layout: home
                         <li>Project Management</li>
                         <li>Game Artificial Intelligence</li>
                         <li>Software Engineering</li>
-                        <li>GameJams</li>
+                        <li>Game Framework Development</li>
+                        <li>Augmented Reality Applications</li>
+                        <li>Web Development</li>
+                        <li>Working with Compute Shaders</li>
+                        <li>Low-level Software Optimization</li>
                     </ul>
                 </div>
             </div>

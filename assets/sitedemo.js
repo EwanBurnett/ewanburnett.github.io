@@ -62,7 +62,7 @@ function main() {
 
         Draw(gl, programInfo, buffers);
     }
-    ResizeCanvas();
+    
     //Draw the scene
     Draw(gl, programInfo, buffers);
 
