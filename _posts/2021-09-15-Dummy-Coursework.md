@@ -1,12 +1,13 @@
 ---
-Title: Dummy Project 
+Title: Dummy Coursework 
 Date: 2021-09-15
 layout: blog
-categories: Personal
-tags: DX11
+categories: Coursework
+tags: Unity
 permalink: /Projects/:title/
 thumbnail: "/Resources/BoxDemoCap.png"
 ---
+
 <h4>{% tag_name %}</h4>
 
-PROJECT DUMMY TEMPLATE
+COURSEWORK DUMMY TEMPLATE
