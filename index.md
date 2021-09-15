@@ -67,7 +67,7 @@ layout: home
                     <h2>Programming</h2>
                     <p>Adept at programming in various languages and technologies:</p>
                     <ul>
-                        <li>C++</li>
+                        <li>C/C++</li>
                         <li>C#</li>
                         <li>HLSL</li>
                         <li>x86 ASM</li>
@@ -75,7 +75,7 @@ layout: home
                         <li>DirectX 12</li>
                         <li>Vulkan</li>
                         <li>OpenGL</li>
-                        <li>Artificial Intelligence for Games</li>
+                        <li>LUA</li>
                         <li></li>
                     </ul>
                 </div>
@@ -83,10 +83,11 @@ layout: home
                     <h2>Tools</h2>
                     <p>Knowledgable in industry-standard tools and software</p>
                     <ul>
-                        <li>Visual Studio 2019</li>
+                        <li>Visual Studio</li>
                         <li>Git</li>
                         <li>Unreal Engine 4</li>
                         <li>Unity Engine</li>
+                        <li>Photoshop</li>
                         <li>Trello</li>
                         <li>Autodesk Maya</li>
                         <li>Autodesk 3DS Max</li>
@@ -102,9 +103,9 @@ layout: home
                         <li>GameJams</li>
                     </ul>
                 </div>
-               <div class = techs>
+               <div class = 'timeline'>
                     <div>
-                        <h3>Confetti Institute of Creative Technologies (2018 - 2020)</h3>
+                        <h3>Confetti Institute of Creative Technologies (2018 - 2020) | Distinction</h3>
                         <p>Student of Games Technology - covering gameplay programming, teamwork, 3d modelling, industry skills and leadership.</p>
                     </div>
                     <div>
