@@ -3,10 +3,11 @@ author: Ewan Burnett
 email: EwanBurnettSK@Outlook.com
 theme: minima
 description: > 
-  A Blog page, where I talk about my projects and what I get up to!
+  Portfolio Page
 
 # social links
 twitter_username: StrikerDEV_ # DO NOT include the @ character, or else the build will fail!
 github_username:  EwanBurnett # DO NOT include the @ character, or else the build will fail!
+linkedin_username: EwanBurnettSK
 
 show_excerpts: true # set to false to remove excerpts on the homepage

@@ -40,8 +40,7 @@ layout: home
                 <div class = 'promoimage'></div>
                 <div id = 'intro'>
                     <h2>Ewan Burnett</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis finibus luctus. Ut sodales scelerisque erat. Nunc metus eros, aliquam non tristique in, faucibus sit amet metus. Fusce pulvinar dui non semper euismod. Aliquam at consectetur ante, a aliquam justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis nulla semper, fermentum justo vel, laoreet libero. Proin semper sem ut eros sodales ultrices. Vestibulum tristique metus odio. Vestibulum mattis sapien leo, non consequat ligula lacinia volutpat. Phasellus ut neque et risus luctus vehicula. Quisque aliquam mattis iaculis. Suspendisse tincidunt mi sed ligula placerat blandit. In dolor eros, ornare ut augue quis, blandit finibus risus. In sit amet felis eu enim hendrerit congue vel vel diam. Curabitur vehicula est nec odio ultricies, sit amet accumsan orci pretium.
-                    </p>
+                    <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
                     <p>
                     Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
                     </p>
@@ -65,21 +64,53 @@ layout: home
             <h1>Skills</h1>
             <div class = 'tech'>
                 <div class = 'skill'>
-                    <h2>I'm adept at Programming, and love learning new tech</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis finibus luctus. Ut sodales scelerisque erat. Nunc metus eros, aliquam non tristique in, faucibus sit amet metus. Fusce pulvinar dui non semper euismod. Aliquam at consectetur ante, a aliquam justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis nulla semper, fermentum justo vel, laoreet libero. Proin semper sem ut eros sodales ultrices. Vestibulum tristique metus odio. Vestibulum mattis sapien leo, non consequat ligula lacinia volutpat. Phasellus ut neque et risus luctus vehicula. Quisque aliquam mattis iaculis. Suspendisse tincidunt mi sed ligula placerat blandit. In dolor eros, ornare ut augue quis, blandit finibus risus. In sit amet felis eu enim hendrerit congue vel vel diam. Curabitur vehicula est nec odio ultricies, sit amet accumsan orci pretium.</p>
-                </div>
-                <div class = 'skill'>
-                    <h2>I'm used to industry standard tools</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis finibus luctus. Ut sodales scelerisque erat. Nunc metus eros, aliquam non tristique in, faucibus sit amet metus. Fusce pulvinar dui non semper euismod. Aliquam at consectetur ante, a aliquam justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis nulla semper, fermentum justo vel, laoreet libero. Proin semper sem ut eros sodales ultrices. Vestibulum tristique metus odio. Vestibulum mattis sapien leo, non consequat ligula lacinia volutpat. Phasellus ut neque et risus luctus vehicula. Quisque aliquam mattis iaculis. Suspendisse tincidunt mi sed ligula placerat blandit. In dolor eros, ornare ut augue quis, blandit finibus risus. In sit amet felis eu enim hendrerit congue vel vel diam. Curabitur vehicula est nec odio ultricies, sit amet accumsan orci pretium.</p>
-                </div>
-                <div class = 'skill'>
-                    <h2>I've had experience within the whole dev pipeline</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis finibus luctus. Ut sodales scelerisque erat. Nunc metus eros, aliquam non tristique in, faucibus sit amet metus. Fusce pulvinar dui non semper euismod. Aliquam at consectetur ante, a aliquam justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lobortis nulla semper, fermentum justo vel, laoreet libero. Proin semper sem ut eros sodales ultrices. Vestibulum tristique metus odio. Vestibulum mattis sapien leo, non consequat ligula lacinia volutpat. Phasellus ut neque et risus luctus vehicula. Quisque aliquam mattis iaculis. Suspendisse tincidunt mi sed ligula placerat blandit. In dolor eros, ornare ut augue quis, blandit finibus risus. In sit amet felis eu enim hendrerit congue vel vel diam. Curabitur vehicula est nec odio ultricies, sit amet accumsan orci pretium.</p>
-                </div>
-               <div class = techs>
+                    <h2>Programming</h2>
+                    <p>Adept at programming in various languages and technologies:</p>
                     <ul>
                         <li>C++</li>
+                        <li>C#</li>
+                        <li>HLSL</li>
+                        <li>x86 ASM</li>
+                        <li>DirectX 11</li>
+                        <li>DirectX 12</li>
+                        <li>Vulkan</li>
+                        <li>OpenGL</li>
+                        <li>Artificial Intelligence for Games</li>
+                        <li></li>
                     </ul>
+                </div>
+                <div class = 'skill'>
+                    <h2>Tools</h2>
+                    <p>Knowledgable in industry-standard tools and software</p>
+                    <ul>
+                        <li>Visual Studio 2019</li>
+                        <li>Git</li>
+                        <li>Unreal Engine 4</li>
+                        <li>Unity Engine</li>
+                        <li>Trello</li>
+                        <li>Autodesk Maya</li>
+                        <li>Autodesk 3DS Max</li>
+                    </ul>
+                </div>
+                <div class = 'skill'>
+                    <h2>Application</h2>
+                    <p>Practiced applying my skills in various contexts</p>
+                    <ul>
+                        <li>Project Management</li>
+                        <li>Game Artificial Intelligence</li>
+                        <li>Software Engineering</li>
+                        <li>GameJams</li>
+                    </ul>
+                </div>
+               <div class = techs>
+                    <div>
+                        <h3>Confetti Institute of Creative Technologies (2018 - 2020)</h3>
+                        <p>Student of Games Technology - covering gameplay programming, teamwork, 3d modelling, industry skills and leadership.</p>
+                    </div>
+                    <div>
+                        <h3>Sheffield Hallam University (2020 - 2025)</h3>
+                        <p>Master's Student in Computer Science for Games.</p>
+                    </div>
                </div>
             </div>
        </section>
