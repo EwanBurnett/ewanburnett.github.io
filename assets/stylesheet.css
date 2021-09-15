@@ -37,25 +37,27 @@ body {
 
 .main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 25%;
-    right: 15%;
+    flex-direction: row;
+    align-items: normal;
+    position:inherit;
+    top: 10%;
+    right: 10%;
+    
 }
 
 .sitedemo {
-    float: left;
+    flex: 1;
     width: 1280px;
     height: 720px;
     margin: 5px;
 }
 
 .tagline {
-    float: right;
+    flex:0.4;
     width: 400px;
     height: 150px;
     margin: 10px;
+    margin-top: 10%;
 }
 
 .demo {
@@ -84,7 +86,7 @@ body {
     align-items: left;
     color: white;
     background: rgb(62, 160, 114);
-    height: 800px;
+    height: 900px;
 }
 
 #portfolio::before {
@@ -199,7 +201,7 @@ body {
     color: white;
 }
 
-.project button:hover {
+.project a:hover {
     cursor: pointer;
     background-color: white;
     color: black;
@@ -210,7 +212,7 @@ body {
 
 #details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
     align-items: left;
     color: white;
@@ -233,11 +235,13 @@ body {
 }
 
 .about {
+    flex:1;
     display: flex;
     padding: 50px;
 }
 
 .promoimage {
+    flex:1;
     width: 400px;
     height: 600px;
     padding: 0px 200px;
@@ -249,8 +253,8 @@ body {
 }
 
 .intro {
+    flex:1;
     display: block;
-    float: right;
     flex-direction: column;
     text-align: right;
     padding: 10px;
@@ -277,6 +281,7 @@ body {
 }
 
 .contact {
+    flex: 1;
     padding: 20px 40px;
     margin-top: 100px;
     margin-bottom: 160px;
@@ -287,14 +292,19 @@ body {
     bottom: 60px;
 }
 
-.contact li {
-    float: left;
-    margin-top: 0px;
+#email{
+    flex: 1;
+}
+
+#social li{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-top: 10px;
     padding: 10px;
     display: block;
     bottom: 0px;
 }
-
 
 /* Skills Section */
 

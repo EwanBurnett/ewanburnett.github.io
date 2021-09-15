@@ -51,18 +51,20 @@ layout: home
                     <p>
                     Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
                     </p>
-                    <a   href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                    <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                     <div class="contact">
-                        <h3>Email Me</h3>
-                        <a href = 'mailto:ewanburnettsk@oulook.com'>EwanBurnettSK@oulook.com</a>
-                        <br>
-                        <h3>Socials</h3>
-                        <ul>
-                            <li><a href = 'https://github.com/ewanburnett'>Github</a></li>
-                            <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
-                            <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
-                        </ul>
-                        <br>
+                        <div id = 'email'>
+                            <h3>Email Me</h3>
+                            <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
+                        </div>
+                        <div id = 'social'>
+                            <h3>Social Media</h3>
+                            <ul>
+                                <li><a href = 'https://github.com/ewanburnett'>Github</a></li>
+                                <li><a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a></li>
+                                <li><a href = 'https://twitter.com/strikerdev_'>Twitter</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
            </div>
@@ -83,7 +85,6 @@ layout: home
                         <li>Vulkan</li>
                         <li>OpenGL</li>
                         <li>LUA</li>
-                        <li></li>
                     </ul>
                 </div>
                 <div class = 'skill'>
