@@ -18,6 +18,7 @@ layout: home
                 <div class = 'sitedemo'>
                     <!--Embed WebGl mini-project here-->
                     <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
+                    <script src="/assets/gl-matrix.js"></script>
                     <script src="/assets/sitedemo.js"></script>
                 </div>
                 <div class = 'tagline'>
