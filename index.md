@@ -14,7 +14,7 @@ layout: home
     </head>
     <body>
         <section id = 'home'>
-            <div class="main">
+            <div class="pagewrapper">    <!--class = 'main'-->
                 <div class = 'sitedemo'>
                     <!--Embed WebGl mini-project here-->
                     <canvas id = 'demoCanvas' width = '1280' height = '720'></canvas>
@@ -28,48 +28,53 @@ layout: home
             </div>
         </section>
         <section id="portfolio">
-            <h1>Portfolio</h1>
-            <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
-                <div class="slide" id = 'project1'>proj1</div>
-                <div class="slide" id = 'project2'>proj2</div>
-                <div class="slide" id = 'project3'>proj3</div>
-                <div class="slide" id = 'project4'>proj4</div>
-              </div>
-            <div class = 'project'>
-                <h2>Project</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat suscipit sagittis. Nunc quis consequat tortor. Donec nec tortor ut odio pretium eleifend eu facilisis erat.</h3>
-                <a href = '/projects/'>Take a look at my work</a>
+            <div class = 'pagewrapper'> 
+                <h1>Portfolio</h1>
+                <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
+                    <div class="slide" id = 'project1'>proj1</div>
+                    <div class="slide" id = 'project2'>proj2</div>
+                    <div class="slide" id = 'project3'>proj3</div>
+                    <div class="slide" id = 'project4'>proj4</div>
+                </div>    
+                <div class = 'project'>
+                    <h2>Project</h2>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat suscipit sagittis. Nunc quis consequat tortor. Donec nec tortor ut odio pretium eleifend eu facilisis erat.</h3>
+                    <a href = '/projects/'>Take a look at my work</a>
+                </div>            
             </div>
         </section>
        <section id = "details">
-        <h1>About Me</h1>
-           <div class = 'about'>
-                <div class = 'promoimage'></div>
-                <div id = 'intro'>
-                    <div id = 'summary'>
-                        <h2>Ewan Burnett</h2>
-                        <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
-                        <p>
-                        Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
-                        </p>
-                        <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
-                    </div>
-                    <div class="contact">
-                        <div id = 'email'>
-                            <h3>Email Me</h3>
-                            <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
+       <div class = 'pagewrapper'>
+            <h1>About Me</h1>
+            <div class = 'about'>
+                    <div class = 'promoimage'></div>
+                    <div id = 'intro'>
+                        <div id = 'summary'>
+                            <h2>Ewan Burnett</h2>
+                            <p>From a young age, I've been fascinated by games. I spent my teens captivated by these virtual worlds, which led to me deciding to pursue games as a career. </p>
+                            <p>
+                            Nunc urna tortor, convallis quis molestie vitae, iaculis non neque. In hac habitasse platea dictumst. Vestibulum malesuada sed quam in iaculis. Aliquam commodo pretium tincidunt. Nunc dolor arcu, aliquam sed accumsan a, egestas vel diam. Morbi finibus vulputate vestibulum. Nulla scelerisque magna augue, vel euismod felis sagittis vitae. Aliquam placerat pharetra sapien eget facilisis. Etiam eu odio tellus. Fusce in massa tincidunt, blandit dolor eu, feugiat urna. Praesent scelerisque ante accumsan velit tristique sagittis nec at nibh. Curabitur quis elementum sem, in bibendum felis. Aliquam semper, magna eget sagittis ornare, velit elit tincidunt tortor, et lacinia neque ex sed erat. Donec fringilla ultrices sapien at varius.
+                            </p>
+                            <a href = '/assets/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
                         </div>
-                        <div id = 'social'>
-                            <h3>Social Media</h3>                            
-                                <a href = 'https://github.com/ewanburnett'>Github</a>
-                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
-                                <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
+                        <div class="contact">
+                            <div id = 'email'>
+                                <h3>Email Me</h3>
+                                <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
+                            </div>
+                            <div id = 'social'>
+                                <h3>Social Media</h3>                            
+                                    <a href = 'https://github.com/ewanburnett'>Github</a>
+                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
+                            </div>
                         </div>
                     </div>
-                </div>
+            </div>
            </div>
        </section>
        <section id="skills">
+       <div class = 'pagewrapper'>
             <h1>Skills</h1>
             <div class = 'tech'>
                 <div class = 'skill'>
@@ -122,7 +127,8 @@ layout: home
                         <h3>Sheffield Hallam University (2020 - 2025)</h3>
                         <p>Master's Student in Computer Science for Games.</p>
                     </div>
-               </div>
+            </div>
+        </div>
        </section>
        <script src="/assets/flickity.pkgd.min.js"></script>
        <script src="/assets/fullscreen.js"></script>
