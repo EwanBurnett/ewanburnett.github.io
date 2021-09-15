@@ -2,7 +2,7 @@ const mat4 = glMatrix.mat4
 
 function main() {
     const canvas = document.querySelector("#demoCanvas");
-    ctx = $("#demoCanvas")[0].getContext('2d');
+    const ctx = canvas.getContext('2d');
 
     //init WebGL context
     const gl = canvas.getContext("webgl");
@@ -56,7 +56,10 @@ function main() {
     window.addEventListener('resize', ResizeCanvas, false);
 
     function ResizeCanvas(){
-        $(ctx.canvas).css("width: 100%");
+        canvas.style.width='100%';
+        canvas.style.height='100%';
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
 
         Draw(gl, programInfo, buffers);
     }
