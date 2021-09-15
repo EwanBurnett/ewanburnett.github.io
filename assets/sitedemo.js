@@ -49,7 +49,7 @@ function main() {
     const buffers = InitGeoBuffers(gl);
 
     //Draw the scene
-    Draw();
+    Draw(gl, programInfo, buffers);
 
 }
 
