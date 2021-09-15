@@ -27,7 +27,7 @@ function main() {
     //OpenGL refers to this as a fragment shader
     const ps = `
         void main(){
-            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+            gl_FragColor = vec4(1.0, 1.0, 1 .0, 1.0);
         }
 
     `
@@ -54,15 +54,15 @@ function main() {
 
     window.addEventListener('resize', ResizeCanvas, false);
 
-    function ResizeCanvas(){
-        canvas.style.width='100%';
-        canvas.style.height='100%';
-        canvas.width  = canvas.offsetWidth;
+    function ResizeCanvas() {
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
 
         Draw(gl, programInfo, buffers);
     }
-    
+
     //Draw the scene
     Draw(gl, programInfo, buffers);
 
@@ -172,6 +172,7 @@ function Draw(gl, programInfo, buffers) {
     //Draw to scene 0, translate back so the whole model is in view
     const viewMatrix = mat4.create();
     mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -2.5]);
+    mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 1, 0]);
 
     { //Scope this
         //WebGL struct packing
@@ -195,12 +196,12 @@ function Draw(gl, programInfo, buffers) {
 
     const offset = 0;
     const vertCount = 24;
-    gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertCount);
+    gl.drawArrays(gl.LINE_STRIP, offset, vertCount);
 
 
 }
 
-(function(){
-    
+(function() {
+
 })();
 window.onload = main;
