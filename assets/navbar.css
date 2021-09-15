@@ -1,56 +1,64 @@
 /* Navigation Bar */
-.navigation{
+
+.navigation {
     display: flex;
     align-items: center;
-    
     background-color: rgba(1, 1, 1, 1);
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-.navigation ul{
-    float:right;
+.navigation ul {
+    float: right;
     justify-content: right;
     display: flex;
     list-style: none;
     margin: 20px, 0px;
 }
 
-.navigation h1{
+.navigation h1 {
     justify-self: left;
-    float:left;
+    float: left;
     color: white;
 }
-.navigation li{
+
+.navigation li {
     justify-content: right;
     background-color: black;
-    display:block;
-    color:white;
-    text-align:center;
-    padding:14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-.navigation li:hover{
+.navigation li:hover {
     background-color: azure;
-    color:black;
+    color: black;
 }
 
-.navigation li a{
+.navigation li a {
     text-decoration: none;
     color: white;
     transition: all 0.5s ease;
 }
 
-.navigation li:hover a{
+.navigation li:hover a {
     text-decoration: none;
     color: black;
 }
-.navigation li:hover a:hover{
+
+.navigation li:hover a:hover {
     text-decoration: none;
     color: purple;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }

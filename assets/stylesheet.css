@@ -93,7 +93,7 @@
 }
 
 .showreel.is-fullscreen .slide {
-    top: 50%;
+    top: 25%;
 }
 
 .slide {
@@ -308,6 +308,7 @@
     justify-content: space-around;
     align-content: center;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .cv {
