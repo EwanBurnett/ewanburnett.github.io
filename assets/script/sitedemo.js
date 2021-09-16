@@ -1,4 +1,7 @@
 const mat4 = glMatrix.mat4
+var boxRotation = 0.0;
+var isDemoRunning = false;
+
 window.onload = main;
 
 function main() {
@@ -57,11 +60,24 @@ function main() {
 
     function ResizeCanvas() {
         //Redraw on canvas resize
-        Draw(gl, programInfo, buffers);
+        Draw(gl, programInfo, buffers, 0);
     }
 
     //Draw the scene
-    Draw(gl, programInfo, buffers);
+    Draw(gl, programInfo, buffers, 0);
+
+    var then = 0;
+
+    function render(now) {
+        now *= 0.001;
+        const deltaTime = now - then;
+        then = now;
+
+        Draw(gl, programInfo, buffers, deltaTime);
+        requestAnimationFrame(render);
+    }
+
+    requestAnimationFrame(render);
 
 }
 
@@ -146,7 +162,7 @@ function InitGeoBuffers(gl) {
     };
 }
 
-function Draw(gl, programInfo, buffers) {
+function Draw(gl, programInfo, buffers, deltaTime) {
     //Clear
     gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clearDepth(1.0);
@@ -163,6 +179,8 @@ function Draw(gl, programInfo, buffers) {
     const farPlane = 100.0;
     const mProjMatrix = mat4.create();
 
+    boxRotation += deltaTime;
+
     mat4.perspective(mProjMatrix, FoV, aspectRatio, nearPlane, farPlane);
 
     //TODO: World Matrix implementation
@@ -171,7 +189,11 @@ function Draw(gl, programInfo, buffers) {
     mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -2.5]);
 
     //Rotation - W = TRS 
-    mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 1, 0]);
+    mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 0, 1]);
+
+    if (RunDemo()) {
+        mat4.rotate(viewMatrix, viewMatrix, boxRotation / Math.PI * 1, [0, 1, 0]);
+    }
 
     { //Scope this
         //WebGL struct packing
@@ -202,4 +224,5 @@ function Draw(gl, programInfo, buffers) {
 
 function RunDemo() {
     console.log("Run Demo Button Clicked");
+    isDemoRunning = true;
 }
