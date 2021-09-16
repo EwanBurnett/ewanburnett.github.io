@@ -42,21 +42,21 @@ layout: default
                     <div class = 'works'>
                         <div>
                             <h2>GameJams</h2>
-                            <ul><a href = '#'><h4>GameJam 1</h4></a></ul>
-                            <ul><a href = '#'><h4>GameJam 2</h2></a></ul>
-                            <ul><a href = '#'><h4>GameJam 3</h2></a></ul>
+                            <ul><a href = '#'><h3>GameJam 1</h3></a></ul>
+                            <ul><a href = '#'><h3>GameJam 2</h3></a></ul>
+                            <ul><a href = '#'><h3>GameJam 3</h3></a></ul>
                         </div>
                         <div>
                             <h2>Personal</h2>
-                            <ul><a href = '#'><h4>Personal 1</h4></a></ul>
-                            <ul><a href = '#'><h4>Personal 2</h4></a></ul>
-                            <ul><a href = '#'><h4>Personal 3</h4></a></ul>
+                            <ul><a href = '#'><h3>Personal 1</h3></a></ul>
+                            <ul><a href = '#'><h3>Personal 2</h3></a></ul>
+                            <ul><a href = '#'><h3>Personal 3</h3></a></ul>
                         </div>
                         <div>
                             <h2>Coursework</h2>
-                            <ul><a href = '#'><h4>Coursework 1</h4></a></ul>
-                            <ul><a href = '#'><h4>Coursework 2</h4></a></ul>
-                            <ul><a href = '#'><h4>Coursework 3</h4></a></ul>
+                            <ul><a href = '#'><h3>Coursework 1</h3></a></ul>
+                            <ul><a href = '#'><h3>Coursework 2</h3></a></ul>
+                            <ul><a href = '#'><h3>Coursework 3</h3></a></ul>
                         </div>
                     </div>
                     <a href = '/projects/'>Take a look at my other works</a>
