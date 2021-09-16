@@ -191,7 +191,7 @@ function Draw(gl, programInfo, buffers, deltaTime) {
     //Rotation - W = TRS 
     mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 0, 1]);
 
-    if (RunDemo()) {
+    if (isDemoRunning) {
         mat4.rotate(viewMatrix, viewMatrix, boxRotation / Math.PI * 180, [0, 1, 0]);
     }
 
