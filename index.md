@@ -42,21 +42,21 @@ layout: default
                     <div class = 'works'>
                         <div>
                             <h2>GameJams</h2>
-                            <ul><a href = '#'>GameJam 1</a></ul>
-                            <ul><a href = '#'>GameJam 2</a></ul>
-                            <ul><a href = '#'>GameJam 3</a></ul>
+                            <ul><a href = '#'><h4>GameJam 1</h4></a></ul>
+                            <ul><a href = '#'><h4>GameJam 2</h2></a></ul>
+                            <ul><a href = '#'><h4>GameJam 3</h2></a></ul>
                         </div>
                         <div>
                             <h2>Personal</h2>
-                            <ul><a href = '#'>Personal 1</a></ul>
-                            <ul><a href = '#'>Personal 2</a></ul>
-                            <ul><a href = '#'>Personal 3</a></ul>
+                            <ul><a href = '#'><h4>Personal 1</h4></a></ul>
+                            <ul><a href = '#'><h4>Personal 2</h4></a></ul>
+                            <ul><a href = '#'><h4>Personal 3</h4></a></ul>
                         </div>
                         <div>
                             <h2>Coursework</h2>
-                            <ul><a href = '#'>Coursework 1</a></ul>
-                            <ul><a href = '#'>Coursework 2</a></ul>
-                            <ul><a href = '#'>Coursework 3</a></ul>
+                            <ul><a href = '#'><h4>Coursework 1</h4></a></ul>
+                            <ul><a href = '#'><h4>Coursework 2</h4></a></ul>
+                            <ul><a href = '#'><h4>Coursework 3</h4></a></ul>
                         </div>
                     </div>
                     <a href = '/projects/'>Take a look at my other works</a>
@@ -111,7 +111,7 @@ layout: default
                 </div>
             </div>
             <div class = 'timeline'>
-            <h2>Where I've been</h2>
+            <h2>Timeline</h2>
                     <div>
                         <h3>Confetti Institute of Creative Technologies (2018 - 2020) | Distinction</h3>
                         <p>Student of Games Technology - covering gameplay programming, teamwork, 3d modelling, industry skills and leadership.</p>
@@ -138,7 +138,7 @@ layout: default
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
-                            <a href = '/resources/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                            <a href = '/resources/Ewan Burnett CV 2021-2022.pdf'>CV / Resumé</a>
                         </div>
                         <div class="contact">
                             <div id = 'email'>
