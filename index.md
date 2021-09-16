@@ -63,40 +63,7 @@ layout: default
                 </div>            
             </div>
         </section>
-       <section id = "details">
-       <div class = 'pagewrapper'>
-            <h1 class = 'title'>About Me</h1>
-            <div class = 'about'>
-                    <div class = 'promoimage'></div>
-                    <div id = 'intro'>
-                        <div id = 'summary'>
-                            <h2>Ewan Burnett</h2>
-                            <p>I've been studying Game Development for 4 years now - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
-                            <p>
-                            I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn frameworks like DirectX 11 - which enable me to engineer efficient graphical applications. Though I'm rooted in Game Development, my skills are applicable across the board.
-                            </p>
-                            <p>
-                            Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
-                            </p>
-                            <a href = '/resources/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
-                        </div>
-                        <div class="contact">
-                            <div id = 'email'>
-                                <h3>Email Me</h3>
-                                <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
-                            </div>
-                            <div id = 'social'>
-                                <h3>Social Media</h3>                            
-                                    <a href = 'https://github.com/ewanburnett'>Github</a>
-                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
-                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
-                            </div>
-                        </div>
-                    </div>
-            </div>
-           </div>
-       </section>
-       <section id="skills">
+        <section id="skills">
        <div class = 'pagewrapper'>
             <h1 class = 'title'>Skills</h1>
             <div class = 'tech'>
@@ -155,6 +122,39 @@ layout: default
                     </div>
             </div>
         </div>
+       </section>
+       <section id = "details">
+       <div class = 'pagewrapper'>
+            <h1 class = 'title'>About Me</h1>
+            <div class = 'about'>
+                    <div class = 'promoimage'></div>
+                    <div id = 'intro'>
+                        <div id = 'summary'>
+                            <h2>Ewan Burnett</h2>
+                            <p>I've been studying Game Development for 4 years now - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
+                            <p>
+                            I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn frameworks like DirectX 11 - which enable me to engineer efficient graphical applications. Though I'm rooted in Game Development, my skills are applicable across the board.
+                            </p>
+                            <p>
+                            Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
+                            </p>
+                            <a href = '/resources/Ewan Burnett CV 2021 _ 2022.pdf'>CV / Resumé</a>
+                        </div>
+                        <div class="contact">
+                            <div id = 'email'>
+                                <h3>Email Me</h3>
+                                <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
+                            </div>
+                            <div id = 'social'>
+                                <h3>Social Media</h3>                            
+                                    <a href = 'https://github.com/ewanburnett'>Github</a>
+                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
+                            </div>
+                        </div>
+                    </div>
+            </div>
+           </div>
        </section>
        <script src="/assets/script/flickity.pkgd.min.js"></script>
        <script src="/assets/script/fullscreen.js"></script>

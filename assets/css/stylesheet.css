@@ -85,7 +85,7 @@ body {
     justify-content: left;
     align-items: left;
     color: white;
-    background: rgb(62, 160, 114);
+    background: rgb(48 49 48);
     height: auto;
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .showreel {
-    background: rgb(17, 168, 105);
+    background: rgb(48 49 48);
 }
 
 .showreel.is-fullscreen .slide {
@@ -119,7 +119,7 @@ body {
     min-width: 1000px;
     min-height: 500px;
     margin-right: 10px;
-    background: #8C8;
+    background: gainsboro;
     counter-increment: slide;
     left: 50%;
     display: flex;
@@ -267,7 +267,7 @@ body {
     justify-content: left;
     align-items: left;
     color: white;
-    background: rgb(209, 183, 69);
+    background: rgb(48 49 48);
     height: auto;
 }
 
@@ -362,8 +362,8 @@ body {
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    color: black;
-    background: rgb(103, 235, 224);
+    color: white;
+    background: rgb(48 49 48);
     height: auto;
 }
 
@@ -396,7 +396,7 @@ body {
     flex-direction: column;
     width: 300px;
     height: 450px;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 10px;
     margin-right: auto;
     margin-left: auto;
@@ -407,7 +407,7 @@ body {
     flex: 1;
     width: 92.5%;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 5px;
     margin: 10px;
     margin-left: auto;
