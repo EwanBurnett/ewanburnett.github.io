@@ -138,7 +138,7 @@ layout: default
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
-                            <a href = '/resources/Ewan Burnett CV 2021-2022.pdf'>CV / Resumé</a>
+                            <a href = '/Resources/Ewan Burnett CV 2021-2022.pdf'>CV / Resumé</a>
                         </div>
                         <div class="contact">
                             <div id = 'email'>
