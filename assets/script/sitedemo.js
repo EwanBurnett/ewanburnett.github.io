@@ -56,11 +56,7 @@ function main() {
     window.addEventListener('resize', ResizeCanvas, false);
 
     function ResizeCanvas() {
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-
+        //Redraw on canvas resize
         Draw(gl, programInfo, buffers);
     }
 

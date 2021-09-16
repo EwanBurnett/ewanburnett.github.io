@@ -51,6 +51,11 @@ body {
     margin: 5px;
 }
 
+.sitedemo canvas{
+    width:100%;
+    height:100%;
+}
+
 .tagline {
     position: relative;
     flex: 0.4;
