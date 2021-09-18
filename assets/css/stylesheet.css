@@ -232,8 +232,9 @@ body {
 /* works */
 
 .works {
-    display: flex;
+    display: none;
     flex-direction: row;
+    width: 100%;
 }
 
 .works a {
@@ -289,7 +290,7 @@ body {
 .about {
     flex: 1;
     display: flex;
-    padding: 50px;
+    padding: 5px;
     height: auto;
 }
 
@@ -301,7 +302,7 @@ body {
     margin-right: 100px;
     background-image: url("https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)");
     overflow: hidden;
-    display: block;
+    display: none;
     float: left;
 }
 
@@ -385,6 +386,7 @@ body {
 
 .tech {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -400,7 +402,8 @@ body {
 .skill {
     flex: 0.25;
     flex-direction: column;
-    width: 300px;
+    width: 70%;
+    
     height: 450px;
     border: 1px solid white;
     margin: 10px;
@@ -411,7 +414,7 @@ body {
 
 .timeline {
     flex: 1;
-    width: 92.5%;
+    width: 80%;
     height: auto;
     border: 1px solid white;
     padding: 5px;
@@ -420,4 +423,26 @@ body {
     margin-right: auto;
     justify-content: center;
     align-content: center;
+}
+
+@media only screen and (min-width: 1210px){
+    .about{
+        padding: 50px;
+    }
+    .tech{
+        flex-direction: row;
+    }
+    .skill{
+        width: 300px;
+    }
+    .timeline{
+        width: 92.5%;
+    }
+
+    .promoimage{
+        display:flex;
+    }
+    .works{
+        width: auto;
+    }
 }

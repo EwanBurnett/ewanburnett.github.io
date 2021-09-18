@@ -40,20 +40,20 @@ layout: default
                     <h2>Projects</h2>
                     <h3 style = 'text-align: center;'>Between Gamejams, University Coursework and Personal Projects, I have plenty of work to show off </h3>
                     <div class = 'works'>
+                    <h2>GameJams</h2>
                         <div>
-                            <h2>GameJams</h2>
                             <ul><a href = '#'><h3>GameJam 1</h3></a></ul>
                             <ul><a href = '#'><h3>GameJam 2</h3></a></ul>
                             <ul><a href = '#'><h3>GameJam 3</h3></a></ul>
                         </div>
+                        <h2>Personal</h2>
                         <div>
-                            <h2>Personal</h2>
                             <ul><a href = '#'><h3>Personal 1</h3></a></ul>
                             <ul><a href = '#'><h3>Personal 2</h3></a></ul>
                             <ul><a href = '#'><h3>Personal 3</h3></a></ul>
                         </div>
+                        <h2>Coursework</h2>
                         <div>
-                            <h2>Coursework</h2>
                             <ul><a href = '#'><h3>Coursework 1</h3></a></ul>
                             <ul><a href = '#'><h3>Coursework 2</h3></a></ul>
                             <ul><a href = '#'><h3>Coursework 3</h3></a></ul>
@@ -138,7 +138,7 @@ layout: default
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
-                            <a href = '/Resources/Ewan Burnett CV 2021-2022.pdf'>CV / Resumé</a>
+                            <a class = 'resumebutton' href = '/Resources/Ewan Burnett CV 2021-2022.pdf'>CV / Resumé</a>
                         </div>
                         <div class="contact">
                             <div id = 'email'>
