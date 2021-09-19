@@ -445,6 +445,7 @@ body {
     .works{
         width: auto;
         display: flex;
+        flex-direction: column;
 
     }
     .works h2{
