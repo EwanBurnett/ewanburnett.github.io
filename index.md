@@ -38,7 +38,7 @@ layout: default
                 </div>    
                 <div class = 'project'>
                     <h2>Projects</h2>
-                    <h3 style = 'text-align: center;'>Between Gamejams, University Coursework and Personal Projects, I have plenty of work to show off </h3>
+                    <h3 style = 'text-align: center;'>Between Gamejams, University Coursework and Personal Projects, I have plenty of work ready to show </h3>
                     <div class = 'works'>
                     <h2>GameJams</h2>
                         <div>
@@ -131,10 +131,10 @@ layout: default
                     <div id = 'intro'>
                         <div id = 'summary'>
                             <h2>Ewan Burnett</h2>
-                            <p>I've been studying Game Development for 4 years now - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
                             <p>
                             I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn frameworks like DirectX 11 - which enable me to engineer efficient graphical applications. Though I'm rooted in Game Development, my skills are applicable across the board.
                             </p>
+                            <p>I've been studying Game Development since 2018 - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>

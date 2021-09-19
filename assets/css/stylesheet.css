@@ -444,5 +444,17 @@ body {
     }
     .works{
         width: auto;
+        display: flex;
+
+    }
+    .works h2{
+        text-align:left;
+        padding: 5px;
+        
+    }
+    .works div{
+        display: flex;
+        width: 100%;
+        flex-direction:row;
     }
 }
