@@ -12,27 +12,29 @@ layout: default
             <div>
                 <h2>Personal Projects</h2>
                 {% for post in site.categories.Personal %}
-                <li href="{{ post.url }}">
-                <div>
-                    <h4>{{ post.date }}</h4>
-                    <h3>{{ post.title }}</h3>
-                </div>
-                <div>
-                    <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></img>
-                </div>
+                <li>
+                <a href="{{ post.url }}">
+                    <div>
+                        <h4>{{ post.date }}</h4>
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div>
+                        <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;">
+                    </div>
                 </li>
                 {% endfor %}
             </div>
             <div>
                 <h2>GameJams</h2>
                 {% for post in site.categories.GameJam %}
-                <li href="{{ post.url }}">
+                <li>
+                <a href="{{ post.url }}">
                     <div>
                         <h4>{{ post.date }}</h4>
                         <h3>{{ post.title }}</h3>
                     </div>
                     <div>
-                        <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></img>
+                        <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;">
                     </div>
                 </li>
                 {% endfor %}
@@ -40,13 +42,14 @@ layout: default
             <div>
                 <h2>University Coursework</h2>
                 {% for post in site.categories.Coursework %}
-                <li href="{{ post.url }}">
+                <li>
+                <a href="{{ post.url }}">
                     <div>
                         <h4>{{ post.date }}</h4>
                         <h3>{{ post.title }}</h3>
                     </div>
                     <div>
-                        <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;"></img>
+                        <img src = "{{ post.thumbnail }}" style = "width:300px; height:155px;">
                     </div>
                 </li>
                 {% endfor %}
