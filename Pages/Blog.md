@@ -5,5 +5,8 @@ paginate_path: "/blog/"
 show_excerpts: true
 layout: bloghome
 ---
-<h1>Development Blogs</h1>
-Here are short Blogs detailing my various projects! 
+<body>
+    <link rel = 'stylesheet' href = '/assets/css/pagestyle.css'>
+    <h1>Development Blogs</h1>
+    Read about my projects here 
+</body>

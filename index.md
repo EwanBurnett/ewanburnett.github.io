@@ -107,6 +107,7 @@ layout: default
                         <li>Web Development</li>
                         <li>Working with Compute Shaders</li>
                         <li>Low-level Software Optimization</li>
+                        <li>Japanese Language</li>
                     </ul>
                 </div>
             </div>
@@ -132,9 +133,9 @@ layout: default
                         <div id = 'summary'>
                             <h2>Ewan Burnett</h2>
                             <p>
-                            I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn frameworks like DirectX 11 - which enable me to engineer efficient graphical applications. Though I'm rooted in Game Development, my skills are applicable across the board.
+                            I am an adept programmer and software developer - mainly rooted in C/C++, but also proficient in C#, HLSL and x86 ASM. I've used this knowledge to learn progrmming APIs like DirectX 11 - Enabling me to engineer efficient graphical applications. 
                             </p>
-                            <p>I've been studying Game Development since 2018 - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. </p>
+                            <p>I've been studying Game Development since 2018 - during which I have participated in multiple game jams, tested games for local studios, and worked on personal projects. Though I'm rooted in Game Development, my skills are applicable across the board.</p>
                             <p>
                             Looking forwards, my aspiration is to break into the games industry professionally- focusing on tool and game engine development, and creating development environments for Augmented and Virtual reality platforms. 
                             </p>
@@ -147,9 +148,9 @@ layout: default
                             </div>
                             <div id = 'social'>
                                 <h3>Social Media</h3>                            
-                                    <a href = 'https://github.com/ewanburnett'>Github</a>
-                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
-                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
+                                <a href = 'https://github.com/ewanburnett'>Github</a>
+                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
                             </div>
                         </div>
                     </div>

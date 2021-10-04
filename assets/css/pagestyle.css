@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(48 49 48);
+}
+
+li{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+a{
+
+}
+
+img{
+    
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+    
+}
