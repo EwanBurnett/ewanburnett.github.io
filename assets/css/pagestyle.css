@@ -5,43 +5,43 @@
     box-sizing: border-box;
 }
 
-body{
+#projects{
     background: rgb(48 49 48);
 }
 
-li{
+#projects li{
     background-color: transparent;
     border: 1px solid white;
     color: white;
     outline: none;
 }
 
-li:hover{
+#projects li:hover{
     cursor: pointer;
     background-color: white;
     color: black;
 }
 
-a{
+#projects a{
 
 }
 
-img{
+#projects img{
     
 }
 
-h1{
+#projects h1{
 
 }
 
-h2{
+#projects h2{
 
 }
 
-h3{
+#projectsh3{
 
 }
 
-h4{
-    
+#projects h4{
+
 }
