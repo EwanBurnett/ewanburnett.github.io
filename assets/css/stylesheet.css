@@ -367,6 +367,11 @@ h2 {
     margin-top: 30px;
 }
 
+#social div{
+    display: inline-block;
+    margin-right: auto;
+}
+
 
 /* Skills Section */
 
