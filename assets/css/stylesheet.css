@@ -25,7 +25,9 @@ body {
     margin-left: 50px;
 }
 
-
+h2 {
+    color: #88D9FF;
+}
 /* home page */
 
 #home {
@@ -339,7 +341,7 @@ body {
 
 #summary {
     flex: 0.7;
-    height: 285px;
+    height: fit-content;
 }
 
 .contact {

@@ -152,15 +152,15 @@ layout: default
                                 <h3>Social Media</h3>
                                 <div>
                                     <img src = "Resources/Icons/Github.png" style = "width: 64px; height: 64px;">              
-                                    <a href = 'https://github.com/ewanburnett'>Github</a>
+                                    <a href = 'https://github.com/ewanburnett' target="_blank">Github</a>
                                 </div>
                                 <div>
                                     <img src = "Resources/Icons/Linkedin.png" style = "width: 64px; height: 64px;">
-                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk' target="_blank">Linkedin</a>
                                 </div>
                                 <div>
                                     <img src = "Resources/Icons/Twitter.png" style = "width: 64px; height: 64px;">
-                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>
+                                    <a href = 'https://twitter.com/strikerdev_' target="_blank">Twitter</a>
                                 </div>               
                             </div>
                         </div>
