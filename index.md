@@ -30,11 +30,13 @@ layout: default
         <section id="portfolio">
             <div class = 'pagewrapper'> 
                 <h1 class = 'title'>Portfolio</h1>
-                <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
-                    <div class="slide" id = 'project1'><a href = '#'>Project 1</a></div>
-                    <div class="slide" id = 'project2'><a href = '#'>Project 2</a></div>
-                    <div class="slide" id = 'project3'><a href = '#'>Project 3</a></div>
-                    <div class="slide" id = 'project4'><a href = '#'>Project 4</a></div>
+                <div class = 'reel'>
+                    <div class="showreel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay":true, "fullscreen":true, "cellselector":".slide" }'>
+                        <div class="slide" id = 'project1'><a href = '#'>Project 1</a></div>
+                        <div class="slide" id = 'project2'><a href = '#'>Project 2</a></div>
+                        <div class="slide" id = 'project3'><a href = '#'>Project 3</a></div>
+                        <div class="slide" id = 'project4'><a href = '#'>Project 4</a></div>
+                    </div>
                 </div>    
                 <div class = 'project'>
                     <h2>Projects</h2>
@@ -147,10 +149,19 @@ layout: default
                                 <a href = 'mailto:ewanburnettsk@outlook.com'>EwanBurnettSK@outlook.com</a>
                             </div>
                             <div id = 'social'>
-                                <h3>Social Media</h3>                            
-                                <a href = 'https://github.com/ewanburnett'>Github</a>
-                                <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
-                                <a href = 'https://twitter.com/strikerdev_'>Twitter</a>                            
+                                <h3>Social Media</h3>
+                                <div>
+                                    <img src = "Resources/Icons/Github.png" style = "width: 64px; height: 64px;">              
+                                    <a href = 'https://github.com/ewanburnett'>Github</a>
+                                </div>
+                                <div>
+                                    <img src = "Resources/Icons/Linkedin.png" style = "width: 64px; height: 64px;">
+                                    <a href = 'https://www.linkedin.com/in/ewanburnettsk'>Linkedin</a>
+                                </div>
+                                <div>
+                                    <img src = "Resources/Icons/Twitter.png" style = "width: 64px; height: 64px;">
+                                    <a href = 'https://twitter.com/strikerdev_'>Twitter</a>
+                                </div>               
                             </div>
                         </div>
                     </div>
