@@ -1,9 +1,9 @@
 ---
-Title: Dummy GameJam
+Title: Dummy Research
 Date: 2021-09-15
 layout: blog
-categories: GameJam
-tags: UE4
+categories: Research
+tags: Research
 permalink: /Projects/:title/
 thumbnail: "/Resources/BoxDemoCap.png"
 ---

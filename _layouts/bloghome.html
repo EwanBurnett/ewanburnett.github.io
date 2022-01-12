@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: en  }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en'  }}">
 
 {%- include head.html -%}
 <link rel='stylesheet' href='/assets/css/navbar.css'>
@@ -24,10 +24,10 @@
             <div>
                 <h2>Development Blogs</h2>
                 {% for post in site.categories.Blog %}
-                <li>
-                    <h4>{{ post.date }}</h4>
-                    <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-                </li>
+
+                <h4>{{ post.date }}</h4>
+                <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+
                 {% endfor %}
             </div>
 

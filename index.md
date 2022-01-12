@@ -8,6 +8,7 @@ layout: default
         <meta charset="UTF-8">
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
         <title>Portfolio</title>
+        <link rel = "shortcut icon" type = "image/x-icon" href = "resources/siteicon.ico">
         <link rel = 'stylesheet' href = '/assets/css/stylesheet.css'>
         <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
         <link rel="stylesheet" href="/assets/css/fullscreen.css" media="screen">
@@ -40,25 +41,25 @@ layout: default
                 </div>    
                 <div class = 'project'>
                     <h2>Projects</h2>
-                    <h3 style = 'text-align: center;'>Between Gamejams, University Coursework and Personal Projects, I have plenty of work ready to show </h3>
+                    <h3 style = 'text-align: center;'>Take a look at what I've been up to!</h3>
                     <div class = 'works'>
-                    <h2>GameJams</h2>
+                    <h2>Personal</h2>
                         <div>
-                            <ul><a href = '#'><h3>GameJam 1</h3></a></ul>
-                            <ul><a href = '#'><h3>GameJam 2</h3></a></ul>
-                            <ul><a href = '#'><h3>GameJam 3</h3></a></ul>
-                        </div>
-                        <h2>Personal</h2>
-                        <div>
-                            <ul><a href = '#'><h3>Personal 1</h3></a></ul>
-                            <ul><a href = '#'><h3>Personal 2</h3></a></ul>
-                            <ul><a href = '#'><h3>Personal 3</h3></a></ul>
+                            <ul><a href = '/Projects/SFML-Particle-Systems/'><h3>SFML Particle Systems</h3></a></ul>
+                            <ul><a href = '/Projects/SFML-Cellular-Automata/'><h3>SFML Cellular Automata</h3></a></ul>
+                            <ul><a href = '/blog/Achieved-3D-Rendering-in-DX11/'><h3>DX11 Simple 3D Rendering</h3></a></ul>
                         </div>
                         <h2>Coursework</h2>
                         <div>
-                            <ul><a href = '#'><h3>Coursework 1</h3></a></ul>
-                            <ul><a href = '#'><h3>Coursework 2</h3></a></ul>
-                            <ul><a href = '#'><h3>Coursework 3</h3></a></ul>
+                            <ul><a href = '#'><h3>[Year 1] UE4 Aspect</h3></a></ul>
+                            <ul><a href = '#'><h3>[Year 2] DX11 Rendering Engine</h3></a></ul>
+                            <ul><a href = '#'><h3>[Year 2] UE4 Dimension Hopper</h3></a></ul>
+                        </div>
+                    <h2>Research Paper Implementations</h2>
+                        <div>
+                            <ul><a href = '#'><h3>Research 1</h3></a></ul>
+                            <ul><a href = '#'><h3>Research 2</h3></a></ul>
+                            <ul><a href = '#'><h3>Research 3</h3></a></ul>
                         </div>
                     </div>
                     <a href = '/projects/'>Take a look at my other works</a>
@@ -130,7 +131,7 @@ layout: default
        <div class = 'pagewrapper'>
             <h1 class = 'title'>About Me</h1>
             <div class = 'about'>
-                    <div class = 'promoimage'></div>
+                <div class = 'promoimage'></div>
                     <div id = 'intro'>
                         <div id = 'summary'>
                             <h2>Ewan Burnett</h2>

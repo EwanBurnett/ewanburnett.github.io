@@ -1,7 +1,11 @@
 const mat4 = glMatrix.mat4
-var boxRotation = 0.0;
-var isDemoRunning = false;
+const vec4 = glMatrix.vec4;
 
+var boxRotation = 45.0;
+var isDemoRunning = false;
+var axis = [1, 1, 0];
+var objColor = vec4.create;
+var wireColor = vec4.create;
 window.onload = main;
 
 function main() {
@@ -20,18 +24,23 @@ function main() {
     const vs = `
         attribute vec4 aVertPos;
 
+        uniform mat4 uWorldMatrix;
         uniform mat4 uViewMatrix;
         uniform mat4 uProjMatrix;
+        
 
         void main(){
-            gl_Position = uProjMatrix * uViewMatrix * aVertPos;
+            gl_Position = uProjMatrix * uViewMatrix * uWorldMatrix * aVertPos;
         }
     `
 
     //OpenGL refers to this as a fragment shader
     const ps = `
+        precision mediump float;
+        uniform vec4 uColor;
+
         void main(){
-            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+            gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
         }
 
     `
@@ -47,6 +56,8 @@ function main() {
         uniformLocations: {
             projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjMatrix'),
             viewMatrix: gl.getUniformLocation(shaderProgram, 'uViewMatrix'),
+            worldMatrix: gl.getUniformLocation(shaderProgram, 'uWorldMatrix'),
+            //color: gl.getUniformLocation(shaderProgram, 'uColor'),
         },
     };
 
@@ -163,6 +174,8 @@ function InitGeoBuffers(gl) {
 }
 
 function Draw(gl, programInfo, buffers, deltaTime) {
+    objColor = (0.0, 0.0, 1.0, 1.0);
+    wireColor = (1.0, 1.0, 1.0, 1.0);
     //Clear
     gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clearDepth(1.0);
@@ -178,21 +191,22 @@ function Draw(gl, programInfo, buffers, deltaTime) {
     const nearPlane = 0.1;
     const farPlane = 100.0;
     const mProjMatrix = mat4.create();
-
-    boxRotation += deltaTime;
+    const mWorldMatrix = mat4.create();
+    objColor = [1, 0, 0, 1];
 
     mat4.perspective(mProjMatrix, FoV, aspectRatio, nearPlane, farPlane);
 
     //TODO: World Matrix implementation
     //Draw to scene 0, translate back so the whole model is in view
-    const viewMatrix = mat4.create();
-    mat4.translate(viewMatrix, viewMatrix, [0.0, 0.0, -2.5]);
+    const mViewMatrix = mat4.create();
+    mat4.translate(mViewMatrix, mViewMatrix, [0.0, 0.0, -2.5]);
 
     //Rotation - W = TRS 
-    mat4.rotate(viewMatrix, viewMatrix, 45 / Math.PI * 180, [1, 1, 0]);
+    mat4.rotate(mWorldMatrix, mWorldMatrix, boxRotation / Math.PI * 180, axis);
 
     if (isDemoRunning) {
-        mat4.rotate(viewMatrix, viewMatrix, (boxRotation / (Math.PI * 180)) * 0.05, [0, 0, 1]);
+        axis = [0, 1, 0]
+        boxRotation += (Math.PI / 180) *deltaTime;
     }
 
     { //Scope this
@@ -212,12 +226,17 @@ function Draw(gl, programInfo, buffers, deltaTime) {
 
         //set constant buffers
         gl.uniformMatrix4fv(programInfo.uniformLocations.projectionMatrix, false, mProjMatrix);
-        gl.uniformMatrix4fv(programInfo.uniformLocations.viewMatrix, false, viewMatrix);
+        gl.uniformMatrix4fv(programInfo.uniformLocations.viewMatrix, false, mViewMatrix);
+        gl.uniformMatrix4fv(programInfo.uniformLocations.worldMatrix, false, mWorldMatrix);
+        //gl.uniform4fv(programInfo.uniformLocations.color, false, [0, 0, 0, 1]);
     }
 
     const offset = 0;
     const vertCount = 24;
-    gl.drawArrays(gl.LINE_LOOP, offset, vertCount);
+    //gl.uniform4fv(programInfo.uniformLocations.color, false, [1, 0, 0, 1]);
+    gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertCount);    //Draw the solid model
+    //gl.uniform4f(programInfo.uniformLocations.color, false, [1, 1, 1, 1]);
+    gl.drawArrays(gl.LINE_STRIP, offset, vertCount);    //Draw the wireframe model
 
 
 }
