@@ -23,12 +23,11 @@ function main() {
     //OpenGL uses a different format to D3D, so instead of worldviewproj it's projviewworld
     const vs = `
         attribute vec4 aVertPos;
-
+        
         uniform mat4 uWorldMatrix;
         uniform mat4 uViewMatrix;
         uniform mat4 uProjMatrix;
         
-
         void main(){
             gl_Position = uProjMatrix * uViewMatrix * uWorldMatrix * aVertPos;
         }
@@ -57,7 +56,7 @@ function main() {
             projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjMatrix'),
             viewMatrix: gl.getUniformLocation(shaderProgram, 'uViewMatrix'),
             worldMatrix: gl.getUniformLocation(shaderProgram, 'uWorldMatrix'),
-            //color: gl.getUniformLocation(shaderProgram, 'uColor'),
+            color: gl.getUniformLocation(shaderProgram, 'uColor'),
         },
     };
 
@@ -138,22 +137,26 @@ function InitGeoBuffers(gl) {
         // Front face
         -1.0, -1.0, 1.0,
         1.0, -1.0, 1.0,
-        1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
+        1.0, 1.0, 1.0, 
+        -1.0, 1.0, 1.0,
 
         // Back face
-        -1.0, -1.0, -1.0, -1.0, 1.0, -1.0,
+        -1.0, -1.0, -1.0, 
+        -1.0, 1.0, -1.0,
         1.0, 1.0, -1.0,
         1.0, -1.0, -1.0,
 
         // Top face
-        -1.0, 1.0, -1.0, -1.0, 1.0, 1.0,
+        -1.0, 1.0, -1.0, 
+        -1.0, 1.0, 1.0,
         1.0, 1.0, 1.0,
         1.0, 1.0, -1.0,
 
         // Bottom face
         -1.0, -1.0, -1.0,
         1.0, -1.0, -1.0,
-        1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
+        1.0, -1.0, 1.0, 
+        -1.0, -1.0, 1.0,
 
         // Right face
         1.0, -1.0, -1.0,
@@ -162,7 +165,10 @@ function InitGeoBuffers(gl) {
         1.0, -1.0, 1.0,
 
         // Left face
-        -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
+        -1.0, -1.0, -1.0, 
+        -1.0, -1.0, 1.0, 
+        -1.0, 1.0, 1.0, 
+        -1.0, 1.0, -1.0,
     ];
 
     //pass on position data to WebGL
@@ -176,6 +182,7 @@ function InitGeoBuffers(gl) {
 function Draw(gl, programInfo, buffers, deltaTime) {
     objColor = (0.0, 0.0, 1.0, 1.0);
     wireColor = (1.0, 1.0, 1.0, 1.0);
+
     //Clear
     gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clearDepth(1.0);
@@ -192,7 +199,7 @@ function Draw(gl, programInfo, buffers, deltaTime) {
     const farPlane = 100.0;
     const mProjMatrix = mat4.create();
     const mWorldMatrix = mat4.create();
-    objColor = [1, 0, 0, 1];
+    //mObjColor = [1, 0, 0, 1];
 
     mat4.perspective(mProjMatrix, FoV, aspectRatio, nearPlane, farPlane);
 
@@ -205,7 +212,7 @@ function Draw(gl, programInfo, buffers, deltaTime) {
     mat4.rotate(mWorldMatrix, mWorldMatrix, boxRotation / Math.PI * 180, axis);
 
     if (isDemoRunning) {
-        axis = [0, 1, 0]
+        axis = [Math.sin(boxRotation), 1 , Math.cos(boxRotation)]
         boxRotation += (Math.PI / 180) *deltaTime;
     }
 
@@ -228,7 +235,7 @@ function Draw(gl, programInfo, buffers, deltaTime) {
         gl.uniformMatrix4fv(programInfo.uniformLocations.projectionMatrix, false, mProjMatrix);
         gl.uniformMatrix4fv(programInfo.uniformLocations.viewMatrix, false, mViewMatrix);
         gl.uniformMatrix4fv(programInfo.uniformLocations.worldMatrix, false, mWorldMatrix);
-        //gl.uniform4fv(programInfo.uniformLocations.color, false, [0, 0, 0, 1]);
+        //gl.uniform4fv(programInfo.uniformLocations.color, false, mObjColor);
     }
 
     const offset = 0;

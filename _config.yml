@@ -28,6 +28,7 @@ twitter_username: StrikerDEV_
 github_username:  EwanBurnett
 linkedin_username: EwanBurnettSK
 
+repository: ""  #link to the repository
 # Build settings
 theme: minima
 plugins:

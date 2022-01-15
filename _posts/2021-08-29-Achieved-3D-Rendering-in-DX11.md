@@ -2,9 +2,10 @@
 Title: Achieved 3D Rendering in DirectX 11
 Date: 2021-08-29
 layout: blog
-categories: Blog
-tags: DX11
+categories: [Blog, Personal]
+tags: [DX11, C++]
 permalink: /:categories/:title/
+repository: https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0
 ---
 
 <h1>3D Rendering in DirectX 11 </h1>
@@ -14,7 +15,7 @@ After hours of study, and even more hours of debbugging, I have a 3D rendered cu
 
 This demo has a comparatively huge featureset compared to last week's [Triangle Demo](https://ewanburnett.github.io/2021/08/19/DX11-First-Triangle.html), featuring:
 
-![BoxDemo](https://github.com/EwanBurnett/ewanburnett.github.io/blob/master/Resources/BoxDemoCap.png?raw=true)
+![BoxDemo](/Resources/Blogs/Achieved-3d-Rendering-in-DX11/BoxDemoCap.png)
 
 - Object Scaling, Rotation and Translation
 - An ArcBall style Camera 
@@ -56,7 +57,7 @@ After setting this up, by modifying the appropriate Scale, Rotation and Translat
 <h2>Z-Buffering</h2>
 
 To ensure that objects are properly occluded when being rendered, a Depth buffer (Also known as a Z-Buffer) is necessary. Below is an example of Z-Buffering (the black and white view to the right)
-![ZBuffer](https://github.com/EwanBurnett/ewanburnett.github.io/blob/master/Resources/Blog_DepthStencilWorking.png?raw=true)
+![ZBuffer](/Resources/Blogs/Achieved-3d-Rendering-in-DX11/Blog_DepthStencilWorking.png)
 
 Z-Buffers perform a function known as a Depth Test on objects in a scene, preserving the pixels closest to the near plane, and discarding any others. this way, objects are able to render in-front or behind one another. Implementing this buffer is quite standard:
 
@@ -186,7 +187,7 @@ VSOut main(VSIn input)
 }
 ```
 
-And this is the result! (rotated, scaled cube) ![Transformed Cube](https://github.com/EwanBurnett/ewanburnett.github.io/blob/master/Resources/TransformedCube.png?raw=true)
+And this is the result! (rotated, scaled cube) ![Transformed Cube](/Resources/Blogs/Achieved-3d-Rendering-in-DX11/TransformedCube.png)
 
 As a quick note; DirectX 11 uses a Row major format for its matrices, though mind-bogglingly, the DirectX functions for matrix transformations outputs a Column major matrix. So when passing this sort information into a constant buffer, the matrix must first be transposed - else there'll be all sorts of graphical issues. 
 
@@ -198,7 +199,7 @@ This demo was quite fun to make, especially after I fixed my matrix math issues.
 
 After linking ImGui - a pretty simple process thanks to the extensive documentation - I got to binding the various controls for the application, which again was straightforwards. With programming, It's quite rare that things work first time; and i'm glad that this was one of those instances!
 
-Anyway, That was my escapade for this week! As always the Source Code is available on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/53c4d690e2306513bb1a55896848abfd9687e74f), and the Demo can be downloaded from [Here!](https://github.com/EwanBurnett/ewanburnett.github.io/blob/66b96eacfa4002f8dfebf6d7b71ea4f544877b8a/Resources/DX11%20Box%20Demo.zip)
+Anyway, That was my escapade for this week! As always the Source Code is available on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/3D-Rendering), and the Demo can be downloaded from [Here!](https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0)
 
 Thanks for following me on my journey so far! For next week, i'll be looking into procedural mesh generation, and improving the framework of my code.
 
