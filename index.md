@@ -40,7 +40,7 @@ layout: default
                 </div>    
                 <div class = 'project'>
                     <h2>Projects</h2>
-                    <h3 style = 'text-align: center;'>My Development Journey manifests itself in Game Projects, Applications, and Academic Works</h3>
+                    <h3 style = 'text-align: center;'>My Development Journey within Game Projects, Applications, and Academic Works</h3>
                     <div class = 'works'>
                         <h2>Games</h2>
                         <!--<img src = "Resources/Icons/Game.jpg"/>-->
