@@ -1,15 +1,20 @@
 const mat4 = glMatrix.mat4
 const vec4 = glMatrix.vec4;
 
+var indexOfRefraction = 1.0;
+
+var res = [1280, 720];
+
 var boxRotation = 45.0;
-var isDemoRunning = false;
-var axis = [1, 1, 0];
+var isDemoRunning = true;
+var axis = [0.75, 1, 0.25];
 var objColor = vec4.create;
 var wireColor = vec4.create;
 window.onload = main;
 
 function main() {
     const canvas = document.querySelector("#demoCanvas");
+    //const tex = await loadTexture("Resources/SiteDemo/Background.png");
 
     //init WebGL context
     const gl = canvas.getContext("webgl");
@@ -23,13 +28,24 @@ function main() {
     //OpenGL uses a different format to D3D, so instead of worldviewproj it's projviewworld
     const vs = `
         attribute vec4 aVertPos;
-        
+        attribute vec3 aVertNorm;
+
         uniform mat4 uWorldMatrix;
         uniform mat4 uViewMatrix;
         uniform mat4 uProjMatrix;
         
+        varying vec3 iDir;
+        varying vec3 wNormal;
+
         void main(){
+            vec3 iPos = vec3(0.0, 0.0, -2.5);
+            vec4 worldPos = uWorldMatrix * aVertPos;
+            iDir = normalize(worldPos.xyz - vec3(0, 0, -2.5));
+
+            wNormal = normalize(uViewMatrix * vec4(aVertNorm, 0.0)).xyz;
+
             gl_Position = uProjMatrix * uViewMatrix * uWorldMatrix * aVertPos;
+
         }
     `
 
@@ -37,9 +53,30 @@ function main() {
     const ps = `
         precision mediump float;
         uniform vec4 uColor;
+        uniform vec2 uResolution;
+
+        uniform sampler2D background;
+        uniform sampler2D foreground;
+
+        varying vec3 iDir;
+        varying vec3 wNormal;
+
 
         void main(){
-            gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+
+            float ior = 0.8;
+            vec2 uv = gl_FragCoord.xy / uResolution; 
+            vec3 refracted = refract(iDir, wNormal, 1.0/ior);
+
+            uv += refracted.xy;
+
+            vec4 tex = texture2D(background, uv);
+            vec4 fg = texture2D(foreground, uv);
+
+            float f = pow( 1.0 + dot( iDir, wNormal), 3.0 );
+
+            gl_FragColor = vec4(mix(tex.rgb, tex.gbr, f).rgb, f);
+
         }
 
     `
@@ -51,18 +88,65 @@ function main() {
         program: shaderProgram,
         attribLocations: {
             vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertPos'),
+            vertexNormal: gl.getAttribLocation(shaderProgram, 'aVertNorm')
         },
         uniformLocations: {
             projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjMatrix'),
             viewMatrix: gl.getUniformLocation(shaderProgram, 'uViewMatrix'),
             worldMatrix: gl.getUniformLocation(shaderProgram, 'uWorldMatrix'),
             color: gl.getUniformLocation(shaderProgram, 'uColor'),
+            resolution: gl.getUniformLocation(shaderProgram, 'uResolution'),
         },
     };
 
 
     //Initialize Scene Objects
     const buffers = InitGeoBuffers(gl);
+
+    
+        var texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,  new Uint8Array([255, 0, 255, 255]));
+
+        //Load an image 
+        var image = new Image();
+        image.src = "Resources/SiteDemo/Background.png";
+        image.addEventListener('load', function() {
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,gl.UNSIGNED_BYTE, image);
+        gl.generateMipmap(gl.TEXTURE_2D);
+        });
+    
+
+    
+        /*
+        var texture2 = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture2);
+
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,  new Uint8Array([255, 0, 255, 255]));
+
+        //Load an image 
+        var image2 = new Image();
+        image2.src = "Resources/SiteDemo/Foreground.png";
+        image2.addEventListener('load', function() {
+        gl.bindTexture(gl.TEXTURE_2D, texture2);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,gl.UNSIGNED_BYTE, image2);
+        gl.generateMipmap(gl.TEXTURE_2D);
+        });
+    
+        var bgLoc = gl.getUniformLocation(program, "background");
+        var fgLoc = gl.getUniformLocation(program, "foreground");
+
+        gl.uniform1i(bgLoc, 0); 
+        gl.uniform1i(fgLoc, 1); 
+
+        gl.activeTexture(gl.TEXTURE0);
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.activeTexture(gl.TEXTURE1);
+        gl.bindTexture(gl.TEXTURE_2D, texture2);
+        */
+        
 
     //handle canvas resizing
 
@@ -133,49 +217,133 @@ function InitGeoBuffers(gl) {
     gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
 
     //Simple Cube - anticlockwise winding order
-    const cube = [ //Yoinked from the internet, because typing this is a pain.
+    const cube = [ 
+        /*
         // Front face
         -1.0, -1.0, 1.0,
         1.0, -1.0, 1.0,
-        1.0, 1.0, 1.0, 
         -1.0, 1.0, 1.0,
+        1.0, 1.0, 1.0, 
 
-        // Back face
-        -1.0, -1.0, -1.0, 
-        -1.0, 1.0, -1.0,
+        // Back Face
         1.0, 1.0, -1.0,
+        -1.0, 1.0, -1.0,
         1.0, -1.0, -1.0,
+        -1.0, -1.0, -1.0,
 
-        // Top face
-        -1.0, 1.0, -1.0, 
+        // Top Face
+        -1.0, 1.0, -1.0,
         -1.0, 1.0, 1.0,
         1.0, 1.0, 1.0,
         1.0, 1.0, -1.0,
 
-        // Bottom face
-        -1.0, -1.0, -1.0,
+        // Bottom Face
+        1.0, -1.0, 1.0,
         1.0, -1.0, -1.0,
-        1.0, -1.0, 1.0, 
+        -1.0, -1.0, -1.0,
         -1.0, -1.0, 1.0,
 
-        // Right face
+        // Right Face
         1.0, -1.0, -1.0,
-        1.0, 1.0, -1.0,
+        1.0, -1.0, 1.0, 
+        1.0, 1.0, -1.0, 
         1.0, 1.0, 1.0,
-        1.0, -1.0, 1.0,
 
-        // Left face
-        -1.0, -1.0, -1.0, 
-        -1.0, -1.0, 1.0, 
-        -1.0, 1.0, 1.0, 
+        // Left Face
+        -1.0, 1.0, 1,0,
         -1.0, 1.0, -1.0,
+        -1.0, -1.0, 1.0,
+        -1.0, -1.0, -1.0,
+*/
+
+// Front face 
+-1.0, -1.0, 1.0, 
+1.0, -1.0, 1.0, 
+1.0, 1.0, 1.0,  
+-1.0, 1.0, 1.0, 
+
+// Back face 
+-1.0, -1.0, -1.0,  
+-1.0, 1.0, -1.0, 
+1.0, 1.0, -1.0, 
+1.0, -1.0, -1.0, 
+
+// Top face 
+-1.0, 1.0, -1.0,  
+-1.0, 1.0, 1.0, 
+1.0, 1.0, 1.0, 
+1.0, 1.0, -1.0, 
+
+// Bottom face 
+-1.0, -1.0, -1.0, 
+1.0, -1.0, -1.0, 
+1.0, -1.0, 1.0,  
+-1.0, -1.0, 1.0, 
+
+// Right face 
+1.0, -1.0, -1.0, 
+1.0, 1.0, -1.0, 
+1.0, 1.0, 1.0, 
+1.0, -1.0, 1.0, 
+
+// Left face 
+-1.0, -1.0, -1.0,  
+-1.0, -1.0, 1.0,  
+-1.0, 1.0, 1.0,  
+-1.0, 1.0, -1.0, 
+        
     ];
 
     //pass on position data to WebGL
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cube), gl.STATIC_DRAW);
 
+    const nBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, nBuffer);
+
+    const cubeNormals = [
+        // Front face
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+
+        // Back face
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+        0.0, 0.0, -1.0,
+        
+        //Top Face
+        0.0, 1.0, 0.0,
+        0.0, 1.0, 0.0,
+        0.0, 1.0, 0.0,
+        0.0, 1.0, 0.0,
+
+        //Bottom Face
+        0.0, -1.0, 0.0,
+        0.0, -1.0, 0.0,
+        0.0, -1.0, 0.0,
+        0.0, -1.0, 0.0,
+
+        //Right Face
+        1.0, 0,0, 0.0,
+        1.0, 0,0, 0.0,
+        1.0, 0,0, 0.0,
+        1.0, 0,0, 0.0,
+
+        //Left Face
+        -1.0, 0.0, 0.0,
+        -1.0, 0.0, 0.0,
+        -1.0, 0.0, 0.0,
+        -1.0, 0.0, 0.0,
+        
+    ]
+
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cubeNormals), gl.STATIC_DRAW);
+
     return {
         position: vBuffer,
+        normal: nBuffer,
     };
 }
 
@@ -228,6 +396,11 @@ function Draw(gl, programInfo, buffers, deltaTime) {
         gl.vertexAttribPointer(programInfo.attribLocations.vertexPosition, numComponents, type, normalize, stride, offset);
         gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
 
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffers.normal);
+        gl.vertexAttribPointer(programInfo.attribLocations.vertexNormal, numComponents, type, normalize, stride, offset);
+        gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
+        
+
         //set the program in WebGL
         gl.useProgram(programInfo.program);
 
@@ -235,7 +408,9 @@ function Draw(gl, programInfo, buffers, deltaTime) {
         gl.uniformMatrix4fv(programInfo.uniformLocations.projectionMatrix, false, mProjMatrix);
         gl.uniformMatrix4fv(programInfo.uniformLocations.viewMatrix, false, mViewMatrix);
         gl.uniformMatrix4fv(programInfo.uniformLocations.worldMatrix, false, mWorldMatrix);
+        gl.uniform2fv(programInfo.uniformLocations.resolution, res );
         //gl.uniform4fv(programInfo.uniformLocations.color, false, mObjColor);
+        //gl.uniform1fv(programInfo.uniformLocations.ior, false, indexOfRefraction);
     }
 
     const offset = 0;
@@ -243,7 +418,7 @@ function Draw(gl, programInfo, buffers, deltaTime) {
     //gl.uniform4fv(programInfo.uniformLocations.color, false, [1, 0, 0, 1]);
     gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertCount);    //Draw the solid model
     //gl.uniform4f(programInfo.uniformLocations.color, false, [1, 1, 1, 1]);
-    gl.drawArrays(gl.LINE_STRIP, offset, vertCount);    //Draw the wireframe model
+    //gl.drawArrays(gl.LINE_STRIP, offset, vertCount);    //Draw the wireframe model
 
 
 }
