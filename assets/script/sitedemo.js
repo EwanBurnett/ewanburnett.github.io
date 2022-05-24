@@ -5,6 +5,9 @@ var indexOfRefraction = 1.0;
 
 var res = [1280, 720];
 
+var texture;
+var texture2;
+
 var boxRotation = 45.0;
 var isDemoRunning = true;
 var axis = [0.75, 1, 0.25];
@@ -64,18 +67,18 @@ function main() {
 
         void main(){
 
-            float ior = 0.8;
+            float ior = 0.74;
             vec2 uv = gl_FragCoord.xy / uResolution; 
             vec3 refracted = refract(iDir, wNormal, 1.0/ior);
 
             uv += refracted.xy;
 
             vec4 tex = texture2D(background, uv);
-            vec4 fg = texture2D(foreground, uv);
+            vec4 fg = texture2D(foreground, vec2(uv.x * 1.0, uv.y * -1.0));
 
             float f = pow( 1.0 + dot( iDir, wNormal), 3.0 );
 
-            gl_FragColor = vec4(mix(tex.rgb, tex.gbr, f).rgb, f);
+            gl_FragColor = vec4(mix(tex.rgb, fg.gbr, f).rgb, f);
 
         }
 
@@ -104,7 +107,7 @@ function main() {
     const buffers = InitGeoBuffers(gl);
 
     
-        var texture = gl.createTexture();
+        texture = gl.createTexture();
         gl.bindTexture(gl.TEXTURE_2D, texture);
 
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,  new Uint8Array([255, 0, 255, 255]));
@@ -120,32 +123,22 @@ function main() {
     
 
     
-        /*
-        var texture2 = gl.createTexture();
+        
+        texture2 = gl.createTexture();
         gl.bindTexture(gl.TEXTURE_2D, texture2);
 
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,  new Uint8Array([255, 0, 255, 255]));
 
         //Load an image 
         var image2 = new Image();
-        image2.src = "Resources/SiteDemo/Foreground.png";
+        image2.src = "Resources/SiteDemo/foreground.png";
         image2.addEventListener('load', function() {
         gl.bindTexture(gl.TEXTURE_2D, texture2);
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,gl.UNSIGNED_BYTE, image2);
         gl.generateMipmap(gl.TEXTURE_2D);
         });
     
-        var bgLoc = gl.getUniformLocation(program, "background");
-        var fgLoc = gl.getUniformLocation(program, "foreground");
-
-        gl.uniform1i(bgLoc, 0); 
-        gl.uniform1i(fgLoc, 1); 
-
-        gl.activeTexture(gl.TEXTURE0);
-        gl.bindTexture(gl.TEXTURE_2D, texture);
-        gl.activeTexture(gl.TEXTURE1);
-        gl.bindTexture(gl.TEXTURE_2D, texture2);
-        */
+        
         
 
     //handle canvas resizing
@@ -216,81 +209,17 @@ function InitGeoBuffers(gl) {
     const vBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
 
-    //Simple Cube - anticlockwise winding order
+    //Simple Cube
     const cube = [ 
-        /*
-        // Front face
-        -1.0, -1.0, 1.0,
-        1.0, -1.0, 1.0,
-        -1.0, 1.0, 1.0,
-        1.0, 1.0, 1.0, 
 
-        // Back Face
-        1.0, 1.0, -1.0,
-        -1.0, 1.0, -1.0,
-        1.0, -1.0, -1.0,
-        -1.0, -1.0, -1.0,
-
-        // Top Face
-        -1.0, 1.0, -1.0,
         -1.0, 1.0, 1.0,
         1.0, 1.0, 1.0,
-        1.0, 1.0, -1.0,
-
-        // Bottom Face
+        -1.0, -1.0, 1.0,
         1.0, -1.0, 1.0,
-        1.0, -1.0, -1.0,
-        -1.0, -1.0, -1.0,
-        -1.0, -1.0, 1.0,
-
-        // Right Face
-        1.0, -1.0, -1.0,
-        1.0, -1.0, 1.0, 
-        1.0, 1.0, -1.0, 
-        1.0, 1.0, 1.0,
-
-        // Left Face
-        -1.0, 1.0, 1,0,
         -1.0, 1.0, -1.0,
-        -1.0, -1.0, 1.0,
+        1.0, 1.0, -1.0,
         -1.0, -1.0, -1.0,
-*/
-
-// Front face 
--1.0, -1.0, 1.0, 
-1.0, -1.0, 1.0, 
-1.0, 1.0, 1.0,  
--1.0, 1.0, 1.0, 
-
-// Back face 
--1.0, -1.0, -1.0,  
--1.0, 1.0, -1.0, 
-1.0, 1.0, -1.0, 
-1.0, -1.0, -1.0, 
-
-// Top face 
--1.0, 1.0, -1.0,  
--1.0, 1.0, 1.0, 
-1.0, 1.0, 1.0, 
-1.0, 1.0, -1.0, 
-
-// Bottom face 
--1.0, -1.0, -1.0, 
-1.0, -1.0, -1.0, 
-1.0, -1.0, 1.0,  
--1.0, -1.0, 1.0, 
-
-// Right face 
-1.0, -1.0, -1.0, 
-1.0, 1.0, -1.0, 
-1.0, 1.0, 1.0, 
-1.0, -1.0, 1.0, 
-
-// Left face 
--1.0, -1.0, -1.0,  
--1.0, -1.0, 1.0,  
--1.0, 1.0, 1.0,  
--1.0, 1.0, -1.0, 
+        1.0, -1.0, -1.0,
         
     ];
 
@@ -301,49 +230,49 @@ function InitGeoBuffers(gl) {
     gl.bindBuffer(gl.ARRAY_BUFFER, nBuffer);
 
     const cubeNormals = [
-        // Front face
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-
-        // Back face
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-        0.0, 0.0, -1.0,
-        
-        //Top Face
-        0.0, 1.0, 0.0,
-        0.0, 1.0, 0.0,
-        0.0, 1.0, 0.0,
-        0.0, 1.0, 0.0,
-
-        //Bottom Face
-        0.0, -1.0, 0.0,
-        0.0, -1.0, 0.0,
-        0.0, -1.0, 0.0,
-        0.0, -1.0, 0.0,
-
-        //Right Face
-        1.0, 0,0, 0.0,
-        1.0, 0,0, 0.0,
-        1.0, 0,0, 0.0,
-        1.0, 0,0, 0.0,
-
-        //Left Face
-        -1.0, 0.0, 0.0,
-        -1.0, 0.0, 0.0,
-        -1.0, 0.0, 0.0,
-        -1.0, 0.0, 0.0,
+                    -0.577, 0.577, 0.577 ,
+                    0.577, 0.577, 0.577 ,
+                    -0.577, -0.577, 0.577 ,
+                    0.577, -0.577, 0.577 ,
+                    -0.577, 0.577, -0.577 ,
+                    0.577, 0.577, -0.577 ,
+                    -0.577, -0.577, -0.577 ,
+                    0.577, -0.577, -0.577 ,
         
     ]
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cubeNormals), gl.STATIC_DRAW);
 
+
+    const iBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, iBuffer);
+
+    const indices = [
+        0, 2, 3,
+        0, 3, 1,
+
+        0, 4, 5,
+        0, 5, 1,
+
+        0, 4, 6,
+        0, 6, 2,
+
+        2, 6, 7,
+        2, 7, 3,
+
+        1, 5, 7,
+        1, 7, 3,
+
+        4, 6, 7,
+        4, 7, 5,
+
+    ]
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices), gl.STATIC_DRAW);
+
     return {
         position: vBuffer,
         normal: nBuffer,
+        indices: iBuffer,
     };
 }
 
@@ -359,6 +288,12 @@ function Draw(gl, programInfo, buffers, deltaTime) {
 
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
+    gl.useProgram(programInfo.program);
+    var bgLoc = gl.getUniformLocation(programInfo.program, "background");
+    var fgLoc = gl.getUniformLocation(programInfo.program, "foreground");
+
+    gl.uniform1i(bgLoc, 0); 
+    gl.uniform1i(fgLoc, 1); 
 
     //Perspective Matrix (FoV LH)
     const FoV = 90 * Math.PI / 180; //Field of View in Radians
@@ -384,6 +319,14 @@ function Draw(gl, programInfo, buffers, deltaTime) {
         boxRotation += (Math.PI / 180) *deltaTime;
     }
 
+        
+
+        gl.activeTexture(gl.TEXTURE0);
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.activeTexture(gl.TEXTURE1);
+        gl.bindTexture(gl.TEXTURE_2D, texture2);
+        
+
     { //Scope this
         //WebGL struct packing
         const numComponents = 3; //XYZ
@@ -401,6 +344,8 @@ function Draw(gl, programInfo, buffers, deltaTime) {
         gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
         
 
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
+
         //set the program in WebGL
         gl.useProgram(programInfo.program);
 
@@ -415,10 +360,13 @@ function Draw(gl, programInfo, buffers, deltaTime) {
 
     const offset = 0;
     const vertCount = 24;
+    const iCount = 36;
     //gl.uniform4fv(programInfo.uniformLocations.color, false, [1, 0, 0, 1]);
-    gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertCount);    //Draw the solid model
+    //gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertCount);    //Draw the solid model
     //gl.uniform4f(programInfo.uniformLocations.color, false, [1, 1, 1, 1]);
     //gl.drawArrays(gl.LINE_STRIP, offset, vertCount);    //Draw the wireframe model
+
+    gl.drawElements(gl.TRIANGLE_STRIP, iCount, gl.UNSIGNED_SHORT, offset);
 
 
 }
