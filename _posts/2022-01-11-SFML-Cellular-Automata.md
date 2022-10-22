@@ -5,7 +5,8 @@ layout: blog
 categories: [Blog, Personal]
 tags: [SFML, c++]
 permalink: /:categories/:title/
-thumbnail: "/Resources/TitleCards/SFMLCellularAutomata.png"
+card: "https://dummyimage.com/600x300/Cfa19c/fff.png&text=Card+(600x300)"
+thumbnail: "https://dummyimage.com/300x155/9fa19c/faf.png&text=Thumbnail+(300x155)"
 repository: "https://github.com"
 ---
 <h1>SFML Cellular Automata</h1>

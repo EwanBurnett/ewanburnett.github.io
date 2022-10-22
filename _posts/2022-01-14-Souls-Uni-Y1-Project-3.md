@@ -5,7 +5,8 @@ layout: blog
 categories: [Blog, Coursework]
 tags: Unity
 permalink: /:categories/:title/
-thumbnail: "/Resources/BoxDemoCap.png"
+card: "https://dummyimage.com/600x300/Cfa19c/fff.png&text=Card+(600x300)"
+thumbnail: "https://dummyimage.com/300x155/9fa19c/faf.png&text=Thumbnail+(300x155)"
 ---
 <h1>Souls</h1>
 Souls:
