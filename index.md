@@ -152,38 +152,38 @@ layout: default
             <div class = 'skill'>
                 <h2>&lt;Languages&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="resources/icons/c.png" alt="C99"></li>
-                    <li><img class = "logo" src="resources/icons/c++.png" alt="C++ 20"></li>
-                    <li><img class = "logo" src="resources/icons/cs.png" alt="C#"></li>
-                    <li><img class = "logo" src="resources/icons/hlsl.png" alt="HLSL"></li>
-                    <li><img class = "logo" src="resources/icons/glsl.png" alt="GLSL"></li>
-                    <li><img class = "logo" src="resources/icons/x8664.png" alt="x86/x64 ASM"></li>
-                    <li><img class = "logo" src="resources/icons/arm.png" alt="ARM ASM"></li>
-                    <li><img class = "logo" src="resources/icons/bash.png" alt="Bash"></li>
+                    <li><img class = "logo" src="/Resources/Icons/c.png" alt="C99"></li>
+                    <li><img class = "logo" src="/Resources/Icons/c++.png" alt="C++ 20"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cs.png" alt="C#"></li>
+                    <li><img class = "logo" src="/Resources/Icons/hlsl.png" alt="HLSL"></li>
+                    <li><img class = "logo" src="/Resources/Icons/glsl.png" alt="GLSL"></li>
+                    <li><img class = "logo" src="/Resources/Icons/x8664.png" alt="x86/x64 ASM"></li>
+                    <li><img class = "logo" src="/Resources/Icons/arm.png" alt="ARM ASM"></li>
+                    <li><img class = "logo" src="/Resources/Icons/bash.png" alt="Bash"></li>
                 </ul>
             </div>
             <div class = 'skill'>
                 <h2>&lt;Technology&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="resources/icons/dx11.png" alt="DirectX 11"></li>
-                    <li><img class = "logo" src="resources/icons/dx12.png" alt="DirectX 12"></li>
-                    <li><img class = "logo" src="resources/icons/vulkan.png" alt="Vulkan"></li>
-                    <li><img class = "logo" src="resources/icons/cuda.png" alt="CUDA"></li>
-                    <li><img class = "logo" src="resources/icons/unrealengine4.png" alt="Unreal Engine 4"></li>
-                    <li><img class = "logo" src="resources/icons/unity.png" alt="Unity Enigne"></li>
+                    <li><img class = "logo" src="/Resources/Icons/dx11.png" alt="DirectX 11"></li>
+                    <li><img class = "logo" src="/Resources/Icons/dx12.png" alt="DirectX 12"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vulkan.png" alt="Vulkan"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cuda.png" alt="CUDA"></li>
+                    <li><img class = "logo" src="/Resources/Icons/unrealengine4.png" alt="Unreal Engine 4"></li>
+                    <li><img class = "logo" src="/Resources/Icons/unity.png" alt="Unity Enigne"></li>
                 </ul>
             </div>
             <div class = 'skill'>
                 <h2>&lt;Tools&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="resources/icons/vs22.png" alt="Visual Studio 2022"></li>
-                    <li><img class = "logo" src="resources/icons/vim.png" alt="Vim"></li>
-                    <li><img class = "logo" src="resources/icons/maya.png" alt="Autodesk Maya"></li>
-                    <li><img class = "logo" src="resources/icons/git.png" alt="Git"></li>
-                    <li><img class = "logo" src="resources/icons/cmake.png" alt="CMake"></li>
-                    <li><img class = "logo" src="resources/icons/nsight.png" alt="Nsight"></li>
-                    <li><img class = "logo" src="resources/icons/pix.png" alt="PIX"></li>
-                    <li><img class = "logo" src="resources/icons/renderdoc.png" alt="RenderDoc"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vs22.png" alt="Visual Studio 2022"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vim.png" alt="Vim"></li>
+                    <li><img class = "logo" src="/Resources/Icons/maya.png" alt="Autodesk Maya"></li>
+                    <li><img class = "logo" src="/Resources/Icons/git.png" alt="Git"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cmake.png" alt="CMake"></li>
+                    <li><img class = "logo" src="/Resources/Icons/nsight.png" alt="Nsight"></li>
+                    <li><img class = "logo" src="/Resources/Icons/pix.png" alt="PIX"></li>
+                    <li><img class = "logo" src="/Resources/Icons/renderdoc.png" alt="RenderDoc"></li>
                 </ul>
             </div>
         </div>
