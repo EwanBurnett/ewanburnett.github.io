@@ -23,12 +23,18 @@
 
             <div>
                 <h2>Development Blogs</h2>
+                <ul>
                 {% for post in site.categories.Blog %}
-
-                <h4>{{ post.date }}</h4>
-                <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-
+                <div>
+                    <div>
+                    <h4>{{ post.date }}</h4>
+                    <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+                    <h3>{{ post.summary }}</h3>
+                    </div>
+                    <img src = "{{ post.card }}" style="width:400px; object-fit: contain;">
+                </div>
                 {% endfor %}
+                </ul>
             </div>
 
         </div>

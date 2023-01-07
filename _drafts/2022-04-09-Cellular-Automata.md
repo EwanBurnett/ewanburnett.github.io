@@ -5,7 +5,7 @@ layout: project
 categories: Personal Project Featured
 tags: C++ 
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Cellular-Automata+(1000x500)"
+card: "/Resources/Cards/Cellular-Automata.png"
 summary: Adventures in 2D Cellular Automata. 
 repository: "https://github.com/EwanBurnett/"
 download: ""

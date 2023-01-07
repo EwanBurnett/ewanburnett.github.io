@@ -1,11 +1,13 @@
 ---
-Title: Achieved 3D Rendering in DirectX 11
+Title: Basic 3D Rendering in DirectX 11
 Date: 2021-08-29
 layout: blog
 categories: Blog
 tags: [DX11, C++]
 permalink: /Blog/:title/
-repository: https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0
+repository: https://github.com/EwanBurnett/DirectX-11-Practice/
+download: https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0
+card: "/Resources/Cards/Basic-3D-Rendering-in-DX11.png"
 ---
 
 <h1>3D Rendering in DirectX 11 </h1>
@@ -199,7 +201,7 @@ This demo was quite fun to make, especially after I fixed my matrix math issues.
 
 After linking ImGui - a pretty simple process thanks to the extensive documentation - I got to binding the various controls for the application, which again was straightforwards. With programming, It's quite rare that things work first time; and i'm glad that this was one of those instances!
 
-Anyway, That was my escapade for this week! As always the Source Code is available on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/3D-Rendering), and the Demo can be downloaded from [Here!](https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0)
+Anyway, That was my escapade for this week! As always the Source Code is available on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/3D-Rendering), and the Demo can be downloaded from [Here!]({{ page.download }})
 
 Thanks for following me on my journey so far! For next week, i'll be looking into procedural mesh generation, and improving the framework of my code.
 
