@@ -4,7 +4,8 @@ Date: 2021-08-19
 layout: blog
 categories: Blog
 tags: DX11
-permalink: /:categories/:title/
+permalink: /Blog/:title/
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Aura-Engine+(1000x500)"
 ---
 <h1>First Triangle using DirectX 11</h1>
 <h6>{{ tag_name }}</h6>

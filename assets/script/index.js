@@ -21,6 +21,7 @@ GitHubActivity.feed({
   limit: 3, // optional
 });
 
+
 var flkty = new Flickity( '.showreel', {
 
     wrapAround: true, 
@@ -33,34 +34,23 @@ var flkty = new Flickity( '.showreel', {
         //Change the description's text based on the corresponding index
         console.log( 'Slide changed to' + index );
         
-        switch(index){
-            case(0):
-                document.getElementById('desc_project1').style.display = "block";
-                document.getElementById('desc_project2').style.display = "none";
-                document.getElementById('desc_project3').style.display = "none";
-                document.getElementById('desc_project4').style.display = "none";
-            break;
-            case(1):
-            document.getElementById('desc_project1').style.display = "none";
-            document.getElementById('desc_project2').style.display = "block";
-            document.getElementById('desc_project3').style.display = "none";
-            document.getElementById('desc_project4').style.display = "none";
-            break;
-            case(2):
-            document.getElementById('desc_project1').style.display = "none";
-            document.getElementById('desc_project2').style.display = "none";
-            document.getElementById('desc_project3').style.display = "block";
-            document.getElementById('desc_project4').style.display = "none";
-            break;
-            case(3):
-            document.getElementById('desc_project1').style.display = "none";
-            document.getElementById('desc_project2').style.display = "none";
-            document.getElementById('desc_project3').style.display = "none";
-            document.getElementById('desc_project4').style.display = "block";
-            break;
-            default:
-                break;
+        var wrapper = document.getElementById("project_descs");
+        var div = wrapper.getElementsByClassName("desc");
+
+        for(var i = 0; i < div.length; i++)
+        {
+          div[i].style.display = "none";
         }
+
+        div[index].style.display = "block";
+
+    
       }
     }
   });
+
+  var wrapper = document.getElementById("project_descs");
+  var div = wrapper.getElementsByClassName("desc");
+
+  div[0].style.display = "block";
+

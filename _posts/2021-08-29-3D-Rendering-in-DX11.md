@@ -2,9 +2,9 @@
 Title: Achieved 3D Rendering in DirectX 11
 Date: 2021-08-29
 layout: blog
-categories: [Blog, Personal]
+categories: Blog
 tags: [DX11, C++]
-permalink: /:categories/:title/
+permalink: /Blog/:title/
 repository: https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0
 ---
 

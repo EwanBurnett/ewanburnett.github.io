@@ -80,23 +80,19 @@ body{
     
 }
 
-.slide a {
-    padding: 10px 40px;
-    margin-top: 10px;
+.showreel a {
     background-color: transparent;
     border: 1px solid white;
     outline: none;
     transition: 0.3s ease;
     color: white;
-    height: 40px;
-    width: 80%;
-    top: auto;
-    text-align: center;
+
 }
 
 .slide a:hover {
     cursor: pointer;
     background-color: white;
+    border-color: royalblue;
     color: black;
 }
 
@@ -133,25 +129,6 @@ body{
     fill: white;
 }
 
-#project1 {
-    background-color: aqua;
-    background-image: url("https://dummyimage.com/1000x500/a19ca1/fff.png&text=Project+1(1000x500)");
-}
-
-#project2 {
-    background-color: coral;
-    background-image: url("https://dummyimage.com/1000x500/5ca9b5/fff.png&text=Project+2(1000x500)");
-}
-
-#project3 {
-    background-color: cornsilk;
-    background-image: url("https://dummyimage.com/1000x500/b32b24/fff.png&text=Project+3(1000x500)");
-}
-
-#project4 {
-    background-color: crimson;
-    background-image: url("https://dummyimage.com/1000x500/89ba4d/fff.png&text=Project+4(1000x500)");
-}
 
 .blogposts {
         columns: 4;
@@ -307,6 +284,19 @@ body{
     cursor:pointer;
     min-width: 32px;
     min-height: 32px;
+}
+
+.logowrapper span{
+    display: none;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.logowrapper:hover span{
+    display: block;
 }
 
 #projects h2{

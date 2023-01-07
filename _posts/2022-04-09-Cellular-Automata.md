@@ -1,12 +1,12 @@
 ---
-Title: 2D Particle Simulation
-Date: 2022-03-22
+Title: Cellular Automata
+Date: 2022-04-09
 layout: project
 categories: Personal Project Featured
 tags: C++ 
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
-summary: Adventures in 2D Molecular particle simulations. 
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Cellular-Automata+(1000x500)"
+summary: Adventures in 2D Cellular Automata. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"

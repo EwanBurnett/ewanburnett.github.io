@@ -14,7 +14,7 @@ layout: default
         <link rel="stylesheet" href="node_modules/octicons/build/font/octicons.css">
         <link rel="stylesheet" href="node_modules/github-activity-feed/dist/github-activity.dark.min.css">
         <link rel="stylesheet" href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css">
-<link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
 
 <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
@@ -39,7 +39,10 @@ layout: default
                 <!--Site Intro-->
                 <div style = "position: relative; margin: 10px;  margin-top: 30%;">
                     <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
-                    <button style="display: flex" class = 'b0' onClick = "window.location.href='#projects'">See what I can do </button>
+                    <div style = "display: flex; flex-direction: row;">
+                    <button style="display: flex;" class = 'b0' onClick = "window.location.href='#projects'">See what I can do </button>
+                    <button style="display: flex; margin-left: 3%;" class = 'b0' onClick = "location.href='/Resources/Ewan Burnett CV 2021-2022.pdf'" target = "_blank">CV / Resumé </button>
+                    </div>
                 </div>
                 <!--Socials-->
                 <div style="float: right; margin-right: 5%; margin-top:5%; ">
@@ -58,75 +61,76 @@ layout: default
                 <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Projects-</h1>
                 <div>
                 <div class="showreel js-flickity">
-                    <div class="slide" id = 'project1'><a href = '#'>Catalyst</a></div>
-                    <div class="slide" id = 'project2'><a href = '#'>Atlas Engine</a></div>
-                    <div class="slide" id = 'project3'><a href = '#'>GBA Emulator</a></div>
-                    <div class="slide" id = 'project4'><a href = '#'>Runic</a></div>
+                    {% for post in site.categories.Featured limit: 4 %}
+                        <div>
+                            <div class="slide">
+                            <a href = "{{ post.url }}">
+                                <img style="width: 1000px; object-fit: contain;" src="{{ post.card }}">
+                            </a>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>  
                 </div>
-                <div>
-                    <div style="padding-top:1%; display:block;" id='desc_project1'>
-                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Catalyst</h2>
-                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis quam in eros molestie elementum. Fusce rhoncus nisi et est volutpat, id sodales arcu consectetur. Mauris scelerisque aliquam est.</p>
+                <div id="project_descs">
+                {% for post in site.categories.Featured limit: 4 %}
+                    {% if forloop.index == 0 %}
+                        <div class = "desc" style="padding-top:1%; display:block;">
+                    {% else %}
+                        <div class = "desc" style="padding-top:1%; display:none;">
+                    {% endif %}
+                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.title }}</h2>
+                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.summary }}</p>
                     </div>
-                    <div style="padding-top:1%; display:none;" id='desc_project2'>
-                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Atlas Engine</h2>
-                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis quam in eros molestie elementum. Fusce rhoncus nisi et est volutpat, id sodales arcu consectetur. Mauris scelerisque aliquam est.</p>
-                    </div>
-                    <div style="padding-top:1%; display:none;" id='desc_project3'>
-                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">GBA Emulator</h2>
-                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis quam in eros molestie elementum. Fusce rhoncus nisi et est volutpat, id sodales arcu consectetur. Mauris scelerisque aliquam est.</p>
-                    </div>
-                    <div style="padding-top:1%; display:none;" id='desc_project4'>
-                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Runic</h2>
-                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis quam in eros molestie elementum. Fusce rhoncus nisi et est volutpat, id sodales arcu consectetur. Mauris scelerisque aliquam est.</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
-                    <h2>Latest</h2>
+            <h2 style="margin-left: 80px;">Latest</h2>
             <!--Git Commit Activity-->
             <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>
             <!--Project Subnavigation Bar-->
             <div class = 'projectSubnav' style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">
-                    {% for post in site.posts limit:1 %}
-                    <!--Latest Post-->
-                    <div class = 'blogpost' style="align-items: center;
-  display: flex;
-  justify-content: center; margin-bottom: 30px;">
-                        <div style=" margin: 15px 15px 15px 15px;">
-                            <img src = "{{ post.card }}"/>
-                        </div>
-                        <div style = "display: flex; flex-direction: column;">
-                            <h3>{{ post.title }}</h3>  
-                            <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
-                            <p>{{ post.summary }}</p>
-                            <div>
-                                <ul style = "margin-top: auto; color: white;">
-                                <a class = "btn" href = "{{ post.repository }}">Repo</a>
-                                <a class = "btn" href = "{{ post.download }}">Download</a>
-                                <a class = "btn" href = "{{ post.url }}">Blog</a>
-                                </ul>
-                            </div>
-                        </div>
+                {% for post in site.posts limit:1 %}
+                <!--Latest Post-->
+                <div class = 'blogpost' style="align-items: center; display: flex; justify-content: center; margin-bottom: 30px;">
+                    <div style=" margin: 15px 15px 15px 15px;">
+                        <img style = "width: 800px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
                     </div>
-                    {% endfor %}
-                    <h3>Recent Projects</h3>
-                    <!--Recent Posts-->
-                    <div style="align-items: center; display: flex; justify-content: center; margin: auto;">
-                    <ul class='blogposts'>
-                    {% for post in site.posts limit:8 offset:1 %}
-                    <!--Latest Post-->
-                    <div class = 'blogpost' style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: 205px; display: inline-block; text-align: center;">
-                        <a href = "{{ post.url }}">
-                            <img src = "{{ post.thumbnail }}"/>
-                            <h3>{{ post.title }}</h3>
-                            <!--<p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>-->
-                        </a>
-                    </div>
-                    {% endfor %}
-                    </ul>
+                    <div style = "display: flex; flex-direction: column;">
+                        <h3>{{ post.title }}</h3>  
+                        <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+                        <p>{{ post.summary }}</p>
+                        <div>
+                            <ul style = "margin-top: auto; color: white;"> <!--TODO: Size these elements the same, and space evenly.-->
+                            <a class = "btn" href = "{{ post.repository }}">Repository</a>
+                            <a class = "btn" href = "{{ post.download }}">Download</a>
+                            {% if post.categories contains "Project" %}
+                            <a class = "btn" href = "{{ post.url }}">Site</a>
+                            {% elsif post.categories contains "Blog" %}
+                            <a class = "btn" href = "{{ post.url }}">Blog</a>
+                            {% endif %}
+                            </ul>
+                        </div>    
                     </div>
                 </div>
+                {% endfor %}
+                <h2>Recent Projects</h2>
+                <!--Recent Posts-->
+                <div style="align-items: center; display: flex; justify-content: center; margin: auto;">
+                    <ul class='blogposts'>
+                    {% for post in site.posts limit:8 offset:1 %}
+                        <!--Latest Post-->
+                        <div class = 'blogpost' style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: 205px; display: inline-block; text-align: center;">
+                            <a href = "{{ post.url }}">
+                                <img style = "width:320px; object-fit: contain;" src = "{{ post.card }}"/>
+                                <h3 style = "text-overflow: inherit;">{{ post.title | truncate: 22}}</h3>
+                                <!--<p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>-->
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <!--About Section-->
@@ -136,11 +140,8 @@ layout: default
             <div>
                 <img class = 'promoimage' href = "https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)">
             </div>
-            <div>
             <div style="margin-top:40px;margin-bottom:40px; margin-left: 180px; margin-right: 180px;">
-                <p style = "border: 1px solid white;">Currently a student at Sheffield Hallam University, I am a proficient programmer, mainly focused on the C++ language. I've been a specialist game development student since 2018. I am passionate about graphics and software optimisation, and have experience in parallel software architecture using Vectorisation, threads and Compute. In the future, I'd like to break into either Graphics or Tools programming. I'm also a Japanese student, currently working towards my JLPT N3 certification.</p>
-            <a class = 'btn' href = '/Resources/Ewan Burnett CV 2021-2022.pdf' target = "_blank">CV / Resumé</a>
-            </div>
+                <h3 style = "border: 1px solid white; color: white; padding: 5px;">Currently a student at Sheffield Hallam University, I am a proficient programmer, mainly focused on the C++ language. I've been a specialist game development student since 2018. I am passionate about graphics and software optimisation, and have experience in parallel software architecture using Vectorisation, threads and Compute. In the future, I'd like to break into either Graphics or Tools programming. I'm also a Japanese student, currently working towards my JLPT N3 certification.</h3>
             </div>
         </div>
     </section>
@@ -152,38 +153,38 @@ layout: default
             <div class = 'skill'>
                 <h2>&lt;Languages&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="/Resources/Icons/c.png" alt="C99"></li>
-                    <li><img class = "logo" src="/Resources/Icons/c++.png" alt="C++ 20"></li>
-                    <li><img class = "logo" src="/Resources/Icons/cs.png" alt="C#"></li>
-                    <li><img class = "logo" src="/Resources/Icons/hlsl.png" alt="HLSL"></li>
-                    <li><img class = "logo" src="/Resources/Icons/glsl.png" alt="GLSL"></li>
-                    <li><img class = "logo" src="/Resources/Icons/x8664.png" alt="x86/x64 ASM"></li>
-                    <li><img class = "logo" src="/Resources/Icons/arm.png" alt="ARM ASM"></li>
-                    <li><img class = "logo" src="/Resources/Icons/bash.png" alt="Bash"></li>
+                    <li><img class = "logo" src="/Resources/Icons/c.png" alt="C99" title="C99"></li>
+                    <li><img class = "logo" src="/Resources/Icons/c++.png" alt="C++ 20" title="C++ 20"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cs.png" alt="C#" title="C#"></li>
+                    <li><img class = "logo" src="/Resources/Icons/hlsl.png" alt="HLSL" title="High-Level Shader Language"></li>
+                    <li><img class = "logo" src="/Resources/Icons/glsl.png" alt="GLSL" title="OpenGL Shading Language"></li>
+                    <li><img class = "logo" src="/Resources/Icons/x8664.png" alt="x86/x64 ASM" title="x86 / x64 Assembly"></li>
+                    <li><img class = "logo" src="/Resources/Icons/arm.png" alt="ARM ASM" title="ARM Assembly"></li>
+                    <li><img class = "logo" src="/Resources/Icons/bash.png" alt="Bash" title="Bash Scripting"></li>
                 </ul>
             </div>
             <div class = 'skill'>
                 <h2>&lt;Technology&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="/Resources/Icons/dx11.png" alt="DirectX 11"></li>
-                    <li><img class = "logo" src="/Resources/Icons/dx12.png" alt="DirectX 12"></li>
-                    <li><img class = "logo" src="/Resources/Icons/vulkan.png" alt="Vulkan"></li>
-                    <li><img class = "logo" src="/Resources/Icons/cuda.png" alt="CUDA"></li>
-                    <li><img class = "logo" src="/Resources/Icons/unrealengine4.png" alt="Unreal Engine 4"></li>
-                    <li><img class = "logo" src="/Resources/Icons/unity.png" alt="Unity Enigne"></li>
+                    <li><img class = "logo" src="/Resources/Icons/dx11.png" alt="DirectX 11" title="DirectX 11"></li>
+                    <li><img class = "logo" src="/Resources/Icons/dx12.png" alt="DirectX 12" title="DirectX 12"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vulkan.png" alt="Vulkan" title="Vulkan"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cuda.png" alt="CUDA" title = "NVidia CUDA"></li>
+                    <li><img class = "logo" src="/Resources/Icons/unrealengine4.png" alt="Unreal Engine 4" title="Unreal Engine 4"></li>
+                    <li><img class = "logo" src="/Resources/Icons/unity.png" alt="Unity Enigne" title="Unity Engine"></li>
                 </ul>
             </div>
             <div class = 'skill'>
                 <h2>&lt;Tools&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="/Resources/Icons/vs22.png" alt="Visual Studio 2022"></li>
-                    <li><img class = "logo" src="/Resources/Icons/vim.png" alt="Vim"></li>
-                    <li><img class = "logo" src="/Resources/Icons/maya.png" alt="Autodesk Maya"></li>
-                    <li><img class = "logo" src="/Resources/Icons/git.png" alt="Git"></li>
-                    <li><img class = "logo" src="/Resources/Icons/cmake.png" alt="CMake"></li>
-                    <li><img class = "logo" src="/Resources/Icons/nsight.png" alt="Nsight"></li>
-                    <li><img class = "logo" src="/Resources/Icons/pix.png" alt="PIX"></li>
-                    <li><img class = "logo" src="/Resources/Icons/renderdoc.png" alt="RenderDoc"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vs22.png" alt="Visual Studio 2022" title="Visual Studio 2022"></li>
+                    <li><img class = "logo" src="/Resources/Icons/vim.png" alt="Vim" title="Vim"></li>
+                    <li><img class = "logo" src="/Resources/Icons/maya.png" alt="Autodesk Maya" title="Autodesk Maya"></li>
+                    <li><img class = "logo" src="/Resources/Icons/git.png" alt="Git" title="Git"></li>
+                    <li><img class = "logo" src="/Resources/Icons/cmake.png" alt="CMake" title="CMake"></li>
+                    <li><img class = "logo" src="/Resources/Icons/nsight.png" alt="Nsight" title="NVidia NSight Profiler"></li>
+                    <li><img class = "logo" src="/Resources/Icons/pix.png" alt="PIX" title="Microsoft PIX Profiler"></li>
+                    <li><img class = "logo" src="/Resources/Icons/renderdoc.png" alt="RenderDoc" title="RenderDoc"></li>
                 </ul>
             </div>
         </div>
@@ -205,9 +206,9 @@ layout: default
                             <li>Scripting in C# for Unity, and Blueprints for Unreal Engine 4</li>
                         </ul>
                     </li>
-                     <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
+                    <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
                         <h2>MCOMP Computer Science for Games</h2>
-                        <h3>Sheffied Hallam Univesrity - [2:1]</h3>
+                        <h3>Sheffied Hallam University - [2:1]</h3>
                         <p>During my 5 years at Sheffield Hallam University, I am studying various specialist topics.</p>
                         <ul>
                             <li>Advanced C++ Programming</li>
@@ -224,7 +225,7 @@ layout: default
         </div>
     </section>
     </body>
-            <script src="/assets/script/flickity.pkgd.min.js"></script>
+        <script src="/assets/script/flickity.pkgd.min.js"></script>
         <script src = "/assets/script/index.js"></script>
         <script src="/assets/script/gl-matrix.js"></script>
         <script src="/assets/script/sitedemo.js"></script>
