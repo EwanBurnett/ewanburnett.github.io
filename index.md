@@ -21,6 +21,8 @@ layout: default
 
 <!-- if using dark theme add this in addition to the main CSS file -->
 <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
     </head>
     <body>
     <!--Intro Section-->
