@@ -2,7 +2,7 @@
 Title: 2D Particle Simulation
 Date: 2022-03-22
 layout: blog
-categories: Personal Project Featured
+categories: Personal Blog Featured
 tags: C++ 
 permalink: /Projects/:title/
 card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"

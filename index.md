@@ -213,7 +213,7 @@ layout: default
                     <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
                         <h2>MCOMP Computer Science for Games</h2>
                         <h3>Sheffied Hallam University - [2:1]</h3>
-                        <p>During my 5 years at Sheffield Hallam University, I am studying various specialist topics.</p>
+                        <p>I am studying various specialist topics as part of a 5 year intergated master's</p>
                         <ul>
                             <li>Advanced C++ Programming</li>
                             <li>Mathematics for 3D Graphics</li>
