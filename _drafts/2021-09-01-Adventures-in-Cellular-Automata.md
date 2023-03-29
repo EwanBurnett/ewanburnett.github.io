@@ -1,12 +1,12 @@
 ---
-Title: Genesis R
-Date: 2021-12-10
+Title: Adventures in Cellular Automata
+Date: 2022-03-22
 layout: project
 categories: Personal Project Featured
-tags: Unity
+tags: C++ 
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Genesis-R+(1000x500)"
-summary: MComp Computer Science for Games Year 1 Project 1
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"

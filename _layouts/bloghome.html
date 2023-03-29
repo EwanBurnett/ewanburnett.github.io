@@ -3,6 +3,7 @@
 
 {%- include head.html -%}
 <link rel='stylesheet' href='/assets/css/navbar.css'>
+<link rel='stylesheet' href='/assets/css/projecthome.css'>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 <body>
 
@@ -19,19 +20,25 @@
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
 
-            {{ content }}
-
+            <h1 style="text-align: center; font-size: 54px; font-family: Arial, Helvetica, sans-serif; color: white;"> Development Blogs </h1>
             <div>
-                <h2>Development Blogs</h2>
                 <ul>
                 {% for post in site.categories.Blog %}
-                <div>
-                    <div>
-                    <h4>{{ post.date }}</h4>
-                    <a href="{{ post.url | relative_url }}">{{ post.title | post.date | date: date_format | escape }}</a> {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-                    <h3>{{ post.summary }}</h3>
-                    </div>
-                    <img src = "{{ post.card }}" style="width:400px; object-fit: contain;">
+                <div class = "BlogCard">
+                    <a href = "{{ post.url | relative_url }}">
+                        <div>
+                        <h4>{{ post.title }}</h4>
+                        <h4>{{ post.date | date: "%d %B %Y" }}</h4>
+                        
+                        {% for tag in post.tags %}
+                            <h4>{{ tag }}</h4>
+                        {% endfor %}
+                        </div>
+                        <div>
+                            <h3>{{ post.summary }}</h3>
+                            <img src = "{{ post.card }}" style="width: 400px; object-fit: contain;">
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
                 </ul>

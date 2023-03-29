@@ -1,12 +1,12 @@
 ---
-Title: State Stacks
-Date: 2021-02-22
+Title: Experimenting with ECS
+Date: 2022-03-22
 layout: blog
 categories: Personal Blog
 tags: C++ 
-permalink: /Blog/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=State-Stacks+(1000x500)"
-summary: Experimenting with State Stacks, and their use in Game Devlopment
+permalink: /Projects/:title/
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"

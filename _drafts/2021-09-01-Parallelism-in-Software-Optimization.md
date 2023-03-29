@@ -1,12 +1,12 @@
 ---
-Title: Aspect
-Date: 2022-01-14
+Title: Parallelism in Software Optimisation
+Date: 2022-03-22
 layout: project
 categories: Personal Project Featured
-tags: UE4
+tags: C++ 
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Aspects+(1000x500)"
-summary: MComp Computer Science for Games Year 1 Project 2
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"

@@ -43,7 +43,7 @@ layout: default
                     <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
                     <div style = "display: flex; flex-direction: row;">
                     <button style="display: flex;" class = 'b0' onClick = "window.location.href='#projects'">See what I can do </button>
-                    <button style="display: flex; margin-left: 3%;" class = 'b0' onClick = "location.href='/Resources/Ewan Burnett CV 2021-2022.pdf'" target = "_blank">CV / Resumé </button>
+                    <button style="display: flex; margin-left: 3%;" class = 'b0' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">CV / Resumé </button>
                     </div>
                 </div>
                 <!--Socials-->
@@ -143,7 +143,9 @@ layout: default
                 <img class = 'promoimage' href = "https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)">
             </div>
             <div style="margin-top:40px;margin-bottom:40px; margin-left: 180px; margin-right: 180px;">
-                <h3 style = "border: 1px solid white; color: white; padding: 5px;">Currently a student at Sheffield Hallam University, I am a proficient programmer, mainly focused on the C++ language. I've been a specialist game development student since 2018. I am passionate about graphics and software optimisation, and have experience in parallel software architecture using Vectorisation, threads and Compute. In the future, I'd like to break into either Graphics or Tools programming. I'm also a Japanese student, currently working towards my JLPT N3 certification.</h3>
+                <h3 style = "border: 1px solid white; color: white; padding: 5px;">A Second Year Computing student at Sheffield Hallam University, with a focus on C++ Programming. I've studied game development since 2018. I specialize in computer graphics and software optimisation, and have a passion for learning about hardware architecture.
+                <br><br>
+                Additionally, as a Japanese student, I am currently working towards my JLPT N3 certification for the end of 2024. I enjoy working in challenging situations to come up with a novel solution.</h3>
             </div>
         </div>
     </section>

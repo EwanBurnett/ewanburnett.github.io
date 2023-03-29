@@ -1,13 +1,13 @@
 ---
-Title: Atom Loader
-Date: 2023-01-06
-layout: project
-categories: Personal Project Featured
+Title: 3D Skeletal Animation
+Date: 2022-03-22
+layout: blog
+categories: Personal Blog 
 tags: C++ 
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Atom-Loader+(1000x500)"
-summary: A Utility Library and Viewer for Importing and Exporting 3D Models
-repository: "https://github.com/EwanBurnett/AtomLoader"
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+summary: Adventures in 2D Molecular particle simulations. 
+repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"
 ---

@@ -1,12 +1,12 @@
 ---
-Title: Cellular Automata
-Date: 2022-04-09
+Title: Skyblazer
+Date: 2022-03-22
 layout: project
 categories: Personal Project Featured
 tags: C++ 
 permalink: /Projects/:title/
-card: "/Resources/Cards/Cellular-Automata.png"
-summary: Adventures in 2D Cellular Automata. 
+card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
 video: "https://www.youtube.com/embed/PMFbgZx2WOc"
