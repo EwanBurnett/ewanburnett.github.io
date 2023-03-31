@@ -5,7 +5,7 @@ layout: blog
 categories: Blog
 tags: [DX11, C++]
 permalink: /Blog/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=Aura-Engine+(1000x500)"
+card: "/Resources/Cards/Triangle-Demo-Card-TO-RESIZE.png"
 ---
 <h1>First Triangle using DirectX 11</h1>
 <h6>{{ tag_name }}</h6>

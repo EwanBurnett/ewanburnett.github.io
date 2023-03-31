@@ -1,15 +1,15 @@
 ---
-Title: 2D Particle Simulation
+Title: Adventures in Cellular Automata
 Date: 2022-03-22
 layout: project
 categories: Personal Project Featured
-tags: C++ 
+tags: C++ SFML
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
-summary: Adventures in 2D Molecular particle simulations. 
+card: /Resources/Cards/Cellular-Automata.png
+summary: Learning about Cellular Automata.
 repository: "https://github.com/EwanBurnett/"
 download: ""
-video: "https://www.youtube.com/embed/PMFbgZx2WOc"
+video:
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt varius dolor semper tristique. Nam in nisl at est finibus bibendum sit amet id erat. Fusce in urna id diam faucibus tincidunt. Duis ornare viverra bibendum. Phasellus pharetra, velit at blandit feugiat, tortor tellus accumsan dolor, nec dapibus mi turpis eget felis. Pellentesque egestas fringilla nisl. Sed in velit sed urna dignissim ornare ac eu mi. Nullam accumsan placerat nunc, ut aliquet magna finibus sed. Curabitur sodales ligula id erat vehicula, ac rhoncus dolor elementum. Cras semper lacus et quam finibus, in placerat ante efficitur. Pellentesque ac quam tincidunt, vulputate odio sit amet, rutrum enim. Etiam mollis aliquet ornare. Suspendisse sollicitudin ante sed nisi condimentum, eu vestibulum orci auctor. Pellentesque et ultrices arcu. Donec ac ipsum viverra, interdum lorem nec, dignissim est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

@@ -16,7 +16,7 @@ layout: projecthome
                     <div style="display: inline-block;">
                         <h4 style="margin-left: 15px; color: white; text-align:left;">{{ post.date | date:"%d/%m/%Y" }}</h4>
                         <div style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: 205px; display: inline-block; text-align: center;">
-                            <a href = "{{ post.url }}">
+                            <a href = "{{ post.url }}" style="color: white;">
                                 <img src = "{{ post.card }}" style = "width:320px; object-fit: contain;">
                                 <h3 style = "text-overflow: inherit;">{{ post.title | truncate: 22}}</h3>
                             </a>
@@ -28,4 +28,3 @@ layout: projecthome
         </div>
     </section>
 </body>
-

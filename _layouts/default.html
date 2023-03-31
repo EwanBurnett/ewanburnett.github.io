@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: ' en ' }}">
-
-{%- include head.html -%}
-<link rel='stylesheet' href='/assets/css/navbar.css'>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-<body>
-
-    <nav class='navigation'>
-        <h1>Ewan Burnett</h1>
-        <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/projects/'>Projects</a></li>
-            <li><a href='/blog/'>Blog</a></li>
-            <li><a href='https://github.com/ewanburnett'>Github</a></li>
-        </ul>
+  {%- include head.html -%}
+  <link rel="stylesheet" href="/assets/css/navbar.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
+  <body>
+    <nav class="navigation">
+      <h1>Ewan Burnett</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="https://github.com/ewanburnett">Github</a></li>
+      </ul>
     </nav>
 
-    <main>
-        {{ content }}
-    </main>
-
+    <main>{{ content }}</main>
 
     {%- include footer.html -%}
-
-</body>
-
+  </body>
 </html>

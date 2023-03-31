@@ -4,7 +4,7 @@
 {%- include head.html -%}
 <link rel='stylesheet' href='/assets/css/navbar.css'>
 <link rel='stylesheet' href='/assets/css/project.css'>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 <body>
     <nav class='navigation'>
         <h1>Ewan Burnett</h1>
@@ -40,7 +40,10 @@
                     </div>
                     {% if page.video and page.video != '' %}
                         <iframe style=" border: 1px solid black;" width="600" height="337.5" src={{ page.video }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                {% endif %}
+                    {% else %}
+                    <!--Show an alternative image instead-->
+                        <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.altcard }}>
+                        {% endif %}
                 </div>
             </div>
         </div>

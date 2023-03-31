@@ -42,10 +42,17 @@ html.is-flickity-fullscreen {
   left: 10px;
 }
 
-.flickity-fullscreen-button-exit { display: none; }
+.flickity-fullscreen-button-exit {
+  display: none;
+}
 
-.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit { display: block; }
-.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view { display: none; }
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
+  display: block;
+}
+
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
+  display: none;
+}
 
 .flickity-fullscreen-button .flickity-button-icon {
   position: absolute;

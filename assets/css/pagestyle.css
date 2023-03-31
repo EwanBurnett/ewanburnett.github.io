@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-#projects{
+#projects {
     background: rgb(48 49 48);
 }
 
-#projects li{
+#projects li {
     display: block;
     list-style: none;
     background-color: transparent;
@@ -18,35 +18,25 @@
     outline: none;
 }
 
-#projects li:hover{
+#projects li:hover {
     cursor: pointer;
     background-color: white;
     color: black;
 }
 
-#projects li:a{
+#projects li:a {
     margin: 0px;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-#projects img{
-    
-}
+#projects img {}
 
-#projects h1{
+#projects h1 {}
 
-}
+#projects h2 {}
 
-#projects h2{
+#projectsh3 {}
 
-}
-
-#projectsh3{
-
-}
-
-#projects h4{
-
-}
+#projects h4 {}

@@ -1,11 +1,11 @@
 ---
-Title: Adventures in Cellular Automata
+Title: Rendering Engine
 Date: 2022-03-22
 layout: project
-categories: Personal Project Featured
-tags: C++ 
+categories: Project Featured Coursework
+tags: C++ DX11
 permalink: /Projects/:title/
-card: "https://dummyimage.com/1000x500/Cfa19c/fff.png&text=2D-Particles+(1000x500)"
+card: /Resources/Cards/Rendering-Engine.png
 summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
