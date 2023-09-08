@@ -1,11 +1,11 @@
 ---
-Title: Emulating a 6502 Processor
-Date: 2022-04-29
-layout: project
-categories: Personal Project
+Title: Learning Vulkan 1 - Initialization
+Date: 2023-09-08
+layout: blog
+categories: Personal Blog 
 tags: C++ 
 permalink: /Projects/:title/
-card: "/Resources/Cards/6502_Emu_Card.png"
+card: "/Resources/Cards/VKTriangle_Card.png"
 summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""

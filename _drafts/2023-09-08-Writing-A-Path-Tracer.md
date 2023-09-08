@@ -1,11 +1,11 @@
 ---
-Title: Emulating a 6502 Processor
-Date: 2022-04-29
-layout: project
-categories: Personal Project
+Title: Writing a Path tracer - Part 1
+Date: 2023-09-08
+layout: blog
+categories: Personal Blog 
 tags: C++ 
 permalink: /Projects/:title/
-card: "/Resources/Cards/6502_Emu_Card.png"
+card: "/Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png"
 summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
 download: ""
