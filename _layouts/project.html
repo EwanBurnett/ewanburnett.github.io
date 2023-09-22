@@ -26,22 +26,26 @@
                 {{ content }}
             </div>
             <!--Project Info-->
-                <div class = "column" style="width: 40%; text-align: center;">
-                    <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.card }}>
-                    <h4>{{ page.summary }}</h4>
-                    <div class = "row" style="width: 100%; margin-bottom: 30px;">
-                        <div class = "column">
-                            <a class = "btn" href = {{ page.repository }}>Repository</a>    
+            <div class = "column" style="width: 40%; text-align: center;">
+                <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.card }}>
+                <h4>{{ page.summary }}</h4>
+                <div class = 'column' style='width: 100%; margin-bottom: 30px;'>
+                        {% if page.repository and page.repository != '' %}
+                        <div class = "row">
+                            <a href= {{ page.repository }}><img src="https://gh-card.dev/repos/{{ page.repository | remove: 'https://github.com/' }}.svg"></a>
                         </div>
-                        <div class = "column">
-                            <a class = "btn" href = {{ page.download }}>Download</a>
+                        {% endif %}
+                        {% if page.download and page.download != '' %}
+                        <div class="row" style="padding: auto;">
+                            <a class = "btn" ref = {{ page.download }}>Download</a>
                         </div>
-                        </ul>
-                    </div>
-                    {% if page.video and page.video != '' %}
-                        <iframe style=" border: 1px solid black;" width="600" height="337.5" src={{ page.video }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    {% else %}
-                    <!--Show an alternative image instead-->
+                        {% endif %}
+                        {% if page.video and page.video != '' %}
+                        <div class="row" style="padding: 5%;">
+                            <iframe style=" border: 1px solid black;" width="600" height="337.5" src={{ page.video }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        {% else %}
+                        <!--Show an alternative image instead-->
                         <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.altcard }}>
                         {% endif %}
                 </div>
