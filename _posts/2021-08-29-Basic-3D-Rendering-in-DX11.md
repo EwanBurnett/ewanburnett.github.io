@@ -1,5 +1,5 @@
 ---
-Title: Basic 3D Rendering in DirectX 11
+Title: DirectX 11 Rendering - 3D Geometry
 Date: 2021-08-29
 layout: blog
 categories: Blog
@@ -8,11 +8,10 @@ permalink: /Blog/:title/
 repository: https://github.com/EwanBurnett/DirectX-11-Practice/
 download: https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v1.0.0
 card: "/Resources/Cards/Basic-3D-Rendering-in-DX11.png"
+Previous: 
+Next: 
 ---
 
-<h1>3D Rendering in DirectX 11 </h1>
-
-<h2>Demo Overview</h2>
 After hours of study, and even more hours of debbugging, I have a 3D rendered cube!
 
 This demo has a comparatively huge featureset compared to last week's [Triangle Demo](https://ewanburnett.github.io/2021/08/19/DX11-First-Triangle.html), featuring:
@@ -203,13 +202,10 @@ After linking ImGui - a pretty simple process thanks to the extensive documentat
 
 Anyway, That was my escapade for this week! As always the Source Code is available on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/3D-Rendering), and the Demo can be downloaded from [Here!]({{ page.download }})
 
-Thanks for following me on my journey so far! For next week, i'll be looking into procedural mesh generation, and improving the framework of my code.
+Thanks for following me on my journey so far!
 
 -Ewan
 
-P.S. This Demo and post are a couple of days late; I've had a really bad medical week! - I'll try my best to keep on schedule, as long as I'm able to. If all goes well, I'll be back on track from the demo after next. 
-
-I'll be publishing a demo video during the next site update. it's quite difficult to edit / record when you're stuck in bed after all
 
 
 

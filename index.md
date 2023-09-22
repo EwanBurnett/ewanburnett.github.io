@@ -34,14 +34,17 @@ layout: default
             <div style="float: right; width:40%; background-colour: red;">
                 <!--Translate Button-->
                 <div style = "float: right;">
-                    <button class = "b0" onClick = "window.location.href='#'" >EN/日本語</button>
+                    <button class = "b0" onClick = "switchLanguage()">EN/日本語</button>
                 </div>
                 <!--Site Intro-->
                 <div style = "position: relative; margin: 10px;  margin-top: 30%;">
-                    <h1>Hi, I'm Ewan - A Graphics Programmer</h1>
+                    <h1 lang="en" class="en">Hi, I'm Ewan - A Graphics Programmer</h1>
+                    <h1 lang="jp" class="jp" style="display: none;">グラヒックスプログラマーのユアンです</h1>
                     <div style = "display: flex; flex-direction: row;">
-                    <button style="display: flex;" class = 'b0' onClick = "window.location.href='#projects'">See what I can do </button>
-                    <button style="display: flex; margin-left: 3%;" class = 'b0' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">CV / Resumé </button>
+                    <button style="display: flex;" class = 'b0 en' onClick = "window.location.href='#projects'">See what I can do </button> 
+                    <button style="display: flex;" lang="jp" style="display:none;" class = 'b0 jp' onClick = "window.location.href='#projects'">プロジェクトを見て</button>
+                    <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">CV / Resumé </button>
+                     <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
                     </div>
                 </div>
                 <!--Socials-->
@@ -85,12 +88,11 @@ layout: default
                     {% endfor %}
                 </div>
             </div>
-            <h2 style="margin-left: 80px;">Latest</h2>
-            <!--Git Commit Activity-->
-            <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>
             <!--Project Subnavigation Bar-->
             <div class = 'projectSubnav' style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">
-            <div class="column" style="display: inline-block;margin-bottom: 30px;">
+            <h2>Latest</h2>
+            <div style="display:flex; flex-direction:column; margin-bottom: 30px;">
+            <div style="display: inline-block;">
                 <!--Latest Project-->
                 <div style="float: left; width: 78%;">
                     {% for post in site.categories.Project limit:1 %}
@@ -103,10 +105,11 @@ layout: default
                             <div style = "display: flex; flex-direction: column;">
                                 <div style = "display: flex; flex-direction: row;">
                                     <h2 style="margin-right: 15px;">{{ post.title }}</h2>  
-                                    <h3 class="blogdate">{{ post.date | date: "%d %B %Y" }}</h3>
                                 </div>
                                 <div>
                                     <p>{{ post.summary }}</p>
+                                    <a class = "btn" href="{{ post.repository }}" style="margin-right: 20px;">Repository</a>
+                                    <a class = "btn" href="{{ post.download }}">Download</a>
                                 </div>
                             </div>
                         </div>
@@ -130,38 +133,33 @@ layout: default
                         {% endfor %}
                     </div>
                 </div>
-                <h2>Recent Work</h2>
-                <!--Recent Posts-->
-                <div style="align-items: center; display: flex; justify-content: center; margin: auto;">
-                    <ul class='blogposts'>
-                    {% for post in site.posts limit:8 offset:1 %}
+            </div>
+            </div>
+            <!--Recent Posts-->
+                <div style="display: flex; margin-left: 50px;">
+                    <ul>
+                    {% assign postCount = 0 %}
+                    {% for post in site.posts %}
+                    {% if postCount < 5 %}
+                    {% unless post == site.categories.Blog[0] or post == site.categories.Project[0] %}
+                        {% assign postCount = postCount | plus: 1 %}
                         <!--Latest Project-->
-                        <div class = 'blogpost' style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: 205px; display: inline-block; text-align: center;">
-                            <a href = "{{ post.url }}">
-                                <img style = "width:320px; object-fit: contain;" src = "{{ post.card }}"/>
-                                <h3 style = "text-overflow: inherit;">{{ post.title | truncate: 22}}</h3>
+                        <div class = 'blogpost' style = "border: 1px solid white; width: 320px; margin-right: 20px; height: 220px; display: inline-block; ">
+                            <a href = "{{ post.url }}" style="text-align: center;">
+                                <img style = "width:400px; object-fit: contain;" src = "{{ post.card }}"/>
+                                <h3 style = "text-overflow: inherit;">{{ post.Title | truncate: 22}}</h3>
                                 <!--<p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>-->
                             </a>
                         </div>
+                    {% endunless %}
+                    {% endif %}
                     {% endfor %}
                     </ul>
                 </div>
-            </div>
-        </div>
+        </div>           
     </section>
     <!--About Section-->
     <section id = 'about'>
-        <div style="width:100%;">
-            <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-About Me-</h1>
-            <div>
-                <img class = 'promoimage' href = "https://dummyimage.com/400x600/9fa19c/fff.png&text=Promo+Image+(400x600)">
-            </div>
-            <div style="margin-top:40px;margin-bottom:40px; margin-left: 180px; margin-right: 180px;">
-                <h3 style = "border: 1px solid white; color: white; padding: 5px;">A Second Year Computing student at Sheffield Hallam University, with a focus on C++ Programming. I've studied game development since 2018. I specialize in computer graphics and software optimisation, and have a passion for learning about hardware architecture.
-                <br><br>
-                Additionally, as a Japanese student, I am currently working towards my JLPT N3 certification for the end of 2024. I enjoy working in challenging situations to come up with a novel solution.</h3>
-            </div>
-        </div>
     </section>
     <!--Skills Section-->
     <section id = 'skills'>
@@ -184,6 +182,7 @@ layout: default
             <div class = 'skill'>
                 <h2>&lt;Technology&gt;</h2>
                 <ul>
+                    <li><img class = "logo" src="/Resources/Icons/opengl.png" alt="OpenGL" title="OpenGL"></li>
                     <li><img class = "logo" src="/Resources/Icons/dx11.png" alt="DirectX 11" title="DirectX 11"></li>
                     <li><img class = "logo" src="/Resources/Icons/dx12.png" alt="DirectX 12" title="DirectX 12"></li>
                     <li><img class = "logo" src="/Resources/Icons/vulkan.png" alt="Vulkan" title="Vulkan"></li>
@@ -211,42 +210,54 @@ layout: default
     <!--Timeline Section-->
     <section id = 'timeline'>
         <div style="width:100%;">
+             <!--Git Commit Activity-->
+            <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>x
             <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Timeline-</h1>
-            <div>   <!--Timeline-->
-                <ul class = 'tl'>
-                    <li class = 'event' data-date='>2018' style="color: white; font-size: 20px;">
-                        <h2>BTECH Games Technology</h2>
-                        <h3>Confetti Insititute of Creative Technologies [DDM]</h3>
-                        <p>Confetti was my first step into the games industry. Focusing on the basic skills required for any game developer.</p>
-                        <ul>
-                            <li>Principles of Game Design and The Development Pipeline</li>
-                            <li>3D Modelling in Autodesk Maya</li>
-                            <li>Scripting in C# for Unity, and Blueprints for Unreal Engine 4</li>
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex: 3.5; flex-direction: column;">
+                    <div>   <!--Timeline-->
+                        <ul class = 'tl'>
+                            <li class = 'event' data-date='>2018' style="color: white; font-size: 20px;">
+                                <h2>BTECH Games Technology</h2>
+                                <h3>Confetti Insititute of Creative Technologies [DDM]</h3>
+                                <p>Confetti was my first step into the games industry. Focusing on the basic skills required for any game developer.</p>
+                                <ul>
+                                    <li>Principles of Game Design and The Development Pipeline</li>
+                                    <li>3D Modelling in Autodesk Maya</li>
+                                    <li>Scripting in C# for Unity, and Blueprints for Unreal Engine 4</li>
+                                </ul>
+                            </li>
+                            <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
+                                <h2>MCOMP Computer Science for Games</h2>
+                                <h3>Sheffied Hallam University - [2:1]</h3>
+                                <p>I am studying various specialist topics as part of a 5 year intergated master's</p>
+                                <ul>
+                                    <li>Advanced C++ Programming</li>
+                                    <li>Mathematics for 3D Graphics</li>
+                                    <li>Low Level System Architecture</li>
+                                    <li>PS4 / PS5 Console Development</li>
+                                </ul>
+                            </li>
+                            <li class = 'event' data-date='>2025' style="color: white; font-size: 20px;">
+                                <h2>...</h2>
+                            </li>
                         </ul>
-                    </li>
-                    <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
-                        <h2>MCOMP Computer Science for Games</h2>
-                        <h3>Sheffied Hallam University - [2:1]</h3>
-                        <p>I am studying various specialist topics as part of a 5 year intergated master's</p>
-                        <ul>
-                            <li>Advanced C++ Programming</li>
-                            <li>Mathematics for 3D Graphics</li>
-                            <li>Low Level System Architecture</li>
-                            <li>PS4 / PS5 Console Development</li>
-                        </ul>
-                    </li>
-                    <li class = 'event' data-date='>2025' style="color: white; font-size: 20px;">
-                        <h2>...</h2>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+            <div style="display: inline-block; flex: 2;">
+                <div style="margin: 15px;">
+                    <h3 style = "border: 1px solid white; color: white; padding: 5px;">A Computing student at Sheffield Hallam University, Focusing on C++ Programming. I've been studying Game Development since 2018, and specialize in Computer Graphics, Software Optimisation and Cross-platform Development.
+                    <br><br>
+                    I also study Japanese, currently JLPT grade N4 - I am currently working towards N3 certification for the end of 2024. このページは日本語で読んでみたったら、最上の「EN/日本ご」ボタンを打ちてください!</h3>
+                </div>
             </div>
         </div>
     </section>
     </body>
-        <script src="/assets/script/flickity.pkgd.min.js"></script>
-        <script src = "/assets/script/index.js"></script>
-        <script src="/assets/script/gl-matrix.js"></script>
-        <script src="/assets/script/sitedemo.js"></script>
-        <script src="https://kit.fontawesome.com/daf7b09e3b.js" crossorigin="anonymous"></script>
-        <script src="/assets/script/fullscreen.js"></script>
+        <script src="/assets/script/flickity.pkgd.min.js" type="text/javascript"></script>
+        <script src = "/assets/script/index.js" type="text/javascript"></script>
+        <script src="/assets/script/gl-matrix.js" type="text/javascript"></script>
+        <script src="/assets/script/sitedemo.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/daf7b09e3b.js" crossorigin="anonymous" type="text/javascript"></script>
+        <script src="/assets/script/fullscreen.js" type="text/javascript"></script>
 </html>
