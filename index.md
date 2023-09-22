@@ -16,14 +16,11 @@ layout: default
         <link rel="stylesheet" href="node_modules/github-activity-feed/dist/github-activity.dark.min.css">
         <link rel="stylesheet" href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css">
         <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
-
-<script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
-
-<!-- if using dark theme add this in addition to the main CSS file -->
-<link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
-
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+        <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
+        <!-- if using dark theme add this in addition to the main CSS file -->
+        <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
     </head>
     <body>
     <!--Intro Section-->
@@ -93,36 +90,52 @@ layout: default
             <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>
             <!--Project Subnavigation Bar-->
             <div class = 'projectSubnav' style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">
-                {% for post in site.posts limit:1 %}
-                <!--Latest Post-->
-                <div class = 'blogpost' style="align-items: center; display: flex; justify-content: center; margin-bottom: 30px;">
-                    <div style=" margin: 15px 15px 15px 15px;">
-                        <img style = "width: 800px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
+            <div class="column" style="display: inline-block;margin-bottom: 30px;">
+                <!--Latest Project-->
+                <div style="float: left; width: 78%;">
+                    {% for post in site.categories.Project limit:1 %}
+                        <div style="align-items: center; display: flex; height: 100%;">
+                            <div >
+                                <a href = "{{ post.url }}" style="margin-right: 35px;">
+                                    <img style = "width: 800px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
+                                </a>
+                            </div>
+                            <div style = "display: flex; flex-direction: column;">
+                                <div style = "display: flex; flex-direction: row;">
+                                    <h2 style="margin-right: 15px;">{{ post.title }}</h2>  
+                                    <h3 class="blogdate">{{ post.date | date: "%d %B %Y" }}</h3>
+                                </div>
+                                <div>
+                                    <p>{{ post.summary }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <div style = "display: flex; flex-direction: column;">
-                        <h3>{{ post.title }}</h3>  
-                        <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
-                        <p>{{ post.summary }}</p>
-                        <div>
-                            <ul style = "margin-top: auto; color: white;"> <!--TODO: Size these elements the same, and space evenly.-->
-                            <a class = "btn" href = "{{ post.repository }}">Repository</a>
-                            <a class = "btn" href = "{{ post.download }}">Download</a>
-                            {% if post.categories contains "Project" %}
-                            <a class = "btn" href = "{{ post.url }}">Site</a>
-                            {% elsif post.categories contains "Blog" %}
-                            <a class = "btn" href = "{{ post.url }}">Blog</a>
-                            {% endif %}
-                            </ul>
-                        </div>    
+                    <!--Latest Blog-->
+                    <div style="float: right; width: 20%;border: 1px solid white;">
+                        {% for post in site.categories.Blog limit:1 %}
+                        <a href = "{{ post.url }}" class="btn2">
+                            <div style="align-items: center; display: inline-block; justify-content: center;">
+                                <div>
+                                    <img style = "width: 400px; object-fit: contain; border: 1px solid white;" src = "{{ post.card }}"/>
+                                </div>
+                                <div style = "display: flex; flex-direction: column; ">
+                                    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+                                    <h3 style="justify-content: center; margin-left: auto; margin-right: auto;">{{ post.title }}</h3>  
+                                    <p style="height: 100%;">{{ post.content | strip_html | truncatewords: 50 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
                     </div>
                 </div>
-                {% endfor %}
-                <h2>Recent Projects</h2>
+                <h2>Recent Work</h2>
                 <!--Recent Posts-->
                 <div style="align-items: center; display: flex; justify-content: center; margin: auto;">
                     <ul class='blogposts'>
                     {% for post in site.posts limit:8 offset:1 %}
-                        <!--Latest Post-->
+                        <!--Latest Project-->
                         <div class = 'blogpost' style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: 205px; display: inline-block; text-align: center;">
                             <a href = "{{ post.url }}">
                                 <img style = "width:320px; object-fit: contain;" src = "{{ post.card }}"/>
@@ -219,7 +232,7 @@ layout: default
                             <li>Advanced C++ Programming</li>
                             <li>Mathematics for 3D Graphics</li>
                             <li>Low Level System Architecture</li>
-                            <li>PS4 Console Development</li>
+                            <li>PS4 / PS5 Console Development</li>
                         </ul>
                     </li>
                     <li class = 'event' data-date='>2025' style="color: white; font-size: 20px;">

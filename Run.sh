@@ -1,1 +1,1 @@
-bundle exec jekyll serve --baseurl="" --drafts
+bundle exec jekyll serve --baseurl="" --drafts --livereload
