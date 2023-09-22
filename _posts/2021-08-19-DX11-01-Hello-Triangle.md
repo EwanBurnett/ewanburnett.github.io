@@ -1,18 +1,14 @@
 ---
-Title: DirectX 11 First Triangle
+Title: DirectX 11 Rendering 01 - Hello Triangle
 Date: 2021-08-19
 layout: blog
 categories: Blog
 tags: [DX11, C++]
 permalink: /Blog/:title/
-card: "/Resources/Cards/Triangle-Demo-Card-TO-RESIZE.png"
+card: "/Resources/Cards/DX11-01-Hello-Triangle.png"
 ---
-<h1>First Triangle using DirectX 11</h1>
 <h6>{{ tag_name }}</h6>
 Yesterday, I made my first triangle in DX11! 
-
-Here's a video of the Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PMFbgZx2WOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 After hours of working through Frank Luna's book on DX11 programming, I finally reached chapter 6 - Drawing in DirectX 11.
 
@@ -87,5 +83,8 @@ After fixing those two sneaky errors, I finally had my long-awaited Triangle!
 I've learned a lot from this project so far - Hundreds of things are happening even for something so simple! And I don't think i've ever been so relieved to see a simple triangle on the screen. Next step: A 3D Box! 
 
 Thanks for reading!
+
+Here's a video of the Demo
+<iframe width="100%" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/PMFbgZx2WOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The Demo for this project can be found [here](https://github.com/EwanBurnett/DirectX-11-Practice/releases/tag/v0.5.0), and the source code can be found on my [Github](https://github.com/EwanBurnett/DirectX-11-Practice/tree/Drawing).

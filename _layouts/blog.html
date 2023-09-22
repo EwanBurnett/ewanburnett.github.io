@@ -23,6 +23,10 @@
             <img src = {{ page.card }}/>
             <br></br>
             {{ content }}
+            <div style="display: flex; flex-direction: row;">
+                <a style="display: flex; flex: 1; justify-content: left;" href="{{ page.PreviousURL }}"><h2>{{ page.Previous }}</h2></a>
+                <a style="display: flex; flex: 1; justify-content: right;" href="{{ page.NextURL }}"><h2>{{ page.Next }}</h2></a>
+            </div>
         </div>
     </main>
 

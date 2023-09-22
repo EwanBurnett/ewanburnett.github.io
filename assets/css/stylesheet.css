@@ -359,16 +359,17 @@ body {
     background: fade(white, 3%);
     color: fade(white, 80%);
     font-family: 'Chivo', sans-serif;
-    margin: 50px auto;
+    margin-left: 15%;
+    margin-bottom: 15%;
     letter-spacing: 0.5px;
     position: relative;
     line-height: 1.4em;
     font-size: 1.03em;
-    padding: 50px;
+    padding-left: 50px;
     list-style: none;
     text-align: left;
     font-weight: 100;
-    max-width: 30%;
+    max-width: 60%;
 }
 
 .tl h1 {
@@ -382,7 +383,7 @@ body {
 h3 {
     font-family: 'Chivo', sans-serif;
     letter-spacing: 1.5px;
-    font-weight: 400;
+    font-weight: 70;
     font-size: 1.4em;
 }
 
@@ -390,6 +391,7 @@ h3 {
     border-bottom: 1px dashed fade(white, 10%);
     padding-bottom: (50px * 0.5);
     margin-bottom: 50px;
+    padding-right: 20px;
     position: relative;
 }
 
@@ -408,12 +410,12 @@ h3 {
 
 .tl .event:before {
     /* left: (((120px * 0.6) + 50px + 5px + 11px + (4px * 2)) * 1.5) * -1;  */
-    left: -38%;
+    left: -25%;
     color: fade(white, 40%);
     content: attr(data-date);
-    text-align: right;
+    text-align: left;
     font-weight: 100;
-    font-size: 0.9em;
+    font-size: 1.4em;
     min-width: 120px;
     font-family: 'Chivo', sans-serif;
 }
