@@ -1,8 +1,8 @@
 ---
 Title: Rendering Engine
 Date: 2022-03-22
-layout: project
-categories: Project Featured 
+layout: blog
+categories: Blog 
 tags: [C++ DX11]
 permalink: /Projects/:title/
 card: /Resources/Cards/Rendering-Engine.png

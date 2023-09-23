@@ -4,7 +4,7 @@ Date: 2023-09-08
 layout: blog
 categories: Personal Blog 
 tags: C++ 
-permalink: /Projects/:title/
+permalink: /Blog/:title
 card: "/Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png"
 summary: Adventures in 2D Molecular particle simulations. 
 repository: "https://github.com/EwanBurnett/"
