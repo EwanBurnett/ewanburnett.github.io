@@ -71,7 +71,9 @@ body {
 
 .slide {
     min-width: 1000px;
+    max-width: 1000px;
     min-height: 500px;
+    max-width: 500px;
     margin-right: 10px;
     background: gainsboro;
     counter-increment: slide;

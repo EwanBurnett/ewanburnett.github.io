@@ -20,7 +20,9 @@
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
             <h1>{{ page.title }} {{ page.version }}</h1>
-            <h4>{{ page.date | date: "%d %B %Y"}}</h4>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <h4 style="flex: 1">{{ page.date | date: "%d %B %Y"}}</h4>
+            </div>
             <div class="row">
                 <!--Page Content-->
                 <div class="column" style="width: 60%;">
@@ -31,6 +33,25 @@
                     <img class="card" style="width: 600px; object-fit: contain; border: 1px solid black;" src={{
                         page.card }}>
                     <h4>{{ page.summary }}</h4>
+                    <div style="flex: 1.2">
+                        {% for platform in page.platforms %}
+                            {% if platform == "Windows" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/windows.png" alt="Windows" title="Windows">
+                            {% endif %}
+                            {% if platform == "Mac" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/osx.png" alt="OSX" title="OSX">
+                            {% endif %}
+                            {% if platform == "Linux" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/linux.png" alt="Linux" title="Linux">
+                            {% endif %}
+                            {% if platform == "PS4" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/ps4.png" alt="PS4" title="PS4">
+                            {% endif %}
+                            {% if platform == "PS5" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/ps5.png" alt="PS5" title="PS5">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                     <div class='column' style='width: 100%; margin-bottom: 30px;'>
                         {% if page.repository and page.repository != '' %}
                         <div class="row">
@@ -59,11 +80,14 @@
                         {% endif %}
                         <!--Show any linked posts-->
                         {% if page.blogposts %}
-                        <h2>See Also</h2>
+                        <h2 style="margin-top: 15px;">See Also</h2>
                         {% endif %}
+                        {% assign postCount = 0 %}
                         {% for blogpost in page.blogposts %}
                         {% for post in site.posts %}
+                        {% if postCount < 5 %}
                         {% if post.Title == blogpost %}
+                        {% assign postCount = postCount | plus: 1 %}
                         <a href="{{ post.url }}" class="blogpost" style="
                             color: black;
                             align-items: center;
@@ -81,11 +105,12 @@
                                 src="{{ post.card }}" />
                             </div>
                             <div style="display: flex; flex-direction: column; margin: 15px">
-                                <h3>{{ post.title }}</h3>
+                                <h3>{{ post.Title }}</h3>
                                 <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
                                 <p>{{ post.summary }}</p>
                             </div>
                         </a>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
                         {% endfor %}
