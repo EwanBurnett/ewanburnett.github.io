@@ -5,6 +5,7 @@
 <link rel='stylesheet' href='/assets/css/navbar.css'>
 <link rel='stylesheet' href='/assets/css/project.css'>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
 <body>
     <nav class='navigation'>
         <h1>Ewan Burnett</h1>
@@ -18,39 +19,104 @@
 
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
-            <h1>{{ page.title }}</h1>
-            <h4>{{ page.date | date: "%d %B %Y"}}</h4>
-            <div class = "row">
-            <!--Page Content-->
-            <div class = "column" style="width: 60%;">
-                {{ content }}
+            <h1>{{ page.title }} {{ page.version }}</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <h4 style="flex: 1">{{ page.date | date: "%d %B %Y"}}</h4>
             </div>
-            <!--Project Info-->
-            <div class = "column" style="width: 40%; text-align: center;">
-                <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.card }}>
-                <h4>{{ page.summary }}</h4>
-                <div class = 'column' style='width: 100%; margin-bottom: 30px;'>
+            <div class="row">
+                <!--Page Content-->
+                <div class="column" style="width: 60%;">
+                    {{ content }}
+                </div>
+                <!--Project Info-->
+                <div class="column" style="width: 40%; text-align: center;">
+                    <img class="card" style="width: 600px; object-fit: contain; border: 1px solid black;" src={{
+                        page.card }}>
+                    <h4>{{ page.summary }}</h4>
+                    <div style="flex: 1.2">
+                        {% for platform in page.platforms %}
+                            {% if platform == "Windows" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/windows.png" alt="Windows" title="Windows">
+                            {% endif %}
+                            {% if platform == "Mac" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/osx.png" alt="OSX" title="OSX">
+                            {% endif %}
+                            {% if platform == "Linux" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/linux.png" alt="Linux" title="Linux">
+                            {% endif %}
+                            {% if platform == "PS4" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/ps4.png" alt="PS4" title="PS4">
+                            {% endif %}
+                            {% if platform == "PS5" %}
+                                <img class = "logo" style="margin-left: 2%; margin-right: 2%; max-width: 5%; height: 5%; object-fit: contain;" src="/Resources/Icons/ps5.png" alt="PS5" title="PS5">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class='column' style='width: 100%; margin-bottom: 30px;'>
                         {% if page.repository and page.repository != '' %}
-                        <div class = "row">
-                            <a href= {{ page.repository }}><img src="https://gh-card.dev/repos/{{ page.repository | remove: 'https://github.com/' }}.svg"></a>
+                        <div class="row">
+                            <a href={{ page.repository }}><img
+                                    src="https://gh-card.dev/repos/{{ page.repository | remove: 'https://github.com/' }}.svg"></a>
                         </div>
                         {% endif %}
                         {% if page.download and page.download != '' %}
-                        <div class="row" style="padding: auto;">
-                            <a class = "btn" ref = {{ page.download }}>Download</a>
+                        <div class="row" style="margin-top: 30px;">
+                            <a class="btn" href={{ page.download }}>Download {{ page.version }} </a>
                         </div>
                         {% endif %}
                         {% if page.video and page.video != '' %}
                         <div class="row" style="padding: 5%;">
-                            <iframe style=" border: 1px solid black;" width="600" height="337.5" src={{ page.video }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe style=" border: 1px solid black;" width="600" height="337.5" src={{ page.video }}
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </div>
-                        {% else %}
-                        <!--Show an alternative image instead-->
-                        <img class = "card" style="width: 600px; object-fit: contain; border: 1px solid black;" src = {{ page.altcard }}>
                         {% endif %}
+                        {% if page.altcard and page.altcard != '' %}
+                        <!--Show an alternative image instead-->
+                        <img class="card"
+                            style="margin: 5%; width: 600px; object-fit: contain; border: 1px solid black;" src={{
+                            page.altcard }}>
+                        {% endif %}
+                        <!--Show any linked posts-->
+                        {% if page.blogposts %}
+                        <h2 style="margin-top: 15px;">See Also</h2>
+                        {% endif %}
+                        {% assign postCount = 0 %}
+                        {% for blogpost in page.blogposts %}
+                        {% for post in site.posts %}
+                        {% if postCount < 5 %}
+                        {% if post.Title == blogpost %}
+                        {% assign postCount = postCount | plus: 1 %}
+                        <a href="{{ post.url }}" class="blogpost" style="
+                            color: black;
+                            align-items: center;
+                            display: flex;
+                            justify-content: left;
+                            margin-bottom: 30px;
+                            border: 1px solid black;
+                        ">
+                        <div style="margin: 15px 15px 15px 15px">
+                            <img style="
+                                width: 300px;
+                                height: 150px;
+                                object-fit: cover;
+                                border: 1px solid black;" 
+                                src="{{ post.card }}" />
+                            </div>
+                            <div style="display: flex; flex-direction: column; margin: 15px">
+                                <h3>{{ post.Title }}</h3>
+                                <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+                                <p>{{ post.summary }}</p>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
     {%- include footer.html -%}
