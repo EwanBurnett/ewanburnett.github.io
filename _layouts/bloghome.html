@@ -50,7 +50,7 @@
                 border: 1px solid white;
               "
             >
-              <div style="margin: 15px 15px 15px 15px">
+              <div style="margin: 15px 15px 15px 15px; min-width: 400px;" >
                 <img
                   style="
                     width: 400px;
@@ -61,10 +61,10 @@
                   src="{{ post.card }}"
                 />
               </div>
-              <div style="display: flex; flex-direction: column; margin: 15px">
-                <h3>{{ post.title }}</h3>
-                <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
-                <p>{{ post.summary }}</p>
+              <div style="display: flex; flex-direction: column; margin: 15px; text-align: left;">
+                <p class="blogdate" >{{ post.date | date: "%d %B %Y" }}</p>
+                <h3>{{ post.Title }}</h3>
+                <p style="word-wrap: break-word;">{{ post.summary }}</p>
               </div>
             </a>
             {% endfor %}
