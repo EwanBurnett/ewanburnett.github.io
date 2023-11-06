@@ -1,0 +1,81 @@
+--- 
+--- 
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #322f2f;
+    overflow-x: hidden;
+    transition: 0.55s;
+}
+
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.25s;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: #1702ff;
+}
+
+.menu .closeButton {
+    padding: 5px;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.menu .divider {
+    border-top: 3px solid #ccc;
+}
+
+.menu .closed {
+    /*display: inline-block;*/
+    opacity: 0;
+}
+
+.menuButton {
+    font-size:2vw;
+    cursor: pointer;
+    color: white;
+    font-family: Helvetica;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+.menu .icon {
+    margin: auto;
+    padding: 0px;
+}
+
+.menuItem span {
+    float: right; 
+    margin-right: 1vw;
+}
+@media screen and (max-width: 750px) {
+    .menuButton{
+        font-size: 4vh;
+    }
+
+    .closeButton{
+        font-size: 4vh;
+    }
+
+    .menu a{
+        font-size: 3vh;
+        text-align: center;
+        margin: auto;
+        padding: auto;
+    }
+}

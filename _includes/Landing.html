@@ -1,0 +1,47 @@
+<section id="Landing">
+    <div class="wrapper">
+        <!--Wrapper-->
+        <video id="Showreel" autoplay loop muted disablePictureInPicture controlsList="nodownload" poster="{{ site.data.demos.showreelposter }}"
+            style="background-color: black;">
+            <source src="{{ site.data.demos.showreel }}" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="details">
+                <div class="header">
+                    <!--Title-->
+                    <h1>{{ site.data.metadata.name }}</h1>
+                    <!--<hr>-->
+                    <h2>{{ site.data.metadata.title }}</h2>
+                    <div style="display: flex; flex-direction: row;">
+                        <!--Links-->
+                        <a class="icon" href="https://github.com/{{ site.data.metadata.github }}" target="_blank"><span
+                                class="fa-brands fa-github"></span></a>
+                        <a class="icon" href="{{ site.data.metadata.linkedin }}" target="_blank"><span
+                                class="fa-brands fa-linkedin"></span></a>
+                        <a class="icon" href="{{ site.data.metadata.youtube }}" target="_blank"><span
+                                class="fa-brands fa-youtube"></span></a>
+                        <a class="icon" href="{{ site.data.metadata.github }}" target="_blank"><span
+                                class="fa-solid fa-file-lines"></span></a>
+                    </div>
+                </div>
+                <!--<div style="flex: 2; width: 100%; height: 100%;">-->
+                <!--WebGL Render-->
+                <div style="flex: 1.2; width: 100%; height: 40vh; line-height:0;">
+                    <canvas id="demo"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    //Add the stylesheet to the page's head
+    {
+        stylesheet = document.createElement("link");
+        stylesheet.href = "css/Landing.css";
+        stylesheet.type = "text/css";
+        stylesheet.rel = "stylesheet";
+        document.head.appendChild(stylesheet);
+    }
+
+   
+</script>

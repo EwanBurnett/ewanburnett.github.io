@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link rel="stylesheet" href="/css/Background.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://kit.fontawesome.com/daf7b09e3b.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/gl-matrix.js"></script>
+  <script type="text/javascript" src="js/SiteDemo.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+  {% include NavBar.html %}
+  <section>
+    <div class="bg">
+      {% for i in (1..10) %}
+      <div class="square"></div>
+      {% endfor %}
+    </div>
+
+    <!--Include each subpage-->
+    {% include Landing.html %}
+    <div class="content">
+      <!--<canvas class="particles"></canvas>
+
+      <div
+        style="background: radial-gradient(circle, rgba(149,144,144,1) 0%, rgba(110,110,110,1) 54%, rgba(52,52,52,1) 100%);">-->
+        <div class="mainPanel">
+
+        {% include Projects.html %}
+        {% include Gallery.html %}
+        {% include AboutMe.html %}
+        {% include Contact.html %}
+      </div>
+    </div>
+  </section>
+  {% include Footer.html %}
+</body>
+
+</html>

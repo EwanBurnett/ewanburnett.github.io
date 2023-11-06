@@ -1,0 +1,53 @@
+<section id="Projects">
+    <h1>Projects</h1>
+    <div class="wrapper" style="background-image: url('https://picsum.photos/1250/500')">
+        <!--Display any Featured projects-->
+        <div style="height: auto;">
+            <div style="display: flex; flex-direction: column;">
+                {% for post in site.categories.Featured %}
+                <div class="featured">
+                
+                    <div class="card">
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.card }}"></img>
+                        </a>
+                    </div>
+                    <div class="details">
+                        <h2>{{ post.title }}</h2>
+                        <div>
+                            <!--Tags Carousel-->
+                            <h3>{{ post.date | date: "%d/%m/%Y"}}</h3>
+                        </div>
+                        <h4>{{ post.summary | strip }}</h4>
+                        <div>
+                            {% for tag in post.tags %}
+                            <div>
+                                <span>{{ tag }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <!--Hyperlinks to Project Archive and Blog-->
+    <div>
+        <a href="/Archive">See More</a>
+        <a href="/Blog">Blog</a>
+    </div>
+</section>
+<script>
+    //Add the stylesheet to the page's head
+    {
+        stylesheet = document.createElement("link");
+        stylesheet.href = "css/Projects.css";
+        stylesheet.type = "text/css";
+        stylesheet.rel = "stylesheet";
+        document.head.appendChild(stylesheet);
+    }
+
+</script>

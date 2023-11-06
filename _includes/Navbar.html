@@ -1,0 +1,126 @@
+<!--A Navigation Menu-->
+<div id="menu" class="menu">
+    <a href="javascript:void(0)" class="closeButton" onclick="CloseNavMenu()">
+        <h4>{{ site.data.metadata.name }}</h4>
+    </a>
+    <!--Social Media Link Icons-->
+    <div style="object-fit:cover;">
+        <img style="width: 100%;" src="https://github.com/{{ site.data.metadata.github }}.png?size=300">
+    </div>
+    <hr class="divider">
+    <div>
+        <div class="menuItem">
+            <a href="#Landing">
+                Landing
+                <span class="fa-solid fa-house"></span>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a href="#Projects">
+                Projects
+                <span class="fa-solid fa-gamepad"></span>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a href="#Gallery">
+                Gallery
+                <span class="fa-regular fa-image"></span>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a href="#AboutMe">
+                About Me
+                <span class="fa-solid fa-user"></span>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a href="#Contact">
+                Contact
+                <span class="fa-regular fa-envelope"></span>
+            </a>
+        </div>
+    </div>
+    <hr class="divider">
+    <div>
+         <div class="menuItem">
+            <a href="#">
+                Archive
+                <span class="fa-solid fa-box-archive"></span>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a href="#">
+                Blog
+                <span class="fa-solid fa-blog"></span>
+            </a>
+        </div>
+    </div>
+    <hr class="divider">
+    <div style="display:flex; flex-direction: row;">
+        <a class="icon" href="https://github.com/{{ site.data.metadata.github }}" target="_blank"><span
+                class="fa-brands fa-github"></span></a>
+        <a class="icon" href="{{ site.data.metadata.linkedin }}" target="_blank"><span
+                class="fa-brands fa-linkedin"></span></a>
+        <a class="icon" href="{{ site.data.metadata.youtube }}" target="_blank"><span
+                class="fa-brands fa-youtube"></span></a>
+        <a class="icon" href="{{ site.data.metadata.github }}" target="_blank"><span
+                class="fa-brands fa-github"></span></a>
+    </div>
+
+</div>
+
+<span class="menuButton" onclick="OpenNavMenu()">&#9776; 
+    {{ site.data.metadata.name }}
+</span>
+
+<script>
+    var navbarWidth;
+    var isNavbarOpen = false;
+
+    //Add the stylesheet to the page's head
+    {
+        stylesheet = document.createElement("link");
+        stylesheet.href = "css/Navmenu.css";
+        stylesheet.type = "text/css";
+        stylesheet.rel = "stylesheet";
+        document.head.appendChild(stylesheet);
+    }
+
+    function ToggleChildStyle() {
+        var menuChildren = document.getElementById("menu").getElementsByTagName("*");
+        for (i = 0; i < menuChildren.length; i++) {
+            menuChildren[i].classList.toggle("closed");
+        }
+    }
+
+    ToggleChildStyle(); //Ensure all child elements are "closed" by default. 
+
+    function OpenNavMenu() {
+        document.getElementById("menu").style.width = window.navbarWidth;
+        ToggleChildStyle();
+        isNavbarOpen = true;
+    }
+
+    function CloseNavMenu() {
+        document.getElementById("menu").style.width = "0";
+        ToggleChildStyle();
+        isNavbarOpen = false;
+    }
+
+    function NavDisplayState(state) {
+        if (state.matches) {
+            window.navbarWidth = "100%";
+        }
+        else {
+            window.navbarWidth = "14vw";
+        }
+
+        if (isNavbarOpen) {
+            document.getElementById("menu").style.width = window.navbarWidth;
+        }
+    }
+
+    var x = window.matchMedia("(max-width: 750px)");
+    NavDisplayState(x);
+    x.addListener(NavDisplayState);
+</script>

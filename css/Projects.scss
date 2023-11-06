@@ -1,0 +1,75 @@
+---
+---
+#Projects .wrapper{
+    padding-top: 5%;
+    margin-bottom: 5%;
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Projects h1{
+    text-align: right;
+    font-size: 4vw;
+    margin-bottom: 0.5vh;
+    
+    text-align: center;
+    
+}
+#Projects .featured {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    margin-bottom: 1vh;
+}
+
+
+#Projects .card {
+    display: inline-block;
+    width: 100%;
+    height:auto;
+    background-size: contain;
+    
+    img {
+        border: 1px solid white; 
+    }
+}
+#Projects .details{
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    height: 100%; 
+    width: auto; 
+    
+    h2, h3, h4 {
+        text-align: left;
+        margin-right: 1vw;
+        margin-top: 0; 
+        max-height: 1em;
+    }
+
+    h2 {
+        font-size: 2.8vw;
+        margin-bottom: 2vh;
+    }
+
+    h3 {
+        font-size: 1.5vw; 
+        text-align: right;
+    }
+
+    h4 {
+        font-weight: normal;
+        font-size: 2vw;
+    }
+
+
+}
+
+#Projects *{
+    position: relative;
+    z-index: 10;
+}
+

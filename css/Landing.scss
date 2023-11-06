@@ -1,0 +1,101 @@
+---
+---
+
+#Landing .wrapper {
+    height: 50%;
+    margin: 50px; 
+}
+
+#Showreel {
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover;
+    position: fixed;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -100;
+    filter: blur(3px);
+}
+
+#Landing h1 {
+    font-size: 4vw;
+    word-wrap:unset;
+
+    
+}
+
+#Landing h2 {
+    font-size: 3vw;
+}
+
+#Landing .icon {
+    text-align: center;
+    font-size: 4vw;
+    padding: 1vw;
+    color: whitesmoke;
+    transition: 0.25s;
+}
+
+#Landing .icon:hover {
+    color: blue;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+#Landing .header{
+    flex: 1.3;
+    flex-direction: row; 
+    width: 40%;
+}
+
+#Landing .container{
+    margin: 10vw;
+}
+
+#demo {
+    width: 100%;
+    height: 100%; 
+}
+@media screen and (max-width: 750px) {
+    .details {
+        display: flex;
+        flex-direction: column;
+        height: auto; 
+    }
+
+    #Landing .header{
+        width: 100%;
+    }
+
+    #Landing .header h1{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #Landing .header h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    #Landing .icon {
+        font-size: 4vh;
+        text-align: center;
+        margin: auto; 
+    }
+
+    #Landing .container{
+        margin: 0px; 
+        width: 100%;
+    }
+    
+    #Landing .wrapper{
+        width: 100%;
+        margin: 0px;
+        margin-top: 20vh;
+    }
+}
