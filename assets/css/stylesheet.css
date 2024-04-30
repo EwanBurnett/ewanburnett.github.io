@@ -81,7 +81,6 @@ body {
     display: flex;
     justify-content: center;
     font-size: 24px;
-
 }
 
 .showreel a {
@@ -90,7 +89,6 @@ body {
     outline: none;
     transition: 0.3s ease;
     color: white;
-
 }
 
 .slide a:hover {

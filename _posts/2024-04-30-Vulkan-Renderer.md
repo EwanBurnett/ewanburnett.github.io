@@ -1,17 +1,18 @@
 ---
-Title: Firefly
-Date: 2023-09-10
+Title: Vulkan Renderer
+Date: 2024-04-30
 layout: project
 categories: Project Featured 
 tags: C++ 
 permalink: /Projects/:title/
-card: https://github.com/EwanBurnett/Firefly/assets/25666480/a7718362-c659-4ff4-bd34-87f29f572601
-screenshots: [ "/Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png", "/Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png"] 
-summary: An offline Path-Tracer Written in C++.
-repository: "https://github.com/EwanBurnett/Firefly"
-download: "https://github.com/EwanBurnett/Firefly/releases/tag/v0.3a"
-version: v0.3a
-blogposts: [ Writing a Path Tracer - Part 1 ]
+card: /Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png 
+screenshots: [ /Resources/Cards/Firefly_v1_0_SiteCard_1000x500.png ] 
+summary: A Project Exploring the Vulkan API.
+documentation: "https://ewanburnett.github.io/Vulkan-Renderer/"
+repository: "https://github.com/EwanBurnett/Vulkan-Renderer"
+download: "https://github.com/EwanBurnett/Vulkan-Renderer/releases/tag/v0.1.0"
+version: v0.1.0a
+blogposts: [  ]
 video: ""
 platforms: [ Windows, Mac, Linux ]
 ---

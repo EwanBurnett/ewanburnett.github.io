@@ -68,7 +68,7 @@ layout: default
                         <div>
                             <div class="slide">
                             <a href = "{{ post.url }}">
-                                <img style="width: 1000px; object-fit: contain;" src="{{ post.card }}">
+                                <img style="width: 1000px; height: 500px; object-fit: fill;" src="{{ post.card }}">
                             </a>
                             </div>
                         </div>
