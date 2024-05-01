@@ -66,9 +66,9 @@ layout: default
                 <div class="showreel js-flickity">
                     {% for post in site.categories.Featured limit: 4 %}
                         <div>
-                            <div class="slide">
+                            <div class="slide" style="width: 1000px; height: 500px;">
                             <a href = "{{ post.url }}">
-                                <img style="width: 1000px; height: 500px; object-fit: fill;" src="{{ post.card }}">
+                                <img style="width: 100%; height: 100%; object-fit: fill;" src="{{ post.card }}"/>
                             </a>
                             </div>
                         </div>
