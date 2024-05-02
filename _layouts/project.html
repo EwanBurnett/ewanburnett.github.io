@@ -67,9 +67,11 @@
                     <div class='column' style='width: 100%; margin-bottom: 30px;'>
                         {% if page.repository and page.repository != '' %}
                         <div class="row">
-                            <a href={{ page.repository }}><img
-                                    src="https://gh-card.dev/repos/{{ page.repository | remove: 'https://github.com/' }}.svg"></a>
-                            <img src="/Resources/Icons/Github.png" />
+                            <a href={{ page.repository }}>
+                                <img
+                                    src="https://gh-card.dev/repos/{{ page.repository | remove: 'https://github.com/' }}.svg"/>
+                                </a>
+                                <img style="padding: 10px;" src="/Resources/Icons/Github.png" />
                         </div>
                         {% endif %}
                         {% if page.documentation and page.documentation != '' %}

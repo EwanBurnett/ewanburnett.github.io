@@ -99,7 +99,7 @@ layout: default
                         <div style="align-items: center; display: flex; height: 100%;">
                             <div >
                                 <a href = "{{ post.url }}" style="margin-right: 35px;">
-                                    <img style = "width: 800px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
+                                    <img style = "width: 800px; height: 400px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
                                 </a>
                             </div>
                             <div style = "display: flex; flex-direction: column;">
@@ -113,25 +113,29 @@ layout: default
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
                     </div>
                     <!--Latest Blog-->
+                    <h3 style="align-items: center; justify-content: center;">Relevant Posts</h3>
+                    {% for blog in project.blogposts limit 2 %}
+                    {% for post in site.posts %}
+                    {% if blog.Title == post.Title %}
                     <div style="float: right; width: 20%;border: 1px solid white;">
-                        {% for post in site.categories.Blog limit:1 %}
                         <a href = "{{ post.url }}" class="btn2">
                             <div style="align-items: center; display: inline-block; justify-content: center;">
                                 <div>
-                                    <img style = "width: 400px; object-fit: contain; border: 1px solid white;" src = "{{ post.card }}"/>
+                                    <img style = "width: 400px; height: 200px; object-fit: contain; border: 1px solid white;" src = "{{ post.card }}"/>
                                 </div>
                                 <div style = "display: flex; flex-direction: column; ">
-                                    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+                                    <p class="blogdate">{{ blog.date | date: "%d %B %Y" }}</p>
                                     <h3 style="justify-content: center; margin-left: auto; margin-right: auto;">{{ post.title }}</h3>  
-                                    <p style="height: 100%;">{{ post.content | strip_html | truncatewords: 50 }}</p>
                                 </div>
                             </div>
                         </a>
-                        {% endfor %}
                     </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
             </div>
@@ -144,9 +148,9 @@ layout: default
                     {% unless post == site.categories.Blog[0] or post == site.categories.Project[0] %}
                         {% assign postCount = postCount | plus: 1 %}
                         <!--Latest Project-->
-                        <div class = 'blogpost' style = "border: 1px solid white; width: 320px; margin-right: 20px; height: 220px; display: inline-block; ">
+                        <div class = 'blogpost' style = "border: 1px solid white; width: 320px; margin-right: 20px; height: 240px; display: inline-block; ">
                             <a href = "{{ post.url }}" style="text-align: center;">
-                                <img style = "width:400px; object-fit: contain;" src = "{{ post.card }}"/>
+                                <img style = "width:400px; height:200px; object-fit: cover;" src = "{{ post.card }}"/>
                                 <h3 style = "text-overflow: inherit;">{{ post.Title | truncate: 22}}</h3>
                                 <!--<p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>-->
                             </a>

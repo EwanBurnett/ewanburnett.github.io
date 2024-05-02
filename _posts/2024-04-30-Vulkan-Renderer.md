@@ -3,7 +3,7 @@ Title: Vulkan Renderer
 Date: 2024-04-30
 layout: project
 categories: Project Featured 
-tags: C++ 
+tags: C++
 permalink: /Projects/:title/
 card: "https://github.com/EwanBurnett/Vulkan-Renderer/assets/25666480/6619d4ec-7513-4140-8dd3-47223ea08a4d"
 screenshots: [ "https://github.com/EwanBurnett/Vulkan-Renderer/assets/25666480/6619d4ec-7513-4140-8dd3-47223ea08a4d" ] 
@@ -12,19 +12,22 @@ documentation: "https://ewanburnett.github.io/Vulkan-Renderer/"
 repository: "https://github.com/EwanBurnett/Vulkan-Renderer"
 download: "https://github.com/EwanBurnett/Vulkan-Renderer/releases/tag/v0.1.0"
 version: v0.1.0
-blogposts: [  ]
+blogposts: [ "Getting Bootstrapped In Vulkan" ]
 video: ""
 platforms: [ Windows, Mac, Linux ]
 ---
 ## Overview
-This Project was built to explore the Vulkan API. Coming from DirectX 11, Vulkan is infinitely more verbose and particular - but as a modern API, maps closer to the hardware's architecture.  
+This Project is built to explore the Vulkan API. Coming from DirectX 11, Vulkan is infinitely more verbose and particular - but as a modern API, maps closer to the hardware's architecture. 
+
+## Development Roadmap
+![Roadmap](/Resources/Projects/VKR/VKR_Demo_Timeline.png)
 
 ## Build Instructions
 
 Clone the Repository
 ```
 git clone {{ page.repository }}
-cd ulkan-Renderer/ 
+cd Vulkan-Renderer/ 
 ```
 ### Library
 Include the VKR library in your project's CMakeLists.txt

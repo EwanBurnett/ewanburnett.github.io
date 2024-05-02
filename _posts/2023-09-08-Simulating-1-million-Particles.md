@@ -1,5 +1,5 @@
 ---
-Title: Writing a Path tracer - Part 1
+Title: Simulating 1 million Particles
 Date: 2023-09-08
 layout: blog
 categories: Personal Blog 

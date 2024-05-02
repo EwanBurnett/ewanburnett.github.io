@@ -19,7 +19,7 @@ layout: projecthome
                         </div>
                         <div style = "border: 1px solid white; margin: 1px 15px 40px 15px; padding: auto; width: 300px; height: auto; display: inline-block; text-align: center;">
                             <a href = "{{ post.url }}" style="color: white;">
-                                <img src = "{{ post.card }}" style = "width:320px; object-fit: contain;">
+                                <img src = "{{ post.card }}" style = "width:320px; height: 160px; object-fit: cover;">
                                 <h3 style = "text-overflow: inherit;">{{ post.title | truncate: 22}}</h3>
                             </a>
                         </div>
