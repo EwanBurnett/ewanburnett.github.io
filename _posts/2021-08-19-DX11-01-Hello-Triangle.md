@@ -8,39 +8,42 @@ permalink: /Blog/:title/
 card: "/Resources/Cards/DX11-01-Hello-Triangle.png"
 ---
 <h6>{{ tag_name }}</h6>
-Yesterday, I made my first triangle in DX11! 
+Yesterday, I made my first triangle in DX11!
 
 After hours of working through Frank Luna's book on DX11 programming, I finally reached chapter 6 - Drawing in DirectX 11.
 
-At this point, I already had a rudementary framework thanks to following along in the book, and I'd implemented a few more modern features (i.e. WRL COM pointers), and a colour changing window. 
+At this point, I already had a rudementary framework thanks to following along in the book, and I'd implemented a few more modern features (i.e. WRL COM pointers), and a colour changing window.
 
-To outline the process, after initializing my graphics, I made a simple Vertex struct, containing both position and colour. 
+To outline the process, after initializing my graphics, I made a simple Vertex struct, containing both position and colour.
+
 ```cpp
 struct Vertex1 {
-		XMFLOAT3 pos;
-		XMFLOAT4 color;
-	};
+  XMFLOAT3 pos;
+  XMFLOAT4 color;
+ };
 ```
 
 Next came a Vertex and Index buffer for my geometry. Since I was just drawing a triangle, these were both quite simple to create. Filling the buffer descriptions was pretty trivial, even though it took quite a long time.
+
 ```cpp
 //Vertices of the Vertex Buffer
 Vertex1 verts[] =
-	{
-		{XMFLOAT3(0, 0.5, 0), XMFLOAT4(1, 0, 0, 1)},
-		{XMFLOAT3(0.5, -0.5, 0), XMFLOAT4(0, 1, 0, 1)},
-		{XMFLOAT3(-0.5, -0.5, 0), XMFLOAT4(0, 0, 1, 1)}
-	};
+ {
+  {XMFLOAT3(0, 0.5, 0), XMFLOAT4(1, 0, 0, 1)},
+  {XMFLOAT3(0.5, -0.5, 0), XMFLOAT4(0, 1, 0, 1)},
+  {XMFLOAT3(-0.5, -0.5, 0), XMFLOAT4(0, 0, 1, 1)}
+ };
 
 //Indexes used in the Index Buffer
-	UINT indices[3] = {
-		0, 1, 2,	
-	};
+ UINT indices[3] = {
+  0, 1, 2, 
+ };
 ```
 
 Next, I set the Rasterizer state to draw using the fill mode ```D3D11_FILL_SOLID```, so that my triangle would be solid. So far, so good. But then came the problem stage...
 
-I wrote a simple Vertex shader and Pixel shader, both of which just output the position and colour of each Vertex respectively. This was my first time using HLSL; The language is deceptively simple. After having a peek at some documentation, I can already tell it's a topic i'm going to spend hundreds of hours in. 
+I wrote a simple Vertex shader and Pixel shader, both of which just output the position and colour of each Vertex respectively. This was my first time using HLSL; The language is deceptively simple. After having a peek at some documentation, I can already tell it's a topic i'm going to spend hundreds of hours in.
+
 ```cpp
     struct VSIn {
         float3 position : POSITION;
@@ -64,7 +67,7 @@ I wrote a simple Vertex shader and Pixel shader, both of which just output the p
     //Pixel Shader
     float4 PS_main(VSOut pin) : SV_Target
     {
-	    return pin.color;
+     return pin.color;
     }
 ```
 
@@ -73,14 +76,14 @@ However, when it came to binding these shaders to the pipeline, I had a few issu
 Finally, I used the ```DrawIndexed()``` method to draw my triangle - and here's the result!
 >![Complete Triangle!](https://raw.githubusercontent.com/EwanBurnett/ewanburnett.github.io/master/Resources/Hello-Triangle-Render.png)
 
-At this stage, everything *really* ought to have worked. But... Of course I made 2 silly mistakes. After spending hours pouring over this code, I ended up reaching out to the awesome folks over on the DirectX discord for some help - and to be fair, due to their nature I doubt I would have found these errors on my own. 
+At this stage, everything *really* ought to have worked. But... Of course I made 2 silly mistakes. After spending hours pouring over this code, I ended up reaching out to the awesome folks over on the DirectX discord for some help - and to be fair, due to their nature I doubt I would have found these errors on my own.
 
 1. I was drawing into the render target, but clearing it right after in my Update code (WinMain.cpp)
 2. I don't have a Depth/Stencil view bound, but I was still attempting to bind one to the pipeline
 
 After fixing those two sneaky errors, I finally had my long-awaited Triangle!
 
-I've learned a lot from this project so far - Hundreds of things are happening even for something so simple! And I don't think i've ever been so relieved to see a simple triangle on the screen. Next step: A 3D Box! 
+I've learned a lot from this project so far - Hundreds of things are happening even for something so simple! And I don't think i've ever been so relieved to see a simple triangle on the screen. Next step: A 3D Box!
 
 Thanks for reading!
 

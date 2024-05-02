@@ -12,7 +12,7 @@ documentation: "https://ewanburnett.github.io/Vulkan-Renderer/"
 repository: "https://github.com/EwanBurnett/Vulkan-Renderer"
 download: "https://github.com/EwanBurnett/Vulkan-Renderer/releases/tag/v0.1.0"
 version: v0.1.0
-blogposts: [ "Getting Bootstrapped In Vulkan" ]
+blogposts: [ Getting Bootstrapped In Vulkan, Getting Bootstrapped In Vulkan ]
 video: ""
 platforms: [ Windows, Mac, Linux ]
 ---
@@ -73,6 +73,8 @@ make -j8
 
 ### 01 - Hello Triangle 
 ![01-Hello-Triangle]({{ page.card }}) 
+
+see [The Project Blog](/Projects/Getting-Bootstrapped-In-Vulkan/)
 
 Read the Project Docs [Here](https://ewanburnett.github.io/Vulkan-Renderer/subpage.html#autotoc_md4)
 

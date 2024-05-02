@@ -41,7 +41,7 @@ layout: default
                     <h1 lang="en" class="en">Hi, I'm Ewan - A Graphics Programmer</h1>
                     <h1 lang="jp" class="jp" style="display: none;">グラヒックスプログラマーのユアンです</h1>
                     <div style = "display: flex; flex-direction: row;">
-                    <button style="display: flex;" class = 'b0 en' onClick = "window.location.href='#projects'">See what I can do </button> 
+                    <button style="display: flex;" class = 'b0 en' onClick = "window.location.href='#projects'">See what I can do </button>
                     <button style="display: flex;" lang="jp" style="display:none;" class = 'b0 jp' onClick = "window.location.href='#projects'">プロジェクトを見て</button>
                     <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">CV / Resumé </button>
                      <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
@@ -92,50 +92,50 @@ layout: default
             <div class = 'projectSubnav' style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">
             <h2>Latest</h2>
             <div style="display:flex; flex-direction:column; margin-bottom: 30px;">
-            <div style="display: inline-block;">
+            <div style="display: inline-block;" >
                 <!--Latest Project-->
                 <div style="float: left; width: 78%;">
-                    {% for post in site.categories.Project limit:1 %}
+                {% for project in site.categories.Project limit:1 %}
                         <div style="align-items: center; display: flex; height: 100%;">
                             <div >
-                                <a href = "{{ post.url }}" style="margin-right: 35px;">
-                                    <img style = "width: 800px; height: 400px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
+                                <a href = "{{ project.url }}" style="margin-right: 35px;">
+                                    <img style = "width: 800px; height: 400px; object-fit: contain;border: 1px solid white;" src = "{{ project.card }}"/>
                                 </a>
                             </div>
                             <div style = "display: flex; flex-direction: column;">
                                 <div style = "display: flex; flex-direction: row;">
-                                    <h2 style="margin-right: 15px;">{{ post.title }}</h2>  
+                                    <h2 style="margin-right: 15px;">{{ project.title }}</h2>  
                                 </div>
                                 <div>
-                                    <p>{{ post.summary }}</p>
-                                    <a class = "btn" href="{{ post.repository }}" style="margin-right: 20px;">Repository</a>
-                                    <a class = "btn" href="{{ post.download }}">Download</a>
+                                    <p>{{ project.summary }}</p>
+                                    <a class = "btn" href="{{ project.repository }}" style="margin-right: 20px;">Repository</a>
+                                    <a class = "btn" href="{{ project.download }}">Download</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Latest Blog-->
+                    <!--Related Blogs-->
                     <h3 style="align-items: center; justify-content: center;">Relevant Posts</h3>
-                    {% for blog in project.blogposts limit 2 %}
-                    {% for post in site.posts %}
-                    {% if blog.Title == post.Title %}
-                    <div style="float: right; width: 20%;border: 1px solid white;">
-                        <a href = "{{ post.url }}" class="btn2">
-                            <div style="align-items: center; display: inline-block; justify-content: center;">
-                                <div>
-                                    <img style = "width: 400px; height: 200px; object-fit: contain; border: 1px solid white;" src = "{{ post.card }}"/>
-                                </div>
-                                <div style = "display: flex; flex-direction: column; ">
-                                    <p class="blogdate">{{ blog.date | date: "%d %B %Y" }}</p>
-                                    <h3 style="justify-content: center; margin-left: auto; margin-right: auto;">{{ post.title }}</h3>  
-                                </div>
-                            </div>
-                        </a>
+                            <div style="float: right; width: 20%; height: 350px; border: 1px solid white; overflow: auto;">
+                    {% for blog in project.blogposts limit:3 %}
+                        {% for post in site.posts %}
+                            {% if blog == post.Title %}
+                                <a href = "{{ post.url }}" class="btn2">
+                                    <div style="align-items: center; display: inline-block; justify-content: center;">
+                                        <div>
+                                            <img style = "width: 100%; height: 200px; object-fit: contain;" src = "{{ post.card }}"/>
+                                        </div>
+                                        <div style = "display: flex; flex-direction: column; ">
+                                            <p class="blogdate">{{ blog.date | date: "%d %B %Y" }}</p>
+                                            <h3 style="justify-content: center; margin-left: auto; margin-right: auto;">{{ post.title }}</h3>  
+                                        </div>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
                     </div>
-                    {% endif %}
-                    {% endfor %}
-                    {% endfor %}
-                    {% endfor %}
+                {% endfor %}
                 </div>
             </div>
             </div>
@@ -160,7 +160,7 @@ layout: default
                     {% endfor %}
                     </ul>
                 </div>
-        </div>           
+        </div>
     </section>
     <!--About Section-->
     <section id = 'about'>
