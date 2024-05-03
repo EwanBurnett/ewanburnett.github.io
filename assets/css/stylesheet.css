@@ -67,6 +67,8 @@ body {
 
 .showreel.is-fullscreen .slide {
     top: 25%;
+    height: 100%; 
+    width: 100%; 
 }
 
 .slide {
