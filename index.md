@@ -9,6 +9,7 @@ layout: default
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
         <title>Portfolio</title>
         <link rel = 'stylesheet' href = '/assets/css/stylesheet.css'>
+        <link rel = 'stylesheet' href = '/assets/css/newStyle.css'>
         <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
         <link rel="stylesheet" href="/assets/css/fullscreen.css" media="screen">
         <link rel="stylesheet" href="node_modules/github-activity-feed/dist/github-activity.min.css">
@@ -51,7 +52,7 @@ layout: default
                 <div style="float: right; margin-right: 5%; margin-top:5%; ">
                     <a class='icon' href="http://github.com/EwanBurnett" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a class='icon' href="https://www.linkedin.com/in/ewanburnettsk/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class='icon' href="https://twitter.com/StrikerDEV_" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a class='icon' href="https://mastodon.gamedev.place/@EwanBurnett" target="_blank"><i class="fa-brands fa-mastodon"></i></a>
                     <a class='icon' href="mailto:ewanburnettsk@outlook.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
@@ -59,104 +60,57 @@ layout: default
     </section>
     <!--Projects Section-->
     <section id = 'projects'>
-        <div style="width:100%;">   <!--Projects Wrapper-->
+        <div>
+        <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Projects-</h1>
             <div>
-                <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Projects-</h1>
-                <div>
-                <div class="showreel js-flickity">
-                    {% for post in site.categories.Featured limit: 4 %}
-                        <div>
-                            <div class="slide">
-                            <a href = "{{ post.url }}">
-                                <img style="width: 1000px; object-fit: contain;" src="{{ post.card }}">
-                            </a>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>  
-                </div>
-                <div id="project_descs">
-                {% for post in site.categories.Featured limit: 4 %}
-                    {% if forloop.index == 0 %}
-                        <div class = "desc" style="padding-top:1%; display:block;">
-                    {% else %}
-                        <div class = "desc" style="padding-top:1%; display:none;">
-                    {% endif %}
-                        <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.title }}</h2>
-                        <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.summary }}</p>
+            {% for post in site.categories.Featured limit: 8 %}
+                <div class = "project_listing">
+                <a href = "{{ post.url }}">
+                    <div class= "project_titlebar">   <!-- Title Bar-->
+                        <h3> {{ post.title }} </h3> <!-- Title -->
                     </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <!--Project Subnavigation Bar-->
-            <div class = 'projectSubnav' style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">
-            <h2>Latest</h2>
-            <div style="display:flex; flex-direction:column; margin-bottom: 30px;">
-            <div style="display: inline-block;">
-                <!--Latest Project-->
-                <div style="float: left; width: 78%;">
-                    {% for post in site.categories.Project limit:1 %}
-                        <div style="align-items: center; display: flex; height: 100%;">
-                            <div >
-                                <a href = "{{ post.url }}" style="margin-right: 35px;">
-                                    <img style = "width: 800px; object-fit: contain;border: 1px solid white;" src = "{{ post.card }}"/>
-                                </a>
-                            </div>
-                            <div style = "display: flex; flex-direction: column;">
-                                <div style = "display: flex; flex-direction: row;">
-                                    <h2 style="margin-right: 15px;">{{ post.title }}</h2>  
-                                </div>
-                                <div>
-                                    <p>{{ post.summary }}</p>
-                                    <a class = "btn" href="{{ post.repository }}" style="margin-right: 20px;">Repository</a>
-                                    <a class = "btn" href="{{ post.download }}">Download</a>
-                                </div>
-                            </div>
+                    <div>
+                        <img class = "project_card" src = "{{ post.card }}"/><!--Static Banner Image-->
+                    </div>
+                    <div class = "project_overlay">
+                        <!--Supported Platforms-->
+                        <div class = "project_platform_list">
+                        {% for platform in post.platforms limit: 3 %}
+                        <div> 
+                        <!-- TODO: Show Platform Icons as Overlay -->
+                        {% if platform == "Windows" %}
+                            <img class = "project_platform" src="/Resources/Icons/windows.png"/>
+                        {% elsif platform == "Linux" %}
+                            <img class = "project_platform" src="/Resources/Icons/linux.png"/>
+                        {% elsif platform == "Mac" %}
+                            <img class = "project_platform" src="/Resources/Icons/osx.png"/>
+                        {% endif %}
                         </div>
                         {% endfor %}
-                    </div>
-                    <!--Latest Blog-->
-                    <div style="float: right; width: 20%;border: 1px solid white;">
-                        {% for post in site.categories.Blog limit:1 %}
-                        <a href = "{{ post.url }}" class="btn2">
-                            <div style="align-items: center; display: inline-block; justify-content: center;">
-                                <div>
-                                    <img style = "width: 400px; object-fit: contain; border: 1px solid white;" src = "{{ post.card }}"/>
-                                </div>
-                                <div style = "display: flex; flex-direction: column; ">
-                                    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
-                                    <h3 style="justify-content: center; margin-left: auto; margin-right: auto;">{{ post.title }}</h3>  
-                                    <p style="height: 100%;">{{ post.content | strip_html | truncatewords: 50 }}</p>
-                                </div>
-                            </div>
-                        </a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!--Recent Posts-->
-                <div style="display: flex; margin-left: 50px;">
-                    <ul>
-                    {% assign postCount = 0 %}
-                    {% for post in site.posts %}
-                    {% if postCount < 5 %}
-                    {% unless post == site.categories.Blog[0] or post == site.categories.Project[0] %}
-                        {% assign postCount = postCount | plus: 1 %}
-                        <!--Latest Project-->
-                        <div class = 'blogpost' style = "border: 1px solid white; width: 320px; margin-right: 20px; height: 220px; display: inline-block; ">
-                            <a href = "{{ post.url }}" style="text-align: center;">
-                                <img style = "width:400px; object-fit: contain;" src = "{{ post.card }}"/>
-                                <h3 style = "text-overflow: inherit;">{{ post.Title | truncate: 22}}</h3>
-                                <!--<p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>-->
-                            </a>
                         </div>
-                    {% endunless %}
-                    {% endif %}
-                    {% endfor %}
-                    </ul>
+                        <!--Project Tags-->
+                        <div class = "project_tag_list">
+                        {% assign tags = post.tags | sort %}
+                        {% for tag in tags limit: 3 %}
+                        {% case tag %}
+                            {% when "C++" %}
+                                <img class = "project_icon" src="/Resources/Icons/c++.png"/>
+                            {% when "C#" %}
+                                <img class = "project_icon" src="/Resources/Icons/cs.png"/>
+                            {% when "C" %}
+                                <img class = "project_icon" src="/Resources/Icons/c.png"/>
+                            {% when "Vulkan" %}
+                                <img class = "project_icon" src="/Resources/Icons/vulkan.png"/>
+                        {% endcase %}
+                        {% endfor %}
+                        </div>
+                        <!--`-->
+                    </div>    
+                </a>
                 </div>
-        </div>           
+            {% endfor %}
+            </div>
+        </div>
     </section>
     <!--About Section-->
     <section id = 'about'>
@@ -207,50 +161,57 @@ layout: default
         </div>
     </div>
     </section>
+    <!--About Me Section-->
+    <section id = 'about'>
+        <div style="width:100%; margin-bottom: 10%;">
+            <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-About Me-</h1>
+            <div style="text-align: center;">
+                <h3 style="color: white; font-size: 1.8em;">Hi, I'm Ewan!<br/>
+                    A Graphics Programmer, passionate about Rendering and C++ Programming. 
+                    Currently finishing my Masters at Sheffield Hallam University.<br/>
+                    I'm an avid learner, and love immersing myself in books and articles on Computer Graphics. I'd like to apply my knowledge of technology to craft high-fidelity experiences.
+                </h3>
+            </div>
+        </div>
+    </section>
     <!--Timeline Section-->
     <section id = 'timeline'>
-        <div style="width:100%;">
-             <!--Git Commit Activity-->
-            <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>x
+        <div style="width:100%; margin-bottom: 10%;">
             <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Timeline-</h1>
-            <div style="display: flex; flex-direction: row;">
+            <div>   <!--Timeline-->
                 <div style="display: flex; flex: 3.5; flex-direction: column;">
-                    <div>   <!--Timeline-->
+                    <div style="text-align: center;">
                         <ul class = 'tl'>
-                            <li class = 'event' data-date='>2018' style="color: white; font-size: 20px;">
+                            <li class = 'event' data-date='2026' style="color: white; font-size: 20px;">
+                                <h2>...</h2>
+                            </li>
+                            <li class = 'event' data-date='2020' style="color: white; font-size: 20px;">
+                                <h2>MComp Computer Science for Games</h2>
+                                <h3>Sheffied Hallam University - [2:1]</h3>
+                                <p>During my Integrated Masters at SHU, I delved into advanced Software Engineering and Computer Graphics.</p>
+                                <ul>
+                                    <li>Advanced C++ Programming</li>
+                                    <li>Mathematics for 3D Graphics</li>
+                                    <li>Low Level System Architecture and Optimisations</li>
+                                    <li>Cross-Platform Development on the Playstation 5</li>
+                                </ul>
+                            </li>
+                            <li class = 'event' data-date='2018' style="color: white; font-size: 20px;">
                                 <h2>BTECH Games Technology</h2>
-                                <h3>Confetti Insititute of Creative Technologies [DDM]</h3>
-                                <p>Confetti was my first step into the games industry. Focusing on the basic skills required for any game developer.</p>
+                                <h3>Confetti Insititute of Creative Technologies - [DDM]</h3>
+                                <p>Confetti was my first step into the games industry, where I acquired foundational knowledge within the field.</p>
                                 <ul>
                                     <li>Principles of Game Design and The Development Pipeline</li>
                                     <li>3D Modelling in Autodesk Maya</li>
                                     <li>Scripting in C# for Unity, and Blueprints for Unreal Engine 4</li>
                                 </ul>
                             </li>
-                            <li class = 'event' data-date='>2020' style="color: white; font-size: 20px;">
-                                <h2>MCOMP Computer Science for Games</h2>
-                                <h3>Sheffied Hallam University - [2:1]</h3>
-                                <p>I am studying various specialist topics as part of a 5 year intergated master's</p>
-                                <ul>
-                                    <li>Advanced C++ Programming</li>
-                                    <li>Mathematics for 3D Graphics</li>
-                                    <li>Low Level System Architecture</li>
-                                    <li>PS4 / PS5 Console Development</li>
-                                </ul>
-                            </li>
-                            <li class = 'event' data-date='>2025' style="color: white; font-size: 20px;">
-                                <h2>...</h2>
-                            </li>
                         </ul>
                     </div>
                 </div>
-            <div style="display: inline-block; flex: 2;">
-                <div style="margin: 15px;">
-                    <h3 style = "border: 1px solid white; color: white; padding: 5px;">A Computing student at Sheffield Hallam University, Focusing on C++ Programming. I've been studying Game Development since 2018, and specialize in Computer Graphics, Software Optimisation and Cross-platform Development.
-                    <br><br>
-                    I also study Japanese, currently JLPT grade N4 - I am currently working towards N3 certification for the end of 2024. このページは日本語で読んでみたったら、最上の「EN/日本ご」ボタンを打ちてください!</h3>
-                </div>
             </div>
+             <!--Git Commit Activity-->
+            <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>
         </div>
     </section>
     </body>
