@@ -19,15 +19,13 @@ GitHubActivity.feed({
 
 var flkty = new Flickity( '.showreel', {
   wrapAround: true, 
-  autoPlay:true,
-  fullscreen:true,
+  autoPlay: true,
+  fullscreen: true,
   cellselector: "slide",
 
   on: {
     change: function( index ) {
       //Change the description's text based on the corresponding index
-      console.log( 'Slide changed to' + index );
-      
       var wrapper = document.getElementById("project_descs");
       var div = wrapper.getElementsByClassName("desc");
 

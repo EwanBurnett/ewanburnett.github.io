@@ -61,13 +61,22 @@ layout: default
     <!--Projects Section-->
     <section id = 'projects'>
         <div>
-        <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Projects-</h1>
+        <h1 lang="en" class="en" style="display: block; justify-content: center; text-align: center;">-Projects-</h1>
+        <h1 lang="jp" class="jp" style="display: none; justify-content: center; text-align: center;">-プロジェクト-</h1>
             <div>
             {% for post in site.categories.Featured limit: 8 %}
                 <div class = "project_listing">
+                {% unless post.linkOverride %}
                 <a href = "{{ post.url }}">
+                {% else %}
+                <a href = "{{ post.linkOverride }}">
+                {% endunless %}
                     <div class= "project_titlebar">   <!-- Title Bar-->
-                        <h3> {{ post.title }} </h3> <!-- Title -->
+                    {% if post.brief %}
+                        <h3> {{ post.title }} - {{ post.brief }}</h3> <!-- Title -->
+                    {% else %}
+                        <h3> {{ post.title }}</h3> <!-- Title -->
+                    {% endif %}
                     </div>
                     <div>
                         <img class = "project_card" src = "{{ post.card }}"/><!--Static Banner Image-->
@@ -79,11 +88,13 @@ layout: default
                         <div> 
                         <!-- TODO: Show Platform Icons as Overlay -->
                         {% if platform == "Windows" %}
-                            <img class = "project_platform" src="/Resources/Icons/windows.png"/>
+                            <img class = "project_platform" src="/Resources/Icons/windows.png" title="Windows"/>
                         {% elsif platform == "Linux" %}
-                            <img class = "project_platform" src="/Resources/Icons/linux.png"/>
+                            <img class = "project_platform" src="/Resources/Icons/linux.png" title="Linux"/>
                         {% elsif platform == "Mac" %}
-                            <img class = "project_platform" src="/Resources/Icons/osx.png"/>
+                            <img class = "project_platform" src="/Resources/Icons/osx.png" title="Mac"/>
+                        {% elsif platform == "PS5" %}
+                            <img class = "project_platform" src="/Resources/Icons/ps5.png" title="PlayStation 5"/>
                         {% endif %}
                         </div>
                         {% endfor %}
@@ -94,13 +105,23 @@ layout: default
                         {% for tag in tags limit: 3 %}
                         {% case tag %}
                             {% when "C++" %}
-                                <img class = "project_icon" src="/Resources/Icons/c++.png"/>
+                                <img class = "project_icon" src="/Resources/Icons/c++.png" title="C++"/>
                             {% when "C#" %}
-                                <img class = "project_icon" src="/Resources/Icons/cs.png"/>
+                                <img class = "project_icon" src="/Resources/Icons/cs.png" title="C Sharp"/>
                             {% when "C" %}
-                                <img class = "project_icon" src="/Resources/Icons/c.png"/>
+                                <img class = "project_icon" src="/Resources/Icons/c.png" title="C"/>
                             {% when "Vulkan" %}
-                                <img class = "project_icon" src="/Resources/Icons/vulkan.png"/>
+                                <img class = "project_icon" src="/Resources/Icons/vulkan.png" title="Vulkan"/>
+                            {% when "DX11" %}
+                                <img class = "project_icon" src="/Resources/Icons/dx11.png" title="DirectX 11"/>
+                            {% when "DX12" %}
+                                <img class = "project_icon" src="/Resources/Icons/dx12.png" title="DirectX 12"/>
+                            {% when "OpenGL" %}
+                                <img class = "project_icon" src="/Resources/Icons/opengl.png" title="OpenGL"/>
+                            {% when "HLSL" %}
+                                <img class = "project_icon" src="/Resources/Icons/hlsl.png" title="HLSL"/>
+                            {% when "GLSL" %}
+                                <img class = "project_icon" src="/Resources/Icons/glsl.png" title="GLSL"/>
                         {% endcase %}
                         {% endfor %}
                         </div>
@@ -117,13 +138,14 @@ layout: default
     </section>
     <!--Skills Section-->
     <section id = 'skills'>
-    <div style="width:100%;">
-        <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Skills-</h1>
-        <div>
+    <div style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin: auto; width: 60%;">
+        <h1 lang="en" class="en" style="display: block; justify-content: center; text-align: center;">-Skills-</h1>
+        <h1 lang="jp" class="jp" style="display: none; justify-content: center; text-align: center;">-スキル-</h1>
             <div class = 'skill'>
-                <h2>&lt;Languages&gt;</h2>
+                <h2 lang="en" class="en" style="display: block">&lt;Languages&gt;</h2>
+                <h2 lang="jp" class="jp" style="display: none">&lt;プログラム言語&gt;</h2>
                 <ul>
-                    <li><img class = "logo" src="/Resources/Icons/c.png" alt="C99" title="C99"></li>
+                    <li><img class = "logo" src="/Resources/Icons/c.png" alt="C99" title="C"></li>
                     <li><img class = "logo" src="/Resources/Icons/c++.png" alt="C++ 20" title="C++ 20"></li>
                     <li><img class = "logo" src="/Resources/Icons/cs.png" alt="C#" title="C#"></li>
                     <li><img class = "logo" src="/Resources/Icons/hlsl.png" alt="HLSL" title="High-Level Shader Language"></li>
@@ -134,7 +156,8 @@ layout: default
                 </ul>
             </div>
             <div class = 'skill'>
-                <h2>&lt;Technology&gt;</h2>
+                <h2 lang="en" class="en" style="display: block">&lt;Technology&gt;</h2>
+                <h2 lang="jp" class="jp" style="display: none">&lt;テクノロジー&gt;</h2>
                 <ul>
                     <li><img class = "logo" src="/Resources/Icons/opengl.png" alt="OpenGL" title="OpenGL"></li>
                     <li><img class = "logo" src="/Resources/Icons/dx11.png" alt="DirectX 11" title="DirectX 11"></li>
@@ -146,7 +169,8 @@ layout: default
                 </ul>
             </div>
             <div class = 'skill'>
-                <h2>&lt;Tools&gt;</h2>
+                <h2 lang="en" class="en" style="display: block">&lt;Tools&gt;</h2>
+                <h2 lang="jp" class="jp" style="display: none">&lt;他のソフトウェア&gt;</h2>
                 <ul>
                     <li><img class = "logo" src="/Resources/Icons/vs22.png" alt="Visual Studio 2022" title="Visual Studio 2022"></li>
                     <li><img class = "logo" src="/Resources/Icons/vim.png" alt="Vim" title="Vim"></li>
@@ -158,13 +182,14 @@ layout: default
                     <li><img class = "logo" src="/Resources/Icons/renderdoc.png" alt="RenderDoc" title="RenderDoc"></li>
                 </ul>
             </div>
-        </div>
     </div>
     </section>
     <!--About Me Section-->
+    <!--
     <section id = 'about'>
         <div style="width:100%; margin-bottom: 10%;">
-            <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-About Me-</h1>
+        <h1 lang="en" class="en" style="display: block; justify-content: center; text-align: center;">-About Me-</h1>
+        <h1 lang="jp" class="jp" style="display: none; justify-content: center; text-align: center;">-自己紹介-</h1>
             <div style="text-align: center;">
                 <h3 style="color: white; font-size: 1.8em;">Hi, I'm Ewan!<br/>
                     A Graphics Programmer, passionate about Rendering and C++ Programming. 
@@ -174,10 +199,12 @@ layout: default
             </div>
         </div>
     </section>
+    -->
     <!--Timeline Section-->
     <section id = 'timeline'>
-        <div style="width:100%; margin-bottom: 10%;">
-            <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Timeline-</h1>
+        <div style="width:100%; margin-bottom: 10%;">      
+        <h1 lang="en" class="en" style="display: block; justify-content: center; text-align: center;">-Timeline-</h1>
+        <h1 lang="jp" class="jp" style="display: none; justify-content: center; text-align: center;">-年表-</h1>
             <div>   <!--Timeline-->
                 <div style="display: flex; flex: 3.5; flex-direction: column;">
                     <div style="text-align: center;">
@@ -213,6 +240,32 @@ layout: default
              <!--Git Commit Activity-->
             <div id="feed" style="margin-top:40px;margin-bottom:40px; margin-left: 80px; margin-right: 80px;">GITHUB FEED</div>
         </div>
+    </section>
+    <section id="gallery">
+        <div style="margin-bottom: 10%; ">
+            <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Gallery-</h1>
+            <div class="showreel js-flickity">
+                {% for post in site.categories.Featured limit: 8 %}
+                    <div>
+                        <div class="slide">
+                            <img style="width: 100%; object-fit: contain; overflow: hidden;" src="{{ post.card }}">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>  
+            <div id="project_descs"> <!--Title / Descriptions-->
+                {% for post in site.categories.Featured limit: 8 %}
+                    {% if forloop.index == 0 %}
+                        <div class = "desc" style="padding-top:1%; display:block;">
+                    {% else %}
+                        <div class = "desc" style="padding-top:1%; display:none;">
+                    {% endif %}
+                    <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.title }}</h2>
+                    <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.summary }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div> 
     </section>
     </body>
         <script src="/assets/script/flickity.pkgd.min.js" type="text/javascript"></script>
