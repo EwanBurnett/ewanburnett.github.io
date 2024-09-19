@@ -5,7 +5,7 @@ layout: project
 categories: Project Featured 
 tags: C++ Vulkan 
 permalink: /Projects/:title/
-card: /Resources/Featured/Vulkan-renderer-banner.png
+card: /Resources/Featured/Vulkan-Renderer-Banner.png
 altcard: 
 summary: A Vulkan Learning Project
 repository: 
