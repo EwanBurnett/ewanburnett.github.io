@@ -44,8 +44,8 @@ layout: default
                     <div style = "display: flex; flex-direction: row;">
                     <button style="display: flex;" class = 'b0 en' onClick = "window.location.href='#projects'">See what I can do </button> 
                     <button style="display: flex;" lang="jp" style="display:none;" class = 'b0 jp' onClick = "window.location.href='#projects'">プロジェクトを見て</button>
-                    <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">CV / Resumé </button>
-                     <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2023.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
+                    <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2024.pdf'" target = "_blank">CV / Resumé </button>
+                     <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2024.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
                     </div>
                 </div>
                 <!--Socials-->
@@ -245,23 +245,23 @@ layout: default
         <div style="margin-bottom: 10%; ">
             <h1 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">-Gallery-</h1>
             <div class="showreel js-flickity">
-                {% for post in site.categories.Featured limit: 8 %}
+                {% for post in site.categories.Gallery limit: 8 %}
                     <div>
                         <div class="slide">
-                            <img style="width: 100%; object-fit: contain; overflow: hidden;" src="{{ post.card }}">
+                            <img style="width: 100%; object-fit: contain; overflow: hidden;" src="{{ post.galleryImage }}">
                         </div>
                     </div>
                 {% endfor %}
             </div>  
             <div id="project_descs"> <!--Title / Descriptions-->
-                {% for post in site.categories.Featured limit: 8 %}
+                {% for post in site.categories.Gallery limit: 8 %}
                     {% if forloop.index == 0 %}
                         <div class = "desc" style="padding-top:1%; display:block;">
                     {% else %}
                         <div class = "desc" style="padding-top:1%; display:none;">
                     {% endif %}
                     <h2 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.title }}</h2>
-                    <p style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.summary }}</p>
+                    <h3 style="display: flex; flex-direction: column; justify-content: center; text-align: center;">{{ post.galleryDesc }}</h3>
                 </div>
                 {% endfor %}
             </div>
