@@ -44,8 +44,8 @@ layout: default
                     <div style = "display: flex; flex-direction: row;">
                     <button style="display: flex;" class = 'b0 en' onClick = "window.location.href='#projects'">See what I can do </button> 
                     <button style="display: flex;" lang="jp" style="display:none;" class = 'b0 jp' onClick = "window.location.href='#projects'">プロジェクトを見て</button>
-                    <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2024.pdf'" target = "_blank">CV / Resumé </button>
-                     <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2024.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
+                    <button style="display: flex; margin-left: 3%;" class = 'b0 en' onClick = "location.href='/Resources/Ewan_Burnett_CV_2025.pdf'" target = "_blank">CV / Resumé </button>
+                     <button style="display: none; margin-left: 3%;" class = 'b0 jp' onClick = "location.href='/Resources/Ewan_Burnett_CV_2025.pdf'" target = "_blank">履歴書</button> <!--TODO: Japanese CV-->
                     </div>
                 </div>
                 <!--Socials-->
