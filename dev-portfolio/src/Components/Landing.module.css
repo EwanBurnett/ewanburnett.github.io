@@ -1,49 +1,68 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --bg: rgb(39, 39, 39); 
+:root {
+    --bg: rgb(65, 105, 225);
 }
-.landing{ 
-    padding-top: 10vh; 
-    padding-bottom: 10vh; 
-    background-color: var(--bg); 
+
+.landing {
+    padding-top: auto;
+    padding-bottom: auto;
+      padding-top: 10vh; 
+padding-bottom: 10vh;
+    background-color: var(--bg);
 }
-.tagline{ 
-    width: 50vw; 
+
+.tagline {
+    width: 50vw;
     justify-self: center;
     text-align: center;
 }
 
-.tagline h1{
+.tagline h1 {
     font-family: "Noto Sans";
-    font-weight: bolder;
-    font-size: 3.4rem; 
-    color: white; 
+    font-weight: 600;
+    font-size: 3.4rem;
+    color: white;
 }
 
-.tagline h2{ 
+.tagline h2 {
     font-family: "Noto Sans";
-    font-weight: bold;
-    font-size: 2.0rem; 
-    color: white; 
+    font-weight: 600;
+    font-size: 2.0rem;
+    color: white;
+    padding-top: 10%;
+    margin: 0;
 }
 
-.socials{ 
+.socials {
     list-style-type: none;
-    display:inline-block;
+    display: inline-block;
     text-align: center;
 }
-.socials li{ 
+
+.socials li {
     display: inline-block;
 }
-.icon{
-    padding-left: 1rem; 
+
+.icon {
+    padding-left: 1rem;
     color: white;
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
 }
 
-.icon:hover{ 
+.icon:hover {
     color: blue;
     transition: ease 0.2s;
+}
+
+.resume{ 
+    font-size: 2.0rem; 
+    font-weight: 400;
+    border: 1% solid white; 
+}
+
+.resume a{ 
+    color: white;
+    text-decoration: none;
+
 }

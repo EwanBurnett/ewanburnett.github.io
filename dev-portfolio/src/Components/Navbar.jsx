@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css"
 import logo from "../logo.svg"
+import { HiOutlineTranslate } from 'react-icons/hi';
 
 export function NavHome() {
     return (
@@ -37,7 +38,8 @@ export function LanguageMenu() {
         <div className={styles.languageMenu}>
             {/* The Language Selection menu. */}
             <a className={styles.languageButton}>
-               Language ({siteLangCode})
+                    <HiOutlineTranslate/> 
+                    ({siteLangCode})
             </a>
             <div className={styles.languageDropdown}>
                 {Languages.map(({code, label}) => (

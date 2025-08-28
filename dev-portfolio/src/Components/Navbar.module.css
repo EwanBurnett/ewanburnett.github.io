@@ -1,88 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.Navbar{ 
+:root {
+    --navbar-font-size: calc(10px + 1vmin);
+    --navbar-accent-colour: rgb(255, 0, 0);
+}
+
+.Navbar {
     position: sticky;
-    top: 0; 
+    top: 0;
     /*overflow-y: hidden;*/
-    display: flex; 
-    flex: 1 0 auto; 
+    display: flex;
+    flex: 1 0 auto;
     align-items: center;
-    padding: 0.25rem;
-    margin: 0; 
-    width: 100%; 
-    height: auto; 
+    margin: 0;
+    width: 100%;
+    height: auto;
 
+    font-size: var(--navbar-font-size);
     /*TODO: Animate with a sine wave?*/
-    --colour-a: rgba(31, 118, 153, 1);
-    --colour-b:  rgba(19, 41, 102, 1);
+    --colour-a: rgba(31, 118, 153, 0.65);
+    --colour-b: rgba(19, 41, 102, 0.65);
 
-    background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%); 
+    box-shadow: 0, 3px, 20px, rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%);
+
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 900;
 }
 
-.navHome{ 
-    justify-self: flex-start; 
-    margin-left: 2rem; 
-    margin-right: 2rem; 
+.Navbar a:hover {
+    color: var(--navbar-accent-colour);
+    transition: color ease 0.25s;
 }
 
-.navHome .logo{ 
-    display: inline-block; 
-    font-size: 1rem;
-    color: #ffffff; 
+.navHome {
+    justify-self: flex-start;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.navHome .name{
-    display: inline-block; 
-    flex: 1.0; 
+.navHome .logo {
+    display: inline-block;
+    font-size: var(--navbar-font-size);
+    color: #ffffff;
+}
+
+.navHome .name {
+    display: inline-block;
+    flex: 1.0;
     text-decoration: none;
-    font-size: 1.45rem; 
+    font-size: calc(10px + 3vmin);
     font-family: "noto sans";
     font-weight: bold;
     color: #ffffff;
 }
 
-.navHome .name:after{ 
+.navHome .name:after {
     background: none repeat scroll 0 0 transparent;
-    bottom: 0; 
-    content: ""; 
-    display: block; 
-    height: 0.2rem; 
-    left: 50%; 
-    position: absolute; 
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 50%;
+    position: absolute;
     background: #ffffff;
-    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
-    width: 0; 
+    transition: width 0.25s ease 0s, left 0.25s ease 0s;
+    width: 0;
 }
 
-.navMenu{ 
+.navMenu {
+    right: 0;
+    align-self: flex-end;
     justify-self: flex-end;
     justify-content: flex-end;
 }
 
 /* Mobile Phones */
 @media only screen and (max-width: 1080px) {
-    .navMenu{ 
+    .navMenu {
         /*TODO: Hamburger menu*/
         display: none;
     }
 }
 
-.navmenu ul{ 
-    display: inline-block; 
-    width: auto; 
+.navmenu ul {
+    display: inline-block;
+    width: auto;
     text-align: center;
 }
-.navMenu li{ 
+
+.navMenu li {
     display: inline-block;
-    position: relative;  
+    position: relative;
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.navMenu a{
+.navMenu a {
     color: #ffffff;
     display: inline-block;
-    position: relative; 
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -90,33 +111,38 @@
     font-weight: bold;
 }
 
-.navMenu a:after{ 
+.navMenu a:after {
     background: none repeat scroll 0 0 transparent;
-    bottom: -0.25rem; 
-    content: ""; 
-    display: block; 
-    height: 0.2rem; 
-    left: 50%; 
-    position: absolute; 
+    bottom: -0.25rem;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 50%;
+    position: absolute;
     background: #ffffff;
-    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
-    width: 0; 
+    transition: width 0.25s ease 0s, left 0.25s ease 0s;
+    width: 0;
 }
 
-.navMenu a:hover:after { 
-    width: 100%; 
-    left: 0; 
+.navMenu a:hover:after {
+    width: 100%;
+    left: 0;
 }
 
-.languageMenu{ 
+.languageMenu {
     z-index: 1;
-    position: relative; 
+    position: relative;
     display: inline-block;
+    font-size: var(--navbar-font-size);
 }
 
-.languageButton{ 
+.languageMenu p {
+    font-size: calc(10px + 1vmin);
+}
+
+.languageButton {
     display: inline-block;
-    position: relative; 
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -124,18 +150,18 @@
     font-weight: bold;
 }
 
-.languageDropdown{ 
+.languageDropdown {
     overflow-y: visible;
     display: none;
-    position: absolute; 
-    width: auto; 
-    z-index: 1; 
+    position: absolute;
+    width: auto;
+    z-index: 1;
 }
 
-.languageDropdown a{
+.languageDropdown a {
     z-index: inherit;
     display: inline-block;
-    position: relative; 
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -143,29 +169,29 @@
     font-weight: bold;
     padding-bottom: 0.5rem;
     min-width: 100%;
-    margin-top: 0.5rem; 
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.languageDropdown a:hover{
+.languageDropdown a:hover {
     background-color: #008cff;
     transition: background-color 0.25s linear;
 }
 
-.languageMenu:hover .languageDropdown{ 
+.languageMenu:hover .languageDropdown {
     background-color: rgba(0, 0, 0, 0.5);
     display: block;
 }
 
-.languageButton:hover .languageButton:after{ 
+.languageButton:hover .languageButton:after {
     background: none repeat scroll 0 0 transparent;
-    bottom: 0; 
-    content: ""; 
-    display: block; 
-    height: 0.2rem; 
-    left: 50%; 
-    position: absolute; 
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 50%;
+    position: absolute;
     background: #ffffff;
-    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
-    width: 0; 
+    transition: width 0.25s ease 0s, left 0.25s ease 0s;
+    width: 0;
 }

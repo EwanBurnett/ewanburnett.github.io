@@ -1,5 +1,27 @@
+.appHome {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+background-color: rgb(65, 105, 225);
+}
+
+.demoBounds {
+  background-color: green;
+  position: relative;
+  display: inline-block;
+  flex: 1;
+
+}
+
+.landingBounds {
+  display: inline-block;
+  flex: 1;
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -20,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 4vmin);
   color: white;
 }
 
@@ -32,6 +54,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -25,10 +25,16 @@ function DemoApp() {
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <SiteDemo/>
-      <Landing/>
-      <DemoApp/>
+      <Navbar />
+      <div className="appHome">
+        <div className="demoBounds">
+          <SiteDemo />
+        </div>
+        <div className="landingBounds">
+          <Landing />
+        </div>
+      </div>
+      <DemoApp />
     </div>
   );
 }
