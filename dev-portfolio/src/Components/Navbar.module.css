@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.Navbar{ 
+    position: sticky;
+    top: 0; 
+    overflow-y: hidden;
+    display: flex; 
+    flex: 1 0 auto; 
+    align-items: center;
+    padding: 0.25rem;
+    background-color: green;
+    margin: 0; 
+    width: 100%; 
+    height: auto; 
+}
+
+
+
+
+.navHome{ 
+    justify-self: flex-start; 
+    background-color: black;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+}
+
+.navHome .logo{ 
+    display: inline-block; 
+    font-size: 1rem;
+    color: #ffffff; 
+}
+
+.navHome .name{
+    display: inline-block; 
+    flex: 1.0; 
+    text-decoration: none;
+    font-size: 1.45rem; 
+    font-family: "noto sans";
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navHome .name:after{ 
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0; 
+    content: ""; 
+    display: block; 
+    height: 0.2rem; 
+    left: 50%; 
+    position: absolute; 
+    background: #ffffff;
+    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
+    width: 0; 
+}
+
+.navMenu{ 
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 620px) {
+    .navMenu{ 
+        display: none;
+    }
+}
+
+
+.navmenu ul{ 
+    display: inline-block; 
+    width: auto; 
+    text-align: center;
+}
+.navMenu li{ 
+    display: inline-block;
+    position: relative;  
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.navMenu a{
+    color: #ffffff;
+    display: inline-block;
+    position: relative; 
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Noto Sans";
+    font-weight: bold;
+}
+
+.navMenu a:after{ 
+    background: none repeat scroll 0 0 transparent;
+    bottom: -0.25rem; 
+    content: ""; 
+    display: block; 
+    height: 0.2rem; 
+    left: 50%; 
+    position: absolute; 
+    background: #ffffff;
+    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
+    width: 0; 
+}
+
+.navMenu a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.languageMenu{ 
+    z-index: 1;
+    position: relative; 
+    display: inline-block;
+    background-color: blueviolet;
+}
+
+.languageButton{ 
+    display: inline-block;
+    position: relative; 
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Noto Sans";
+    font-weight: bold;
+}
+
+.languageDropdown{ 
+    display: none;
+    position: absolute; 
+    width: auto; 
+    z-index: 1; 
+}
+
+.languageDropdown a{
+    z-index: inherit;
+    display: inline-block;
+    position: relative; 
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Noto Sans";
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    min-width: 100%;
+}
+.languageDropdown a:hover{
+    background-color: #008cff;
+    transition: background-color 0.25s linear;
+}
+
+.languageMenu:hover .languageDropdown{ 
+    display: block;
+}
+
+.languageButton:hover .languageButton:after{ 
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0; 
+    content: ""; 
+    display: block; 
+    height: 0.2rem; 
+    left: 50%; 
+    position: absolute; 
+    background: #ffffff;
+    transition: width 0.25s ease 0s, left 0.25s ease 0s; 
+    width: 0; 
+}
