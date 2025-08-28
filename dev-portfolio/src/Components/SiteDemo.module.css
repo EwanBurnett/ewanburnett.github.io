@@ -1,0 +1,9 @@
+
+.mainCanvas{
+    width: 100vw; 
+    height: 35vh; 
+    background-color: red;
+    margin:0 !important; 
+    padding: 0 !important;
+    display: block;
+}

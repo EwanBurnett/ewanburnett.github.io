@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar'
+import SiteDemo from './Components/SiteDemo'
+import Landing from './Components/Landing'
 
 function DemoApp() {
   return (
@@ -24,6 +26,8 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <SiteDemo/>
+      <Landing/>
       <DemoApp/>
     </div>
   );
