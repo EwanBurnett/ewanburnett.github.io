@@ -3,23 +3,24 @@
 .Navbar{ 
     position: sticky;
     top: 0; 
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     display: flex; 
     flex: 1 0 auto; 
     align-items: center;
     padding: 0.25rem;
-    background-color: green;
     margin: 0; 
     width: 100%; 
     height: auto; 
+
+    /*TODO: Animate with a sine wave?*/
+    --colour-a: rgba(31, 118, 153, 1);
+    --colour-b:  rgba(19, 41, 102, 1);
+
+    background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%); 
 }
-
-
-
 
 .navHome{ 
     justify-self: flex-start; 
-    background-color: black;
     margin-left: 2rem; 
     margin-right: 2rem; 
 }
@@ -59,12 +60,12 @@
 }
 
 /* Mobile Phones */
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 1080px) {
     .navMenu{ 
+        /*TODO: Hamburger menu*/
         display: none;
     }
 }
-
 
 .navmenu ul{ 
     display: inline-block; 
@@ -111,7 +112,6 @@
     z-index: 1;
     position: relative; 
     display: inline-block;
-    background-color: blueviolet;
 }
 
 .languageButton{ 
@@ -125,6 +125,7 @@
 }
 
 .languageDropdown{ 
+    overflow-y: visible;
     display: none;
     position: absolute; 
     width: auto; 
@@ -142,13 +143,17 @@
     font-weight: bold;
     padding-bottom: 0.5rem;
     min-width: 100%;
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;
 }
+
 .languageDropdown a:hover{
     background-color: #008cff;
     transition: background-color 0.25s linear;
 }
 
 .languageMenu:hover .languageDropdown{ 
+    background-color: rgba(0, 0, 0, 0.5);
     display: block;
 }
 

@@ -22,28 +22,27 @@ export function NavHome() {
 /*TODO: Wrap this in a Class...*/ 
 export var siteLangCode = "en"; 
 const Languages = [
-    {label: "English", code: "en"}, 
-    {label: "Japanese", code: "jp"}, 
-    {label: "Mandarin", code: "zh"},
+    {code: "en", label: "English"}, 
+    {code: "jp", label: "日本語"}, 
+    {code: "zh", label: "汉语"},
 ];
 
-function SetSiteLanguage(language){ 
-    siteLangCode = Languages[language]; 
-    console.log("Setting Language to" + language + siteLangCode); 
+function SetSiteLanguage(languageCode){ 
+    siteLangCode = languageCode;    //TODO: This isn't C! Set state properly!
+    console.log("Setting Language to " + siteLangCode); 
 }
 
 export function LanguageMenu() {
-    const langCode = siteLangCode; 
     return (
         <div className={styles.languageMenu}>
             {/* The Language Selection menu. */}
             <a className={styles.languageButton}>
-               Language
+               Language ({siteLangCode})
             </a>
             <div className={styles.languageDropdown}>
-                <a onClick={SetSiteLanguage("English")}>English</a>
-                <a onClick={SetSiteLanguage("日本語")}>日本語</a>
-                <a onClick={SetSiteLanguage("汉语")}>汉语</a>
+                {Languages.map(({code, label}) => (
+                    <a key={code} onClick={(e) => {SetSiteLanguage(code)}}>{label}</a>
+                ))}
             </div>
         </div>
     );
