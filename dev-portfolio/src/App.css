@@ -1,15 +1,16 @@
+
 .appHome {
   display: flex;
   width: 100%;
   align-items: stretch;
 
-background-color: rgb(65, 105, 225);
+  background-color: rgb(65, 105, 225);
 }
 
 .demoBounds {
   background-color: green;
-  position: relative;
-  display: inline-block;
+  align-items: stretch;
+  display: flex;
   flex: 1;
 
 }
@@ -19,6 +20,26 @@ background-color: rgb(65, 105, 225);
   flex: 1;
 }
 
+@media only screen and (max-width: 1200px) {
+  .appHome{ 
+    display: flex; 
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .demoBounds{ 
+    min-height: 30vh;
+  }
+  
+}
+
+@media only screen and (max-height: 800px) {
+  .appHome{
+    display: flex; 
+    flex-direction: row; 
+    align-items: stretch;
+  }
+}
 .App {
   text-align: center;
   background-color: #282c34;

@@ -1,7 +1,7 @@
 .mainCanvas {
-    display: inline-block;
-    height: 100%;
+    width: 100%;
     background-color: red;
     margin: 0 !important;
     padding: 0 !important;
 }
+

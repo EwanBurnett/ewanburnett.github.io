@@ -25,6 +25,7 @@ function DemoApp() {
 function App() {
   return (
     <div className="App">
+      <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi"/>
       <Navbar />
       <div className="appHome">
         <div className="demoBounds">

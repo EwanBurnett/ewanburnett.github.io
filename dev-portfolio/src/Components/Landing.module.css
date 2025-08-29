@@ -7,28 +7,36 @@
 .landing {
     padding-top: auto;
     padding-bottom: auto;
-      padding-top: 10vh; 
-padding-bottom: 10vh;
+    margin: 5%; 
     background-color: var(--bg);
+    display: flex; 
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainCanvas{ 
+        max-height: 40vh;
+    }
 }
 
 .tagline {
-    width: 50vw;
+    display: inline-block;
+    flex: 1; 
     justify-self: center;
-    text-align: center;
+    text-align: left;
 }
 
 .tagline h1 {
     font-family: "Noto Sans";
     font-weight: 600;
-    font-size: 3.4rem;
+    font-size: min(15vw, 3.4rem);
     color: white;
 }
 
 .tagline h2 {
     font-family: "Noto Sans";
     font-weight: 600;
-    font-size: 2.0rem;
+    font-size: min(8vw, 2.0rem);
     color: white;
     padding-top: 10%;
     margin: 0;
@@ -37,7 +45,10 @@ padding-bottom: 10vh;
 .socials {
     list-style-type: none;
     display: inline-block;
+    flex: 1;
     text-align: center;
+    margin: auto 1rem; 
+    justify-content: flex-end;
 }
 
 .socials li {
@@ -45,9 +56,9 @@ padding-bottom: 10vh;
 }
 
 .icon {
-    padding-left: 1rem;
+    margin: auto 0.5rem;
     color: white;
-    font-size: 2.5rem;
+    font-size: min(10vw, 2.5rem);
 }
 
 .icon:hover {
@@ -56,13 +67,40 @@ padding-bottom: 10vh;
 }
 
 .resume{ 
-    font-size: 2.0rem; 
+    font-size: min(10vw, 1.6rem); 
     font-weight: 400;
-    border: 1% solid white; 
+    margin: auto 0.5rem;
+    padding: auto; 
+    display: flex; 
+    flex: 1;
+    justify-self: flex-start;
 }
 
 .resume a{ 
+    border: 0.1em solid white; 
+    padding: 0.5rem;
+    border-radius: 5%;
     color: white;
+    border-color: white; 
     text-decoration: none;
+    white-space: nowrap;
+}
 
+.resume a:hover{
+    color: blue; 
+    border-color: blue;
+    transition:  ease 0.2s;
+}
+
+.handles{ 
+    display: flex; 
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 540px) {
+    .handles{ 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
 }

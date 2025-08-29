@@ -8,10 +8,11 @@
 .Navbar {
     position: sticky;
     top: 0;
+    overflow: initial !important;
     /*overflow-y: hidden;*/
     display: flex;
+    flex-direction: row;
     flex: 1 0 auto;
-    align-items: center;
     margin: 0;
     width: 100%;
     height: auto;
@@ -73,14 +74,16 @@
 }
 
 .navMenu {
-    right: 0;
-    align-self: flex-end;
-    justify-self: flex-end;
+    flex: 1;
+    display: flex;
     justify-content: flex-end;
 }
 
 /* Mobile Phones */
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1200px) {
+    .Navbar{ 
+        position: sticky; 
+    }
     .navMenu {
         /*TODO: Hamburger menu*/
         display: none;

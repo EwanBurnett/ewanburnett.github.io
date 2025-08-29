@@ -20,8 +20,10 @@ export function Socials() {
 
 export function ResumeButton() {
     return (
-        <div className={styles.resume}>
-            <a href="/" target="_blank">CV / Resume</a>
+        <div>
+            <div className={styles.resume}>
+                <a href="/" target="_blank">CV / Resume</a>
+            </div>
         </div>
     );
 }
@@ -32,8 +34,11 @@ export default function Landing() {
                 <h2>Hi, I'm Ewan. I'm a</h2>
                 <h1>Graphics Programmer</h1>
             </div>
-            <ResumeButton />
-            <Socials />
+            <div className={styles.handles}>
+                <ResumeButton />
+                <Socials />
+            </div>
         </div>
     )
 }
+

@@ -13,8 +13,6 @@ export default function SiteDemo() {
         InitSiteDemo();
     });
     return (
-        <div>
             <canvas ref={mainCanvas} className={styles.mainCanvas} />
-        </div>
     )
 }
