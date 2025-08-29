@@ -25,18 +25,35 @@ function DemoApp() {
 function App() {
   return (
     <div className="App">
-      <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi"/>
-      <Navbar />
-      <div className="appHome">
-        <div className="demoBounds">
-          <SiteDemo />
+        <Navbar />
+      <section id="Home">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi" />
+        <div className="appHome">
+          <div className="demoBounds">
+            <SiteDemo />
+          </div>
+          <div className="landingBounds">
+            <Landing />
+          </div>
         </div>
-        <div className="landingBounds">
-          <Landing />
-        </div>
-      </div>
+      </section>
+      <section id="Projects">
+        Projects
+      </section>
+      <section id="Experience">
+        Experience
+      </section>
+      <section id="Gallery">
+        Gallery
+      </section>
+      <section id="About-Me">
+        About Me
+      </section>
+      <section id="Contact">
+        Contact
+      </section>
       <DemoApp />
-    </div>
+    </div >
   );
 }
 

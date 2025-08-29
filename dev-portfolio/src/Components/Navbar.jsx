@@ -6,7 +6,7 @@ export function NavHome() {
     return (
         <div className={styles.navHome}>
             {/* The "Home" button - Always visible in the top-left.*/}
-            <a href="/">
+            <a href="#">
             {/*
                 <div>
                     <img src={logo} className={styles.logo} alt="logo" />
