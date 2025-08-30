@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar'
 import SiteDemo from './Components/SiteDemo'
 import Landing from './Components/Landing'
+import Skills from './Components/Skills'
 
 function DemoApp() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Landing />
           </div>
         </div>
+        <Skills/>
       </section>
       <section id="Projects">
         Projects
