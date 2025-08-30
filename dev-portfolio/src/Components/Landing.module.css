@@ -79,7 +79,7 @@
 .resume a{ 
     border: 0.1em solid white; 
     padding: 0.5rem;
-    border-radius: 5%;
+    border-radius: 1rem;
     color: white;
     border-color: white; 
     text-decoration: none;

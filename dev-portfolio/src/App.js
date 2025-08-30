@@ -26,7 +26,7 @@ function DemoApp() {
 function App() {
   return (
     <div className="App">
-        <Navbar />
+      <Navbar />
       <section id="Home">
         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi" />
         <div className="appHome">
@@ -37,7 +37,10 @@ function App() {
             <Landing />
           </div>
         </div>
-        <Skills/>
+        <section id="Skills">
+          <h1 className="sectionHeader">Skills</h1>
+          <Skills />
+        </section>
       </section>
       <section id="Projects">
         Projects

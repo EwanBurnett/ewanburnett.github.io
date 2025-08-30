@@ -1,4 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.bento{ 
-    background-color: red;
+:root{ 
+    --bento-h1-font-family: "Noto Sans"; 
+}
+.bento {
+    background-color: black;
+    padding: 1rem 2rem; 
+}
+
+.bentoCategory {
+    background-color: rgb(0, 6, 37);
+    margin: 2vh;
+    padding: 0.5vh;
+    border-color: white;
+    border: 0.1em solid white;
+    border-radius: 1rem;
+}
+
+.bentoCategory h1{
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: var(--bento-h1-font-family);
+    color: white;
+}
+
+.bentoCategory:hover{
+    -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+
+    transition: ease 0.3s;
+
+}
+
+.bentoItem {
+    padding: 1vh;
+    margin: auto 1vh;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.bentoIcon {
+    font-size: 4.5vh;
+    color: rgb(255, 255, 255);
+}
+
+.bentoIcon:hover {
+    color: blue;
+    transition: ease 0.2s;
+}
+
+/*TODO: Better tooltip positioning!*/
+.bentoTooltip {
+    visibility: hidden;
+    margin: 0px auto;
+    display: table-cell;
+    width: auto;
+    top: 100%;
+    font-size: 2.5vh;
+    background-color: blue;
+    padding: 0.5vw;
+    text-align: center;
+    color: white;
+    border-radius: 20%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    white-space: nowrap;
+    position: absolute;
+    z-index: 50;
+}
+
+.bentoItem:hover .bentoTooltip {
+    visibility: visible;
 }

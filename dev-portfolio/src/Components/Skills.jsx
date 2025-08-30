@@ -34,7 +34,6 @@ import { FaQuestion } from 'react-icons/fa';
 
 import styles from './Skills.module.css';
 
-import React from 'react';
 
 const programmingLanguages = [
     { Name: "C++ 20", Icon: <FaQuestion /> },
@@ -85,20 +84,7 @@ const BentoLayout = (props) => {
     const { children } = props;
     return (
         <div className={styles.bento}>
-            {
-                React.Children.map(children, (child) => {
-                    return (
-                        <div>
-                            <div>
-                                {child.title}
-                            </div>
-                            <div>
-                                {child}
-                            </div>
-                        </div>
-                    );
-                })
-            }
+            {children}
         </div>
     );
 };
@@ -111,8 +97,9 @@ function BentoCategory({ items, title }) {
                 {items.map(item => {
                     return (
                         <div className={styles.bentoItem}>
-                            <div className={styles.bentoIcon}>{item['Icon']}</div>
-                            <div className={styles.bentoTooltip}>{item['Name']}</div>
+                            <div className={styles.bentoIcon}>{item['Icon']}
+                                <div className={styles.bentoTooltip}>{item['Name']}</div>
+                            </div>
                         </div>
                     );
                 })}
@@ -124,7 +111,6 @@ function BentoCategory({ items, title }) {
 export default function Skills() {
     return (
         <div>
-            <h1>Skills</h1>
             <BentoLayout>
                 <BentoCategory items={programmingLanguages} title={"Programming Languages"} />
                 <BentoCategory items={platforms} title={"Platforms"} />
