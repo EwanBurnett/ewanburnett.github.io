@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --bg: rgb(65, 105, 225);
+    --bg: rgba(65, 105, 225, 0);
 }
 
 .landing {
     padding-top: auto;
     padding-bottom: auto;
-    margin: 5%; 
-    background-color: var(--bg);
+    margin: 0; 
+    padding: 0;
     display: flex; 
+    width: auto; 
+    display: inline-block;
     flex-direction: column;
 }
 
@@ -24,6 +26,7 @@
     flex: 1; 
     justify-self: center;
     text-align: left;
+    width: auto; 
 }
 
 .tagline h1 {
@@ -46,8 +49,9 @@
     list-style-type: none;
     display: inline-block;
     flex: 1;
-    text-align: center;
-    margin: auto 1rem; 
+    text-align: right;
+    margin: auto 1rem;
+    margin-right: 0;
     justify-content: flex-end;
 }
 
@@ -56,7 +60,7 @@
 }
 
 .icon {
-    margin: auto 0.5rem;
+    margin-left: 1.5rem;
     color: white;
     font-size: min(10vw, 2.5rem);
 }
@@ -70,6 +74,7 @@
     font-size: min(10vw, 1.6rem); 
     font-weight: 400;
     margin: auto 0.5rem;
+    margin-left: 0;
     padding: auto; 
     display: flex; 
     flex: 1;

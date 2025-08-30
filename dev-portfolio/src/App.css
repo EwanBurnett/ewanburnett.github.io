@@ -7,11 +7,10 @@ html {
   width: 100%;
   align-items: stretch;
 
-  background-color: rgb(65, 105, 225);
+  background: linear-gradient(180deg, #4169ff 92%, #282c34 100%);
 }
 
 .demoBounds {
-  background-color: green;
   align-items: stretch;
   display: flex;
   flex: 1;

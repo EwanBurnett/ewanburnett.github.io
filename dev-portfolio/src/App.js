@@ -37,25 +37,25 @@ function App() {
             <Landing />
           </div>
         </div>
-        <section id="Skills">
-          <h1 className="sectionHeader">Skills</h1>
-          <Skills />
-        </section>
       </section>
       <section id="Projects">
-        Projects
+        <h1 className="sectionHeader">Projects</h1>
       </section>
       <section id="Experience">
-        Experience
+        <h1 className="sectionHeader">Experience</h1>
       </section>
       <section id="Gallery">
-        Gallery
+        <h1 className="sectionHeader">Gallery</h1>
       </section>
       <section id="About-Me">
-        About Me
+        <h1 className="sectionHeader">About Me</h1>
+      </section>
+      <section id="Skills">
+        <h1 className="sectionHeader">Skills</h1>
+        <Skills />
       </section>
       <section id="Contact">
-        Contact
+        <h1 className="sectionHeader">Contact</h1>
       </section>
       <DemoApp />
     </div >
