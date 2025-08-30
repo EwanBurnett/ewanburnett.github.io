@@ -72,7 +72,9 @@ const tools = [
     { Name: "Jira", Icon: <FaJira /> },
     { Name: "CMake", Icon: <SiCmake /> },
     { Name: "SPIR-V", Icon: <FaQuestion /> },
-    { Name: "Autodesk Maya", Icon: <SiAutodeskmaya /> }
+    { Name: "Autodesk Maya", Icon: <SiAutodeskmaya /> },
+    { Name: "Unreal Engine 5", Icon: <SiUnrealengine /> },
+    { Name: "Unity Engine", Icon: <FaUnity /> },
 ];
 
 const engines = [
@@ -84,7 +86,9 @@ const BentoLayout = (props) => {
     const { children } = props;
     return (
         <div className={styles.bento}>
-            {children}
+            <div className={styles.bentoGrid}>
+                {children}
+            </div>
         </div>
     );
 };
@@ -115,7 +119,6 @@ export default function Skills() {
                 <BentoCategory items={programmingLanguages} title={"Programming Languages"} />
                 <BentoCategory items={platforms} title={"Platforms"} />
                 <BentoCategory items={graphicsAPIs} title={"Graphics APIs"} />
-                <BentoCategory items={engines} title={"Engines"} />
                 <BentoCategory items={tools} title={"Tools"} />
             </BentoLayout>
         </div>

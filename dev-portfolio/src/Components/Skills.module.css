@@ -4,18 +4,41 @@
     --bento-h1-font-family: "Noto Sans"; 
 }
 .bento {
-    background-color: black;
     padding: 1rem 2rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+}
+
+.bentoGrid{ 
+    flex-wrap: wrap; 
+    height: 100%; 
+    width: 100%; 
+    display: inline-block;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem; 
+
 }
 
 /*TODO: Bento Layout!*/
 .bentoCategory {
+    display: inline-block;
+    width: auto; 
+    height: auto; 
     background-color: rgb(0, 6, 37);
     margin: 2vh;
     padding: 0.5vh;
     border-color: white;
     border: 0.1em solid white;
     border-radius: 1rem;
+}
+@media only screen and (max-width: 1200px) {
+    .bentoCategory{
+        display:block; 
+
+    }
 }
 
 .bentoCategory h1{
@@ -44,7 +67,7 @@
 }
 
 .bentoIcon {
-    font-size: 4.5vh;
+    font-size: 5.5vh;
     color: rgb(255, 255, 255);
 }
 
@@ -57,6 +80,7 @@
 .bentoTooltip {
     visibility: hidden;
     margin: 0px auto;
+    padding: 0.2vw;
     display: table-cell;
     width: auto;
     top: 90%;

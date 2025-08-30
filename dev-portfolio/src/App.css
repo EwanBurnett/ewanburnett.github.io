@@ -7,7 +7,8 @@ html {
   width: 100%;
   align-items: stretch;
 
-  background: linear-gradient(180deg, #4169ff 92%, #282c34 100%);
+  padding-bottom: 2rem;
+  background: linear-gradient(180deg, #284ac2 97%, #0a0a0a 100%);
 }
 
 .demoBounds {
@@ -20,6 +21,7 @@ html {
 .landingBounds {
   display: inline-block;
   flex: 1;
+  height: auto;
 }
 
 .sectionHeader {
@@ -53,7 +55,7 @@ html {
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #0a0a0a;
 }
 
 .App-logo {

@@ -31,15 +31,38 @@ const FS_SOURCE = `#version 300 es
         return origin + dir * t; 
     }
 
+
+    //via https://iquilezles.org/articles/distfunctions/
+    float SDF_Octahedron(vec3 point, float size){
+         point = abs(point);
+        float m = point.x+point.y+point.z-size;
+        vec3 q;
+            if( 3.0*point.x < m ) q = point.xyz;
+        else if( 3.0*point.y < m ) q = point.yzx;
+        else if( 3.0*point.z < m ) q = point.zxy;
+        else return m*0.57735027;
+            
+        float k = clamp(0.5*(q.z-q.y+size),0.0,size); 
+        return length(vec3(q.x,q.y-size+k,q.z-k)); 
+    }
+
     float SDF_Sphere(vec3 point,float radius){
         return length(point) - radius;
     }
 
     float Scene(vec3 point){
-        float distance = SDF_Sphere(point, 1.0);
+        float distance = SDF_Octahedron(point, 1.0);
         return distance;
     }
 
+vec3 GetNormal(vec3 point){ 
+    float center = Scene(point); 
+    float dX = Scene(point + vec3(kEpsilon, 0.0, 0.0)); 
+    float dY = Scene(point + vec3(0.0, kEpsilon, 0.0)); 
+    float dZ = Scene(point + vec3(0.0, 0.0, kEpsilon)); 
+
+    return (vec3(dX, dY, dZ) - center) / kEpsilon; 
+}
 
     float RayMarch(vec3 origin, vec3 direction){
         
@@ -88,10 +111,16 @@ const FS_SOURCE = `#version 300 es
         //Apply Shading
         vec4 colour = vec4(0.0);
         vec3 objectColour = vec3(1.0, 0.0, 0.0);
+
+        vec4 lightColour = vec4(1.0, 1.0, 1.0, 1.0); 
+        vec3 lightDirection = vec3(0.8, 0.5, 1.0); 
         
         if(t < kMaxDistance){
-            //TODO: Normals, shading, etc., 
-            colour.rgb = objectColour;
+            vec3 toLight = normalize(lightDirection); 
+            vec3 normal = GetNormal(RayPoint(rayOrigin, rayDirection, t)); 
+            float n_dot_l = max(0.0, dot(normal, toLight)); 
+            
+            colour.rgb = objectColour * n_dot_l;
             colour.a = 1.0; 
         }
         
@@ -211,6 +240,9 @@ export default function SiteDemo() {
         gl.clear(gl.COLOR_BUFFER_BIT);
         gl.viewport(0, 0, canvas.width, canvas.height);
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 6); //Draw the Screen Quad. 
+
+        //TODO: Canvas Resizing (a bigger pain than you'd think)
+        //TODO: Time uniform (for animation)
     });
     return (
         <canvas ref={mainCanvasRef} className={styles.mainCanvas} />

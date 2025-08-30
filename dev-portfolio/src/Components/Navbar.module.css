@@ -19,8 +19,8 @@
 
     font-size: var(--navbar-font-size);
     /*TODO: Animate with a sine wave?*/
-    --colour-a: rgba(31, 118, 153, 0.65);
-    --colour-b: rgba(19, 41, 102, 0.65);
+    --colour-a: rgba(20, 38, 95, 0.85);
+    --colour-b: rgba(10, 20, 48, 0.85);
 
     box-shadow: 0, 3px, 20px, rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -54,7 +54,7 @@
     display: inline-block;
     flex: 1.0;
     text-decoration: none;
-    font-size: calc(10px + 3vmin);
+    font-size: 3vh;
     font-family: "noto sans";
     font-weight: bold;
     color: #ffffff;
@@ -76,31 +76,41 @@
 .navMenu {
     flex: 1;
     display: flex;
+    margin: 0; 
     justify-content: flex-end;
+    align-items: stretch;
 }
 
+.navLinks{ 
+    display: inline-block;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0; 
+}
 /* Mobile Phones */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1050px) {
     .Navbar{ 
         position: sticky; 
     }
+    /*TODO: Hamburger menu*/
     .navMenu {
-        /*TODO: Hamburger menu*/
         display: none;
+        }
+        /*
+    .hamburger{ 
+        display: inline-block; 
     }
-}
-
-.navmenu ul {
-    display: inline-block;
-    width: auto;
-    text-align: center;
+    */
 }
 
 .navMenu li {
     display: inline-block;
     position: relative;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .navMenu a {
@@ -109,7 +119,8 @@
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05vw;
+    font-size: 2vh;
     font-family: "Noto Sans";
     font-weight: bold;
 }
@@ -197,4 +208,27 @@
     background: #ffffff;
     transition: width 0.25s ease 0s, left 0.25s ease 0s;
     width: 0;
+}
+
+.hamburger{ 
+    display: none;  
+right: 0; 
+flex: 1;
+}
+
+.hamburger .hamburgerLines{ 
+    display: block; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%; 
+}
+
+.hamburger .line{ 
+    display: block; 
+    height: 0.2rem; 
+    width: 100%; 
+    border-radius: 5rem;
+    background: white;
 }

@@ -8,11 +8,12 @@
     padding-top: auto;
     padding-bottom: auto;
     margin: 0; 
-    padding: 0;
+    padding: 3rem;
     display: flex; 
-    width: auto; 
-    display: inline-block;
+    height: auto; 
+    display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -32,17 +33,19 @@
 .tagline h1 {
     font-family: "Noto Sans";
     font-weight: 600;
-    font-size: min(15vw, 3.4rem);
+    font-size: min(10vw, 5.0vh);
     color: white;
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
 .tagline h2 {
     font-family: "Noto Sans";
     font-weight: 600;
-    font-size: min(8vw, 2.0rem);
+    font-size: min(5vw, 3.0vh);
     color: white;
     padding-top: 10%;
     margin: 0;
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
 .socials {
@@ -53,6 +56,7 @@
     margin: auto 1rem;
     margin-right: 0;
     justify-content: flex-end;
+    white-space: nowrap; 
 }
 
 .socials li {
@@ -62,7 +66,7 @@
 .icon {
     margin-left: 1.5rem;
     color: white;
-    font-size: min(10vw, 2.5rem);
+    font-size: min(10vw, 3.5vh);
 }
 
 .icon:hover {
@@ -71,7 +75,7 @@
 }
 
 .resume{ 
-    font-size: min(10vw, 1.6rem); 
+    font-size: min(10vw, 2.5vh); 
     font-weight: 400;
     margin: auto 0.5rem;
     margin-left: 0;
@@ -103,9 +107,30 @@
 }
 
 @media only screen and (max-width: 540px) {
+    .tagline h1, h2{
+        text-align: center;
+    }
     .handles{ 
         display: flex; 
         flex-direction: column;
         justify-content: center;
+    }
+    
+    .resume{ 
+        justify-self: center;
+        margin: auto; 
+    }
+    
+    .socials{
+        margin: auto; 
+        padding: 0; 
+        margin-top: 2vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .icon{ 
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
     }
 }
