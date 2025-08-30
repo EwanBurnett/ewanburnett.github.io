@@ -51,7 +51,7 @@ const FS_SOURCE = `#version 300 es
     }
 
     float Scene(vec3 point){
-        float distance = SDF_Octahedron(point, 1.0);
+        float distance = SDF_Octahedron(point, 1.0); 
         return distance;
     }
 

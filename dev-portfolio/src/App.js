@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar'
 import SiteDemo from './Components/SiteDemo'
 import Landing from './Components/Landing'
 import Skills from './Components/Skills'
+import Projects from './Components/Projects'
 
 function DemoApp() {
   return (
@@ -40,6 +41,7 @@ function App() {
       </section>
       <section id="Projects">
         <h1 className="sectionHeader">Projects</h1>
+        <Projects/>
       </section>
       <section id="Experience">
         <h1 className="sectionHeader">Experience</h1>

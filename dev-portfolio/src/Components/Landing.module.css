@@ -13,7 +13,6 @@
     height: auto; 
     display: flex;
     flex-direction: column;
-    width: 80%;
 }
 
 @media only screen and (max-width: 1200px) {

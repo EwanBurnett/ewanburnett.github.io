@@ -1,0 +1,225 @@
+:root {}
+
+.projectWrapper {
+    display: inline-block;
+    width: 40vw;
+    height: 20vw; 
+    background-color: red;
+    border-color: white;
+    border: 0.1em solid white;
+    border-radius: 1rem;
+    color: white;
+    margin: 3rem;
+    overflow: hidden;
+}
+
+.projectContainer{ 
+    display: inline-block; 
+    width: 100%;
+    height: 100%;
+    flex-direction: row ;
+    align-items: stretch;
+    justify-content: center;
+}
+.projectCard {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(0, 255, 128);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cardForeground {
+    position: absolute;
+    display: inline-block;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 10%);
+
+}
+
+.projectPlatforms {
+    border: 0.1em solid white;
+    border-radius: 1rem;
+    border-color: white;
+    background-color: rgb(0, 183, 255);
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+
+.projectPlatforms ul {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+.projectPlatforms li {
+    flex: 1;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.platformIcon {
+    display: inline-block;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+    font-size: 3vh;
+}
+
+
+.platformTooltip {
+    visibility: hidden;
+    margin: 0px auto;
+    padding: 0.2vw;
+    display: table-cell;
+    width: auto;
+    top: 100%;
+    font-size: 1.5vh;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    border-radius: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    position: absolute;
+    z-index: 50;
+}
+
+.platformIcon:hover {
+    color: blue;
+    transition: ease 0.2s;
+}
+
+.platformIcon:hover .platformTooltip {
+    visibility: visible;
+}
+
+.projectHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 10;
+    text-align: center;
+}
+
+.projectTitle {
+    flex: 1;
+    font-size: 3vh;
+    text-shadow: 0.2vw 0.2vw rgba(0, 0, 0, 20%);
+}
+
+.projectBrief {
+    flex: 1;
+    font-size: 1.5vh;
+    text-shadow: 0.2vw 0.2vw rgba(0, 0, 0, 20%);
+}
+
+.cardBackground {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgb(255, 0, 170);
+
+}
+
+.cardThumbnail {
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.cardThumbnail img {
+    aspect-ratio: 2 / 1;
+    object-position: center;
+    object-fit: cover;
+
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    ;
+}
+
+.cardVideo {
+    background-color: red;
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+.cardVideo video {
+    aspect-ratio: 2 / 1;
+    object-position: center;
+    object-fit: cover;
+
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    ;
+}
+
+
+
+.projectDetails {
+    display: none;
+    position: absolute;
+    width: 100%; 
+    background-color: red;
+}
+
+.projectDescription {
+    background-color: red;
+
+}
+
+.projectLinks {
+    background-color: red;
+
+}
+
+.projectLinks a {
+    background-color: red;
+
+}
+
+.projectWrapper:hover {
+    .cardThumbnail {
+        background-color: blueviolet;
+        display: none;
+
+    }
+
+    .cardVideo {
+        background-color: blueviolet;
+        display: inline-block;
+    }
+
+    .projectDetails {
+        background-color: blueviolet;
+        /*display: inline-block;*/
+
+    }
+}
