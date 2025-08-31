@@ -57,9 +57,9 @@ export function NavMenu() {
             <ul className={styles.navLinks}>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Gallery">Gallery</a></li>
                 <li><a href="#About-Me">About Me</a></li>
                 <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
                 <li><LanguageMenu /></li>
             </ul>
             <div className={styles.hamburger}>

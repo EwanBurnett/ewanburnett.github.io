@@ -37,6 +37,50 @@ const projects = [
         },
         /*
         */
+    {
+        title: "PROJECT_TITLE",
+        brief: "PROJECT_BRIEF",
+        date: "2025-05-11",
+        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        repository: "PROJECT_REPOSITORY",
+        article: "PROJECT_ARTICLE",
+        video: "PROJECT_VIDEO",
+        thumbnail: "https://www.dummyimage.com/1000x500/00ff59/0011ff.png",
+    },
+    {
+        title: "PROJECT_TITLE",
+        brief: "PROJECT_BRIEF",
+        date: "2025-05-11",
+        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        repository: "PROJECT_REPOSITORY",
+        article: "PROJECT_ARTICLE",
+        video: "PROJECT_VIDEO",
+        thumbnail: "https://www.dummyimage.com/1000x500/00ff59/0011ff.png",
+    },
+    {
+        title: "PROJECT_TITLE",
+        brief: "PROJECT_BRIEF",
+        date: "2025-05-11",
+        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        repository: "PROJECT_REPOSITORY",
+        article: "PROJECT_ARTICLE",
+        video: "PROJECT_VIDEO",
+        thumbnail: "https://www.dummyimage.com/1000x500/00ff59/0011ff.png",
+    },
+    {
+        title: "PROJECT_TITLE",
+        brief: "PROJECT_BRIEF",
+        date: "2025-05-11",
+        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        repository: "PROJECT_REPOSITORY",
+        article: "PROJECT_ARTICLE",
+        video: "PROJECT_VIDEO",
+        thumbnail: "https://www.dummyimage.com/1000x500/00ff59/0011ff.png",
+    },
 ];
 
 

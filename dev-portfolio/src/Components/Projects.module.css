@@ -138,7 +138,8 @@ h2 {
 
 .projectBrief {
     display: inline-block;
-    font-size: 1.5vh;   /*TODO: Better Font Scaling!!!*/
+    font-size: 1.5vh;
+    /*TODO: Better Font Scaling!!!*/
     text-shadow: 0.2vw 0.2vw rgba(0, 0, 0, 20%);
 }
 
@@ -203,9 +204,7 @@ h2 {
 .projectDescription {
     margin: 2rem;
     color: white;
-    font-size: 1.5vw;
-
-
+    font-size: 1.6vh;
 }
 
 .projectLinks {
@@ -236,22 +235,28 @@ h2 {
 
 }
 
+.projectLinks a:hover {
+    color: blue; 
+    border-color: blue;
+    transition: 0.25s ease; 
+}
+
 .projectWrapper:hover {
     .cardThumbnail {
         background-color: blueviolet;
-        display: none
-        ;
+        display: none;
 
     }
 
-    .projectCard{
-    -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
-    -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
-    box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    .projectCard {
+        -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+        -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+        box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
 
-    transition: ease 0.3s;
+        transition: ease 0.3s;
 
-}
+    }
+
     .cardVideo {
         background-color: blueviolet;
         display: inline-block;
@@ -273,16 +278,14 @@ h2 {
         display: inline-block;
         animation: slideDown 1s ease-out;
     }
-
-
 }
 
 
 @media only screen and (max-width: 1050px) {
-    .projectWrapper{ 
-    }
-    .projectContainer{
-        margin: 0.5rem; 
+    .projectWrapper {}
+
+    .projectContainer {
+        margin: 0.5rem;
         width: 90vw;
     }
 }

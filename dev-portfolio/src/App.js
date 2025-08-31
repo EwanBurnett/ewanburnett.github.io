@@ -6,6 +6,7 @@ import Landing from './Components/Landing'
 import Skills from './Components/Skills'
 import Projects from './Components/Projects'
 import AboutMe from './Components/AboutMe';
+import Experience from './Components/Experience';
 
 function DemoApp() {
   return (
@@ -46,9 +47,7 @@ function App() {
       </section>
       <section id="Experience">
         <h1 className="sectionHeader">Experience</h1>
-      </section>
-      <section id="Gallery">
-        <h1 className="sectionHeader">Gallery</h1>
+        <Experience/>
       </section>
       <section id="About-Me">
         <AboutMe/>
@@ -60,7 +59,15 @@ function App() {
       <section id="Contact">
         <h1 className="sectionHeader">Contact</h1>
       </section>
-      <DemoApp />
+      <section id="Gallery">
+        <h1 className="sectionHeader">Gallery</h1>
+      </section>
+      <footer>
+        <p>
+          Copyright <a href="#">Ewan Burnett ©</a> 2025
+        </p>
+        <a href="mailto:ewanburnettsk@outlook.com">EwanBurnettSK@Outlook.com</a>
+      </footer>
     </div >
   );
 }
