@@ -2,26 +2,27 @@
 
 .projectWrapper {
     display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.projectContainer {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
     width: 40vw;
-    height: 20vw; 
-    background-color: red;
+    gap: 1rem;
+    height: auto;
+}
+
+.projectCard {
     border-color: white;
     border: 0.1em solid white;
     border-radius: 1rem;
     color: white;
-    margin: 3rem;
     overflow: hidden;
-}
-
-.projectContainer{ 
-    display: inline-block; 
-    width: 100%;
-    height: 100%;
-    flex-direction: row ;
-    align-items: stretch;
-    justify-content: center;
-}
-.projectCard {
     position: relative;
     display: inline-block;
     background-color: rgb(0, 255, 128);
@@ -80,7 +81,7 @@
     display: inline-block;
     margin-left: 0.5vh;
     margin-right: 0.5vh;
-    font-size: 3vh;
+    font-size: 3vw;
 }
 
 
@@ -95,7 +96,7 @@
     background-color: blue;
     text-align: center;
     color: white;
-    border-radius: 20%;
+    border-radius: 1rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -114,6 +115,7 @@
 
 .projectHeader {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
@@ -122,14 +124,19 @@
 }
 
 .projectTitle {
-    flex: 1;
+    display: inline-block;
     font-size: 3vh;
     text-shadow: 0.2vw 0.2vw rgba(0, 0, 0, 20%);
 }
 
+.projectTitle h1,
+h2 {
+    margin: 0;
+}
+
 .projectBrief {
-    flex: 1;
-    font-size: 1.5vh;
+    display: inline-block;
+    font-size: 1.5vh;   /*TODO: Better Font Scaling!!!*/
     text-shadow: 0.2vw 0.2vw rgba(0, 0, 0, 20%);
 }
 
@@ -157,17 +164,17 @@
     object-position: center;
     object-fit: cover;
 
+    width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    ;
 }
 
 .cardVideo {
     background-color: red;
     display: none;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .cardVideo video {
@@ -175,40 +182,63 @@
     object-position: center;
     object-fit: cover;
 
+    width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    ;
 }
 
-
-
 .projectDetails {
+    background-color: slategray;
     display: none;
-    position: absolute;
-    width: 100%; 
-    background-color: red;
+    position: relative;
+    width: 100%;
+    border: 0.1em solid white;
+    border-radius: 1rem;
+    z-index: 3;
 }
 
 .projectDescription {
-    background-color: red;
+    margin: 2rem;
+    color: white;
+    font-size: 1.5vw;
+
 
 }
 
 .projectLinks {
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+    font-size: min(10vw, 2.5vh);
+    font-weight: 400;
+    margin: 0;
+    padding: auto;
+    gap: 2rem;
 
 }
 
 .projectLinks a {
-    background-color: red;
+
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: auto;
+    flex: 1;
+    border: 0.1em solid white;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+    white-space: nowrap;
 
 }
 
 .projectWrapper:hover {
     .cardThumbnail {
         background-color: blueviolet;
-        display: none;
+        display: none
+        ;
 
     }
 
@@ -217,9 +247,32 @@
         display: inline-block;
     }
 
-    .projectDetails {
-        background-color: blueviolet;
-        /*display: inline-block;*/
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
 
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .projectDetails {
+        display: inline-block;
+        animation: slideDown 1s ease-out;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .projectWrapper{ 
+    }
+    .projectContainer{
+        margin: 0.5rem; 
+        width: 90vw;
     }
 }

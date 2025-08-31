@@ -2,7 +2,7 @@
 import { FaWindows, FaLinux, FaAndroid, FaPlaystation } from "react-icons/fa";
 import { CgBrowser } from 'react-icons/cg';
 import styles from "./Projects.module.css";
-
+import Markdown from 'react-markdown';
 
 const platforms = {
     "Windows": <FaWindows />,
@@ -18,7 +18,7 @@ const projects = [
         brief: "PROJECT_BRIEF",
         date: "2025-05-11",
         platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
-        description: "PROJECT_DESCRIPTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         repository: "PROJECT_REPOSITORY",
         article: "PROJECT_ARTICLE",
         video: "PROJECT_VIDEO",
@@ -34,7 +34,9 @@ const projects = [
         article: null,
         video: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
         thumbnail: "https://www.dummyimage.com/2000x500/00ff59/0011ff.png",
-    },
+        },
+        /*
+        */
 ];
 
 
@@ -106,9 +108,9 @@ export function ProjectItem(props) {
                     </div>
             <div className={styles.projectDetails}>
                 <div className={styles.projectDescription}>
-                    <p>
-                        {data.description}
-                    </p>
+                        <Markdown>
+                            {data.description}
+                        </Markdown>
                 </div>
                 <div className={styles.projectLinks}>
                     {data.repository ?
