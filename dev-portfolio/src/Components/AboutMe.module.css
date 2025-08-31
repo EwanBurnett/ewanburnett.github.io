@@ -1,0 +1,52 @@
+
+:root{ 
+
+}
+
+.aboutMeWrapper{ 
+    display: inline-block;
+    width: auto;
+    height: auto; 
+    margin-top: 10vh; 
+}
+
+.aboutMeContainer{ 
+    display: flex;
+    flex-direction: row; 
+    flex: auto; 
+    width: 100%;
+    justify-content: center;
+}
+
+.aboutMeImage{ 
+    display: inline-block;
+    background-color: red;
+    width: 30%;
+    height: auto; 
+    overflow: hidden;
+    margin:0 ; 
+    object-fit: contain;
+    object-position: center;
+}
+
+/*TODO: Image Sizing to div!*/
+.aboutMeImage img{ 
+    border: 0.1rem solid white; 
+    border-radius: 1rem;
+    width: auto; 
+}
+
+.aboutMeText{ 
+    font-size: 1vw; 
+    width: 50%;
+    display: inline-block;
+    border: 0.1rem solid white; 
+    border-radius: 1rem;
+    color: white; 
+    background-color: slategray;
+    text-align: left;
+    margin-left: 3vw; 
+    padding:1rem 2rem;
+}
+
+

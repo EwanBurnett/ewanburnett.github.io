@@ -31,6 +31,8 @@
     overflow: hidden;
 }
 
+
+
 .cardForeground {
     position: absolute;
     display: inline-block;
@@ -242,6 +244,14 @@ h2 {
 
     }
 
+    .projectCard{
+    -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+
+    transition: ease 0.3s;
+
+}
     .cardVideo {
         background-color: blueviolet;
         display: inline-block;

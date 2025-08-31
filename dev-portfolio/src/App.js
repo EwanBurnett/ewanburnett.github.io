@@ -5,6 +5,7 @@ import SiteDemo from './Components/SiteDemo'
 import Landing from './Components/Landing'
 import Skills from './Components/Skills'
 import Projects from './Components/Projects'
+import AboutMe from './Components/AboutMe';
 
 function DemoApp() {
   return (
@@ -50,7 +51,7 @@ function App() {
         <h1 className="sectionHeader">Gallery</h1>
       </section>
       <section id="About-Me">
-        <h1 className="sectionHeader">About Me</h1>
+        <AboutMe/>
       </section>
       <section id="Skills">
         <h1 className="sectionHeader">Skills</h1>
