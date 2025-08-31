@@ -4,6 +4,8 @@ import { CgBrowser } from 'react-icons/cg';
 import styles from "./Projects.module.css";
 import Markdown from 'react-markdown';
 
+import { useState } from "react";
+
 const platforms = {
     "Windows": <FaWindows />,
     "Linux": <FaLinux />,
@@ -41,7 +43,7 @@ const projects = [
         title: "PROJECT_TITLE",
         brief: "PROJECT_BRIEF",
         date: "2025-05-11",
-        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        platforms: ["Windows", "Android", "Linux"],
         description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         repository: "PROJECT_REPOSITORY",
         article: "PROJECT_ARTICLE",
@@ -52,7 +54,7 @@ const projects = [
         title: "PROJECT_TITLE",
         brief: "PROJECT_BRIEF",
         date: "2025-05-11",
-        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        platforms: ["Web"],
         description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         repository: "PROJECT_REPOSITORY",
         article: "PROJECT_ARTICLE",
@@ -63,7 +65,7 @@ const projects = [
         title: "PROJECT_TITLE",
         brief: "PROJECT_BRIEF",
         date: "2025-05-11",
-        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        platforms: ["Windows", "PlayStation 5"],
         description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         repository: "PROJECT_REPOSITORY",
         article: "PROJECT_ARTICLE",
@@ -74,7 +76,7 @@ const projects = [
         title: "PROJECT_TITLE",
         brief: "PROJECT_BRIEF",
         date: "2025-05-11",
-        platforms: ["Windows", "PlayStation 5", "Android", "Linux", "Web"],
+        platforms: ["Windows"],
         description: "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         repository: "PROJECT_REPOSITORY",
         article: "PROJECT_ARTICLE",
@@ -93,9 +95,11 @@ const projects = [
 export function ProjectItem(props) {
     const data = props.data;
 
+    const [hover, setHover] = useState(false); 
+
     return (
         <div className={styles.projectWrapper}>
-            <div className={styles.projectContainer}>
+            <div className={styles.projectContainer} onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
 
             <div className={styles.projectCard}>
                 <div className={styles.cardForeground}>
@@ -138,7 +142,7 @@ export function ProjectItem(props) {
                     {data.video != null ?
                         (
                             <div className={styles.cardVideo}>
-                                <video src={data.video} />
+                                <video src={data.video} autoPlay loop muted preload/>
                             </div>
                         ) : 
                         data.thumbnail != null ? (

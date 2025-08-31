@@ -51,7 +51,7 @@ const FS_SOURCE = `#version 300 es
     }
 
     float Scene(vec3 point){
-        float distance = SDF_Octahedron(point, 1.0); 
+        float distance = SDF_Sphere(point, 1.0); //SDF_Octahedron(point, 1.0); 
         return distance;
     }
 
@@ -183,9 +183,24 @@ export default function SiteDemo() {
     const mainCanvasRef = useRef(null);
     var gl = null;
 
+    function Draw(gl, program) {
+        const canvas = mainCanvasRef.current;
+        if (canvas != null) {
+            gl.useProgram(program);
+            var u_resolutionLocation = gl.getUniformLocation(program, "u_resolution");
+            gl.uniform2f(u_resolutionLocation, canvas.width, canvas.height);
+
+            gl.clearColor(0.0, 0.0, 0.0, 0.0);
+            gl.clear(gl.COLOR_BUFFER_BIT);
+            gl.viewport(0, 0, canvas.width, canvas.height);
+            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 6); //Draw the Screen Quad. 
+        }
+    }
+
     useEffect(() => {
         console.log("Initializing Site Demo.\n");
         const canvas = mainCanvasRef.current;
+
         const webGL = canvas.getContext("webgl2");
         if (webGL == null) {
             alert("Failed to initialize WebGL!\nWebGL may be unsupported by this browser.");
@@ -232,16 +247,16 @@ export default function SiteDemo() {
             webGL.bufferData(webGL.ARRAY_BUFFER, verts, webGL.STATIC_DRAW);
         }
 
-        gl.useProgram(program); 
-        var u_resolutionLocation = gl.getUniformLocation(program, "u_resolution");
-        gl.uniform2f(u_resolutionLocation, canvas.width, canvas.height);
+        const onResize = e => {
+            const canvas = mainCanvasRef.current;
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            Draw(gl, program);
+        };
 
-        gl.clearColor(0.0, 0.0, 0.0, 0.0);
-        gl.clear(gl.COLOR_BUFFER_BIT);
-        gl.viewport(0, 0, canvas.width, canvas.height);
-        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 6); //Draw the Screen Quad. 
+        onResize();
+        window.addEventListener("resize", onResize);
 
-        //TODO: Canvas Resizing (a bigger pain than you'd think)
         //TODO: Time uniform (for animation)
     });
     return (

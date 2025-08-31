@@ -7,6 +7,7 @@
     display: inline-block;
     height: auto; 
     margin-top: 10vh; 
+    width: 90%;
 }
 
 .aboutMeContainer{ 
@@ -17,34 +18,46 @@
     justify-content: center;
 }
 
+.aboutMeImageBox{ 
+    /*background-color: red;*/
+    display: flex;
+    max-height: 100%;
+    height: auto;
+    justify-content: center;
+    width: auto;
+}
+
 .aboutMeImage{ 
-    display: inline-block;
-    background-color: red;
-    width: 30%;
-    height: auto; 
+    display: flex;
+    max-width: 50%;
+    height: 100%;
     overflow: hidden;
     margin:0 ; 
-    object-fit: contain;
-    object-position: center;
 }
 
 /*TODO: Image Sizing to div!*/
 .aboutMeImage img{ 
     border: 0.1rem solid white; 
     border-radius: 1rem;
-    width: auto; 
+
+      aspect-ratio: 9 / 16;
+    object-position: center;
+    object-fit: cover;
+
+    width: 100%; 
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .aboutMeText{ 
-    font-size: 1.6vh; 
-    width: 50%;
+    font-size: 1.8vh; 
+    width: 75%;
     display: inline-block;
     border: 0.1rem solid white; 
     border-radius: 1rem;
     color: white; 
     background-color: slategray;
     text-align: left;
-    margin-left: 3vw; 
     padding:1rem 2rem;
 }
 

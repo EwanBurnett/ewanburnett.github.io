@@ -11,7 +11,7 @@ export function NavHome() {
                 <div>
                     <img src={logo} className={styles.logo} alt="logo" />
                 </div>
-                */}
+                    */}
                 <div className={styles.name}>
                     Ewan Burnett
                 </div>

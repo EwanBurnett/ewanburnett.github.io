@@ -2,17 +2,17 @@
 
 .projectWrapper {
     display: inline-block;
-    width: auto;
-    height: auto;
+    margin: 3rem;
+    width: 40vw;
 }
 
 .projectContainer {
-    margin: 3rem;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    width: 40vw;
     gap: 1rem;
     height: auto;
 }
@@ -80,7 +80,10 @@
 }
 
 .platformIcon {
-    display: inline-block;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 0.5vh;
     margin-right: 0.5vh;
     font-size: 3vw;
@@ -160,6 +163,10 @@ h2 {
 
     width: 100%;
     height: 100%;
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1;
 }
 
 .cardThumbnail img {
@@ -168,16 +175,15 @@ h2 {
     object-fit: cover;
 
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
 }
 
 .cardVideo {
-    background-color: red;
-    display: none;
+    display: inline-block;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .cardVideo video {
@@ -186,7 +192,7 @@ h2 {
     object-fit: cover;
 
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
 }
@@ -199,6 +205,7 @@ h2 {
     border: 0.1em solid white;
     border-radius: 1rem;
     z-index: 3;
+
 }
 
 .projectDescription {
@@ -241,10 +248,12 @@ h2 {
     transition: 0.25s ease; 
 }
 
-.projectWrapper:hover {
+.projectContainer:hover {
     .cardThumbnail {
         background-color: blueviolet;
-        display: none;
+        opacity: 0%;
+        visibility: hidden;
+        transition: 1.0s ease;
 
     }
 
@@ -254,38 +263,33 @@ h2 {
         box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
 
         transition: ease 0.3s;
-
     }
 
     .cardVideo {
-        background-color: blueviolet;
-        display: inline-block;
-    }
-
-    @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+    visibility: visible;
+    opacity: 100%; 
+    transition:1.0s ease;
     }
 
     .projectDetails {
         display: inline-block;
-        animation: slideDown 1s ease-out;
     }
 }
 
 
 @media only screen and (max-width: 1050px) {
-    .projectWrapper {}
-
-    .projectContainer {
+    .projectWrapper {
         margin: 0.5rem;
         width: 90vw;
+
     }
+
+    .projectLinks{
+        flex-direction: column;
+        gap: 0;
+    }
+
+.platformIcon {
+    font-size: max(3vh, 3vw); 
+}
 }

@@ -30,6 +30,8 @@ import { SiOpengl, SiVulkan, SiWebgpu } from 'react-icons/si';
 
 import { FaAndroid, FaLinux, FaPlaystation, FaWindows } from 'react-icons/fa';
 
+import { CgBrowser } from 'react-icons/cg';
+
 import { FaQuestion } from 'react-icons/fa';
 
 import styles from './Skills.module.css';
@@ -53,6 +55,7 @@ const platforms = [
     { Name: "Linux", Icon: <FaLinux /> },
     { Name: "PlayStation® 5", Icon: <FaPlaystation /> },
     { Name: "Android", Icon: <FaAndroid /> },
+    { Name: "Web", Icon: <CgBrowser /> },
 ];
 
 const graphicsAPIs = [
@@ -77,10 +80,12 @@ const tools = [
     { Name: "Unity Engine", Icon: <FaUnity /> },
 ];
 
+/*
 const engines = [
     { Name: "Unreal Engine 5", Icon: <SiUnrealengine /> },
     { Name: "Unity Engine", Icon: <FaUnity /> },
 ];
+*/
 
 const BentoLayout = (props) => {
     const { children } = props;

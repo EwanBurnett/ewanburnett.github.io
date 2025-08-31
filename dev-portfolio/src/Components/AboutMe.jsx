@@ -1,7 +1,7 @@
 import styles from './AboutMe.module.css';
 import Markdown from 'react-markdown';
 
-const aboutMeImage = "https://www.dummyimage.com/500x1000/00ff59/0011ff.png";
+const aboutMeImage = "https://www.dummyimage.com/600x1000/00ff59/0011ff.png";
 
 const aboutMeText = `
 # About Me
@@ -24,10 +24,13 @@ export default function AboutMe(){
         <div>
             <div className={styles.aboutMeWrapper}>
                 <div className={styles.aboutMeContainer}>
-                    <div className={styles.aboutMeImage}>
                       {/*
-                       <img src={aboutMeImage}></img> 
                       */}
+                    <div className={styles.aboutMeImageBox}>
+                      <div className={styles.aboutMeImage}>
+                         <img src={aboutMeImage}></img> 
+                      </div>
+
                     </div>
                     <div className={styles.aboutMeText}>
                         <Markdown>
