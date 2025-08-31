@@ -1,6 +1,7 @@
 import styles from './Landing.module.css';
 import { FaGithub, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaBluesky } from 'react-icons/fa6';
+import { LuMail } from 'react-icons/lu';
 
 const githubLink = "https://github.com/EwanBurnett";
 const linkedinLink = "https://www.linkedin.com/in/ewanburnettsk/";
@@ -13,7 +14,7 @@ export function Socials() {
             <li><a className={styles.icon} href={githubLink} target="_blank"><FaGithub /></a></li>
             <li><a className={styles.icon} href={linkedinLink} target="_blank"><FaLinkedinIn /></a></li>
             <li><a className={styles.icon} href={blueskyLink} target="_blank"><FaBluesky /></a></li>
-            <li><a className={styles.icon} href={youtubeLink} target="_blank"><FaYoutube /></a></li>
+            <li><a className={styles.icon} href={"mailto:ewanburnettsk@outlook.com"}><LuMail/></a></li>
         </ul>
     );
 }

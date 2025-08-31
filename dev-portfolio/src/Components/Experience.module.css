@@ -85,6 +85,7 @@
 }
 
 .experienceDescription{ 
+    font-size: 1.8vh; 
     padding: 0 1rem; 
     text-align: left;
 }

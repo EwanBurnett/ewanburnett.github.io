@@ -32,6 +32,36 @@ html {
   margin-top: 2rem;
 }
 
+.contactWrapper{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3vh;
+  margin: 5rem 0; 
+}
+
+.contactWrapper .icon{ 
+  font-size: 4vh; 
+  margin: 1rem;
+}
+
+.contactWrapper a { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; 
+  text-decoration: none;
+}
+
+
+.contactWrapper a:hover { 
+  color: blue; 
+  transition: 0.25s ease;
+}
+
 footer{
     display: flex;
     flex-direction: column;
@@ -55,6 +85,13 @@ footer a{
 
   .demoBounds {
     min-height: 30vh;
+  }
+
+  .contactWrapper{
+  font-size: 3vw;
+  }
+  .contactWrapper .icon{ 
+  font-size: 4vw; 
   }
 
 }
