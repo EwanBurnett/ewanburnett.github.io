@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, React } from "react";
 import styles from "./SiteDemo.module.css";
 
 
@@ -23,6 +23,7 @@ const FS_SOURCE = `#version 300 es
     const float kEpsilon = 0.001; 
     const float kGamma = 1.0 / 2.2; 
 
+    uniform float u_time;
     uniform vec2 u_resolution; 
 
     //-------------------------------
@@ -51,7 +52,7 @@ const FS_SOURCE = `#version 300 es
     }
 
     float Scene(vec3 point){
-        float distance = SDF_Sphere(point, 1.0); //SDF_Octahedron(point, 1.0); 
+        float distance = SDF_Sphere(point + vec3(0.0, sin(u_time), 0.0), 1.0); //SDF_Octahedron(point, 1.0); 
         return distance;
     }
 
@@ -131,6 +132,19 @@ vec3 GetNormal(vec3 point){
     }
 `;
 
+const useRequestAnimationFrame = callback => {
+    const requestRef = useRef();
+    const previousTimeRef = useRef();
+    const animate = time => {
+        if (previousTimeRef.current) callback(time - previousTimeRef.current);
+        previousTimeRef.current = time;
+        requestRef.current = requestAnimationFrame(animate);
+    };
+    useEffect(() => {
+        requestRef.current = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(requestRef.current);
+    }, []);
+};
 
 function CreateShaderProgram(gl, vertexShader, fragmentShader, name) {
     if (gl == null) {
@@ -181,12 +195,18 @@ function CreateShaderProgram(gl, vertexShader, fragmentShader, name) {
 
 export default function SiteDemo() {
     const mainCanvasRef = useRef(null);
-    var gl = null;
+    const gl = useRef(null);
+    const program = useRef(null);
+    const time = useRef(0);
 
     function Draw(gl, program) {
         const canvas = mainCanvasRef.current;
         if (canvas != null) {
             gl.useProgram(program);
+
+            var u_timeLocation = gl.getUniformLocation(program, "u_time");
+            gl.uniform1f(u_timeLocation, time.current);
+
             var u_resolutionLocation = gl.getUniformLocation(program, "u_resolution");
             gl.uniform2f(u_resolutionLocation, canvas.width, canvas.height);
 
@@ -207,9 +227,9 @@ export default function SiteDemo() {
         }
         /*
         */
-        gl = webGL;
+        gl.current = webGL;
 
-        const program = CreateShaderProgram(gl, VS_SOURCE, FS_SOURCE, "Main Program");
+        program.current = CreateShaderProgram(gl.current, VS_SOURCE, FS_SOURCE, "Main Program");
 
 
         //Set up the Screen Quad. 
@@ -222,7 +242,7 @@ export default function SiteDemo() {
             webGL.bindVertexArray(vao);
 
             //Retrieve the index of our position data from the pass_main. 
-            const vPositionIndex = webGL.getAttribLocation(program, "vPosition");
+            const vPositionIndex = webGL.getAttribLocation(program.current, "vPosition");
 
             //Set the Vertex Input Layout
             webGL.bindBuffer(webGL.ARRAY_BUFFER, vertexBuffer);
@@ -251,14 +271,19 @@ export default function SiteDemo() {
             const canvas = mainCanvasRef.current;
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
-            Draw(gl, program);
+            Draw(gl.current, program.current);
         };
 
         onResize();
         window.addEventListener("resize", onResize);
-
-        //TODO: Time uniform (for animation)
     });
+
+    useRequestAnimationFrame(deltaTime => {
+        Draw(gl.current, program.current);
+        time.current = time.current + (deltaTime * 0.001);
+        //console.log(time.current)
+    });
+
     return (
         <canvas ref={mainCanvasRef} className={styles.mainCanvas} />
     )
