@@ -10,6 +10,7 @@ import Experience from './Components/Experience';
 import { FaBluesky } from 'react-icons/fa6';
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { LuMail } from 'react-icons/lu';
+import Gallery from './Components/Gallery';
 
 function DemoApp() {
   return (
@@ -85,6 +86,7 @@ function App() {
       </section>
       <section id="Gallery">
         <h1 className="sectionHeader">Gallery</h1>
+        <Gallery/>
       </section>
       <footer>
         <p>

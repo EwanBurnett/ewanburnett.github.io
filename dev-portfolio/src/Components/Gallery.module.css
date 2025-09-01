@@ -1,0 +1,126 @@
+.gallery{ 
+    display: flex; 
+    justify-content: center;
+}
+
+.galleryWrapper{
+    background-color: red;
+    max-width: 90%;
+    margin: 5vh 0; 
+}
+
+.carousel {
+    margin: auto;
+    --slide-height: 9rem;
+    --slide-spacing: 1rem;
+    --slide-size: 30%;
+    border: 0.1rem solid white; 
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.carousel:hover{
+    -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+
+    transition: ease 0.3s;
+}
+
+.galleryViewport {
+    overflow: hidden;
+}
+
+.galleryContainer {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.gallerySlide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+}
+
+.gallerySlide img{ 
+    object-fit: cover;
+}
+
+
+
+.fullscreenWrapper{ 
+    position: fixed;
+
+    left: 0; 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    overflow: auto;
+    background-color: indigo;
+    z-index: 100;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.slideImage{
+
+}
+
+.slideImageFullscreen{ 
+
+}
+
+.slideOverlay{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 0; 
+    right: 0; 
+    z-index: 10;
+}
+
+.fullscreenButton{ 
+    border: none; 
+    color: white; 
+    padding: 2rem; 
+    display: inline-block; 
+    font-size: 2vw;
+    filter: drop-shadow(0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+    background-color: rgba(0, 0, 0, 0%);
+}
+
+.fullscreenButton:hover{ 
+    color: blue; 
+    transition: ease 0.25s;
+}
+
+.slideTitle{ 
+    background-color: slateblue;
+    color: white; 
+    font-size: 4vh;
+}
+
+.slideDescription{ 
+    color: White; 
+    font-size: 2vh;
+}
+
+.galleryThumbnails {
+    background-color: lavender;
+}
+
+.thumbnailViewport {
+    max-height: 10vh;
+    overflow: hidden;
+}
+
+.thumbnailContainer {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
