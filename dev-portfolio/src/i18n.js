@@ -1,0 +1,98 @@
+import i18n from 'i18next';
+import { initReactI18next } from "react-i18next";
+
+i18n.use(initReactI18next).init({
+    lng: "jp",
+    fallbackLng: "en",
+    interpolation: {
+        escapeValue: false,
+    },
+    resources: {
+        en: {
+            translation: {
+                tagline_intro: "Hi, I'm Ewan. I'm a",
+                tagline_main: "Graphics Programmer",
+                resume_name: "CV / Resume",
+                projects_section_header: "Projects",
+                experience_section_header: "Experience",
+                about_me_section_header: "About Me",
+                skills_section_header: "Skills",
+                contact_section_header: "Contact",
+                gallery_section_header: "Gallery",
+                skill_programming_languages_header: "Programming Languages", 
+                skill_platforms_header: "Platforms", 
+                skill_graphics_apis_header: "Graphics APIs", 
+                skill_tools_header: "Development Tools", 
+                about_me: `
+# About Me
+
+Hi! 👋
+
+I'm Ewan, a UK-based Software Engineer specialising in Real-time Rendering and Computer Graphics. 
+
+I'm currently a __Final Year__ student, studying an __Integrated Master's__ in __Computer Science for Games__ at __Sheffield Hallam University__, where I've learned __Advanced C++ Programming__, __Game Engine Development__, and even had a chance to work directly with __PlayStation® 5 Development Kits__ to produce my own software. I'm currently focused on my __Final Year Dissertation__ project on (__Real-time Global Illumination__ / __GPU-Accelerated Mesh Voxelisation methods__ / __Mesh Shading in Vulkan__ / __Something Cool!__).
+
+I have a real passion for __Games__, and the amazing technology that drives them. I've been a student of Game Development __since 2018__, and have worked with many __industry-standard tools__ as a result. 
+
+I'm also an avid Linguist - Proficient in __Japanese__(JLPT N3), and Conversational in __Mandarin Chinese__ and __German__. 
+
+I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide__, and would love to bring my passion, knowledge, and expertise to the field as a professional! 
+
+(And if you're curious, My favorite titles are: NieR: Automata, Monster Hunter World and Final Fantasy 14!)
+                `,
+            },
+        },
+
+        jp: {
+            translation: {
+                tagline_intro: "ヘイ、ユアンです。",
+                tagline_main: "グラフィックス プログラマー",
+                resume_name: "履歴書",
+                projects_section_header: "プロジェクト",
+                experience_section_header: "職歴",
+                about_me_section_header: "私について",
+                skills_section_header: "スキル",
+                contact_section_header: "連絡",
+                gallery_section_header: "ギャラリー",
+                skill_programming_languages_header: "プログラム言語", 
+                skill_platforms_header: "プラットフォーム", 
+                skill_graphics_apis_header: "グラフィックス API", 
+                skill_tools_header: "開発ツール", 
+                about_me: `
+# 私について 
+ヘイ！👋
+
+イギリスからソフトウェアエンジニアのユアンです。私の専門は__リアルタイムレンダリング__や__コンピューターグラフィックス__などです。
+
+現在、大学院生として、Sheffield Hallam 大学で「ゲームのコンピューターサイエンス」と言う学位を勉強しています。大学で __PlayStation® 5 開発キット__ を使って、独自のソフトウェアを開発しできました。その他、__ゲームエンジンの開発方__ と __上級のC++プログラミング__ も勉強しました。今、 (__「リアルタイムグローバル・イルミネーション方法」__ / __「GPUハードウェアアクセラレーションボクセル方法」__ / __「Vulkan APIでMesh Shadingする方法」__ / __「カッコイイもの!」__) についての学位論文をしています。
+
+ゲーマーと向上心がある人として、__ゲーム技術__　は本当に好きです。2018年からゲーム開発を勉強したので、主の開発ツールを使ったことがあるわけです。
+
+お趣味は言語です！英語の母語話者ですが、日本語もよく分かります (JLPT N3のレベルぐらい)。中国語とドイツ語も自立に勉強しています。世界中の皆さんと話したいです！
+
+プロフェッショナルとして __世界中__ からの __ソフトウェア業界__で職業とインターンシップを探しています。
+
+(気になちゃったら、一番好きのゲームは:　「ニーア オートマタ」、「モンスターハンター」ールド」と「ファイナルファンタジー１４」です！)
+`,
+            },
+        },
+        zh: {
+            translation: {
+                tagline_intro: "",
+                tagline_main: "",
+                resume_name: "",
+            },
+        },
+        de: {
+            translation: {
+                tagline_intro: "",
+                tagline_main: "",
+                resume_name: "",
+            },
+        }
+    },
+});
+
+
+
+export default i18n; 

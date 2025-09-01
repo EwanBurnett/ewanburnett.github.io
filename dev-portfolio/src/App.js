@@ -12,25 +12,11 @@ import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { LuMail } from 'react-icons/lu';
 import Gallery from './Components/Gallery';
 
-function DemoApp() {
-  return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  );
-}
+import { useTranslation } from 'react-i18next';
+
 function App() {
+  const{t, i18n} = useTranslation(); 
+
   return (
     <div className="App">
       <Navbar />
@@ -46,11 +32,11 @@ function App() {
         </div>
       </section>
       <section id="Projects">
-        <h1 className="sectionHeader">Projects</h1>
+        <h1 className="sectionHeader">{t("projects_section_header")}</h1>
         <Projects />
       </section>
       <section id="Experience">
-        <h1 className="sectionHeader">Experience</h1>
+        <h1 className="sectionHeader">{t("experience_section_header")}</h1>
         <Experience />
       </section>
       <section id="About-Me">
@@ -81,16 +67,16 @@ function App() {
         </div>
       </section>
       <section id="Skills">
-        <h1 className="sectionHeader">Skills</h1>
+        <h1 className="sectionHeader">{t("skills_section_header")}</h1>
         <Skills />
       </section>
       <section id="Gallery">
-        <h1 className="sectionHeader">Gallery</h1>
+        <h1 className="sectionHeader">{t("gallery_section_header")}</h1>
         <Gallery/>
       </section>
       <footer>
         <p>
-          Copyright <a href="#">Ewan Burnett ©</a> 2025
+          Copyright <a href="#">Ewan Burnett©</a> 2025
         </p>
         <a href="mailto:ewanburnettsk@outlook.com">EwanBurnettSK@Outlook.com</a>
       </footer>

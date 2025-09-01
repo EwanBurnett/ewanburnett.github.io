@@ -2,6 +2,9 @@ import styles from "./Navbar.module.css"
 import logo from "../logo.svg"
 import { HiOutlineTranslate } from 'react-icons/hi';
 
+import { useTranslation } from 'react-i18next';
+import { useCallback, useState } from "react";
+
 export function NavHome() {
     return (
         <div className={styles.navHome}>
@@ -21,29 +24,27 @@ export function NavHome() {
 }
 
 /*TODO: Wrap this in a Class...*/
-export var siteLangCode = "en";
 const Languages = [
     { code: "en", label: "English" },
     { code: "jp", label: "日本語" },
     { code: "zh", label: "汉语" },
 ];
 
-function SetSiteLanguage(languageCode) {
-    siteLangCode = languageCode;    //TODO: This isn't C! Set state properly!
-    console.log("Setting Language to " + siteLangCode);
-}
+
 
 export function LanguageMenu() {
+    const {t, i18n} = useTranslation(); 
+
     return (
         <div className={styles.languageMenu}>
             {/* The Language Selection menu. */}
             <a className={styles.languageButton}>
                 <HiOutlineTranslate />
-                ({siteLangCode})
+                ({i18n.language})
             </a>
             <div className={styles.languageDropdown}>
                 {Languages.map(({ code, label }) => (
-                    <a key={code} onClick={(e) => { SetSiteLanguage(code) }}>{label}</a>
+                    <a key={code} onClick={(e) => { i18n.changeLanguage(code); }}>{label}</a>
                 ))}
             </div>
         </div>
@@ -51,15 +52,17 @@ export function LanguageMenu() {
 }
 
 export function NavMenu() {
+    const {t, i18n} = useTranslation(); 
+
     return (
         <div className={styles.navMenu}>
             {/* The Navigation menu - Collapses into a Hamburger menu on smaller screen sizes. */}
             <ul className={styles.navLinks}>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#About-Me">About Me</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Projects">{t("projects_section_header")}</a></li>
+                <li><a href="#Experience">{t("experience_section_header")}</a></li>
+                <li><a href="#About-Me">{t("about_me_section_header")}</a></li>
+                <li><a href="#Contact">{t("contact_section_header")}</a></li>
+                <li><a href="#Gallery">{t("gallery_section_header")}</a></li>
                 <li><LanguageMenu /></li>
             </ul>
             <div className={styles.hamburger}>

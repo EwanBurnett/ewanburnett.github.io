@@ -34,6 +34,7 @@ import { CgBrowser } from 'react-icons/cg';
 
 import { FaQuestion } from 'react-icons/fa';
 
+import { useTranslation } from 'react-i18next';
 import styles from './Skills.module.css';
 
 
@@ -118,13 +119,15 @@ function BentoCategory({ items, title }) {
 }
 
 export default function Skills() {
+    const {t, i18n} = useTranslation(); 
+
     return (
         <div>
             <BentoLayout>
-                <BentoCategory items={programmingLanguages} title={"Programming Languages"} />
-                <BentoCategory items={platforms} title={"Platforms"} />
-                <BentoCategory items={graphicsAPIs} title={"Graphics APIs"} />
-                <BentoCategory items={tools} title={"Tools"} />
+                <BentoCategory items={programmingLanguages} title={t("skill_programming_languages_header")} />
+                <BentoCategory items={platforms} title={t("skill_platforms_header")} />
+                <BentoCategory items={graphicsAPIs} title={t("skill_graphics_apis_header")} />
+                <BentoCategory items={tools} title={t("skill_tools_header")} />
             </BentoLayout>
         </div>
     );
