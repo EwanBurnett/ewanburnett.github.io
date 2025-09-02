@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
-    lng: "jp",
+    lng: "en",
     fallbackLng: "en",
     interpolation: {
         escapeValue: false,
@@ -19,10 +19,10 @@ i18n.use(initReactI18next).init({
                 skills_section_header: "Skills",
                 contact_section_header: "Contact",
                 gallery_section_header: "Gallery",
-                skill_programming_languages_header: "Programming Languages", 
-                skill_platforms_header: "Platforms", 
-                skill_graphics_apis_header: "Graphics APIs", 
-                skill_tools_header: "Development Tools", 
+                skill_programming_languages_header: "Programming Languages",
+                skill_platforms_header: "Platforms",
+                skill_graphics_apis_header: "Graphics APIs",
+                skill_tools_header: "Development Tools",
                 about_me: `
 # About Me
 
@@ -40,6 +40,28 @@ I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide
 
 (And if you're curious, My favorite titles are: NieR: Automata, Monster Hunter World and Final Fantasy 14!)
                 `,
+                experience: {
+                    university: {
+                        companyName: "Sheffield Hallam University",
+                        startDate: "September 2020",
+                        endDate: "May 2026",
+                        description: `
+//A description of my time at Sheffield Hallam University 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                    college: {
+                        companyName: "Confetti Institute of Creative Technologies",
+                        startDate: "September 2018",
+                        endDate: "June 2020",
+                        description: `
+//A description of my time at Confetti 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                },
             },
         },
 
@@ -54,10 +76,10 @@ I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide
                 skills_section_header: "スキル",
                 contact_section_header: "連絡",
                 gallery_section_header: "ギャラリー",
-                skill_programming_languages_header: "プログラム言語", 
-                skill_platforms_header: "プラットフォーム", 
-                skill_graphics_apis_header: "グラフィックス API", 
-                skill_tools_header: "開発ツール", 
+                skill_programming_languages_header: "プログラム言語",
+                skill_platforms_header: "プラットフォーム",
+                skill_graphics_apis_header: "グラフィックス API",
+                skill_tools_header: "開発ツール",
                 about_me: `
 # 私について 
 ヘイ！👋
@@ -74,22 +96,86 @@ I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide
 
 (気になちゃったら、一番好きのゲームは:　「ニーア オートマタ」、「モンスターハンター」ールド」と「ファイナルファンタジー１４」です！)
 `,
+                experience: {
+                    university: {
+                        companyName: "Sheffield Hallam University",
+                        startDate: "2020年9月",
+                        endDate: "2026年5月",
+                        description: `
+//A description of my time at Sheffield Hallam University 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                    college: {
+                        companyName: "Confetti Institute of Creative Technologies",
+                        startDate: "2018年9月",
+                        endDate: "2020年6月",
+                        description: `
+//A description of my time at Confetti 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                },
             },
         },
         zh: {
             translation: {
-                tagline_intro: "",
-                tagline_main: "",
-                resume_name: "",
+                tagline_intro: "你好，我叫Ewan。我是一名",
+                tagline_main: "图形程序员",
+                resume_name: "简历",
+                projects_section_header: "项目",
+                experience_section_header: "工作经历",
+                about_me_section_header: "自我评价",
+                skills_section_header: "技能",
+                contact_section_header: "联系方式",
+                gallery_section_header: "图辑",
+                skill_programming_languages_header: "电脑语言",
+                skill_platforms_header: "平台",
+                skill_graphics_apis_header: "电脑绘图",
+                skill_tools_header: "软件开发软件",
+                about_me: `
+# 自我评价
+
+Hi! 👋
+
+I'm Ewan, a UK-based Software Engineer specialising in Real-time Rendering and Computer Graphics. 
+
+I'm currently a __Final Year__ student, studying an __Integrated Master's__ in __Computer Science for Games__ at __Sheffield Hallam University__, where I've learned __Advanced C++ Programming__, __Game Engine Development__, and even had a chance to work directly with __PlayStation® 5 Development Kits__ to produce my own software. I'm currently focused on my __Final Year Dissertation__ project on (__Real-time Global Illumination__ / __GPU-Accelerated Mesh Voxelisation methods__ / __Mesh Shading in Vulkan__ / __Something Cool!__).
+
+I have a real passion for __Games__, and the amazing technology that drives them. I've been a student of Game Development __since 2018__, and have worked with many __industry-standard tools__ as a result. 
+
+I'm also an avid Linguist - Proficient in __Japanese__(JLPT N3), and Conversational in __Mandarin Chinese__ and __German__. 
+
+I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide__, and would love to bring my passion, knowledge, and expertise to the field as a professional! 
+
+(And if you're curious, My favorite titles are: NieR: Automata, Monster Hunter World and Final Fantasy 14!)
+                `,
+                experience: {
+                    university: {
+                        companyName: "谢菲尔德哈勒姆大学 (硕士)",
+                        startDate: "2020年9月",
+                        endDate: "2026年6月",
+                        description: `
+//A description of my time at Sheffield Hallam University 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                    college: {
+                        companyName: "Confetti Institute of Creative Technologies",
+                        startDate: "2018年9月",
+                        endDate: "2020年6月",
+                        description: `
+//A description of my time at Confetti 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `
+                    },
+                },
             },
         },
-        de: {
-            translation: {
-                tagline_intro: "",
-                tagline_main: "",
-                resume_name: "",
-            },
-        }
     },
 });
 

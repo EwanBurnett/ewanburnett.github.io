@@ -2,6 +2,7 @@
 import styles from './Experience.module.css'
 
 import Markdown from 'react-markdown';
+import { useTranslation } from 'react-i18next';
 
 const experience = [
     {
@@ -15,27 +16,28 @@ const experience = [
     },
     {
         title: "MComp Computer Science for Games",
-        company: "Sheffield Hallam University",
+        company: "experience.university.companyName",
         companyURL: "https://www.shu.ac.uk",
-        startDate: "September 2020",
-        endDate: "May 2026",
+        startDate: "experience.university.startDate",
+        endDate: "experience.university.endDate",
         grade: "1st.",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
+        description: "experience.university.description"
+      },
     {
         title: "BTEC Games Technology",
-        company: "Confetti Institute of Creative Technologies",
+        company: "experience.college.companyName",
         companyURL: "https://confetti.ac.uk",
-        startDate: "September 2018",
-        endDate: "June 2020",
+        startDate: "experience.college.startDate",
+        endDate: "experience.college.endDate",
         grade: "Distinction",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        description: "experience.college.description"
     },
 
 
 ];
 
 export function ExperienceItem(props) {
+    const {t, i18n} = useTranslation(); 
     const item = props.data;
 
     return (
@@ -46,8 +48,8 @@ export function ExperienceItem(props) {
                     {item.grade ?
                         (
                             <div className={styles.experienceGrade}>
-                                <h3> | </h3>
-                                <h3>{item.grade}</h3>
+                                <h2> | </h2>
+                                <h2>{item.grade}</h2>
                             </div>
                         ) :
                         null
@@ -57,18 +59,18 @@ export function ExperienceItem(props) {
                     {item.companyURL ?
                         (
                             <a href={item.companyURL} target="_blank">
-                                <h3>{item.company}</h3>
+                                <h3>{t(item.company)}</h3>
                             </a>
                         ) :
                         (<h3>{item.company}</h3>)
                     }
                 </div>
                 <div className={styles.experienceDates}>
-                    <h4>{item.startDate} — {item.endDate}</h4>
+                    <h4>{t(item.startDate)} — {t(item.endDate)}</h4>
                 </div>
             </div>
             <div className={styles.experienceDescription}>
-                <Markdown>{item.description}</Markdown>
+                <Markdown>{t(item.description)}</Markdown>
             </div>
 
         </div>
