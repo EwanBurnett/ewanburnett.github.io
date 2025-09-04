@@ -26,6 +26,18 @@ const slides = [
         image: "https://www.dummyimage.com/1920x1080/f0ff59/0011ff.png",
         description: "A Short (Markdown!) Description of the slide.",
     },
+    {
+        id: 3,
+        title: "Test Image 4",
+        image: "https://www.dummyimage.com/1920x1080/1aff59/0011ff.png",
+        description: "A Short (Markdown!) Description of the slide.",
+    },
+    {
+        id: 4,
+        title: "Test Image 5",
+        image: "https://www.dummyimage.com/1920x1080/ca5f39/0011ff.png",
+        description: "A Short (Markdown!) Description of the slide.",
+    },
 ];
 
 
@@ -49,13 +61,16 @@ export function Thumbnail(props) {
 }
 
 export function Slide(props) {
-    const { id, image } = props;
+    const { id, image, onClick} = props;
 
     return (
         <div className={styles.gallerySlide} key={id}>
+            <button className={styles.thumbnailButton} onClick={onClick} type='button'>
+
             <div className={styles.slideImage}>
                 <img src={image} />
             </div>
+            </button>
         </div>
     );
 }
@@ -80,11 +95,11 @@ export function EmblaCarousel(props) {
         setFullscreen(!fullscreen);
     }, [fullscreen, setFullscreen]);
 
-
     const onThumbClick = useCallback(
         (index) => {
             if (!emblaMainApi || !emblaThumbsApi) return;
             emblaMainApi.scrollTo(index)
+            emblaThumbsApi.scrollTo(index)
         },
         [emblaMainApi, emblaThumbsApi]
     );
@@ -130,10 +145,11 @@ export function EmblaCarousel(props) {
                                         ) : (null)
                                     }
                                                         */}
-                                    <div>
+                                    <>
                                         <Slide
                                             id={slide.id}
                                             image={slide.image}
+                                            onClick={() => onThumbClick(slide.id)}
                                         />
                                         {selectedIndex === slide.id ?
                                             (<>
@@ -146,7 +162,7 @@ export function EmblaCarousel(props) {
                                             </button>
                                         </div>
                                             </>) : (null)}
-                                    </div>
+                                    </>
 
                                 </>
                             )
