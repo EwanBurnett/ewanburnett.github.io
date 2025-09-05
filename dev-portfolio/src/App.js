@@ -44,25 +44,25 @@ function App() {
       </section>
       <section id="Contact">
         <div className="contactWrapper">
-          <a href="mailto:ewanburnettsk@outlook.com">
-              <LuMail className='icon'/>
+          <a href="https://github.com/EwanBurnett" target="_blank">
+              <FaGithub className='icon' /> 
             <h2>
-               Email: EwanBurnettSK@Outlook.com</h2>
+              Github: EwanBurnett</h2>
           </a>
           <a href="https://www.linkedin.com/in/ewanburnettsk/" target='_blank'>
               <FaLinkedin className='icon'/> 
             <h2>
               Linkedin: @EwanBurnettSK</h2>
           </a>
-          <a href="https://github.com/EwanBurnett" target="_blank">
-              <FaGithub className='icon' /> 
-            <h2>
-              Github: EwanBurnett</h2>
-          </a>
           <a href="https://bsky.app/profile/ewanburnett.bsky.social" target='_blank'>
               <FaBluesky className="icon"/>
             <h2>
                Bluesky: @ewanburnett.bsky.social</h2>
+          </a>
+          <a href="mailto:ewanburnettsk@outlook.com">
+              <LuMail className='icon'/>
+            <h2>
+               Email: EwanBurnettSK@Outlook.com</h2>
           </a>
         </div>
       </section>

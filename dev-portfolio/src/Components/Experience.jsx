@@ -4,7 +4,10 @@ import styles from './Experience.module.css'
 import Markdown from 'react-markdown';
 import { useTranslation } from 'react-i18next';
 
+//TODO: Load from JSON
 const experience = [
+    /*
+    //Here's where I'd put my job experience... if I had some!!!
     {
         title: "Junior Software Engineer",
         company: "Some Company",
@@ -14,6 +17,7 @@ const experience = [
         grade: null,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
+    */
     {
         title: "MComp Computer Science for Games",
         company: "experience.university.companyName",

@@ -45,21 +45,38 @@ I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide
                         companyName: "Sheffield Hallam University",
                         startDate: "September 2020",
                         endDate: "May 2026",
-                        description: `
-//A description of my time at Sheffield Hallam University 
+                        description: 
+`
+Studied an Integrated Master's in Computer Science for Games at Sheffield Hallam University, in the UK. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        `
+During my degree I specialised in Computer Graphics; studying 
+    Essential __Linear Algebra__ and __Calculus__ for rendering, 
+    __Cross-platform__ Game Engine Development with __PlayStation® 5__ Development Kits, and
+    __Concurrent High-Performance__ Software Development with __C++__ and __Vulkan__.
+    
+Here are some Notable projects from my degree:
+
+    ◈ Level 7 Dissertation: GPGPU Mesh Voxellisation methods 
+    ◈ Level 7 Group Project: ???    
+    ◈ Level 7 Assignment (PPG): Vortex GPU Particle Simulation
+    ◈ Level 7 Assignment (GPT): Real-Time Volumetric Rendering
+    ◈ Level 6 Dissertation: Real-Time Global Illumination with Irradiance Probe cascades
+    ◈ Level 6 Group Project: Tactics (PlayStation 5) (Engine Programmer)
+
+`
                     },
                     college: {
                         companyName: "Confetti Institute of Creative Technologies",
                         startDate: "September 2018",
                         endDate: "June 2020",
-                        description: `
-//A description of my time at Confetti 
+                        description: 
+`
+Studied a BTEC Level 3 National Diploma in Creative Digital Media, at Confetti Institute of Creative Technologies (NTU), focusing on Games Technology. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        `
+At Confetti, I learned the foundations of Game Development - With a primary focus on In-Engine programming, through __C++ in Unreal Engine 4__ and __C# in Unity Engine__. Additionally, we explored the entire Production Pipeline; Using __Game Design Principles__ to define sequences, __3D Modelling in Autodesk Maya__ to create environments, and finally Implementing behaviour and interactions in-engine. 
+
+I also gained valuable __QA Testing__ experience, working with local studios to playtest Video games and Board games. 
+`
                     },
                 },
             },

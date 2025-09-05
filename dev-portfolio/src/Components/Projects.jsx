@@ -14,6 +14,7 @@ const platforms = {
     "Web": <CgBrowser />
 };
 
+//TODO: Load from JSON
 const projects = [
     {
         title: "PROJECT_TITLE",
@@ -36,9 +37,8 @@ const projects = [
         article: null,
         video: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
         thumbnail: "https://www.dummyimage.com/2000x500/00ff59/0011ff.png",
-        },
-        /*
-        */
+    },
+
     {
         title: "PROJECT_TITLE",
         brief: "PROJECT_BRIEF",
