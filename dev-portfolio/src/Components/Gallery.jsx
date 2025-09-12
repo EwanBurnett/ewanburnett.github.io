@@ -7,38 +7,8 @@ import styles from './Gallery.module.css'
 import { BsFullscreen } from 'react-icons/bs';
 import { BsFullscreenExit } from 'react-icons/bs';
 
-const slides = [
-    {
-        id: 0,
-        title: "Test Image 1",
-        image: "https://www.dummyimage.com/1920x1080/00f0fr/0011ff.png",
-        description: "A Short __(Markdown!)__ Description of the slide.",
-    },
-    {
-        id: 1,
-        title: "Test Image 2",
-        image: "https://www.dummyimage.com/1920x1080/a00f59/0011ff.png",
-        description: "A Short (Markdown!) Description of the slide.",
-    },
-    {
-        id: 2,
-        title: "Test Image 3",
-        image: "https://www.dummyimage.com/1920x1080/f0ff59/0011ff.png",
-        description: "A Short (Markdown!) Description of the slide.",
-    },
-    {
-        id: 3,
-        title: "Test Image 4",
-        image: "https://www.dummyimage.com/1920x1080/1aff59/0011ff.png",
-        description: "A Short (Markdown!) Description of the slide.",
-    },
-    {
-        id: 4,
-        title: "Test Image 5",
-        image: "https://www.dummyimage.com/1920x1080/ca5f39/0011ff.png",
-        description: "A Short (Markdown!) Description of the slide.",
-    },
-];
+import axios from 'axios';
+
 
 
 
@@ -61,15 +31,15 @@ export function Thumbnail(props) {
 }
 
 export function Slide(props) {
-    const { id, image, onClick} = props;
+    const { id, image, onClick } = props;
 
     return (
         <div className={styles.gallerySlide} key={id}>
             <button className={styles.thumbnailButton} onClick={onClick} type='button'>
 
-            <div className={styles.slideImage}>
-                <img src={image} />
-            </div>
+                <div className={styles.slideImage}>
+                    <img src={image} />
+                </div>
             </button>
         </div>
     );
@@ -153,14 +123,14 @@ export function EmblaCarousel(props) {
                                         />
                                         {selectedIndex === slide.id ?
                                             (<>
-                                        <div className={styles.slideOverlay}>
-                                            <button className={styles.fullscreenButton} onClick={onToggleFullscrenClick}>
-                                                {fullscreen ?
-                                                    (<BsFullscreenExit />) :
-                                                    (<BsFullscreen />)
-                                                }
-                                            </button>
-                                        </div>
+                                                <div className={styles.slideOverlay}>
+                                                    <button className={styles.fullscreenButton} onClick={onToggleFullscrenClick}>
+                                                        {fullscreen ?
+                                                            (<BsFullscreenExit />) :
+                                                            (<BsFullscreen />)
+                                                        }
+                                                    </button>
+                                                </div>
                                             </>) : (null)}
                                     </>
 
@@ -212,9 +182,27 @@ export function EmblaCarousel(props) {
 }
 
 export default function Gallery() {
-    return (
-        <div className={styles.gallery}>
-            <EmblaCarousel slides={slides} />
-        </div>
-    )
+    const [slides, setSlides] = useState(null);
+
+    useEffect(() => {
+        //Retrieve the Slides from JSON via Axios. 
+        axios.get("/data/gallery.json")
+            .then((res) => {
+                setSlides(res.data.slides);
+            }
+            );
+    });
+
+    if (slides === null) {
+        return (
+            <></>
+        )
+    }
+    else {
+        return (
+            <div className={styles.gallery}>
+                <EmblaCarousel slides={slides} />
+            </div>
+        )
+    }
 }

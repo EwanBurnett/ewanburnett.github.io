@@ -20,7 +20,7 @@ const FS_SOURCE = `#version 300 es
 
     const int kMaxSteps = 100; 
     const float kMaxDistance = 100.0; 
-    const float kEpsilon = 0.001; 
+    const float kEpsilon = 0.01; 
     const float kGamma = 1.0 / 2.2; 
 
     uniform float u_time;

@@ -27,7 +27,7 @@ export function NavHome() {
 const Languages = [
     { code: "en", label: "English" },
     { code: "jp", label: "日本語" },
-    { code: "zh", label: "汉语" },
+    { code: "zh", label: "中文" },
 ];
 
 
