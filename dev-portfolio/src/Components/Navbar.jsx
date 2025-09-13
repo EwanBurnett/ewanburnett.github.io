@@ -3,7 +3,7 @@ import logo from "../logo.svg"
 import { HiOutlineTranslate } from 'react-icons/hi';
 
 import { useTranslation } from 'react-i18next';
-import { useCallback, useState } from "react";
+import { useCallback, useState, useRef} from "react";
 
 export function NavHome() {
     return (
@@ -53,7 +53,23 @@ export function LanguageMenu() {
 
 export function NavMenu() {
     const {t, i18n} = useTranslation(); 
+    const menuRef = useRef(null); 
+    const [sideBarEnabled, setSideBarEnabled] = useState(false); 
+    const toggleSidebar = () => { 
+        const prevState = sideBarEnabled; 
+        setSideBarEnabled(!prevState); 
+        console.log("Toggling Sidebar!\n" + !prevState); 
 
+        const menu = menuRef.current;
+        if(sideBarEnabled){
+
+        menu.style.width = "100%";
+        }
+        else{ 
+            menu.style.width = "0%"; 
+        }
+
+    };
     return (
         <div className={styles.navMenu}>
             {/* The Navigation menu - Collapses into a Hamburger menu on smaller screen sizes. */}
@@ -66,14 +82,22 @@ export function NavMenu() {
                 <li><LanguageMenu /></li>
             </ul>
             <div className={styles.hamburger}>
-                <input type="checkbox" className={styles.menuToggle} />
+                <input type="checkbox" className={styles.menuToggle} onClick={toggleSidebar} />
                 <div className={styles.hamburgerLines}>
                     <span className={[styles.line]} />
                     <span className={[styles.line]} />
                     <span className={[styles.line]} />
                 </div>
             </div>
-
+            <div className={styles.sidebar} ref={menuRef}>
+                <a href="#Home">{t("home_header")}</a>
+                <a href="#Projects">{t("projects_section_header")}</a>
+                <a href="#Experience">{t("experience_section_header")}</a>
+                <a href="#About-Me">{t("about_me_section_header")}</a>
+                <a href="#Contact">{t("contact_section_header")}</a>
+                <a href="#Gallery">{t("gallery_section_header")}</a>
+                <LanguageMenu />
+            </div>
         </div>
     );
 }

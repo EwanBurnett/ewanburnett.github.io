@@ -1,136 +1,6 @@
 import { useEffect, useState, useRef, React } from "react";
 import styles from "./SiteDemo.module.css";
-
-
-const VS_SOURCE = `#version 300 es
-    precision mediump float; 
-
-    in vec3 vPosition; 
-
-    void main(){ 
-        gl_Position = vec4(vPosition, 1.0); 
-    }
-`;
-
-const FS_SOURCE = `#version 300 es
-    precision mediump float; 
-    out vec4 FragColour; 
-
-    #define DBG_SHOW_SCREEN_UVS 0
-
-    const int kMaxSteps = 100; 
-    const float kMaxDistance = 100.0; 
-    const float kEpsilon = 0.01; 
-    const float kGamma = 1.0 / 2.2; 
-
-    uniform float u_time;
-    uniform vec2 u_resolution; 
-
-    //-------------------------------
-
-    vec3 RayPoint(vec3 origin, vec3 dir, float t){ 
-        return origin + dir * t; 
-    }
-
-
-    //via https://iquilezles.org/articles/distfunctions/
-    float SDF_Octahedron(vec3 point, float size){
-         point = abs(point);
-        float m = point.x+point.y+point.z-size;
-        vec3 q;
-            if( 3.0*point.x < m ) q = point.xyz;
-        else if( 3.0*point.y < m ) q = point.yzx;
-        else if( 3.0*point.z < m ) q = point.zxy;
-        else return m*0.57735027;
-            
-        float k = clamp(0.5*(q.z-q.y+size),0.0,size); 
-        return length(vec3(q.x,q.y-size+k,q.z-k)); 
-    }
-
-    float SDF_Sphere(vec3 point,float radius){
-        return length(point) - radius;
-    }
-
-    float Scene(vec3 point){
-        float distance = SDF_Sphere(point + vec3(0.0, sin(u_time), 0.0), 1.0); //SDF_Octahedron(point, 1.0); 
-        return distance;
-    }
-
-vec3 GetNormal(vec3 point){ 
-    float center = Scene(point); 
-    float dX = Scene(point + vec3(kEpsilon, 0.0, 0.0)); 
-    float dY = Scene(point + vec3(0.0, kEpsilon, 0.0)); 
-    float dZ = Scene(point + vec3(0.0, 0.0, kEpsilon)); 
-
-    return (vec3(dX, dY, dZ) - center) / kEpsilon; 
-}
-
-    float RayMarch(vec3 origin, vec3 direction){
-        
-        float t = 0.0;
-        
-        for(int i = 0; i < kMaxSteps; i++){
-            
-            //Sample the scene using our ray. 
-            vec3 p = RayPoint(origin, direction, t); 
-            float s = Scene(p);
-            
-            t += s;
-
-            //Return intersections. 
-            if(s < kEpsilon){
-                return t;
-            }
-            if(t > kMaxDistance){
-                break;
-            }
-        }
-
-        return kMaxDistance;
-    }
-
-    vec3 GammaCorrect(in vec3 colour){ 
-        return pow(colour, vec3(kGamma));     
-    }
-
-    void main(){ 
-        vec2 uv = gl_FragCoord.xy / u_resolution.xy; 
-        uv -= 0.5; 
-        uv.x *= u_resolution.x / u_resolution.y; 
-
-        #if DBG_SHOW_SCREEN_UVS
-        FragColour = vec4(uv.xy, 0.0, 1.0); 
-        #else
-            
-        //Create the Ray
-        vec3 rayOrigin = vec3(0.0, 0.0, 3.0);
-        vec3 rayDirection = normalize(vec3(uv.xy, -1.0));
-
-        //Ray March
-        float t = RayMarch(rayOrigin, rayDirection);
-        
-        //Apply Shading
-        vec4 colour = vec4(0.0);
-        vec3 objectColour = vec3(1.0, 0.0, 0.0);
-
-        vec4 lightColour = vec4(1.0, 1.0, 1.0, 1.0); 
-        vec3 lightDirection = vec3(0.8, 0.5, 1.0); 
-        
-        if(t < kMaxDistance){
-            vec3 toLight = normalize(lightDirection); 
-            vec3 normal = GetNormal(RayPoint(rayOrigin, rayDirection, t)); 
-            float n_dot_l = max(0.0, dot(normal, toLight)); 
-            
-            colour.rgb = objectColour * n_dot_l;
-            colour.a = 1.0; 
-        }
-        
-        colour.rgb = GammaCorrect(colour.rgb); 
-
-        FragColour = vec4(colour);
-        #endif
-    }
-`;
+import axios from "axios";
 
 const useRequestAnimationFrame = callback => {
     const requestRef = useRef();
@@ -194,6 +64,9 @@ function CreateShaderProgram(gl, vertexShader, fragmentShader, name) {
 
 
 export default function SiteDemo() {
+    const [VS_SOURCE, setVertexShaderSource] = useState(null); 
+    const [FS_SOURCE, setFragmentShaderSource] = useState(null); 
+
     const mainCanvasRef = useRef(null);
     const gl = useRef(null);
     const program = useRef(null);
@@ -209,6 +82,7 @@ export default function SiteDemo() {
 
             var u_resolutionLocation = gl.getUniformLocation(program, "u_resolution");
             gl.uniform2f(u_resolutionLocation, canvas.width, canvas.height);
+            //console.log(canvas.width + "x" + canvas.height);
 
             gl.clearColor(0.0, 0.0, 0.0, 0.0);
             gl.clear(gl.COLOR_BUFFER_BIT);
@@ -225,10 +99,19 @@ export default function SiteDemo() {
         if (webGL == null) {
             alert("Failed to initialize WebGL!\nWebGL may be unsupported by this browser.");
         }
-        /*
-        */
         gl.current = webGL;
 
+        //Load the shaders
+        axios.get("/data/shaders/vs_sitedemo.vert")
+            .then((res) => {
+                setVertexShaderSource(res.data); 
+            }
+        ); 
+        axios.get("/data/shaders/fs_sitedemo.frag")
+            .then((res) => {
+                setFragmentShaderSource(res.data); 
+            }
+        )
         program.current = CreateShaderProgram(gl.current, VS_SOURCE, FS_SOURCE, "Main Program");
 
 
@@ -269,13 +152,18 @@ export default function SiteDemo() {
 
         const onResize = e => {
             const canvas = mainCanvasRef.current;
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
+            //console.log("Resizing! \nOriginal:" + canvas.width + "x" + canvas.height);
+            mainCanvasRef.current.width = canvas.offsetWidth;
+            mainCanvasRef.current.height = canvas.offsetHeight;
+            //`1console.log("new:" + canvas.width + "x" + canvas.height);
             Draw(gl.current, program.current);
         };
 
         onResize();
         window.addEventListener("resize", onResize);
+        return () => {
+            window.removeEventListener("resize", onResize); 
+        }
     });
 
     useRequestAnimationFrame(deltaTime => {

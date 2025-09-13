@@ -13,6 +13,7 @@ i18n.use(initReactI18next).init({
                 tagline_intro: "Hi, I'm Ewan. I'm a",
                 tagline_main: "Graphics Programmer",
                 resume_name: "CV / Resume",
+                home_header: "Home",
                 projects_section_header: "Projects",
                 experience_section_header: "Experience",
                 about_me_section_header: "About Me",
