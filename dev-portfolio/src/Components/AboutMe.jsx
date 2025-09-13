@@ -1,5 +1,6 @@
 import styles from './AboutMe.module.css';
 import Markdown from 'react-markdown';
+import aboutMeImg from "../Assets/AboutMe_Image.png";
 
 import { useTranslation } from 'react-i18next';
 
@@ -17,7 +18,7 @@ export default function AboutMe(){
                       */}
                     <div className={styles.aboutMeImageBox}>
                       <div className={styles.aboutMeImage}>
-                         <img src={aboutMeImage}></img> 
+                         <img src={aboutMeImg}></img> 
                       </div>
 
                     </div>

@@ -1,12 +1,13 @@
 #version 300 es
-precision mediump float;
+precision lowp float;
 out vec4 FragColour;
 
 #define DBG_SHOW_SCREEN_UVS 0
+#define DBG_SHOW_NORMALS 1
 
 const int kMaxSteps=100;
 const float kMaxDistance=100.;
-const float kEpsilon=.01;
+const float kEpsilon=.1;
 const float kGamma=1./2.2;
 
 uniform float u_time;
@@ -106,7 +107,11 @@ void main(){
         vec3 normal=GetNormal(RayPoint(rayOrigin,rayDirection,t));
         float n_dot_l=max(0.,dot(normal,toLight));
         
+        #if DBG_SHOW_NORMALS 
+        colour.rgb = normal.rgb; 
+        #else
         colour.rgb=objectColour*n_dot_l;
+        #endif
         colour.a=1.;
     }
     

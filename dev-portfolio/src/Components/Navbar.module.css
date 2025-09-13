@@ -231,7 +231,19 @@ flex: 1;
     z-index: 900; 
     left: 0; 
     top: 0; 
+    /*
     background-color: red;
+    */
+
+    --colour-a: rgba(20, 38, 95, 0.85);
+    --colour-b: rgba(10, 20, 48, 0.85);
+
+    box-shadow: 0, 3px, 20px, rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+    background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%);
+
     overflow-x: hidden; 
     padding-top: 10%; 
     padding-bottom: 10%;
@@ -261,5 +273,16 @@ flex: 1;
         }
     .hamburger{ 
         display: inline-block; 
+    }
+
+    .languageDropdown{ 
+        right: auto; 
+        left: auto; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: inherit;
+    margin-top: 0.5rem; 
+    transition: 0.25s; 
     }
 }

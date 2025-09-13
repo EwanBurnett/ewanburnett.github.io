@@ -76,7 +76,15 @@ footer a{
   color: blue;
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 480px) {
+  .appHome {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .appHome {
     display: flex;
     flex-direction: column;
@@ -94,14 +102,6 @@ footer a{
   font-size: 4vw; 
   }
 
-}
-
-@media only screen and (max-height: 800px) {
-  .appHome {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
 }
 
 .App {

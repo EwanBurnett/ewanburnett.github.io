@@ -35,6 +35,9 @@
     border-radius: 1rem;
 }
 @media only screen and (max-width: 1200px) {
+    .bento{
+        padding: 0; 
+    }
     .bentoCategory{
         display:block; 
 

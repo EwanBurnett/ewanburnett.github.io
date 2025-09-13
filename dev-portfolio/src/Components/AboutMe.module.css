@@ -29,6 +29,7 @@
 
 .aboutMeImage{ 
     display: flex;
+    min-width: 400px; 
     max-width: 50%;
     height: 100%;
     overflow: hidden;
@@ -84,7 +85,15 @@
         display: none;
     }
     .aboutMeText{ 
-        width: 85%;
+        width: 100%;
         margin: 0; 
+        padding: 1rem; 
     }
+
+    .aboutMeText h1{ 
+        text-align: center;;
+    }
+     .aboutMeWrapper{
+    margin-top: 2rem;
+     }
 }

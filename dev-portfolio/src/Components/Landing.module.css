@@ -105,7 +105,7 @@
     flex-direction: row;
 }
 
-@media only screen and (max-width: 540px) {
+@media screen and (max-width: 480px) {
     .tagline h1, h2{
         text-align: center;
     }
