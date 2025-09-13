@@ -2,7 +2,7 @@
 
 :root {
     --navbar-font-size: calc(10px + 1vmin);
-    --navbar-accent-colour: rgb(255, 0, 0);
+    --navbar-accent-colour: rgb(0, 0, 255);
 }
 
 .Navbar {
