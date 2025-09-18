@@ -5,6 +5,8 @@ import { LuMail } from 'react-icons/lu';
 
 import { useTranslation } from 'react-i18next';
 
+import cv_ref from "../Assets/Ewan_Burnett_CV_2025.pdf";
+
 const githubLink = "https://github.com/EwanBurnett";
 const linkedinLink = "https://www.linkedin.com/in/ewanburnettsk/";
 const blueskyLink = "https://bsky.app/profile/ewanburnett.bsky.social";
@@ -27,7 +29,7 @@ const { t, i18n } = useTranslation();
     return (
         <div>
             <div className={styles.resume}>
-                <a href="/" target="_blank">{t("resume_name")}</a>
+                <a href={cv_ref} target="_blank">{t("resume_name")}</a>
             </div>
         </div>
     );

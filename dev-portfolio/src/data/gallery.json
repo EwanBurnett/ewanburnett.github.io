@@ -3,7 +3,7 @@
         {
             "id": 0,
             "title": "Test image 1",
-            "image": "https://www.dummyimage.com/1920x1080/00f0fr/0011ff.png",
+            "image": "/assets/Gallery/RTX-2.png",
             "description": "A Short __(Markdown!)__ Description of the slide."
         },
         {

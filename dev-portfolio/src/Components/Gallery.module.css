@@ -128,7 +128,7 @@
 
 .thumbnail{
     display: flex; 
-    flex: 0 0 22%;
+    flex: 0 0 42%;
     border-radius: 1rem; 
     border: 0.1rem solid white; 
     overflow: hidden; 
