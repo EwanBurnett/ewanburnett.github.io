@@ -75,7 +75,7 @@
 
 .experienceCompany a:hover {
     color: blue;
-    transition: ease 0.25s ;
+    transition: ease 0.25s;
 }
 
 .experienceDates {}
@@ -84,11 +84,12 @@
     margin: 0.5rem 0;
 }
 
-.experienceDescription{ 
-    font-size: 1.8vh; 
-    padding: 0 1rem; 
+.experienceDescription {
+    font-size: 1.8vh;
+    padding: 0 1rem;
     text-align: left;
 }
+
 @media only screen and (max-width: 1050px) {
     .experienceTitle {
         white-space: wrap;

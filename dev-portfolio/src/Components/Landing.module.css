@@ -7,26 +7,26 @@
 .landing {
     padding-top: auto;
     padding-bottom: auto;
-    margin: 0; 
+    margin: 0;
     padding: 3rem;
-    display: flex; 
-    height: auto; 
+    display: flex;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
 @media only screen and (max-width: 1200px) {
-    .mainCanvas{ 
+    .mainCanvas {
         max-height: 40vh;
     }
 }
 
 .tagline {
     display: inline-block;
-    flex: 1; 
+    flex: 1;
     justify-self: center;
     text-align: left;
-    width: auto; 
+    width: auto;
 }
 
 .tagline h1 {
@@ -55,7 +55,7 @@
     margin: auto 1rem;
     margin-right: 0;
     justify-content: flex-end;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .socials li {
@@ -73,62 +73,65 @@
     transition: ease 0.2s;
 }
 
-.resume{ 
-    font-size: min(10vw, 2.5vh); 
+.resume {
+    font-size: min(10vw, 2.5vh);
     font-weight: 400;
     margin: auto 0.5rem;
     margin-left: 0;
-    padding: auto; 
-    display: flex; 
+    padding: auto;
+    display: flex;
     flex: 1;
     justify-self: flex-start;
 }
 
-.resume a{ 
-    border: 0.1em solid white; 
+.resume a {
+    border: 0.1em solid white;
     padding: 0.5rem;
     border-radius: 1rem;
     color: white;
-    border-color: white; 
+    border-color: white;
     text-decoration: none;
     white-space: nowrap;
 }
 
-.resume a:hover{
-    color: blue; 
+.resume a:hover {
+    color: blue;
     border-color: blue;
-    transition:  ease 0.2s;
+    transition: ease 0.2s;
 }
 
-.handles{ 
-    display: flex; 
+.handles {
+    display: flex;
     flex-direction: row;
 }
 
 @media screen and (max-width: 480px) {
-    .tagline h1, h2{
+
+    .tagline h1,
+    h2 {
         text-align: center;
     }
-    .handles{ 
-        display: flex; 
+
+    .handles {
+        display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
-    .resume{ 
+
+    .resume {
         justify-self: center;
-        margin: auto; 
+        margin: auto;
     }
-    
-    .socials{
-        margin: auto; 
-        padding: 0; 
+
+    .socials {
+        margin: auto;
+        padding: 0;
         margin-top: 2vh;
         justify-content: center;
         text-align: center;
     }
 
-    .icon{ 
+    .icon {
         margin-left: 0.75rem;
         margin-right: 0.75rem;
     }

@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     overflow: initial !important;
-    
+
     display: flex;
     flex-direction: row;
     flex: 1 0 auto;
@@ -25,9 +25,9 @@
     box-shadow: 0, 3px, 20px, rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    
+
     background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%);
-    
+
     white-space: nowrap;
     overflow: hidden;
     z-index: 900;
@@ -70,19 +70,19 @@
 .navMenu {
     flex: 1;
     display: flex;
-    margin: 0; 
+    margin: 0;
     justify-content: flex-end;
     align-items: stretch;
 }
 
-.navLinks{ 
+.navLinks {
     display: inline-block;
     justify-self: flex-end;
     align-items: center;
     justify-content: center;
     align-self: center;
     text-align: center;
-    margin: 0; 
+    margin: 0;
 }
 
 .navMenu li {
@@ -152,11 +152,11 @@
     z-index: 1;
     */
 
-    width: auto; 
-    right: 0; 
-    display: none; 
+    width: auto;
+    right: 0;
+    display: none;
     position: absolute;
-    width: auto; 
+    width: auto;
     z-index: 9999;
 }
 
@@ -199,38 +199,38 @@
     width: 0;
 }
 
-.hamburger{ 
-    display: none;  
-z-index: 999;
-right: 0; 
-flex: 1;
+.hamburger {
+    display: none;
+    z-index: 999;
+    right: 0;
+    flex: 1;
 }
 
-.hamburger .hamburgerLines{ 
-    display: block; 
-    display: flex; 
+.hamburger .hamburgerLines {
+    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
-.hamburger .line{ 
-    display: block; 
-    height: 0.2rem; 
-    width: 100%; 
+.hamburger .line {
+    display: block;
+    height: 0.2rem;
+    width: 100%;
     border-radius: 5rem;
     background: white;
 }
 
-.sidebar{
-    display: none; 
+.sidebar {
+    display: none;
     height: auto;
-    width: 0; 
-    position: fixed; 
-    z-index: 900; 
-    left: 0; 
-    top: 0; 
+    width: 0;
+    position: fixed;
+    z-index: 900;
+    left: 0;
+    top: 0;
     /*
     background-color: red;
     */
@@ -241,48 +241,51 @@ flex: 1;
     box-shadow: 0, 3px, 20px, rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    
+
     background: linear-gradient(90deg, var(--colour-a) 0%, var(--colour-b) 100%);
 
-    overflow-x: hidden; 
-    padding-top: 10%; 
+    overflow-x: hidden;
+    padding-top: 10%;
     padding-bottom: 10%;
     transition: 0.25s;
 }
 
 /* Mobile Phones */
 @media only screen and (max-width: 1050px) {
-    .Navbar{ 
-        position: sticky; 
+    .Navbar {
+        position: sticky;
     }
+
     /*TODO: Hamburger menu*/
     .navMenu ul {
         display: none;
-        }
-
-        .sidebar{
-             display: flex;
-             flex-direction: column;
-        }
-        
-        .sidebar a{ 
-            display: block; 
-        }
-        .navHome{ 
-            width:100%; 
-        }
-    .hamburger{ 
-        display: inline-block; 
     }
 
-    .languageDropdown{ 
-        right: auto; 
-        left: auto; 
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar a {
+        display: block;
+    }
+
+    .navHome {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .languageDropdown {
+        right: auto;
+        left: auto;
         justify-content: center;
         align-items: center;
         text-align: center;
         position: inherit;
-    margin-top: 0.5rem; 
-    transition: 0.25s; 
+        margin-top: 0.5rem;
+        transition: 0.25s;
     }
 }

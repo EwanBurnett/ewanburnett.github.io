@@ -45,7 +45,7 @@ const projects = [
             "platforms": [
                 "Web",
             ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+            "description": "A series of SDF renders, showcasing a number of elemental __Volumetric__ materials. Inspired by the Final Fantasy series.",
             "repository": null,
             "article": null,
             "video": project_1_video,
@@ -55,13 +55,13 @@ const projects = [
         {
             "title": "Onyx",
             "brief": "Cross-Platform Game Engine",
-            "date": "2025-08-18",
+            "date": "2025-07-12",
             "platforms": [
                 "Windows", 
                 "Linux", 
                 "Android"
             ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+            "description": "A Cross-Platform 3D Game Engine written in C++, supporting Windows, Linux and Android.",
             "repository": null,
             "article": null,
             "video": null,
@@ -71,12 +71,12 @@ const projects = [
                 {
             "title": "Wild To Wired",
             "brief": "Jingle Jam 2024 Entry",
-            "date": "2025-08-18",
+            "date": "2024-11-30",
             "platforms": [
                 "Windows", 
                 "Linux", 
             ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+            "description": "Team Entry for the Jingle Jam 2024, developed in Unity over 3 days.",
             "repository": null,
             "article": null,
             "video": project_3_video,
@@ -91,7 +91,7 @@ const projects = [
                 "Windows", 
                 "Linux", 
             ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+            "description": "A CPU-Driven Path Tracer, designed for Offline Rendering. Written in C++.",
             "repository": null,
             "article": null,
             "video": project_4_video,
@@ -105,7 +105,7 @@ const projects = [
             "platforms": [
                 "PlayStation 5", 
             ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+            "description": "A 3D Game Engine developed from the ground up for the Playstation 5. Used in a collaborative group project alongside other programmers, artists, and designers to produce a title over 12 weeks.",
             "repository": null,
             "article": null,
             "video": project_5_video,

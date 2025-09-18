@@ -19,13 +19,13 @@ export function Socials() {
             <li><a className={styles.icon} href={githubLink} target="_blank"><FaGithub /></a></li>
             <li><a className={styles.icon} href={linkedinLink} target="_blank"><FaLinkedinIn /></a></li>
             <li><a className={styles.icon} href={blueskyLink} target="_blank"><FaBluesky /></a></li>
-            <li><a className={styles.icon} href={"mailto:ewanburnettsk@outlook.com"}><LuMail/></a></li>
+            <li><a className={styles.icon} href={"mailto:ewanburnettsk@outlook.com"}><LuMail /></a></li>
         </ul>
     );
 }
 
 export function ResumeButton() {
-const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     return (
         <div>
             <div className={styles.resume}>

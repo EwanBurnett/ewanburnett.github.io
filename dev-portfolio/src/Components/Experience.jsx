@@ -26,7 +26,7 @@ const experience = [
         endDate: "experience.university.endDate",
         grade: "1st.",
         description: "experience.university.description"
-      },
+    },
     {
         title: "BTEC Games Technology",
         company: "experience.college.companyName",
@@ -41,7 +41,7 @@ const experience = [
 ];
 
 export function ExperienceItem(props) {
-    const {t, i18n} = useTranslation(); 
+    const { t, i18n } = useTranslation();
     const item = props.data;
 
     return (

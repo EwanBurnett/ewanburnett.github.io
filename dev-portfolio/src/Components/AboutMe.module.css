@@ -1,24 +1,21 @@
+:root {}
 
-:root{ 
-
-}
-
-.aboutMeWrapper{ 
+.aboutMeWrapper {
     display: inline-block;
-    height: auto; 
-    margin-top: 10vh; 
+    height: auto;
+    margin-top: 10vh;
     width: 90%;
 }
 
-.aboutMeContainer{ 
+.aboutMeContainer {
     display: flex;
-    flex-direction: row; 
-    flex: auto; 
+    flex-direction: row;
+    flex: auto;
     width: 100%;
     justify-content: center;
 }
 
-.aboutMeImageBox{ 
+.aboutMeImageBox {
     /*background-color: red;*/
     display: flex;
     max-height: 100%;
@@ -27,39 +24,39 @@
     width: auto;
 }
 
-.aboutMeImage{ 
+.aboutMeImage {
     display: flex;
-    min-width: 400px; 
+    min-width: 400px;
     max-width: 50%;
     height: 100%;
     overflow: hidden;
-    margin:0 ; 
+    margin: 0;
 }
 
 /*TODO: Image Sizing to div!*/
-.aboutMeImage img{ 
-    border: 0.1rem solid white; 
+.aboutMeImage img {
+    border: 0.1rem solid white;
     border-radius: 1rem;
 
-      aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 16;
     object-position: center;
     object-fit: cover;
 
-    width: 100%; 
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
 }
 
-.aboutMeText{ 
-    font-size: 1.8vh; 
+.aboutMeText {
+    font-size: 1.8vh;
     width: 75%;
     display: inline-block;
-    border: 0.1rem solid white; 
+    border: 0.1rem solid white;
     border-radius: 1rem;
-    color: white; 
+    color: white;
     background-color: #29304A;
     text-align: left;
-    padding:1rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .aboutMeImage:hover {
@@ -69,6 +66,7 @@
 
     transition: ease 0.3s;
 }
+
 .aboutMeText:hover {
     -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
     -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
@@ -81,19 +79,22 @@
 
 @media only screen and (max-width: 1050px) {
 
-    .aboutMeImage{
+    .aboutMeImage {
         display: none;
     }
-    .aboutMeText{ 
+
+    .aboutMeText {
         width: 100%;
-        margin: 0; 
-        padding: 1rem; 
+        margin: 0;
+        padding: 1rem;
     }
 
-    .aboutMeText h1{ 
-        text-align: center;;
+    .aboutMeText h1 {
+        text-align: center;
+        ;
     }
-     .aboutMeWrapper{
-    margin-top: 2rem;
-     }
+
+    .aboutMeWrapper {
+        margin-top: 2rem;
+    }
 }

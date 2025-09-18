@@ -3,7 +3,7 @@ import logo from "../logo.svg"
 import { HiOutlineTranslate } from 'react-icons/hi';
 
 import { useTranslation } from 'react-i18next';
-import { useCallback, useState, useRef} from "react";
+import { useCallback, useState, useRef } from "react";
 
 export function NavHome() {
     return (
@@ -33,7 +33,7 @@ const Languages = [
 
 
 export function LanguageMenu() {
-    const {t, i18n} = useTranslation(); 
+    const { t, i18n } = useTranslation();
 
     return (
         <div className={styles.languageMenu}>
@@ -52,21 +52,21 @@ export function LanguageMenu() {
 }
 
 export function NavMenu() {
-    const {t, i18n} = useTranslation(); 
-    const menuRef = useRef(null); 
-    const [sideBarEnabled, setSideBarEnabled] = useState(false); 
-    const toggleSidebar = () => { 
-        const prevState = sideBarEnabled; 
-        setSideBarEnabled(!prevState); 
-        console.log("Toggling Sidebar!\n" + !prevState); 
+    const { t, i18n } = useTranslation();
+    const menuRef = useRef(null);
+    const [sideBarEnabled, setSideBarEnabled] = useState(false);
+    const toggleSidebar = () => {
+        const prevState = sideBarEnabled;
+        setSideBarEnabled(!prevState);
+        console.log("Toggling Sidebar!\n" + !prevState);
 
         const menu = menuRef.current;
-        if(sideBarEnabled){
+        if (sideBarEnabled) {
 
-        menu.style.width = "100%";
+            menu.style.width = "100%";
         }
-        else{ 
-            menu.style.width = "0%"; 
+        else {
+            menu.style.width = "0%";
         }
 
     };

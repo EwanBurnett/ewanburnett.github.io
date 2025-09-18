@@ -76,7 +76,7 @@ function App() {
       </section>
       <footer>
         <p>
-          Copyright <a href="#">Ewan Burnett©</a> 2025
+          Site v0.8 - Copyright <a href="#">Ewan Burnett©</a> 2025
         </p>
         <a href="mailto:ewanburnettsk@outlook.com">EwanBurnettSK@Outlook.com</a>
       </footer>
