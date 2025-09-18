@@ -1,0 +1,101 @@
+:root {}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.experienceWrapper {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+    width: 50vw;
+    height: auto;
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.experienceWrapper:hover {
+    -webkit-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    -moz-box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+    box-shadow: 0px 0px 55px 4px rgba(9, 0, 255, 0.43);
+
+    transition: ease 0.3s;
+}
+
+.experienceHeader {
+    background-color: #29304A;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    border: 0.1rem solid white;
+}
+
+.experienceTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0.85rem 0;
+}
+
+.experienceGrade {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-self: flex-end;
+}
+
+.experienceGrade h3 {
+    margin: 0;
+}
+
+.experienceCompany {
+    color: white;
+}
+
+.experienceCompany h3 {
+    margin: 0;
+}
+
+.experienceCompany a {
+    color: white;
+    text-decoration: none;
+}
+
+.experienceCompany a:hover {
+    color: blue;
+    transition: ease 0.25s;
+}
+
+.experienceDates {}
+
+.experienceDates h4 {
+    margin: 0.5rem 0;
+}
+
+.experienceDescription {
+    font-size: 1.8vh;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1050px) {
+    .experienceTitle {
+        white-space: wrap;
+    }
+
+    .experienceWrapper {
+        width: 90vw;
+    }
+}

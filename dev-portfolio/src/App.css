@@ -1,0 +1,110 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.appHome {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+  padding-bottom: 2rem;
+  background: linear-gradient(180deg, #284ac2 97%, #0a0a0a 100%);
+}
+
+.demoBounds {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+
+}
+
+.landingBounds {
+  display: inline-block;
+  flex: 1;
+  height: auto;
+}
+
+.sectionHeader {
+  font-size: 5vh;
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.contactWrapper{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3vh;
+  margin: 5rem 0; 
+}
+
+.contactWrapper .icon{ 
+  font-size: 4vh; 
+  margin: 1rem;
+}
+
+.contactWrapper a { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; 
+  text-decoration: none;
+}
+
+
+.contactWrapper a:hover { 
+  color: blue; 
+  transition: 0.25s ease;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    margin: 0 3vw;
+}
+ 
+footer a{
+  text-decoration: none;
+  color: blue;
+}
+
+@media screen and (max-width: 480px) {
+  .appHome {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .appHome {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .demoBounds {
+    min-height: 30vh;
+  }
+
+  .contactWrapper{
+  font-size: 3vw;
+  }
+  .contactWrapper .icon{ 
+  font-size: 4vw; 
+  }
+
+}
+
+.App {
+  text-align: center;
+  background-color: #0a0a0a;
+}

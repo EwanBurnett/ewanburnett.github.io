@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: rgba(65, 105, 225, 0);
+}
+
+.landing {
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: 0;
+    padding: 3rem;
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainCanvas {
+        max-height: 40vh;
+    }
+}
+
+.tagline {
+    display: inline-block;
+    flex: 1;
+    justify-self: center;
+    text-align: left;
+    width: auto;
+}
+
+.tagline h1 {
+    font-family: "Noto Sans";
+    font-weight: 600;
+    font-size: min(10vw, 5.0vh);
+    color: white;
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.tagline h2 {
+    font-family: "Noto Sans";
+    font-weight: 600;
+    font-size: min(5vw, 3.0vh);
+    color: white;
+    padding-top: 10%;
+    margin: 0;
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.socials {
+    list-style-type: none;
+    display: inline-block;
+    flex: 1;
+    text-align: right;
+    margin: auto 1rem;
+    margin-right: 0;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+
+.socials li {
+    display: inline-block;
+}
+
+.icon {
+    margin-left: 1.5rem;
+    color: white;
+    font-size: min(10vw, 3.5vh);
+}
+
+.icon:hover {
+    color: blue;
+    transition: ease 0.2s;
+}
+
+.resume {
+    font-size: min(10vw, 2.5vh);
+    font-weight: 400;
+    margin: auto 0.5rem;
+    margin-left: 0;
+    padding: auto;
+    display: flex;
+    flex: 1;
+    justify-self: flex-start;
+}
+
+.resume a {
+    border: 0.1em solid white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.resume a:hover {
+    color: blue;
+    border-color: blue;
+    transition: ease 0.2s;
+}
+
+.handles {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 480px) {
+
+    .tagline h1,
+    h2 {
+        text-align: center;
+    }
+
+    .handles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .resume {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .socials {
+        margin: auto;
+        padding: 0;
+        margin-top: 2vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .icon {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+}

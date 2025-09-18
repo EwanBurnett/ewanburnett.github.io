@@ -1,0 +1,77 @@
+{
+    "projects": [
+        {
+            "title": "PROJECT_TITLE",
+            "brief": "PROJECT_BRIEF",
+            "date": "2025-05-11",
+            "platforms": [
+                "Windows",
+                "PlayStation 5",
+                "Android",
+                "Linux",
+                "Web"
+            ],
+            "description": "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "repository": "PROJECT_REPOSITORY",
+            "article": "PROJECT_ARTICLE",
+            "video": "PROJECT_VIDEO",
+            "thumbnail": "https://www.dummyimage.com/1000x500/00ff59/0011ff.png"
+        },
+        {
+            "title": "Onyx",
+            "brief": "Cross-Platform 3D Game Engine",
+            "date": "2025-08-12",
+            "platforms": [
+                "Windows",
+                "PlayStation 5",
+                "Android",
+                "Linux"
+            ],
+            "description": "PROJECT_DESCRIPTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "repository": "https://github.com/EwanBurnett/Onyx.git",
+            "article": null,
+            "video": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
+            "thumbnail": "https://www.dummyimage.com/2000x500/00ff59/0011ff.png"
+        },
+        {
+            "title": "SDF Demo",
+            "brief": "Exploring Signed Distance Fields",
+            "date": "2025-08-20",
+            "platforms": [
+                "Web"
+            ],
+            "description": "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "repository": "PROJECT_REPOSITORY",
+            "article": "PROJECT_ARTICLE",
+            "video": "/assets/Projects/SDF_Demo/SDF_Demo.mp4",
+            "thumbnail": "/assets/Projects/SDF_Demo/SDF_Demo_01.png"
+        },
+        {
+            "title": "PROJECT_TITLE",
+            "brief": "PROJECT_BRIEF",
+            "date": "2025-05-11",
+            "platforms": [
+                "Web"
+            ],
+            "description": "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "repository": "PROJECT_REPOSITORY",
+            "article": "PROJECT_ARTICLE",
+            "video": "PROJECT_VIDEO",
+            "thumbnail": "https://www.dummyimage.com/1000x500/00ffff/00f1ff.png"
+        },
+        {
+            "title": "PROJECT_TITLE",
+            "brief": "PROJECT_BRIEF",
+            "date": "2025-05-11",
+            "platforms": [
+                "Windows",
+                "PlayStation 5"
+            ],
+            "description": "_PROJECT_DESCRIPTION_ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "repository": "PROJECT_REPOSITORY",
+            "article": "PROJECT_ARTICLE",
+            "video": "PROJECT_VIDEO",
+            "thumbnail": "https://www.dummyimage.com/1000x500/00ff59/0011ff.png"
+        }
+    ]
+}

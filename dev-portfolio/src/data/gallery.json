@@ -1,0 +1,34 @@
+{
+    "slides": [
+        {
+            "id": 0,
+            "title": "Test image 1",
+            "image": "/assets/Gallery/RTX-2.png",
+            "description": "A Short __(Markdown!)__ Description of the slide."
+        },
+        {
+            "id": 1,
+            "title": "Test image 2",
+            "image": "https://www.dummyimage.com/1920x1080/a00f59/0011ff.png",
+            "description": "A Short (Markdown!) Description of the slide."
+        },
+        {
+            "id": 2,
+            "title": "Test image 3",
+            "image": "https://www.dummyimage.com/1920x1080/f0ff59/0011ff.png",
+            "description": "A Short (Markdown!) Description of the slide."
+        },
+        {
+            "id": 3,
+            "title": "Test image 4",
+            "image": "https://www.dummyimage.com/1920x1080/1aff59/0011ff.png",
+            "description": "A Short (Markdown!) Description of the slide."
+        },
+        {
+            "id": 4,
+            "title": "Test image 5",
+            "image": "https://www.dummyimage.com/1920x1080/ca5f39/0011ff.png",
+            "description": "A Short (Markdown!) Description of the slide."
+        }
+    ]
+}
