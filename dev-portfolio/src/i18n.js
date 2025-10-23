@@ -29,17 +29,17 @@ i18n.use(initReactI18next).init({
 
 Hi! 👋
 
-I'm Ewan, a UK-based Software Engineer specialising in Real-time Rendering and Computer Graphics.
+I'm Ewan, a UK-based Software Engineer specialising in Real-time Rendering and Computer Graphics. 
 
-I'm currently a Final Year student, studying an Integrated Master's in Computer Science for Games at Sheffield Hallam University, where I've learned Advanced C++ Programming, Game Engine Development, and even had a chance to work directly with PlayStation® 5 Development Kits to produce my own software. I'm currently focused on my Final Year Dissertation project on GPU-Accelerated SDF Rendering using Mesh Shaders!
+I'm currently a __Final Year__ student, studying an __Integrated Master's__ in __Computer Science for Games__ at __Sheffield Hallam University__, where I've learned __Advanced C++ Programming__, __Game Engine Development__, and even had a chance to work directly with __PlayStation® 5 Development Kits__ to produce my own software. I'm currently focused on my __Final Year Dissertation__ project on GPU-Accelerated SDF Rendering using __Mesh Shaders__!.
 
-I have a real passion for Games, and the amazing technology that drives them. I've been a student of Game Development since 2018, and have worked with many industry-standard tools as a result.
+I have a real passion for __Games__, and the amazing technology that drives them. I've been a student of Game Development __since 2018__, and have worked with many __industry-standard tools__ as a result. 
 
-I'm also an avid Linguist - Proficient in Japanese(JLPT N3), and Conversational in Mandarin Chinese and German.
+I'm also an avid Linguist - Proficient in __Japanese__(JLPT N3), and Conversational in __Mandarin Chinese__ and __German__. 
 
-I'm currently seeking Graduate Positions in Software Engineering worldwide, and would love to bring my passion, knowledge, and expertise to the field as a professional!
+I'm currently seeking __Graduate Positions__ in Software Engineering __worldwide__, and would love to bring my passion, knowledge, and expertise to the field as a professional! 
 
-(And if you're curious, My favourite titles are: NieR: Automata, Monster Hunter World and Final Fantasy 14!)
+(And if you're curious, My favorite titles are: NieR: Automata, Monster Hunter World and Final Fantasy 14!)
                 `,
                 experience: {
                     university: {
@@ -57,7 +57,7 @@ During my degree I specialised in Computer Graphics; studying
     
 Here are some Notable projects from my degree:
 
-    ◈ Level 7 Dissertation: GPGPU Mesh Voxellisation methods 
+    ◈ Level 7 Dissertation: Real Time Implicit Surface Rendering using Mesh Shaders
     ◈ Level 7 Group Project: ???    
     ◈ Level 7 Assignment (PPG): Vortex GPU Particle Simulation
     ◈ Level 7 Assignment (GPT): Real-Time Volumetric Rendering
@@ -150,7 +150,7 @@ Hi! 👋
 
 I'm Ewan, a UK-based Software Engineer specialising in Real-time Rendering and Computer Graphics. 
 
-I'm currently a __Final Year__ student, studying an __Integrated Master's__ in __Computer Science for Games__ at __Sheffield Hallam University__, where I've learned __Advanced C++ Programming__, __Game Engine Development__, and even had a chance to work directly with __PlayStation® 5 Development Kits__ to produce my own software. I'm currently focused on my __Final Year Dissertation__ project on (__Real-time Global Illumination__ / __GPU-Accelerated Mesh Voxelisation methods__ / __Mesh Shading in Vulkan__ / __Something Cool!__).
+I'm currently a __Final Year__ student, studying an __Integrated Master's__ in __Computer Science for Games__ at __Sheffield Hallam University__, where I've learned __Advanced C++ Programming__, __Game Engine Development__, and even had a chance to work directly with __PlayStation® 5 Development Kits__ to produce my own software. I'm currently focused on my __Final Year Dissertation__ project on GPU-Accelerated SDF Rendering using __Mesh Shaders__!
 
 I have a real passion for __Games__, and the amazing technology that drives them. I've been a student of Game Development __since 2018__, and have worked with many __industry-standard tools__ as a result. 
 
