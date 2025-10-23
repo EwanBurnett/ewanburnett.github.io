@@ -23,22 +23,36 @@ import project_5_video from "../Assets/Projects/Lapis/Lapis_Demo.mp4";
 
 //TODO: Import this properly! 
 const projects = [
-        {
-            "title": "Vulkan Ray Tracing",
-            "brief": "Exploring RTX in Vulkan",
-            "date": "2025-02-21",
-            "platforms": [
-                "Windows",
-                "Linux",
-            ],
-            "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
-            "repository": null,
-            "article": null,
-            "video": null,
-            "thumbnail": project_0_img_0,
-            "background": project_0_img_1, 
-        },
-        {
+    {
+        "title": "Vulkan Ray Tracing",
+        "brief": "Exploring RTX in Vulkan",
+        "date": "2025-02-21",
+        "platforms": [
+            "Windows",
+            "Linux",
+        ],
+        "description": "A project exploring Hardware-Accelerated Ray Tracing using the Vulkan API, developed as a part of my Year-3 Dissertation work on Real-Time Global Illumination methods. ",
+        "repository": null,
+        "article": null,
+        "video": null,
+        "thumbnail": project_0_img_0,
+        "background": project_0_img_1, 
+    },
+    {
+    "title": "Lapis",
+    "brief": "PlayStation 5 Game Engine",
+    "date": "2025-08-18",
+    "platforms": [
+    "PlayStation 5", 
+    ],
+    "description": "A 3D Game Engine developed from the ground up for the Playstation 5. Used in a collaborative group project alongside other programmers, artists, and designers to produce a title over 12 weeks.",
+    "repository": null,
+    "article": null,
+    "video": project_5_video,
+    "thumbnail": project_5_img_0,
+    "background": null, 
+    }, 
+    {
             "title": "Signed Distance Functions",
             "brief": "Power of the Elements",
             "date": "2025-08-18",
@@ -96,20 +110,6 @@ const projects = [
             "article": null,
             "video": project_4_video,
             "thumbnail": project_4_img_0,
-            "background": null, 
-        }, 
-                              {
-            "title": "Lapis",
-            "brief": "PlayStation 5 Game Engine",
-            "date": "2025-08-18",
-            "platforms": [
-                "PlayStation 5", 
-            ],
-            "description": "A 3D Game Engine developed from the ground up for the Playstation 5. Used in a collaborative group project alongside other programmers, artists, and designers to produce a title over 12 weeks.",
-            "repository": null,
-            "article": null,
-            "video": project_5_video,
-            "thumbnail": project_5_img_0,
             "background": null, 
         }, 
     ]
